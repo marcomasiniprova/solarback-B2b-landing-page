@@ -97,26 +97,50 @@ const jsonLd = {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Cos\'è SOLARBACK?',
+          name: "Cos'è SOLARBACK e cosa fa esattamente?",
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'SOLARBACK è il primo sistema di acquisizione verticale costruito per aziende installatrici di fotovoltaico in Italia. Gestiamo ogni richiesta fino al sopralluogo qualificato.',
+            text: "SOLARBACK è il primo sistema di acquisizione verticale costruito esclusivamente per aziende installatrici di fotovoltaico in Italia. Non generiamo richieste: trasformiamo quelle che già ricevi in sopralluoghi qualificati nell'agenda dei tuoi commerciali. Contattiamo ogni lead entro pochi minuti via WhatsApp, verifichiamo interesse reale e disponibilità, poi fissiamo l'appuntamento direttamente.",
           },
         },
         {
           '@type': 'Question',
-          name: 'Quanto costa SOLARBACK?',
+          name: "SOLARBACK è l'agenzia giusta per la mia azienda?",
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'SOLARBACK lavora a performance: paghi solo quando portiamo sopralluoghi qualificati in agenda. Nessun canone fisso, nessun costo mensile.',
+            text: "SOLARBACK è adatto alle aziende che installano fotovoltaico, ricevono già richieste ogni settimana ma faticano a trasformarle in sopralluoghi, e hanno commerciali pronti a uscire. Se invece cerchi un'agenzia che gestisca anche la tua pubblicità o non hai ancora commerciali attivi, siamo onesti: non siamo il servizio giusto per te.",
           },
         },
         {
           '@type': 'Question',
-          name: 'SOLARBACK funziona per la mia zona?',
+          name: 'Quanto costa il servizio SOLARBACK?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'SOLARBACK opera su tutto il territorio italiano, da Nord a Sud. Lavoriamo con installatori di fotovoltaico in Lombardia, Veneto, Piemonte, Lazio, Campania e tutte le altre regioni.',
+            text: 'SOLARBACK lavora esclusivamente a performance: paghi solo quando ti portiamo sopralluoghi qualificati in agenda. Nessun canone fisso, nessun costo mensile, nessun contratto pluriennale. Il rischio è nostro: se non portiamo risultati nei numeri e nei tempi concordati, continuiamo a lavorare senza costi aggiuntivi finché non li raggiungiamo.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Quali risultati posso aspettarmi e in quanto tempo?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Nella maggior parte dei casi attiviamo il sistema entro 48 ore dalla firma. I primi sopralluoghi qualificati arrivano già nella prima settimana. I numeri esatti dipendono dal volume di richieste che ricevi e dalla tua zona operativa — definiamo insieme l\'obiettivo preciso prima di partire, nero su bianco.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Come funziona il processo di qualificazione?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "Ogni richiesta che arriva dal tuo sito o dalle tue pubblicità entra nel nostro sistema. Entro pochi minuti scriviamo al contatto su WhatsApp. Poi lo chiamiamo, verifichiamo: tipo di abitazione, consumo attuale, interesse concreto e disponibilità di budget. Solo chi supera questi criteri viene inserito nell'agenda del tuo commerciale.",
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'SOLARBACK opera in tutta Italia?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Sì, SOLARBACK lavora con installatori di fotovoltaico su tutto il territorio italiano — da Lombardia, Veneto e Piemonte al Sud. La qualificazione avviene da remoto, quindi serviamo efficacemente sia le grandi città che le zone periferiche. Se hai commerciali che coprono una o più regioni, possiamo strutturare il servizio sulla tua copertura geografica.',
           },
         },
       ],

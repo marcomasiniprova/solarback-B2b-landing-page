@@ -27,7 +27,7 @@ export function Nav() {
         <div className="nav-inner">
           <a href="#hero" className="nav-logo">
             <span className="nav-logo-mark">
-              <Image src="/solarback-logo.png" alt="SOLARBACK" width={36} height={36} />
+              <Image src="/solarback-logo.png" alt="SOLARBACK" width={36} height={36} priority />
             </span>
             <span className="nav-logo-text">SOLARBACK</span>
           </a>

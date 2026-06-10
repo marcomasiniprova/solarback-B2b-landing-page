@@ -73,7 +73,7 @@ export function CandidaturaForm() {
             Verifica Se Possiamo<br /><span className="gold-shine">Aiutarti</span>
           </motion.h2>
           <motion.p className="form-sub" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.16 }}>
-            Ti basta compilare il form qui sotto. Ti ricontattiamo entro 24 ore.
+            Compila il form. Il nostro team è attivo adesso e ti contatterà a momenti.
           </motion.p>
 
           <AnimatePresence mode="wait">
@@ -84,7 +84,7 @@ export function CandidaturaForm() {
                   <circle cx="24" cy="24" r="20"/><path d="M15 24l6 6 12-14"/>
                 </svg>
                 <h3 style={{ fontWeight: 800, fontSize: '1.5rem', marginBottom: '0.7rem', color: 'var(--text)' }}>Richiesta ricevuta!</h3>
-                <p style={{ color: 'var(--text-soft)' }}>Ti ricontattiamo entro 24 ore al numero che ci hai lasciato.</p>
+                <p style={{ color: 'var(--text-soft)' }}>Stiamo già analizzando la tua richiesta. Ti contatteremo a momenti al numero che ci hai lasciato.</p>
               </motion.div>
             ) : (
               <motion.form key="form" className="form-card" onSubmit={handleSubmit(onSubmit)} noValidate initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
