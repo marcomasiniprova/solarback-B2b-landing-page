@@ -1,8 +1,6 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { GoldText } from './ui/GoldText'
-import { Eyebrow } from './ui/Eyebrow'
 
 const reasons = [
   {
@@ -29,52 +27,36 @@ const reasons = [
 
 export function Perche() {
   return (
-    <section
-      id="perche"
-      className="relative z-[1] px-6 section-spacing"
-      style={{ background: 'var(--bg-2)', borderTop: '1px solid var(--line)', borderBottom: '1px solid var(--line)' }}
-    >
-      <div className="max-w-[1240px] mx-auto">
-        <div className="text-center mb-12">
-          <motion.div className="flex justify-center mb-8" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <Eyebrow>Perché sceglierci</Eyebrow>
+    <section id="perche" className="sb-section">
+      <div className="sb-container">
+        <div className="head-center">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+            <div className="eyebrow"><span className="dot" />Perché sceglierci</div>
           </motion.div>
-          <motion.h2
-            className="font-black leading-[1.02] tracking-[-0.025em]"
-            style={{ fontSize: 'clamp(2.2rem, 5vw, 4rem)', color: 'var(--text)' }}
-            initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }}
-          >
-            Perché Le Aziende<br />Ci <GoldText>Scelgono</GoldText>
+          <motion.h2 className="sb-h2" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.08 }}>
+            Perché Le Aziende<br />Ci <span className="gold-shine">Scelgono</span>
           </motion.h2>
         </div>
 
-        <div className="grid gap-5 max-w-[1000px] mx-auto" style={{ gridTemplateColumns: '1fr 1fr' }}>
+        <div className="why-grid">
           {reasons.map((r, i) => (
             <motion.div
               key={i}
-              className="flex items-start gap-6 p-8 rounded-[20px] border transition-colors duration-300 hover:border-[rgba(217,164,65,0.3)] hover:bg-[rgba(255,255,255,0.04)]"
-              style={{ background: 'var(--card-bg)', borderColor: 'var(--line)' }}
+              className="why-row"
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.7, delay: i * 0.08, ease: 'easeOut' }}
             >
-              <div
-                className="flex-shrink-0 w-[46px] h-[46px] rounded-[12px] flex items-center justify-center border"
-                style={{ background: 'rgba(217,164,65,0.08)', borderColor: 'rgba(217,164,65,0.22)', color: 'var(--gold)' }}
-              >
-                {r.icon}
-              </div>
+              <div className="why-icon">{r.icon}</div>
               <div>
-                <h3 className="font-bold text-[1.1rem] tracking-[-0.01em] mb-2" style={{ color: 'var(--text)' }}>{r.title}</h3>
-                <p className="text-[0.95rem] leading-[1.6]" style={{ color: 'var(--text-dim)' }}>{r.desc}</p>
+                <h3>{r.title}</h3>
+                <p>{r.desc}</p>
               </div>
             </motion.div>
           ))}
         </div>
       </div>
-
-      <style>{`@media (max-width: 760px) { #perche .grid { grid-template-columns: 1fr !important; } }`}</style>
     </section>
   )
 }
