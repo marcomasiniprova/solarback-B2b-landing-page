@@ -96,6 +96,12 @@ body::after {
 
 .dot-pulse { animation: dot-pulse 1.8s ease-in-out infinite; }
 
+/* Consistent vertical breathing across all sections */
+.section-spacing {
+  padding-top:    clamp(5rem, 10vw, 9rem);
+  padding-bottom: clamp(5rem, 10vw, 9rem);
+}
+
 /* Step connector arrows */
 @media (min-width: 981px) {
   .step-card:not(:last-child)::after {

@@ -7,6 +7,7 @@ import { Perche } from '@/components/Perche'
 import { Fit } from '@/components/Fit'
 import { Garanzia } from '@/components/Garanzia'
 import { Founder } from '@/components/Founder'
+import { TechVantaggi } from '@/components/TechVantaggi'
 import { CandidaturaForm } from '@/components/CandidaturaForm'
 import { Footer } from '@/components/Footer'
 
@@ -30,6 +31,7 @@ export default function Home() {
         <Fit />
         <Garanzia />
         <Founder />
+        <TechVantaggi />
         <CandidaturaForm />
       </main>
       <Footer />

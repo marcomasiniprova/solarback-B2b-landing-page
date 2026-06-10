@@ -49,65 +49,135 @@ const steps = [
 
 export function Metodo() {
   return (
-    <section id="metodo" className="relative z-[1] px-6 py-36">
-      <div className="max-w-[1240px] mx-auto">
-        <div className="text-center mb-12">
-          <motion.div className="flex justify-center mb-8" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+    <section
+      id="metodo"
+      className="relative z-[1] px-6"
+      style={{
+        paddingTop: 'clamp(5rem, 10vw, 9rem)',
+        paddingBottom: 'clamp(5rem, 10vw, 9rem)',
+      }}
+    >
+      <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
+
+        <div className="text-center" style={{ marginBottom: 'clamp(3rem, 6vw, 5rem)' }}>
+          <motion.div
+            className="flex justify-center mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <Eyebrow>Il metodo</Eyebrow>
           </motion.div>
           <motion.h2
-            className="font-black leading-[1.02] tracking-[-0.025em] mb-6"
+            className="font-black leading-[1.02] tracking-[-0.025em] mb-5"
             style={{ fontSize: 'clamp(2.2rem, 5vw, 4rem)', color: 'var(--text)' }}
-            initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
           >
             Come Trasformiamo le Richieste<br />
             in <GoldText>Sopralluoghi Qualificati</GoldText>
           </motion.h2>
           <motion.p
-            className="text-center mx-auto"
-            style={{ color: 'var(--text-dim)', fontSize: '1.1rem', maxWidth: '640px', lineHeight: 1.65 }}
-            initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}
+            className="mx-auto"
+            style={{ color: 'var(--text-dim)', fontSize: 'clamp(1rem, 1.5vw, 1.15rem)', maxWidth: '600px', lineHeight: 1.65 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
             Quattro passaggi semplici. Nessun cambiamento nel tuo modo di lavorare.
             Il sistema entra in funzione dal momento in cui la richiesta arriva.
           </motion.p>
         </div>
 
-        <div className="grid gap-5" style={{ gridTemplateColumns: 'repeat(4, 1fr)' }}>
-          {steps.map((step, i) => (
+        <div className="metodo-grid">
+          {steps.map((s, i) => (
             <motion.div
               key={i}
-              className="step-card relative border rounded-[20px] p-10 flex flex-col transition-colors duration-300 hover:border-[rgba(217,164,65,0.35)] hover:bg-[rgba(255,255,255,0.04)]"
-              style={{ background: 'var(--card-bg)', borderColor: 'var(--line)' }}
-              initial={{ opacity: 0, y: 32 }}
+              className="step-card relative flex flex-col gap-5 rounded-[22px] border"
+              style={{
+                padding: 'clamp(1.8rem, 3vw, 2.5rem)',
+                background: 'var(--card-bg)',
+                borderColor: 'var(--line)',
+              }}
+              initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 0.7, delay: i * 0.08, ease: 'easeOut' }}
-              whileHover={{ translateY: -4 }}
+              transition={{ duration: 0.7, delay: i * 0.09, ease: 'easeOut' }}
             >
-              <span className="block text-[0.75rem] font-extrabold tracking-[0.2em] mb-6" style={{ color: 'var(--gold)' }}>
-                PASSAGGIO {step.num}
-              </span>
-              <div
-                className="w-[52px] h-[52px] rounded-[14px] flex items-center justify-center mb-6 border"
-                style={{ background: 'rgba(217,164,65,0.08)', borderColor: 'rgba(217,164,65,0.22)', color: 'var(--gold)' }}
-              >
-                {step.icon}
+              <div className="flex items-start justify-between gap-4">
+                <div
+                  className="w-[52px] h-[52px] rounded-[14px] flex items-center justify-center border flex-shrink-0"
+                  style={{ background: 'rgba(217,164,65,0.07)', borderColor: 'rgba(217,164,65,0.2)', color: 'var(--gold)' }}
+                >
+                  {s.icon}
+                </div>
+                <span
+                  className="font-black text-[2.6rem] leading-none tracking-tight select-none"
+                  style={{ color: 'rgba(255,255,255,0.04)' }}
+                >
+                  {s.num}
+                </span>
               </div>
-              <h3 className="font-bold text-[1.2rem] leading-[1.25] tracking-[-0.015em] mb-3" style={{ color: 'var(--text)' }}>
-                {step.title}
-              </h3>
-              <p className="text-[0.95rem] leading-[1.6]" style={{ color: 'var(--text-dim)' }}>
-                {step.desc}
-              </p>
+
+              <div>
+                <div className="text-[0.68rem] font-bold tracking-[0.2em] uppercase mb-3" style={{ color: 'var(--gold)' }}>
+                  PASSAGGIO {s.num}
+                </div>
+                <h3
+                  className="font-bold leading-[1.2] tracking-[-0.01em] mb-3"
+                  style={{ fontSize: 'clamp(1rem, 1.4vw, 1.18rem)', color: 'var(--text)' }}
+                >
+                  {s.title}
+                </h3>
+                <p
+                  className="leading-[1.65]"
+                  style={{ fontSize: 'clamp(0.88rem, 1.1vw, 0.96rem)', color: 'var(--text-soft)' }}
+                >
+                  {s.desc}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>
       </div>
 
       <style>{`
-        @media (max-width: 980px) { #metodo .grid { grid-template-columns: 1fr 1fr !important; } }
-        @media (max-width: 540px) { #metodo .grid { grid-template-columns: 1fr !important; } }
+        .metodo-grid {
+          display: grid;
+          gap: clamp(0.9rem, 1.8vw, 1.4rem);
+          grid-template-columns: repeat(4, 1fr);
+        }
+        @media (max-width: 1060px) {
+          .metodo-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 580px) {
+          .metodo-grid { grid-template-columns: 1fr; }
+        }
+        @media (min-width: 1061px) {
+          .step-card:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 50%; right: -1rem;
+            width: 0.5rem; height: 2px;
+            background: rgba(217,164,65,0.35);
+            transform: translateY(-50%);
+            z-index: 1;
+          }
+          .step-card:not(:last-child)::before {
+            content: '';
+            position: absolute;
+            top: 50%; right: -1.2rem;
+            width: 7px; height: 7px;
+            border-right: 1.8px solid var(--gold);
+            border-top: 1.8px solid var(--gold);
+            transform: translateY(-50%) rotate(45deg);
+            z-index: 1;
+          }
+        }
       `}</style>
     </section>
   )

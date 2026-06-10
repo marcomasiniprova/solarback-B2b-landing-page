@@ -7,7 +7,7 @@ import { Button } from './ui/Button'
 
 export function Garanzia() {
   return (
-    <section id="garanzia" className="relative z-[1] px-6 py-36">
+    <section id="garanzia" className="relative z-[1] px-6 section-spacing">
       <div className="max-w-[1240px] mx-auto">
         <motion.div
           className="max-w-[920px] mx-auto relative overflow-hidden text-center rounded-[28px] border"

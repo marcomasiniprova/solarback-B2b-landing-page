@@ -111,7 +111,7 @@ export function CandidaturaForm() {
   }
 
   return (
-    <section id="candidatura" className="relative z-[1] px-6 py-36 text-center">
+    <section id="candidatura" className="relative z-[1] px-6 section-spacing text-center">
       <div className="max-w-[760px] mx-auto">
         <motion.div className="flex justify-center mb-6" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <Eyebrow>Candidatura Gratuita</Eyebrow>

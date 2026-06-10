@@ -31,7 +31,7 @@ export function Perche() {
   return (
     <section
       id="perche"
-      className="relative z-[1] px-6 py-36"
+      className="relative z-[1] px-6 section-spacing"
       style={{ background: 'var(--bg-2)', borderTop: '1px solid var(--line)', borderBottom: '1px solid var(--line)' }}
     >
       <div className="max-w-[1240px] mx-auto">

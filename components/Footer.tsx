@@ -57,7 +57,13 @@ export function Footer() {
         <div>
           <h4 className="font-bold text-[0.95rem] mb-5 tracking-[0.01em]" style={{ color: 'var(--text)' }}>Navigazione</h4>
           <div style={{ color: 'var(--text-soft)', fontSize: '0.92rem', lineHeight: 1.85 }}>
-            {[['#metodo','Metodo'],['#perche','Perché Sceglierci'],['#garanzia','Garanzia'],['#candidatura','Candidatura']].map(([href, label]) => (
+            {[
+              ['#metodo',     'Metodo'],
+              ['#perche',     'Soluzioni'],
+              ['#fit',        'Target & Requisiti'],
+              ['#garanzia',   'Garanzia'],
+              ['#candidatura','Candidati Ora'],
+            ].map(([href, label]) => (
               <p key={href}><a href={href} style={{ color: 'var(--text-soft)', textDecoration: 'none' }}>{label}</a></p>
             ))}
           </div>
