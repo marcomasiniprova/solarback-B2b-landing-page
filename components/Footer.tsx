@@ -18,10 +18,7 @@ export function Footer() {
         {/* Brand */}
         <div className="footer-col footer-logo-block">
           <a href="#hero" className="footer-logo">
-            <span className="footer-logo-mark">
-              <Image src="/solarback-logo.png" alt="SOLARBACK" width={42} height={42} />
-            </span>
-            <span className="footer-logo-text">SOLARBACK</span>
+            <Image src="/solarback-logo.png" alt="SOLARBACK" width={180} height={58} style={{ objectFit: 'contain' }} />
           </a>
           <p className="footer-tagline">
             Il primo sistema di acquisizione verticale costruito esclusivamente

@@ -26,10 +26,7 @@ export function Nav() {
       <nav className={`top-nav${scrolled ? ' scrolled' : ''}`}>
         <div className="nav-inner">
           <a href="#hero" className="nav-logo">
-            <span className="nav-logo-mark">
-              <Image src="/solarback-logo.png" alt="SOLARBACK" width={36} height={36} priority />
-            </span>
-            <span className="nav-logo-text">SOLARBACK</span>
+            <Image src="/solarback-logo.png" alt="SOLARBACK" width={160} height={52} priority style={{ objectFit: 'contain' }} />
           </a>
 
           <ul className="nav-menu">
