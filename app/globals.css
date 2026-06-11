@@ -693,3 +693,53 @@ footer { background: var(--bg-2); border-top: 1px solid var(--line); padding: 5r
 .footer-bar nav { display: flex; gap: 1.6rem; }
 .footer-bar nav a { color: var(--text-dim); text-decoration: none; font-size: 0.82rem; transition: color 0.2s; }
 .footer-bar nav a:hover { color: var(--gold); }
+
+/* ══════════════════════════════════════
+   MOBILE OVERRIDES (≤ 600px)
+   Desktop CSS above is untouched.
+══════════════════════════════════════ */
+@media (max-width: 600px) {
+  :root { --gap-section: 5rem; }
+
+  /* Logo in navbar: scala da 210x62 a 130x38 */
+  .nav-logo img { width: 130px !important; height: 38px !important; }
+
+  /* Nav padding */
+  .top-nav { padding: 0.75rem 1rem; }
+  .top-nav.scrolled { padding: 0.6rem 1rem; }
+  .nav-inner { gap: 0; }
+
+  /* Section horizontal padding */
+  .sb-section, #candidatura, #garanzia { padding-left: 1rem; padding-right: 1rem; }
+
+  /* Hero */
+  #hero { padding: 8rem 1rem 5rem; }
+  .hero-cta-row { flex-direction: column; align-items: center; }
+  .hero-cta-row .sb-btn { width: 100%; justify-content: center; }
+  .hero-stats { gap: 1.5rem; }
+
+  /* Head center spacing */
+  .head-center { margin-bottom: 2.5rem; }
+
+  /* Metodo: step padding più compatto */
+  .step { padding: 1.8rem 1.4rem 1.6rem; }
+
+  /* Perché / Fit cards */
+  .why-row { padding: 1.5rem; gap: 1rem; }
+  .fit-card { padding: 1.8rem 1.5rem; }
+
+  /* Garanzia */
+  .guarantee h2 { font-size: 1.8rem; }
+
+  /* Founder */
+  .founder-photo { width: 160px; height: 160px; }
+
+  /* Form */
+  .form-card { padding: 0; }
+  .form-h1 { font-size: 2rem; }
+
+  /* Footer logo: scala da 220x65 a 150x44 */
+  .footer-logo img { width: 150px !important; height: 44px !important; }
+  .footer-bar { flex-direction: column; text-align: center; }
+  .footer-bar nav { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+}
