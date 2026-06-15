@@ -12,8 +12,8 @@ const QUESTIONS = [
     a: "SOLARBACK è adatto alle aziende che installano fotovoltaico, ricevono già richieste ogni settimana ma faticano a trasformarle in sopralluoghi, e hanno commerciali pronti a uscire. Se invece cerchi un'agenzia che gestisca anche la tua pubblicità o non hai ancora commerciali attivi, siamo onesti: non siamo il servizio giusto per te.",
   },
   {
-    q: "Quanto costa il servizio SOLARBACK?",
-    a: "SOLARBACK lavora esclusivamente a performance: paghi solo quando ti portiamo sopralluoghi qualificati in agenda. Nessun canone fisso, nessun costo mensile, nessun contratto pluriennale. Il rischio è nostro: se non portiamo risultati nei numeri e nei tempi concordati, continuiamo a lavorare senza costi aggiuntivi finché non li raggiungiamo.",
+    q: "Quanto costa il servizio SOLARBACK? C'è un periodo di prova?",
+    a: "Per un periodo limitato offriamo 14 giorni di prova completamente gratuita e risk free: zero costi, zero performance fee, zero impegni. Attiviamo il sistema sulla tua azienda, lavoriamo per 14 giorni e ti mostriamo i risultati concreti. Solo alla fine, se sei soddisfatto, decidiamo insieme come continuare la collaborazione. Nessuna sorpresa, nessun contratto in partenza.",
   },
   {
     q: "Quali risultati posso aspettarmi e in quanto tempo?",

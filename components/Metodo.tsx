@@ -6,25 +6,25 @@ const steps = [
   {
     num: '01',
     title: 'Arriva una richiesta',
-    desc: 'Dal tuo sito, dalle tue pubblicità o dal passaparola online. Il contatto entra subito nel nostro sistema.',
+    desc: 'Dal tuo sito, dalle tue pubblicità o dal passaparola online. Il contatto entra subito nel nostro sistema AI, che lo riconosce e lo smista in tempo reale.',
     icon: <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M13 3v8M9 7l4 4 4-4"/><path d="M4 17v3a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3"/></svg>,
   },
   {
     num: '02',
     title: 'Contattiamo il cliente',
-    desc: 'Scriviamo su WhatsApp entro pochi minuti, prima che il cliente si distragga o contatti qualcun altro.',
+    desc: 'Scriviamo su WhatsApp entro pochi minuti, prima che il cliente si distragga o contatti qualcun altro. Il timing è gestito automaticamente dal nostro sistema AI.',
     icon: <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M5 20l1.5-4A8 8 0 1 1 10.5 21H5z"/><path d="M10 14h6M10 11h4"/></svg>,
   },
   {
     num: '03',
     title: 'Capiamo se è adatto',
-    desc: 'Verifichiamo abitazione, consumi e interesse reale. Solo chi è davvero pronto va avanti.',
+    desc: 'Verifichiamo abitazione, consumi e interesse reale. Solo chi è davvero pronto va avanti. L\'AI analizza ogni risposta e assegna un punteggio di qualità al contatto.',
     icon: <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M4 22V11l9-7 9 7v11"/><path d="M9 22v-7h8v7"/></svg>,
   },
   {
     num: '04',
     title: 'Fissiamo il sopralluogo',
-    desc: "L'appuntamento qualificato entra nello slot libero del commerciale. Lui arriva e parla con una persona interessata.",
+    desc: "L'appuntamento qualificato entra nello slot libero del commerciale. Lui arriva e parla con una persona interessata. L'AI sincronizza l'agenda e invia i promemoria automatici.",
     icon: <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="5" width="18" height="17" rx="2"/><path d="M4 10h18M9 3v4M17 3v4"/><path d="M10 15l2.5 2.5L17 13"/></svg>,
   },
 ]
