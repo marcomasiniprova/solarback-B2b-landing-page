@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
   try {
     await resend.emails.send({
       from: 'SOLARBACK <onboarding@resend.dev>',
-      to: [process.env.CONTACT_EMAIL ?? 'info@solarback.it'],
+      to: ['artecagenzia@gmail.com'],
       replyTo: email,
       subject: `Nuova candidatura da ${name} — ${company}`,
       html: `

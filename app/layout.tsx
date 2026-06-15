@@ -47,7 +47,16 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+    googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
+  },
+  verification: {
+    google: process.env.GOOGLE_SITE_VERIFICATION ?? '',
+  },
+  category: 'business',
+  classification: 'Lead Generation, Fotovoltaico, B2B, AI Marketing',
+  other: {
+    'article:author': 'Marco Masini — artec AI',
+    'og:locale:alternate': 'it_IT',
   },
 }
 
