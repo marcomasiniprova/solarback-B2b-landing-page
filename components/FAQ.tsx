@@ -5,23 +5,23 @@ import { motion } from 'framer-motion'
 const QUESTIONS = [
   {
     q: "Cos'è SOLARBACK e cosa fa esattamente?",
-    a: "SOLARBACK è il primo sistema di acquisizione verticale costruito esclusivamente per aziende installatrici di fotovoltaico in Italia. Non generiamo richieste: trasformiamo quelle che già ricevi in sopralluoghi qualificati nell'agenda dei tuoi commerciali. Contattiamo ogni lead entro pochi minuti via WhatsApp, verifichiamo interesse reale e disponibilità, poi fissiamo l'appuntamento direttamente.",
+    a: "SOLARBACK è il primo metodo di acquisizione costruito esclusivamente per aziende installatrici di fotovoltaico in Italia. Non ci limitiamo a passarti contatti: portiamo appuntamenti già fissati con chi vuole il fotovoltaico. Contattiamo ogni lead entro pochi minuti via WhatsApp, verifichiamo interesse reale e disponibilità, poi fissiamo l'appuntamento direttamente.",
   },
   {
     q: "SOLARBACK è l'agenzia giusta per la mia azienda?",
-    a: "SOLARBACK è adatto alle aziende che installano fotovoltaico, ricevono già richieste ogni settimana ma faticano a trasformarle in sopralluoghi, e hanno commerciali pronti a uscire. Se invece cerchi un'agenzia che gestisca anche la tua pubblicità o non hai ancora commerciali attivi, siamo onesti: non siamo il servizio giusto per te.",
+    a: "SOLARBACK è adatto alle aziende che installano fotovoltaico, ricevono già richieste ogni settimana ma faticano a fissarle come appuntamenti, e hanno commerciali pronti a uscire. Se invece cerchi un'agenzia che gestisca anche la tua pubblicità o non hai ancora commerciali attivi, siamo onesti: non siamo il servizio giusto per te.",
   },
   {
     q: "Quanto costa SOLARBACK e come funziona il pricing?",
-    a: "SOLARBACK lavora 100% a performance: paghi €99 per ogni sopralluogo effettuato e €400 di bonus per ogni contratto residenziale firmato. Zero canone fisso, zero costi mensili. Diventiamo il tuo reparto acquisizione esterno: il nostro interesse è allineato al tuo, perché guadagniamo solo quando firmi tu.",
+    a: "SOLARBACK lavora 100% a risultato: paghi solo quando portiamo appuntamenti qualificati nel tuo calendario. Zero canone fisso, zero costi mensili. L'investimento preciso lo definiamo insieme nella chiamata di valutazione, perché dipende dal volume di richieste e dalla tua zona. Diventiamo il tuo reparto acquisizione esterno: il nostro interesse è allineato al tuo.",
   },
   {
     q: "Quali risultati posso aspettarmi e in quanto tempo?",
-    a: "Mentre le altre agenzie impiegano mesi a diventare operative, noi ti attiviamo in 7 giorni. All’ottavo giorno iniziano già ad arrivare i primi sopralluoghi qualificati. I numeri precisi li definiamo insieme prima di partire, nero su bianco.",
+    a: "Mentre le altre agenzie impiegano mesi a diventare operative, noi ti attiviamo in 7 giorni. All’ottavo giorno iniziano già ad arrivare i primi appuntamenti qualificati. I numeri precisi li definiamo insieme prima di partire, nero su bianco.",
   },
   {
     q: "Come funziona il processo di qualificazione?",
-    a: "Ogni richiesta che arriva dal tuo sito o dalle tue pubblicità entra nel nostro sistema. Entro pochi minuti scriviamo al contatto su WhatsApp. Poi lo chiamiamo, verifichiamo: tipo di abitazione, consumo attuale, interesse concreto e disponibilità di budget. Solo chi supera questi criteri viene inserito nell'agenda del tuo commerciale.",
+    a: "Ogni richiesta che arriva dal tuo sito o dalle tue pubblicità entra nel nostro processo. Entro pochi minuti scriviamo al contatto su WhatsApp. Poi lo chiamiamo, verifichiamo: tipo di abitazione, consumo attuale, interesse concreto e disponibilità di budget. Solo chi supera questi criteri viene inserito nell'agenda del tuo commerciale.",
   },
   {
     q: "SOLARBACK opera in tutta Italia?",
