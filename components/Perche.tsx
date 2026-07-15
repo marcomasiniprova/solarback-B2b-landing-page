@@ -20,7 +20,7 @@ const reasons = [
   },
   {
     title: 'Paghi solo a risultato',
-    desc: 'Niente canoni fissi. Niente costi mensili. Paghi soltanto quando ti portiamo sopralluoghi qualificati in agenda.',
+    desc: 'Niente canoni fissi. Niente costi mensili. Paghi soltanto quando ti portiamo appuntamenti qualificati in agenda.',
     icon: <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M11 2v18"/><path d="M15 6h-6a2 2 0 0 0 0 4h4a2 2 0 0 1 0 4H8"/></svg>,
   },
 ]
