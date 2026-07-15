@@ -26,8 +26,8 @@ export function Hero() {
 
           <motion.h1 className="hero-h1" variants={item}>
             Installi fotovoltaico?<br />
-            Ti portiamo <span className="gold-shine">appuntamenti già fissati</span><br />
-            con chi vuole l'impianto.
+            Generiamo richieste qualificate e le<br />
+            trasformiamo in <span className="gold-shine">appuntamenti per i tuoi commerciali</span>.
           </motion.h1>
 
           <motion.p className="hero-sub" variants={item}>
@@ -49,9 +49,9 @@ export function Hero() {
 
           <motion.div className="hero-stats" variants={item}>
             {[
-              { n: '15-30', l: 'Partner per zona' },
               { n: '7 giorni', l: 'Sei operativo' },
               { n: '100%', l: 'A risultato' },
+              { n: 'Italia', l: 'Copertura nazionale' },
             ].map(({ n, l }) => (
               <div key={l} style={{ textAlign: 'center' }}>
                 <div className="hero-stat-n">{n}</div>
