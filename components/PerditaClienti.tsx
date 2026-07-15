@@ -16,7 +16,7 @@ export function PerditaClienti() {
             <div className="eyebrow"><span className="dot" />Il rischio nascosto</div>
           </motion.div>
           <motion.h2 className="sb-h2" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.08 }}>
-            Perche gli installatori<br />perdono <span className="gold-shine">clienti</span>
+            Perché gli installatori<br />perdono <span className="gold-shine">clienti</span>
           </motion.h2>
         </div>
 
@@ -28,7 +28,7 @@ export function PerditaClienti() {
           style={{ maxWidth: 820, margin: '0 auto' }}
         >
           <p style={{ fontSize: '1.15rem', lineHeight: 1.7, color: 'var(--text)' }}>
-            Ogni richiesta lasciata senza risposta entro pochi minuti ha ottime probabilita di trasformarsi in un contratto perso.
+            Ogni richiesta lasciata senza risposta entro pochi minuti ha ottime probabilità di trasformarsi in un contratto perso.
           </p>
           <p style={{ fontSize: '1.15rem', lineHeight: 1.7, color: 'var(--gold)', fontWeight: 600, marginTop: '0.5rem' }}>
             SOLARBACK nasce per evitare che questo accada.

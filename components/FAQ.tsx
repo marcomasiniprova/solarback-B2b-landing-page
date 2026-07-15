@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 const QUESTIONS = [
   {
     q: 'Quanto costa SOLARBACK?',
-    a: "Non c'e un canone fisso e non ci sono costi mensili: paghi solo quando portiamo appuntamenti qualificati nel calendario dei tuoi commerciali. L'importo preciso lo definiamo insieme nella chiamata di valutazione, perche dipende dal volume di richieste e dalla tua zona. Il nostro guadagno e allineato al tuo: lavoriamo a risultato.",
+    a: "Non c'è un canone fisso e non ci sono costi mensili: paghi solo quando portiamo appuntamenti qualificati nel calendario dei tuoi commerciali. L'importo preciso lo definiamo insieme nella chiamata di valutazione, perché dipende dal volume di richieste e dalla tua zona. Il nostro guadagno è allineato al tuo: lavoriamo a risultato.",
   },
   {
     q: 'Quanto tempo serve per iniziare?',
@@ -11,27 +11,27 @@ const QUESTIONS = [
   },
   {
     q: "E se non funziona?",
-    a: "Definiamo insieme un obiettivo misurabile prima di partire. Se non lo raggiungiamo, continuiamo a lavorare senza costi aggiuntivi finche non lo centriamo. Tutto scritto nero su bianco prima di iniziare: il rischio e nostro, non tuo.",
+    a: "Definiamo insieme un obiettivo misurabile prima di partire. Se non lo raggiungiamo, continuiamo a lavorare senza costi aggiuntivi finché non lo centriamo. Tutto scritto nero su bianco prima di iniziare: il rischio è nostro, non tuo.",
   },
   {
     q: 'Devo cambiare il mio CRM?',
-    a: "No. Lavoriamo con il tuo sistema attuale: consegniamo gli appuntamenti gia pronti nell'agenda dei tuoi commerciali, nel formato che usi oggi. Se preferisci, possiamo inviarli anche via foglio o WhatsApp. Zero stravolgimenti per il tuo team.",
+    a: "No. Lavoriamo con il tuo sistema attuale: consegniamo gli appuntamenti già pronti nell'agenda dei tuoi commerciali, nel formato che usi oggi. Se preferisci, possiamo inviarli anche via foglio o WhatsApp. Zero stravolgimenti per il tuo team.",
   },
   {
     q: 'Devo assumere o cambiare commerciali?',
-    a: "No. SOLARBACK e il tuo reparto acquisizione esterno: noi gestiamo generazione, qualificazione e fissazione appuntamenti. Tu usi i commerciali che hai gia. Piu richieste portiamo, piu sopralluoghi fai - senza assumere nessuno.",
+    a: "No. SOLARBACK è il tuo reparto acquisizione esterno: noi gestiamo generazione, qualificazione e fissazione appuntamenti. Tu usi i commerciali che hai già. Più richieste portiamo, più sopralluoghi fai - senza assumere nessuno.",
   },
   {
-    q: 'Fate anche la pubblicita su Meta (Facebook e Instagram)?',
-    a: "Si. La pubblicita su Meta e uno dei nostri motori principali: creiamo e gestiamo le campagne, gli annunci e il follow-up. Ma non ci fermiamo li: gestiamo anche email B2B, la riattivazione del tuo database e le landing page. Tutto converge in un unico obiettivo: riempire l'agenda dei tuoi commerciali.",
+    q: 'Fate anche la pubblicità su Meta (Facebook e Instagram)?',
+    a: "Sì. La pubblicità su Meta è uno dei nostri motori principali: creiamo e gestiamo le campagne, gli annunci e il follow-up. Ma non ci fermiamo lì: gestiamo anche email B2B, la riattivazione del tuo database e le landing page. Tutto converge in un unico obiettivo: riempire l'agenda dei tuoi commerciali.",
   },
   {
     q: 'Lavorate in tutta Italia?',
-    a: "Si, su tutto il territorio italiano - dal Nord al Sud. La qualificazione e la prenotazione avvengono da remoto, quindi copriamo sia le grandi citta che le zone periferiche. Se hai commerciali su una o piu regioni, strutturiamo il servizio sulla tua copertura.",
+    a: "Sì, su tutto il territorio italiano - dal Nord al Sud. La qualificazione e la prenotazione avvengono da remoto, quindi copriamo sia le grandi città che le zone periferiche. Se hai commerciali su una o più regioni, strutturiamo il servizio sulla tua copertura.",
   },
   {
     q: 'Quante aziende seguite oggi?',
-    a: "Lavoriamo con un numero ristretto di installatori per zona, in modo da garantire risultati reali a chi e gia dentro. Siamo selettivi per scelta: pochi partner, massima attenzione. Nella chiamata di valutazione ti diciamo subito se c'e ancora spazio per la tua zona.",
+    a: "Lavoriamo con un numero ristretto di installatori per zona, in modo da garantire risultati reali a chi è già dentro. Siamo selettivi per scelta: pochi partner, massima attenzione. Nella chiamata di valutazione ti diciamo subito se c'è ancora spazio per la tua zona.",
   },
 ]
 

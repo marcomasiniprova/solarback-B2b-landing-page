@@ -31,7 +31,7 @@ export function Garanzia() {
             Definiamo insieme un obiettivo misurabile prima di partire. Se non lo
             raggiungiamo,{' '}
             <strong>
-              continuiamo a lavorare senza costi aggiuntivi finche non lo centriamo
+              continuiamo a lavorare senza costi aggiuntivi finché non lo centriamo
             </strong>.
             Tutto scritto, nero su bianco, prima di iniziare.
           </p>

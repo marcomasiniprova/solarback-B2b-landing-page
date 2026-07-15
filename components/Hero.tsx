@@ -25,12 +25,12 @@ export function Hero() {
           <motion.h1 className="hero-h1" variants={item}>
             Installi fotovoltaico?<br />
             Ti portiamo nuove richieste qualificate<br />
-            e le trasformiamo in <span className="gold-shine">sopralluoghi gia fissati</span><br />
+            e le trasformiamo in <span className="gold-shine">sopralluoghi già fissati</span><br />
             nel calendario dei tuoi commerciali.
           </motion.h1>
 
           <motion.p className="hero-sub" variants={item}>
-            Piu persone interessate al fotovoltaico davanti ai tuoi commerciali.
+            Più persone interessate al fotovoltaico davanti ai tuoi commerciali.
             Tu pensi agli impianti. Noi riempiamo l'agenda.
           </motion.p>
 
