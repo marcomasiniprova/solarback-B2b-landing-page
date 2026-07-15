@@ -9,8 +9,8 @@ const manrope = Manrope({
 })
 
 export const metadata: Metadata = {
-  title: 'SOLARBACK — Sopralluoghi Qualificati per Installatori Fotovoltaico | artecai.it',
-  description: 'SOLARBACK by artec AI è il reparto acquisizione clienti esterno per installatori di fotovoltaico. €99 a sopralluogo effettuato, €400 a contratto firmato. Operativi in 7 giorni. Nessun canone fisso.',
+  title: 'SOLARBACK — Appuntamenti Qualificati per Installatori di Fotovoltaico | artecai.it',
+  description: 'SOLARBACK by artec AI è il reparto acquisizione clienti esterno per installatori di fotovoltaico. appuntamenti già fissati nel calendario dei tuoi commerciali. Operativi in 7 giorni, lavoriamo a risultato senza canoni fissi.',
   keywords: [
     'solarback', 'SOLARBACK', 'solarback.it',
     'artec ai', 'artecai', 'artecai.it', 'artec agenzia',
@@ -19,8 +19,8 @@ export const metadata: Metadata = {
     'acquisizione clienti pannelli solari',
     'gestione richieste fotovoltaico',
     'appuntamenti qualificati installatori',
-    'AI lead generation fotovoltaico',
-    'sistema AI qualificazione lead solare',
+    'generazione contatti fotovoltaico',
+    'qualificazione lead solare',
     'Valerio Alieri solarback',
     'Valerio Alieri artec ai',
   ],
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://artecai.it' },
   openGraph: {
     title: 'SOLARBACK — Sopralluoghi Qualificati per Installatori Fotovoltaico',
-    description: 'Il sistema AI che riempie l’agenda dei tuoi commerciali di sopralluoghi qualificati. Operativi in 7 giorni: paghi solo a risultato.',
+    description: 'Il metodo che riempie l’agenda dei tuoi commerciali di appuntamenti qualificati. Operativi in 7 giorni: paghi solo a risultato.',
     type: 'website',
     locale: 'it_IT',
     url: 'https://artecai.it',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'SOLARBACK by artec AI — Sopralluoghi Qualificati Fotovoltaico',
-    description: 'Sistema AI che riempie l’agenda dei tuoi commerciali. €99 a sopralluogo, €400 a contratto. Nessun canone fisso.',
+    description: 'Portiamo appuntamenti qualificati nell’agenda dei tuoi commerciali. Lavoriamo a risultato, senza canoni fissi.',
     images: ['/solarback-logo.png'],
   },
   robots: {
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
   },
   category: 'business',
-  classification: 'Lead Generation, Fotovoltaico, B2B, AI Marketing',
+  classification: 'Lead Generation, Fotovoltaico, B2B, Marketing',
   other: {
     'article:author': 'Valerio Alieri — artec AI',
     'og:locale:alternate': 'it_IT',
@@ -71,7 +71,7 @@ const jsonLd = {
       email: 'team@artecai.it',
       founder: { '@type': 'Person', name: 'Valerio Alieri', jobTitle: 'Founder & CEO', url: 'https://artecai.it' },
       areaServed: { '@type': 'Country', name: 'Italy' },
-      knowsAbout: ['fotovoltaico', 'energia rinnovabile', 'lead generation B2B', 'acquisizione clienti', 'intelligenza artificiale', 'AI marketing'],
+      knowsAbout: ['fotovoltaico', 'energia rinnovabile', 'lead generation B2B', 'acquisizione clienti', 'marketing B2B'],
       sameAs: ['https://artecai.it'],
     },
     {
@@ -99,19 +99,12 @@ const jsonLd = {
       '@type': 'ProfessionalService',
       '@id': 'https://artecai.it/#service',
       name: 'SOLARBACK — Acquisizione Sopralluoghi Qualificati per Fotovoltaico',
-      description: 'Sistema AI verticale di acquisizione e qualificazione contatti per aziende installatrici di fotovoltaico in Italia. Prova gratuita 14 giorni, poi decidi tu.',
+      description: 'Acquisizione e qualificazione contatti per aziende installatrici di fotovoltaico in Italia. Lavoriamo a risultato, senza canoni fissi.',
       url: 'https://artecai.it',
       provider: { '@id': 'https://artecai.it/#organization' },
-      serviceType: 'Lead Generation e Appointment Setting per Fotovoltaico con AI',
+      serviceType: 'Lead Generation e Appointment Setting per Fotovoltaico',
       areaServed: { '@type': 'Country', name: 'Italy' },
-      offers: {
-        '@type': 'Offer',
-        name: 'Performance SOLARBACK — €99 a sopralluogo + €400 a contratto',
-        description: 'Nessun canone fisso. Paghi €99 per ogni sopralluogo effettuato e €400 di bonus per ogni contratto residenziale firmato. Il rischio è nostro.',
-        priceCurrency: 'EUR',
-        price: '0',
-        availability: 'https://schema.org/LimitedAvailability',
-      },
+
     },
     {
       '@type': 'FAQPage',
@@ -121,7 +114,7 @@ const jsonLd = {
           name: "Cos'è SOLARBACK e cosa fa esattamente?",
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "SOLARBACK è il primo sistema di acquisizione verticale costruito esclusivamente per aziende installatrici di fotovoltaico in Italia. Non generiamo richieste: trasformiamo quelle che già ricevi in sopralluoghi qualificati nell'agenda dei tuoi commerciali. Contattiamo ogni lead entro pochi minuti via WhatsApp, verifichiamo interesse reale e disponibilità, poi fissiamo l'appuntamento direttamente.",
+            text: "SOLARBACK è il primo sistema di acquisizione verticale costruito esclusivamente per aziende installatrici di fotovoltaico in Italia. Non ci limitiamo a passarti contatti: portiamo appuntamenti già fissati con chi vuole il fotovoltaico. Contattiamo ogni lead entro pochi minuti via WhatsApp, verifichiamo interesse reale e disponibilità, poi fissiamo l'appuntamento direttamente.",
           },
         },
         {
@@ -129,7 +122,7 @@ const jsonLd = {
           name: "SOLARBACK è l'agenzia giusta per la mia azienda?",
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "SOLARBACK è adatto alle aziende che installano fotovoltaico, ricevono già richieste ogni settimana ma faticano a trasformarle in sopralluoghi, e hanno commerciali pronti a uscire. Se invece cerchi un'agenzia che gestisca anche la tua pubblicità o non hai ancora commerciali attivi, siamo onesti: non siamo il servizio giusto per te.",
+            text: "SOLARBACK è adatto alle aziende che installano fotovoltaico, ricevono già richieste ogni settimana ma faticano a fissarle come appuntamenti, e hanno commerciali pronti a uscire. Se invece cerchi un'agenzia che gestisca anche la tua pubblicità o non hai ancora commerciali attivi, siamo onesti: non siamo il servizio giusto per te.",
           },
         },
         {
@@ -137,7 +130,7 @@ const jsonLd = {
           name: 'Quanto costa il servizio SOLARBACK?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'SOLARBACK lavora esclusivamente a performance. Paghi solo a risultato: €99 per ogni sopralluogo effettuato e un bonus di €400 per ogni contratto residenziale firmato. Nessun canone fisso, nessun costo mensile. Il rischio è nostro: se non portiamo risultati, continuiamo a lavorare gratis finché non li raggiungiamo.',
+            text: 'SOLARBACK lavora esclusivamente a risultato. Paghi solo quando portiamo appuntamenti qualificati nel tuo calendario: nessun canone fisso, nessun costo mensile. L'investimento preciso lo definiamo insieme nella chiamata di valutazione, perché dipende dal volume di richieste e dalla tua zona operativa. Il rischio è nostro.',
           },
         },
         {
