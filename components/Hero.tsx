@@ -26,13 +26,13 @@ export function Hero() {
 
           <motion.h1 className="hero-h1" variants={item}>
             Installi fotovoltaico?<br />
-            Generiamo richieste qualificate e le<br />
-            trasformiamo in <span className="gold-shine">appuntamenti per i tuoi commerciali</span>.
+            Generiamo nuove richieste qualificate e<br />
+            riempiamo l'agenda dei tuoi commerciali con <span className="gold-shine">appuntamenti</span>.
           </motion.h1>
 
           <motion.p className="hero-sub" variants={item}>
-            <strong>Seguiamo ogni richiesta</strong> fino all'appuntamento, così i tuoi commerciali
-            parlano solo con <strong>persone realmente interessate</strong>.
+            Più persone interessate al fotovoltaico davanti ai tuoi commerciali.
+            Tu pensi agli impianti. Noi riempiamo l'agenda.
           </motion.p>
 
           <motion.div className="hero-cta-row" variants={item}>
@@ -50,8 +50,8 @@ export function Hero() {
           <motion.div className="hero-stats" variants={item}>
             {[
               { n: '7 giorni', l: 'Sei operativo' },
-              { n: '100%', l: 'A risultato' },
-              { n: 'Italia', l: 'Copertura nazionale' },
+              { n: 'Zero', l: 'Canone fisso' },
+              { n: 'Paghi', l: 'Solo a risultato' },
             ].map(({ n, l }) => (
               <div key={l} style={{ textAlign: 'center' }}>
                 <div className="hero-stat-n">{n}</div>
