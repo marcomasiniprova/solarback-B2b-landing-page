@@ -23,15 +23,14 @@ export function Problema() {
           </motion.div>
           <motion.h2 className="sb-h2" initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeUp} transition={t(0.08)}>
             Il problema non è generare richieste.<br />
-            È <span className="gold-shine">trasformarle</span> in sopralluoghi.
+            È <span className="gold-shine">fissarle</span> come appuntamenti.
           </motion.h2>
         </div>
 
         <motion.div className="insight-card" initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeUp} transition={t(0.15)}>
           <p>
-            Dopo aver contattato oltre{' '}
-            <span className="accent">100 aziende del settore</span>{' '}
-            abbiamo visto sempre gli stessi problemi:
+            Nel lavoro con gli installatori di fotovoltaico
+            vediamo sempre <span className="accent">gli stessi problemi</span>:
           </p>
           <ul className="problem-list">
             {problems.map((p, i) => (
@@ -42,7 +41,7 @@ export function Problema() {
             SOLARBACK nasce per <span className="gold-shine">risolvere esattamente questo</span>.
           </p>
           <div className="insight-footer">
-            Da una ricerca interna su 100+ aziende fotovoltaiche italiane
+            Dal lavoro con installatori fotovoltaici in Italia
           </div>
         </motion.div>
       </div>
