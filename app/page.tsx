@@ -1,10 +1,11 @@
 import { Nav } from '@/components/Nav'
 import { Hero } from '@/components/Hero'
 import { Problema } from '@/components/Problema'
+import { Fit } from '@/components/Fit'
 import { Metodo } from '@/components/Metodo'
 import { Differenza } from '@/components/Differenza'
 import { Perche } from '@/components/Perche'
-import { Fit } from '@/components/Fit'
+import { Pipeline } from '@/components/Pipeline'
 import { Garanzia } from '@/components/Garanzia'
 import { Founder } from '@/components/Founder'
 import { FAQ } from '@/components/FAQ'
@@ -21,10 +22,11 @@ export default function Home() {
       <main>
         <Hero />
         <Problema />
+        <Fit />
         <Metodo />
         <Differenza />
         <Perche />
-        <Fit />
+        <Pipeline />
         <Garanzia />
         <Founder />
         <FAQ />
