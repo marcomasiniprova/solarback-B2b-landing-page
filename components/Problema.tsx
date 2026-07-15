@@ -3,11 +3,10 @@
 import { motion } from 'framer-motion'
 
 const problems = [
-  'Richieste richiamate dopo ore o giorni',
-  'Contatti che spariscono senza ricevere una risposta',
-  'Commerciali che seguono i contatti solo quando hanno tempo',
-  "Appuntamenti che saltano all'ultimo momento",
-  'Nessun processo chiaro per il follow-up',
+  'Richiamano i contatti troppo tardi',
+  'Non fanno follow-up ai lead',
+  'Non hanno un processo commerciale',
+  'I commerciali seguono i lead quando hanno tempo',
 ]
 
 const fadeUp = { hidden: { opacity: 0, y: 28 }, show: { opacity: 1, y: 0 } }
@@ -22,15 +21,17 @@ export function Problema() {
             <div className="eyebrow"><span className="dot" />Il problema</div>
           </motion.div>
           <motion.h2 className="sb-h2" initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeUp} transition={t(0.08)}>
-            Il problema non è generare richieste.<br />
-            È <span className="gold-shine">fissarle</span> come appuntamenti.
+            Il problema non è solo generare richieste.<br />
+            È <span className="gold-shine">trasformarle in sopralluoghi e contratti</span>.
           </motion.h2>
         </div>
 
         <motion.div className="insight-card" initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeUp} transition={t(0.15)}>
           <p>
-            Nel lavoro con gli installatori di fotovoltaico
-            vediamo sempre <span className="accent">gli stessi problemi</span>:
+            Ogni richiesta lasciata senza risposta entro pochi minuti è
+            un'opportunità che rischia di finire a un concorrente. Molte aziende
+            investono migliaia di euro in marketing, ma poi perdono clienti perché
+            non hanno un processo che li segua fino in fondo.
           </p>
           <ul className="problem-list">
             {problems.map((p, i) => (
@@ -38,7 +39,8 @@ export function Problema() {
             ))}
           </ul>
           <p className="resolve">
-            SOLARBACK nasce per <span className="gold-shine">risolvere esattamente questo</span>.
+            SOLARBACK nasce per <span className="gold-shine">eliminare queste perdite</span> e
+            trasformare più richieste in sopralluoghi.
           </p>
           <div className="insight-footer">
             Dal lavoro con installatori fotovoltaici in Italia
