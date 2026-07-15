@@ -1,13 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-
-function readGeoCookie(): string | null {
-  if (typeof document === 'undefined') return null
-  const m = document.cookie.match(/(?:^|;\s*)geo_region=([^;]*)/)
-  return m ? decodeURIComponent(m[1]) : null
-}
 
 const container = {
   hidden: {},
@@ -19,10 +12,6 @@ const item = {
 }
 
 export function Hero() {
-  const [region, setRegion] = useState<string | null>(null)
-
-  useEffect(() => { setRegion(readGeoCookie()) }, [])
-
   return (
     <section id="hero">
       <div className="hero-content">
@@ -31,28 +20,18 @@ export function Hero() {
           <motion.div variants={item}>
             <div className="hero-tag">
               <span className="dot" />
-              Solo 5 Partner Questo Mese
+              Partner Selezionati · Pochi per Zona
             </div>
           </motion.div>
 
           <motion.h1 className="hero-h1" variants={item}>
-            {region ? (
-              <>
-                Generiamo Sopralluoghi<br />
-                Qualificati per Installatori<br />
-                di Fotovoltaico in <span className="gold-shine">{region}</span>
-              </>
-            ) : (
-              <>
-                Ogni Settimana Ricevi Richieste<br />
-                Che Non Diventano<br />
-                Mai <span className="gold-shine">Sopralluoghi</span>?
-              </>
-            )}
+            Installi fotovoltaico?<br />
+            Ti portiamo <span className="gold-shine">appuntamenti già fissati</span><br />
+            con chi vuole l'impianto.
           </motion.h1>
 
           <motion.p className="hero-sub" variants={item}>
-            <strong>Seguiamo ogni richiesta</strong> fino al sopralluogo, così i tuoi commerciali
+            <strong>Seguiamo ogni richiesta</strong> fino all'appuntamento, così i tuoi commerciali
             parlano solo con <strong>persone realmente interessate</strong>.
           </motion.p>
 
@@ -70,9 +49,9 @@ export function Hero() {
 
           <motion.div className="hero-stats" variants={item}>
             {[
-              { n: '15-30', l: 'Partner gestiti' },
+              { n: '15-30', l: 'Partner per zona' },
               { n: '7 giorni', l: 'Sei operativo' },
-              { n: '€99', l: 'A sopralluogo' },
+              { n: '100%', l: 'A risultato' },
             ].map(({ n, l }) => (
               <div key={l} style={{ textAlign: 'center' }}>
                 <div className="hero-stat-n">{n}</div>
