@@ -13,6 +13,19 @@ const LINKS = [
 export function Nav() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen]         = useState(false)
+  const [theme, setTheme]       = useState<'dark' | 'light'>('dark')
+
+  useEffect(() => {
+    const t = document.documentElement.getAttribute('data-theme')
+    if (t === 'light' || t === 'dark') setTheme(t)
+  }, [])
+
+  const toggleTheme = () => {
+    const next = theme === 'dark' ? 'light' : 'dark'
+    setTheme(next)
+    document.documentElement.setAttribute('data-theme', next)
+    try { localStorage.setItem('sb-theme', next) } catch (e) {}
+  }
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 24)
@@ -36,6 +49,13 @@ export function Nav() {
           </ul>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+            <button type="button" className="theme-toggle" onClick={toggleTheme} aria-label="Cambia tema">
+              {theme === 'dark' ? (
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z" /></svg>
+              ) : (
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="4.5" /><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4" /></svg>
+              )}
+            </button>
             <a href="#candidatura" className="sb-btn" style={{ display: 'none' }} id="nav-cta-desktop">
               Prenota una chiamata
               <span className="arrow">
@@ -87,6 +107,14 @@ export function Nav() {
       <style>{`
         .nav-cta-show { display: inline-flex; }
         @media (max-width: 900px) { .nav-cta-show { display: none; } }
+        .theme-toggle {
+          display: inline-flex; align-items: center; justify-content: center;
+          width: 40px; height: 40px; border-radius: 999px;
+          background: transparent; color: var(--text);
+          border: 1px solid var(--line-2); cursor: pointer;
+          transition: border-color .2s, color .2s, background .2s;
+        }
+        .theme-toggle:hover { border-color: var(--gold); color: var(--gold); }
       `}</style>
     </>
   )

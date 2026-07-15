@@ -743,3 +743,17 @@ footer { background: var(--bg-2); border-top: 1px solid var(--line); padding: 5r
   .footer-bar { flex-direction: column; text-align: center; }
   .footer-bar nav { gap: 1rem; flex-wrap: wrap; justify-content: center; }
 }
+
+/* ===== Light theme (toggle = sun) ===== */
+[data-theme="light"] {
+  --bg:          #FFFFFF;
+  --bg-2:        #F5F2EA;
+  --bg-3:        #ECE8DE;
+  --text:        #16140F;
+  --text-dim:    rgba(22,20,15,0.58);
+  --text-soft:   rgba(22,20,15,0.80);
+  --line:        rgba(0,0,0,0.10);
+  --line-2:      rgba(0,0,0,0.16);
+  --card-bg:     rgba(0,0,0,0.035);
+  --glow:        0.12;
+}

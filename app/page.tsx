@@ -1,3 +1,5 @@
+'use client'
+
 import { Nav } from '@/components/Nav'
 import { Hero } from '@/components/Hero'
 import { PerditaClienti } from '@/components/PerditaClienti'
@@ -12,9 +14,6 @@ import { Founder } from '@/components/Founder'
 import { FAQ } from '@/components/FAQ'
 import { CandidaturaForm } from '@/components/CandidaturaForm'
 import { Footer } from '@/components/Footer'
-
-// ISR: pagina statica rigenerata ogni ~500ms su Netlify Edge
-export const revalidate = 3600
 
 export default function Home() {
   return (
