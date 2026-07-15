@@ -41,7 +41,7 @@ export function Founder() {
               <strong>migliaia di euro spesi in pubblicità, e poi richieste lasciate in sospeso per ore o giorni</strong>.
               Le aziende che installano pannelli non hanno bisogno di più richieste, ne ricevono già.
               Hanno bisogno di un processo chiaro per{' '}
-              <span style={{ color: 'var(--gold)', fontWeight: 600 }}>trasformare quelle richieste in sopralluoghi reali</span>{' '}
+              <span style={{ color: 'var(--gold)', fontWeight: 600 }}>riempire l'agenda dei tuoi commerciali di appuntamenti già fissati con chi vuole davvero il fotovoltaico</span>{' '}
               nell&apos;agenda dei commerciali. È esattamente quello che facciamo.
             </p>
           </div>
