@@ -12,7 +12,7 @@ const QUESTIONS = [
     a: "SOLARBACK è adatto alle aziende che installano fotovoltaico, ricevono già richieste ogni settimana ma faticano a fissarle come appuntamenti, e hanno commerciali pronti a uscire. Se invece cerchi un'agenzia che gestisca anche la tua pubblicità o non hai ancora commerciali attivi, siamo onesti: non siamo il servizio giusto per te.",
   },
   {
-    q: "Quanto costa SOLARBACK e come funziona il pricing?",
+    q: "Quanto costa SOLARBACK?",
     a: "SOLARBACK lavora 100% a risultato: paghi solo quando portiamo appuntamenti qualificati nel tuo calendario. Zero canone fisso, zero costi mensili. L'investimento preciso lo definiamo insieme nella chiamata di valutazione, perché dipende dal volume di richieste e dalla tua zona. Diventiamo il tuo reparto acquisizione esterno: il nostro interesse è allineato al tuo.",
   },
   {
