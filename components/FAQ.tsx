@@ -13,7 +13,7 @@ const QUESTIONS = [
   },
   {
     q: "Quanto costa SOLARBACK?",
-    a: "SOLARBACK lavora 100% a risultato: paghi solo quando portiamo appuntamenti qualificati nel tuo calendario. Zero canone fisso, zero costi mensili. L'investimento preciso lo definiamo insieme nella chiamata di valutazione, perché dipende dal volume di richieste e dalla tua zona. Diventiamo il tuo reparto acquisizione esterno: il nostro interesse è allineato al tuo.",
+    a: "SOLARBACK lavora a risultato: paghi solo quando portiamo appuntamenti qualificati nel tuo calendario. Zero canone fisso, zero costi mensili. L'investimento preciso lo definiamo insieme nella chiamata di valutazione, perché dipende dal volume di richieste e dalla tua zona. Diventiamo il tuo reparto acquisizione esterno: il nostro interesse è allineato al tuo.",
   },
   {
     q: "Quali risultati posso aspettarmi e in quanto tempo?",
