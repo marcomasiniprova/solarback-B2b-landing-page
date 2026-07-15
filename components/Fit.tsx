@@ -9,7 +9,7 @@ const noList  = [
   "Cerchi un'agenzia che ti gestisca anche la pubblicità",
 ]
 const yesList = [
-  'Ricevi già richieste ma poche diventano sopralluoghi',
+  'Ricevi già richieste ma poche diventano appuntamenti',
   'Vuoi un processo più ordinato per seguire i contatti',
   'Hai commerciali pronti ad andare in sopralluogo',
   'Vuoi un partner che lavori a risultato, non a canone fisso',
