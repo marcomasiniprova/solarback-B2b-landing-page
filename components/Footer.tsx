@@ -21,7 +21,7 @@ export function Footer() {
             <Image src="/solarback-logo.png" alt="SOLARBACK" width={220} height={65} />
           </a>
           <p className="footer-tagline">
-            Il primo sistema di acquisizione verticale costruito esclusivamente
+            Il sistema di acquisizione clienti costruito
             per aziende installatrici di fotovoltaico in Italia.
           </p>
           <div className="social-row">
