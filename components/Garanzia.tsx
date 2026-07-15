@@ -1,5 +1,3 @@
-'use client'
-
 import { motion } from 'framer-motion'
 
 export function Garanzia() {
@@ -25,21 +23,21 @@ export function Garanzia() {
           </div>
 
           <h2>
-            O Portiamo Risultati.<br />
-            O <span className="gold-shine">Lavoriamo Gratis</span>.
+            Un obiettivo misurabile.<br />
+            O <span className="gold-shine">lavoriamo gratis</span>.
           </h2>
 
           <p>
-            Definiamo insieme l&apos;obiettivo prima di partire. Se non lo raggiungiamo
-            nei tempi e nei numeri concordati,{' '}
+            Definiamo insieme un obiettivo misurabile prima di partire. Se non lo
+            raggiungiamo,{' '}
             <strong>
-              continuiamo a lavorare senza costi aggiuntivi finché non lo raggiungiamo
+              continuiamo a lavorare senza costi aggiuntivi finche non lo centriamo
             </strong>.
-            Tutto scritto, nero su bianco, prima di firmare.
+            Tutto scritto, nero su bianco, prima di iniziare.
           </p>
 
           <a href="#candidatura" className="sb-btn lg">
-            Candidati Ora
+            Prenota una chiamata
             <span className="arrow">
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
                 <path d="M3 6h6M7 3l3 3L7 9" stroke="#1a0e00" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>

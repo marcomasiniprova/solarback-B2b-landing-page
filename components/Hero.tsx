@@ -1,5 +1,3 @@
-'use client'
-
 import { motion } from 'framer-motion'
 
 const container = {
@@ -26,25 +24,25 @@ export function Hero() {
 
           <motion.h1 className="hero-h1" variants={item}>
             Installi fotovoltaico?<br />
-            Generiamo nuove richieste qualificate e<br />
-            riempiamo l'agenda dei tuoi commerciali con <span className="gold-shine">appuntamenti</span>.
+            Ti portiamo nuove richieste qualificate<br />
+            e le trasformiamo in <span className="gold-shine">sopralluoghi gia fissati</span><br />
+            nel calendario dei tuoi commerciali.
           </motion.h1>
 
           <motion.p className="hero-sub" variants={item}>
-            Più persone interessate al fotovoltaico davanti ai tuoi commerciali.
+            Piu persone interessate al fotovoltaico davanti ai tuoi commerciali.
             Tu pensi agli impianti. Noi riempiamo l'agenda.
           </motion.p>
 
           <motion.div className="hero-cta-row" variants={item}>
             <a href="#candidatura" className="sb-btn xl">
-              Candidati Ora
+              Prenota una chiamata
               <span className="arrow">
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
                   <path d="M3 6h6M7 3l3 3L7 9" stroke="#1a0e00" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </span>
             </a>
-            <a href="#metodo" className="sb-btn ghost lg">Scopri il Metodo</a>
           </motion.div>
 
           <motion.div className="hero-stats" variants={item}>

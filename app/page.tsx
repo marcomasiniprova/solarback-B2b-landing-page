@@ -1,5 +1,6 @@
 import { Nav } from '@/components/Nav'
 import { Hero } from '@/components/Hero'
+import { PerditaClienti } from '@/components/PerditaClienti'
 import { Problema } from '@/components/Problema'
 import { Fit } from '@/components/Fit'
 import { Metodo } from '@/components/Metodo'
@@ -12,7 +13,7 @@ import { FAQ } from '@/components/FAQ'
 import { CandidaturaForm } from '@/components/CandidaturaForm'
 import { Footer } from '@/components/Footer'
 
-// ISR: pagina statica rigenerata ogni ora → caricamento < 500ms su Netlify Edge
+// ISR: pagina statica rigenerata ogni ~500ms su Netlify Edge
 export const revalidate = 3600
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
+        <PerditaClienti />
         <Problema />
         <Fit />
         <Metodo />

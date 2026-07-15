@@ -37,7 +37,7 @@ export function Nav() {
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
             <a href="#candidatura" className="sb-btn" style={{ display: 'none' }} id="nav-cta-desktop">
-              Candidati Ora
+              Prenota una chiamata
               <span className="arrow">
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
                   <path d="M3 6h6M7 3l3 3L7 9" stroke="#1a0e00" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
@@ -45,7 +45,7 @@ export function Nav() {
               </span>
             </a>
             <a href="#candidatura" className="sb-btn nav-cta-show">
-              Candidati Ora
+              Prenota una chiamata
               <span className="arrow">
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
                   <path d="M3 6h6M7 3l3 3L7 9" stroke="#1a0e00" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
@@ -73,7 +73,7 @@ export function Nav() {
           <div style={{ marginTop: '2rem' }}>
             <a href="#candidatura" className="sb-btn xl" onClick={() => setOpen(false)}
                style={{ display: 'inline-flex', width: '100%', justifyContent: 'center' }}>
-              Candidati Ora
+              Prenota una chiamata
               <span className="arrow">
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
                   <path d="M3 6h6M7 3l3 3L7 9" stroke="#1a0e00" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>

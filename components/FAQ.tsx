@@ -1,31 +1,37 @@
-'use client'
-
 import { motion } from 'framer-motion'
 
 const QUESTIONS = [
   {
-    q: "Cos'è SOLARBACK e cosa fa esattamente?",
-    a: "SOLARBACK è il primo metodo di acquisizione costruito esclusivamente per aziende installatrici di fotovoltaico in Italia. Non ci limitiamo a passarti contatti: portiamo appuntamenti già fissati con chi vuole il fotovoltaico. Contattiamo ogni lead entro pochi minuti via WhatsApp, verifichiamo interesse reale e disponibilità, poi fissiamo l'appuntamento direttamente.",
+    q: 'Quanto costa SOLARBACK?',
+    a: "Non c'e un canone fisso e non ci sono costi mensili: paghi solo quando portiamo appuntamenti qualificati nel calendario dei tuoi commerciali. L'importo preciso lo definiamo insieme nella chiamata di valutazione, perche dipende dal volume di richieste e dalla tua zona. Il nostro guadagno e allineato al tuo: lavoriamo a risultato.",
   },
   {
-    q: "SOLARBACK è l'agenzia giusta per la mia azienda?",
-    a: "SOLARBACK è adatto alle aziende che installano fotovoltaico, ricevono già richieste ogni settimana ma faticano a fissarle come appuntamenti, e hanno commerciali pronti a uscire. Se invece cerchi un'agenzia che gestisca anche la tua pubblicità o non hai ancora commerciali attivi, siamo onesti: non siamo il servizio giusto per te.",
+    q: 'Quanto tempo serve per iniziare?',
+    a: "Ti attiviamo in 7 giorni. All'ottavo giorno partono le prime richieste qualificate e i primi appuntamenti cominciano a entrare nell'agenda. Niente mesi di setup come con le agenzie tradizionali.",
   },
   {
-    q: "Quanto costa SOLARBACK?",
-    a: "SOLARBACK lavora a risultato: paghi solo quando portiamo appuntamenti qualificati nel tuo calendario. Zero canone fisso, zero costi mensili. L'investimento preciso lo definiamo insieme nella chiamata di valutazione, perché dipende dal volume di richieste e dalla tua zona. Diventiamo il tuo reparto acquisizione esterno: il nostro interesse è allineato al tuo.",
+    q: "E se non funziona?",
+    a: "Definiamo insieme un obiettivo misurabile prima di partire. Se non lo raggiungiamo, continuiamo a lavorare senza costi aggiuntivi finche non lo centriamo. Tutto scritto nero su bianco prima di iniziare: il rischio e nostro, non tuo.",
   },
   {
-    q: "Quali risultati posso aspettarmi e in quanto tempo?",
-    a: "Mentre le altre agenzie impiegano mesi a diventare operative, noi ti attiviamo in 7 giorni. All’ottavo giorno iniziano già ad arrivare i primi appuntamenti qualificati. I numeri precisi li definiamo insieme prima di partire, nero su bianco.",
+    q: 'Devo cambiare il mio CRM?',
+    a: "No. Lavoriamo con il tuo sistema attuale: consegniamo gli appuntamenti gia pronti nell'agenda dei tuoi commerciali, nel formato che usi oggi. Se preferisci, possiamo inviarli anche via foglio o WhatsApp. Zero stravolgimenti per il tuo team.",
   },
   {
-    q: "Come funziona il processo di qualificazione?",
-    a: "Ogni richiesta che arriva dal tuo sito o dalle tue pubblicità entra nel nostro processo. Entro pochi minuti scriviamo al contatto su WhatsApp. Poi lo chiamiamo, verifichiamo: tipo di abitazione, consumo attuale, interesse concreto e disponibilità di budget. Solo chi supera questi criteri viene inserito nell'agenda del tuo commerciale.",
+    q: 'Devo assumere o cambiare commerciali?',
+    a: "No. SOLARBACK e il tuo reparto acquisizione esterno: noi gestiamo generazione, qualificazione e fissazione appuntamenti. Tu usi i commerciali che hai gia. Piu richieste portiamo, piu sopralluoghi fai - senza assumere nessuno.",
   },
   {
-    q: "SOLARBACK opera in tutta Italia?",
-    a: "Sì, SOLARBACK lavora con installatori di fotovoltaico su tutto il territorio italiano — da Lombardia, Veneto e Piemonte al Sud. La qualificazione avviene da remoto, quindi serviamo efficacemente sia le grandi città che le zone periferiche. Se hai commerciali che coprono una o più regioni, possiamo strutturare il servizio sulla tua copertura geografica.",
+    q: 'Fate anche la pubblicita su Meta (Facebook e Instagram)?',
+    a: "Si. La pubblicita su Meta e uno dei nostri motori principali: creiamo e gestiamo le campagne, gli annunci e il follow-up. Ma non ci fermiamo li: gestiamo anche email B2B, la riattivazione del tuo database e le landing page. Tutto converge in un unico obiettivo: riempire l'agenda dei tuoi commerciali.",
+  },
+  {
+    q: 'Lavorate in tutta Italia?',
+    a: "Si, su tutto il territorio italiano - dal Nord al Sud. La qualificazione e la prenotazione avvengono da remoto, quindi copriamo sia le grandi citta che le zone periferiche. Se hai commerciali su una o piu regioni, strutturiamo il servizio sulla tua copertura.",
+  },
+  {
+    q: 'Quante aziende seguite oggi?',
+    a: "Lavoriamo con un numero ristretto di installatori per zona, in modo da garantire risultati reali a chi e gia dentro. Siamo selettivi per scelta: pochi partner, massima attenzione. Nella chiamata di valutazione ti diciamo subito se c'e ancora spazio per la tua zona.",
   },
 ]
 

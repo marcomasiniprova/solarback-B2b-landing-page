@@ -172,7 +172,7 @@ export function CandidaturaForm() {
                   whileHover={!sending ? { translateY: -1, filter: 'brightness(1.05)' } : {}}
                   transition={{ duration: 0.2 }}
                 >
-                  {sending ? 'Invio in corso...' : 'Invia La Tua Richiesta'}
+                  {sending ? 'Invio in corso...' : 'Prenota una chiamata'}
                   {!sending && (
                     <span className="arrow">
                       <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
