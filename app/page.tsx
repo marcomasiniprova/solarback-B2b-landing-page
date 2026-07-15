@@ -2,6 +2,7 @@ import { Nav } from '@/components/Nav'
 import { Hero } from '@/components/Hero'
 import { Problema } from '@/components/Problema'
 import { Metodo } from '@/components/Metodo'
+import { Differenza } from '@/components/Differenza'
 import { Perche } from '@/components/Perche'
 import { Fit } from '@/components/Fit'
 import { Garanzia } from '@/components/Garanzia'
@@ -21,6 +22,7 @@ export default function Home() {
         <Hero />
         <Problema />
         <Metodo />
+        <Differenza />
         <Perche />
         <Fit />
         <Garanzia />
