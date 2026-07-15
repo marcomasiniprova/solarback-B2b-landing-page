@@ -115,7 +115,7 @@ export function CandidaturaForm() {
                 </div>
 
                 <div className="form-row">
-                  <label>Quante richieste ricevi ogni mese? <span className="req">*</span></label>
+                  <label>Quanti sopralluoghi fate mediamente ogni mese? <span className="req">*</span></label>
                   <RadioGroup name="leads" value={leadsVal} onChange={v => setValue('leads', v, { shouldValidate: true })}
                     options={[{ value: '0-30', label: 'Meno di 30' }, { value: '30-100', label: 'Tra 30 e 100' }, { value: '100-300', label: 'Tra 100 e 300' }, { value: '300+', label: 'Più di 300' }]}
                     error={errors.leads?.message} />
