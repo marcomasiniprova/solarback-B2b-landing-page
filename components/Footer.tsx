@@ -39,7 +39,7 @@ export function Footer() {
         <div className="footer-col">
           <h4>Titolare</h4>
           <div className="footer-info">
-            <p>Marco Masini</p>
+            <p>Valerio Alieri</p>
             <p style={{ color: 'var(--text-dim)', fontSize: '0.85rem' }}>Founder &amp; CEO</p>
           </div>
         </div>
@@ -49,7 +49,7 @@ export function Footer() {
           <h4>Contatti</h4>
           <div className="footer-info">
             <p><a href="tel:+393273174931" className="gold-link">327 317 4931</a></p>
-            <p><a href="mailto:info@solarback.it">info@solarback.it</a></p>
+            <p><a href="mailto:team@artecai.it">team@artecai.it</a></p>
             <p><a href="https://wa.me/393273174931">WhatsApp diretto</a></p>
           </div>
         </div>

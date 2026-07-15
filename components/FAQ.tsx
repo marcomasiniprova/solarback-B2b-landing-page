@@ -12,12 +12,12 @@ const QUESTIONS = [
     a: "SOLARBACK è adatto alle aziende che installano fotovoltaico, ricevono già richieste ogni settimana ma faticano a trasformarle in sopralluoghi, e hanno commerciali pronti a uscire. Se invece cerchi un'agenzia che gestisca anche la tua pubblicità o non hai ancora commerciali attivi, siamo onesti: non siamo il servizio giusto per te.",
   },
   {
-    q: "Quanto costa il servizio SOLARBACK? C'è un periodo di prova?",
-    a: "Per un periodo limitato offriamo 14 giorni di prova completamente gratuita e risk free: zero costi, zero performance fee, zero impegni. Attiviamo il sistema sulla tua azienda, lavoriamo per 14 giorni e ti mostriamo i risultati concreti. Solo alla fine, se sei soddisfatto, decidiamo insieme come continuare la collaborazione. Nessuna sorpresa, nessun contratto in partenza.",
+    q: "Quanto costa SOLARBACK e come funziona il pricing?",
+    a: "SOLARBACK lavora 100% a performance: paghi €99 per ogni sopralluogo effettuato e €400 di bonus per ogni contratto residenziale firmato. Zero canone fisso, zero costi mensili. Diventiamo il tuo reparto acquisizione esterno: il nostro interesse è allineato al tuo, perché guadagniamo solo quando firmi tu.",
   },
   {
     q: "Quali risultati posso aspettarmi e in quanto tempo?",
-    a: "Nella maggior parte dei casi attiviamo il sistema entro 48 ore dalla firma. I primi sopralluoghi qualificati arrivano già nella prima settimana. I numeri esatti dipendono dal volume di richieste che ricevi e dalla tua zona operativa — definiamo insieme l'obiettivo preciso prima di partire, nero su bianco.",
+    a: "Mentre le altre agenzie impiegano mesi a diventare operative, noi ti attiviamo in 7 giorni. All’ottavo giorno iniziano già ad arrivare i primi sopralluoghi qualificati. I numeri precisi li definiamo insieme prima di partire, nero su bianco.",
   },
   {
     q: "Come funziona il processo di qualificazione?",

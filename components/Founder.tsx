@@ -26,7 +26,7 @@ export function Founder() {
           <div className="founder-photo">
             <Image
               src="/marco-masini.png"
-              alt="Marco Masini, fondatore SOLARBACK"
+              alt="Valerio Alieri, fondatore SOLARBACK"
               width={220}
               height={220}
             />
@@ -34,7 +34,7 @@ export function Founder() {
 
           <div>
             <div className="founder-tag">Founder &amp; CEO</div>
-            <div className="founder-name">Marco Masini</div>
+            <div className="founder-name">Valerio Alieri</div>
             <div className="founder-role">Fondatore SOLARBACK</div>
             <p className="founder-bio">
               SOLARBACK nasce da un&apos;osservazione semplice:{' '}

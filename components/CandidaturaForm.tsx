@@ -56,7 +56,7 @@ export function CandidaturaForm() {
       if (!res.ok) throw new Error()
       setSubmitted(true)
     } catch {
-      setServerError("Errore nell'invio. Riprova o scrivici a info@solarback.it")
+      setServerError("Errore nell'invio. Riprova o scrivici a team@artecai.it")
     } finally {
       setSending(false)
     }
@@ -67,7 +67,7 @@ export function CandidaturaForm() {
       <div className="sb-container">
         <div className="form-wrap">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <div className="eyebrow" style={{ marginBottom: '1.5rem' }}><span className="dot" />Candidatura Gratuita</div>
+            <div className="eyebrow" style={{ marginBottom: '1.5rem' }}><span className="dot" />Candidatura Partner</div>
           </motion.div>
           <motion.h2 className="form-h1" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.08 }}>
             Verifica Se Possiamo<br /><span className="gold-shine">Aiutarti</span>

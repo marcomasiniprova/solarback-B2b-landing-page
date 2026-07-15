@@ -12,7 +12,7 @@ const steps = [
   {
     num: '02',
     title: 'Contattiamo il cliente',
-    desc: 'Scriviamo su WhatsApp entro pochi minuti, prima che il cliente si distragga o contatti qualcun altro. Il timing è gestito automaticamente dal nostro sistema AI.',
+    desc: 'Rispondiamo con la nostra AI entro 30 secondi, prima che il cliente si distragga o contatti un concorrente. È il nostro sistema di Speed to Lead: il contatto immediato è automatico, non lasciato al caso.',
     icon: <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M5 20l1.5-4A8 8 0 1 1 10.5 21H5z"/><path d="M10 14h6M10 11h4"/></svg>,
   },
   {

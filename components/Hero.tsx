@@ -31,7 +31,7 @@ export function Hero() {
           <motion.div variants={item}>
             <div className="hero-tag">
               <span className="dot" />
-              Solo 5 Aziende Questo Mese
+              Solo 5 Partner Questo Mese
             </div>
           </motion.div>
 
@@ -70,9 +70,9 @@ export function Hero() {
 
           <motion.div className="hero-stats" variants={item}>
             {[
-              { n: '100+', l: 'Aziende analizzate' },
-              { n: '48h',  l: 'Attivazione media' },
-              { n: '0 €',  l: 'Fisso mensile' },
+              { n: '15-30', l: 'Partner gestiti' },
+              { n: '7 giorni', l: 'Sei operativo' },
+              { n: '€99', l: 'A sopralluogo' },
             ].map(({ n, l }) => (
               <div key={l} style={{ textAlign: 'center' }}>
                 <div className="hero-stat-n">{n}</div>

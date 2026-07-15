@@ -10,7 +10,7 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   title: 'SOLARBACK — Sopralluoghi Qualificati per Installatori Fotovoltaico | artecai.it',
-  description: 'SOLARBACK by artec AI trasforma le richieste in sopralluoghi qualificati per installatori di fotovoltaico in Italia. Prova gratuita 14 giorni. Zero canone fisso. Garanzia scritta.',
+  description: 'SOLARBACK by artec AI è il reparto acquisizione clienti esterno per installatori di fotovoltaico. €99 a sopralluogo effettuato, €400 a contratto firmato. Operativi in 7 giorni. Nessun canone fisso.',
   keywords: [
     'solarback', 'SOLARBACK', 'solarback.it',
     'artec ai', 'artecai', 'artecai.it', 'artec agenzia',
@@ -21,17 +21,17 @@ export const metadata: Metadata = {
     'appuntamenti qualificati installatori',
     'AI lead generation fotovoltaico',
     'sistema AI qualificazione lead solare',
-    'Marco Masini solarback',
-    'Marco Masini artec ai',
+    'Valerio Alieri solarback',
+    'Valerio Alieri artec ai',
   ],
-  authors: [{ name: 'Marco Masini — artec AI', url: 'https://artecai.it' }],
+  authors: [{ name: 'Valerio Alieri — artec AI', url: 'https://artecai.it' }],
   creator: 'artec AI',
   publisher: 'artec AI',
   metadataBase: new URL('https://artecai.it'),
   alternates: { canonical: 'https://artecai.it' },
   openGraph: {
     title: 'SOLARBACK — Sopralluoghi Qualificati per Installatori Fotovoltaico',
-    description: 'Il primo sistema AI di acquisizione verticale per aziende installatrici di fotovoltaico in Italia. Prova gratuita 14 giorni, poi decidi tu.',
+    description: 'Il sistema AI che riempie l’agenda dei tuoi commerciali di sopralluoghi qualificati. Operativi in 7 giorni: paghi solo a risultato.',
     type: 'website',
     locale: 'it_IT',
     url: 'https://artecai.it',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'SOLARBACK by artec AI — Sopralluoghi Qualificati Fotovoltaico',
-    description: 'Sistema AI che trasforma le richieste in sopralluoghi qualificati. Prova gratuita 14 giorni.',
+    description: 'Sistema AI che riempie l’agenda dei tuoi commerciali. €99 a sopralluogo, €400 a contratto. Nessun canone fisso.',
     images: ['/solarback-logo.png'],
   },
   robots: {
@@ -49,13 +49,10 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
   },
-  verification: {
-    google: 'zwYTOCnjYZYqkWuLPx8evCyvD7ZhjffVfa62pkGb3pU',
-  },
   category: 'business',
   classification: 'Lead Generation, Fotovoltaico, B2B, AI Marketing',
   other: {
-    'article:author': 'Marco Masini — artec AI',
+    'article:author': 'Valerio Alieri — artec AI',
     'og:locale:alternate': 'it_IT',
   },
 }
@@ -71,8 +68,8 @@ const jsonLd = {
       url: 'https://artecai.it',
       logo: 'https://artecai.it/solarback-logo.png',
       telephone: '+393273174931',
-      email: 'info@solarback.it',
-      founder: { '@type': 'Person', name: 'Marco Masini', jobTitle: 'Founder & CEO', url: 'https://artecai.it' },
+      email: 'team@artecai.it',
+      founder: { '@type': 'Person', name: 'Valerio Alieri', jobTitle: 'Founder & CEO', url: 'https://artecai.it' },
       areaServed: { '@type': 'Country', name: 'Italy' },
       knowsAbout: ['fotovoltaico', 'energia rinnovabile', 'lead generation B2B', 'acquisizione clienti', 'intelligenza artificiale', 'AI marketing'],
       sameAs: ['https://artecai.it'],
@@ -109,8 +106,8 @@ const jsonLd = {
       areaServed: { '@type': 'Country', name: 'Italy' },
       offers: {
         '@type': 'Offer',
-        name: 'Prova Gratuita 14 Giorni SOLARBACK',
-        description: '14 giorni completamente gratuiti e risk free: zero costi, zero impegni. Poi decidi se continuare.',
+        name: 'Performance SOLARBACK — €99 a sopralluogo + €400 a contratto',
+        description: 'Nessun canone fisso. Paghi €99 per ogni sopralluogo effettuato e €400 di bonus per ogni contratto residenziale firmato. Il rischio è nostro.',
         priceCurrency: 'EUR',
         price: '0',
         availability: 'https://schema.org/LimitedAvailability',
@@ -140,7 +137,7 @@ const jsonLd = {
           name: 'Quanto costa il servizio SOLARBACK?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'SOLARBACK lavora esclusivamente a performance: paghi solo quando ti portiamo sopralluoghi qualificati in agenda. Nessun canone fisso, nessun costo mensile, nessun contratto pluriennale. Il rischio è nostro: se non portiamo risultati nei numeri e nei tempi concordati, continuiamo a lavorare senza costi aggiuntivi finché non li raggiungiamo.',
+            text: 'SOLARBACK lavora esclusivamente a performance. Paghi solo a risultato: €99 per ogni sopralluogo effettuato e un bonus di €400 per ogni contratto residenziale firmato. Nessun canone fisso, nessun costo mensile. Il rischio è nostro: se non portiamo risultati, continuiamo a lavorare gratis finché non li raggiungiamo.',
           },
         },
         {
