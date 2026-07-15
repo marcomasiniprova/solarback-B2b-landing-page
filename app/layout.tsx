@@ -130,7 +130,7 @@ const jsonLd = {
           name: 'Quanto costa il servizio SOLARBACK?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'SOLARBACK lavora esclusivamente a risultato. Paghi solo quando portiamo appuntamenti qualificati nel tuo calendario: nessun canone fisso, nessun costo mensile. L'investimento preciso lo definiamo insieme nella chiamata di valutazione, perché dipende dal volume di richieste e dalla tua zona operativa. Il rischio è nostro.',
+            text: 'SOLARBACK lavora esclusivamente a risultato. Paghi solo quando portiamo appuntamenti qualificati nel tuo calendario: nessun canone fisso, nessun costo mensile. L\'investimento preciso lo definiamo insieme nella chiamata di valutazione, perché dipende dal volume di richieste e dalla tua zona operativa. Il rischio è nostro.',
           },
         },
         {
