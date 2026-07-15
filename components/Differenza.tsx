@@ -42,9 +42,8 @@ export function Differenza() {
         </div>
 
         <p style={{ textAlign: 'center', marginTop: '2.5rem', fontSize: '1.1rem', color: 'var(--text-soft)', maxWidth: 760, margin: '2.5rem auto 0', lineHeight: 1.6 }}>
-          SOLARBACK non è un'agenzia che genera lead: è il partner che{' '}
-          <span style={{ color: 'var(--gold)', fontWeight: 600 }}>costruisce e gestisce il sistema di acquisizione clienti</span>{' '}
-          della tua azienda.
+          SOLARBACK non è un'agenzia che genera lead:{' '}
+          <span style={{ color: 'var(--gold)', fontWeight: 600 }}>diventiamo il partner che costruisce e gestisce il tuo sistema di acquisizione clienti</span>.
         </p>
       </div>
     </section>
