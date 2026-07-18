@@ -4,9 +4,9 @@
   --font-sans: var(--font-manrope), system-ui, sans-serif;
 }
 
-/* ═════════════════════════════════════
+/* ═══════════════════════════════════
    DESIGN TOKENS
-   ═════════════════════════════════════ */
+   ═══════════════════════════════════ */
 :root {
   --bg:          #0B0B0B;
   --bg-2:        #0E0E0E;
@@ -22,7 +22,7 @@
   --card-bg:     rgba(255,255,255,0.025);
   --glow:        0.55;
   --container:   1240px;
-  --gap-section: 9rem;
+  --gap-section: 5.5rem;
   --radius:      20px;
 }
 
@@ -63,9 +63,9 @@ body::after {
   transition: background-color 0.2s ease;
 }
 
-/* ═════════════════════════════════════
+/* ═══════════════════════════════════
    GOLD TEXT
-   ═════════════════════════════════════ */
+   ═══════════════════════════════════ */
 .gold-shine {
   background: linear-gradient(180deg, #fff1c2 0%, #f0d27a 18%, #d9a441 38%, #a06c1c 52%, #d9a441 68%, #f0d27a 84%, #fff1c2 100%);
   background-size: 100% 220%;
@@ -86,9 +86,9 @@ body::after {
 }
 .dot-pulse { animation: dot-pulse 1.8s ease-in-out infinite; }
 
-/* ═════════════════════════════════════
+/* ═══════════════════════════════════
    LAYOUT PRIMITIVES
-   ═════════════════════════════════════ */
+   ═══════════════════════════════════ */
 .sb-section {
   padding: var(--gap-section) 1.5rem;
   position: relative;
@@ -102,13 +102,13 @@ body::after {
 }
 .head-center {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2.6rem;
 }
 .head-center .eyebrow { margin-bottom: 2rem; }
 
-/* ═════════════════════════════════════
+/* ═══════════════════════════════════
    EYEBROW
-   ═════════════════════════════════════ */
+   ═══════════════════════════════════ */
 .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -131,9 +131,9 @@ body::after {
   animation: dot-pulse 1.8s ease-in-out infinite;
 }
 
-/* ═════════════════════════════════════
+/* ═══════════════════════════════════
    SECTION HEADINGS
-   ═════════════════════════════════════ */
+   ═══════════════════════════════════ */
 .sb-h2 {
   font-weight: 800;
   font-size: clamp(1.9rem, 4.3vw, 3.3rem);
@@ -148,13 +148,13 @@ body::after {
   color: var(--text-dim);
   font-size: 1rem;
   max-width: 640px;
-  margin: 0 auto 4rem;
+  margin: 0 auto 2.6rem;
   line-height: 1.65;
 }
 
-/* ═════════════════════════════════════
+/* ═══════════════════════════════════
    BUTTON
-   ═════════════════════════════════════ */
+   ═══════════════════════════════════ */
 .sb-btn {
   display: inline-flex;
   align-items: center;
@@ -190,9 +190,9 @@ body::after {
 }
 .sb-btn.ghost .arrow { background: rgba(255,255,255,0.08); }
 
-/* ═════════════════════════════════════
+/* ═══════════════════════════════════
    NAV
-   ═════════════════════════════════════ */
+   ═══════════════════════════════════ */
 .top-nav {
   position: fixed; top: 0; left: 0; right: 0;
   z-index: 100;
@@ -279,9 +279,9 @@ body::after {
 }
 @media (max-width: 900px) { .hamburger { display: flex; } }
 
-/* ═════════════════════════════════════
+/* ═══════════════════════════════════
    HERO
-   ═════════════════════════════════════ */
+   ═══════════════════════════════════ */
 #hero {
   min-height: 100vh;
   padding: 8.5rem 1.5rem 7rem;
@@ -321,9 +321,9 @@ body::after {
 .hero-stat-n { font-weight: 800; font-size: 1.35rem; line-height: 1; color: var(--text); }
 .hero-stat-l { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; margin-top: 0.3rem; color: var(--text-dim); }
 
-/* ═════════════════════════════════════
+/* ═══════════════════════════════════
    PROBLEMA
-   ═════════════════════════════════════ */
+   ═══════════════════════════════════ */
 #problema {
   background: var(--bg-2);
   border-top: 1px solid var(--line);
@@ -364,9 +364,9 @@ body::after {
 }
 @media (max-width: 600px) { .insight-card { padding: 2.5rem 1.5rem; } }
 
-/* ═════════════════════════════════════
+/* ═══════════════════════════════════
    METODO
-   ═════════════════════════════════════ */
+   ═══════════════════════════════════ */
 .flow {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -411,9 +411,9 @@ body::after {
   }
 }
 
-/* ═════════════════════════════════════
+/* ═══════════════════════════════════
    FAQ
-   ═════════════════════════════════════ */
+   ═══════════════════════════════════ */
 .faq-list { max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.75rem; }
 .faq-item {
   border: 1px solid var(--line); border-radius: 16px;
@@ -440,9 +440,9 @@ body::after {
   color: var(--text-soft); font-size: 0.97rem; line-height: 1.7;
 }
 
-/* ═════════════════════════════════════
-   PERCHÉ
-   ═════════════════════════════════════ */
+/* ═══════════════════════════════════
+   PERCHE
+   ═══════════════════════════════════ */
 #perche {
   background: var(--bg-2);
   border-top: 1px solid var(--line);
@@ -468,9 +468,9 @@ body::after {
 .why-row h3 { font-weight: 700; font-size: 1.1rem; margin-bottom: 0.5rem; letter-spacing: -0.01em; color: var(--text); }
 .why-row p  { font-size: 0.95rem; color: var(--text-dim); line-height: 1.6; }
 
-/* ═════════════════════════════════════
+/* ═══════════════════════════════════
    FIT
-   ═════════════════════════════════════ */
+   ═══════════════════════════════════ */
 #fit {
   background: var(--bg-2);
   border-top: 1px solid var(--line);
@@ -505,9 +505,9 @@ body::after {
 .fit-card.no  .fit-list li svg { color: var(--text-dim); }
 .fit-card.yes .fit-list li svg { color: var(--gold); }
 
-/* ═════════════════════════════════════
+/* ═══════════════════════════════════
    GARANZIA
-   ═════════════════════════════════════ */
+   ═══════════════════════════════════ */
 #garanzia { padding: var(--gap-section) 1.5rem; }
 .guarantee {
   max-width: 920px; margin: 0 auto;
@@ -537,9 +537,9 @@ body::after {
 .guarantee p strong { color: var(--gold); font-weight: 700; }
 @media (max-width: 600px) { .guarantee { padding: 3rem 1.5rem; } }
 
-/* ═════════════════════════════════════
+/* ═══════════════════════════════════
    FOUNDER
-   ═════════════════════════════════════ */
+   ═══════════════════════════════════ */
 #founder {
   background: var(--bg-2);
   border-top: 1px solid var(--line);
@@ -565,9 +565,9 @@ body::after {
 .founder-role { font-size: 0.95rem; color: var(--text-dim); margin-bottom: 1.2rem; }
 .founder-bio  { color: var(--text-soft); font-size: 1rem; line-height: 1.7; max-width: 560px; }
 
-/* ═════════════════════════════════════
+/* ═══════════════════════════════════
    FORM
-   ═════════════════════════════════════ */
+   ═══════════════════════════════════ */
 #candidatura { padding: var(--gap-section) 1.5rem; text-align: center; }
 .form-wrap { max-width: 760px; margin: 0 auto; }
 .form-h1 {
@@ -633,9 +633,9 @@ body::after {
 .form-submit { width: 100%; justify-content: center; margin-top: 0.5rem; }
 .form-error { color: #f87171; font-size: 0.82rem; margin-top: 0.4rem; }
 
-/* ═════════════════════════════════════
+/* ═══════════════════════════════════
    TECH VANTAGGI
-   ═════════════════════════════════════ */
+   ═══════════════════════════════════ */
 .tech-grid {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem;
 }
@@ -654,9 +654,9 @@ body::after {
 .tech-card p:first-of-type { font-weight: 700; font-size: 0.95rem; color: var(--text); margin-bottom: 0.3rem; }
 .tech-card p:last-of-type  { font-size: 0.87rem; line-height: 1.65; color: var(--text-dim); }
 
-/* ═════════════════════════════════════
+/* ═══════════════════════════════════
    FOOTER
-   ═════════════════════════════════════ */
+   ═══════════════════════════════════ */
 footer { background: var(--bg-2); border-top: 1px solid var(--line); padding: 5rem 1.5rem 0; }
 .footer-grid {
   max-width: var(--container); margin: 0 auto;
@@ -700,10 +700,10 @@ footer { background: var(--bg-2); border-top: 1px solid var(--line); padding: 5r
 .footer-bar nav a { color: var(--text-dim); text-decoration: none; font-size: 0.82rem; transition: color 0.2s; }
 .footer-bar nav a:hover { color: var(--gold); }
 
-/* ═════════════════════════════════════
+/* ═══════════════════════════════════
    MOBILE OVERRIDES (≤ 600px)
    Desktop CSS above is untouched.
-   ═════════════════════════════════════ */
+   ═══════════════════════════════════ */
 @media (max-width: 600px) {
   :root { --gap-section: 5rem; }
 
@@ -779,10 +779,10 @@ footer { background: var(--bg-2); border-top: 1px solid var(--line); padding: 5r
 [data-theme="light"] .theme-toggle:hover { color: var(--gold); border-color: var(--gold); }
 [data-theme="light"] .hamburger span { background: var(--text); }
 
-/* ═════════════════════════════════════
+/* ═══════════════════════════════════
    Sezione "Dentro SOLARBACK"
-   ═════════════════════════════════════ */
-.dentro-stage { margin-top: 2.5rem; display: grid; gap: 1.5rem; }
+   ═══════════════════════════════════ */
+.dentro-stage { margin-top: 1.6rem; display: grid; gap: 0.9rem; }
 .dentro-hero-img { margin: 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: var(--card-bg); }
 /* FIX 3: immagini nitide, non sgranate. Proporzioni mantenute. */
 .dentro-hero-img img {
@@ -812,7 +812,7 @@ footer { background: var(--bg-2); border-top: 1px solid var(--line); padding: 5r
 /* FIX 4: niente gap enorme dopo la frase finale. */
 .dentro-finale {
   text-align: center; max-width: 800px;
-  margin: 2rem auto 0; font-size: 1.25rem; line-height: 1.6; color: var(--text); font-weight: 600;
+  margin: 1rem auto 0; font-size: 1.25rem; line-height: 1.6; color: var(--text); font-weight: 600;
 }
 .dentro-finale::before { content: ""; display: block; width: 54px; height: 2px; margin: 0 auto 1.5rem; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
 

@@ -126,7 +126,9 @@ export function Nav() {
         @media (max-width: 900px) { .nav-cta-show { display: none; } }
 
         /* FIX 1: logo a dimensioni fisse identiche in entrambi i temi.
-           Nessuno shift: solo il colore/opacità cambia. */
+           Il logo bianco ha LA STESSA IDENTICA posizione del nero:
+           stesso container (relative), stessa immagine (absolute, top:50% left:0,
+           translateY(-50%)). Cambia SOLO l'opacità (cross-fade), mai la posizione. */
         .nav-logo-fixed {
           position: relative;
           display: inline-flex;
@@ -145,7 +147,8 @@ export function Nav() {
           object-fit: contain;
           transition: opacity 0.15s ease-in-out;
         }
-        /* FIX 2: cross-fade istantaneo tra i due loghi (no flash, no glitch). */
+        /* FIX 2: cross-fade istantaneo tra i due loghi (no flash, no glitch).
+           Posizione IDENTICA per dark e light: solo opacity cambia. */
         .nav-logo-dark  { opacity: 1; }
         .nav-logo-light { opacity: 0; }
         [data-theme="light"] .nav-logo-dark  { opacity: 0; }
