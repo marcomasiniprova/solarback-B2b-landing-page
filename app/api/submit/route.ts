@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
+const rateLimit = new Map<string, number>()
+
 export async function POST(req: NextRequest) {
   const data = await req.json()
 
@@ -17,7 +19,26 @@ export async function POST(req: NextRequest) {
   const {
     name, company, phone, email,
     salesTeam, installs, channels, marketingSpend, goal12, revenueGoal,
+    website,
   } = data
+
+  if (website) {
+    return NextResponse.json({ error: 'Bot detected' }, { status: 400 })
+  }
+
+  const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || req.headers.get('x-real-ip') || 'unknown'
+  const now = Date.now()
+  const last = rateLimit.get(ip)
+  if (last && now - last < 10000) {
+    return NextResponse.json({ error: 'Troppe richieste. Attendi qualche secondo.' }, { status: 429 })
+  }
+  rateLimit.set(ip, now)
+  if (rateLimit.size > 10000) {
+    const cutoff = now - 60000
+    for (const [key, val] of rateLimit) {
+      if (val < cutoff) rateLimit.delete(key)
+    }
+  }
 
   const row = (label: string, value: string) =>
     `<tr><td style="padding:8px 12px;font-weight:600;background:#f5f5f5">${label}</td><td style="padding:8px 12px">${value || '-'}</td></tr>`
