@@ -154,6 +154,10 @@ export function Nav() {
           transition: border-color .2s, color .2s, background .2s;
         }
         .theme-toggle:hover { border-color: var(--gold); color: var(--gold); }
+
+        /* FIX: logo navbar bianco nel tema chiaro (sfondo chiaro).
+           Stesso file nero + filtro -> dimensioni identiche, zero spostamenti. */
+        [data-theme="light"] .nav-logo-img { filter: brightness(0) invert(1); }
       `}</style>
     </>
   )
