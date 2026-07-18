@@ -1,4 +1,4 @@
-'use client'
+use client'
 
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
@@ -58,9 +58,9 @@ export function CandidaturaForm() {
     setSending(true); setServerError('')
     try {
       const res = await fetch('/api/submit', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
-      if (!res.ok) throw new Error()
+      if (!res.ok) throw new Error('send failed')
       setSubmitted(true)
-    } catch {
+    } catch (e) {
       setServerError("Errore nell'invio. Riprova o scrivici a team@artecai.it")
     } finally {
       setSending(false)
@@ -95,7 +95,7 @@ export function CandidaturaForm() {
               <motion.form key="form" className="form-card" onSubmit={handleSubmit(onSubmit)} noValidate initial={{ opacity:0 }} animate={{ opacity:1 }}>
 
                 <div className="form-block">
-                  <div className="form-block-title">Blocco 1 · I tuoi contatti</div>
+                  <div className="form-block-title">Blocco 1 - I tuoi contatti</div>
 
                   <div className="form-row">
                     <label htmlFor="f-name">Nome e Cognome <span className="req">*</span></label>
@@ -124,7 +124,7 @@ export function CandidaturaForm() {
                 </div>
 
                 <div className="form-block">
-                  <div className="form-block-title">Blocco 2 · Qualificazione</div>
+                  <div className="form-block-title">Blocco 2 - Qualificazione</div>
 
                   <div className="form-row">
                     <label>Quanti commerciali effettuano sopralluoghi? <span className="req">*</span></label>

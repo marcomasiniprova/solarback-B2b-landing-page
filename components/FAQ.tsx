@@ -18,16 +18,8 @@ const QUESTIONS = [
     a: "No. Lavoriamo con il tuo sistema attuale: consegniamo gli appuntamenti già pronti nell'agenda dei tuoi commerciali, nel formato che usi oggi. Se preferisci, possiamo inviarli anche via foglio o WhatsApp. Zero stravolgimenti per il tuo team.",
   },
   {
-    q: 'Devo assumere o cambiare commerciali?',
-    a: "No. SOLARBACK è il tuo reparto acquisizione esterno: noi facciamo il marketing, gestiamo generazione, qualificazione e fissazione appuntamenti. Tu usi i commerciali che hai già. Più richieste portiamo, più sopralluoghi fai - senza assumere nessuno.",
-  },
-  {
-    q: 'Fate pubblicità su Meta (Facebook e Instagram)?',
-    a: "Sì. La pubblicità su Meta è uno dei nostri motori principali per portare nuovi contratti, ma non ci fermiamo lì: gestiamo anche la ricerca su Google, le email B2B e le landing page. Tutto converge in un unico obiettivo: riempire l'agenda dei tuoi commerciali di appuntamenti qualificati.",
-  },
-  {
     q: 'Lavorate in tutta Italia?',
-    a: "Sì, su tutto il territorio italiano - dal Nord al Sud. La qualificazione e la prenotazione avvengono da remoto, quindi copriamo sia le grandi città che le zone periferiche, sia il residenziale che il B2B. Se hai commerciali su una o più regioni, strutturiamo il servizio sulla tua copertura.",
+    a: "Sì, su tutto il territorio italiano - dal Nord al Sud. La qualificazione e la prenotazione avvengono da remoto, quindi copriamo sia le grandi città che le zone periferiche, sia il residenziale che gli impianti commerciali. Se hai commerciali su una o più regioni, strutturiamo il servizio sulla tua copertura.",
   },
   {
     q: 'Quante aziende seguite oggi?',

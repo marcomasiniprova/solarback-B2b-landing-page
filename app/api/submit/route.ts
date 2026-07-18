@@ -6,26 +6,33 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 export async function POST(req: NextRequest) {
   const data = await req.json()
 
-  const { name, company, phone, email, leads, channel, spend, when, notes } = data
+  const {
+    name, company, phone, email,
+    salesTeam, installs, channels, marketingSpend, goal12, revenueGoal,
+  } = data
+
+  const row = (label: string, value: string) =>
+    `<tr><td style="padding:8px 12px;font-weight:600;background:#f5f5f5">${label}</td><td style="padding:8px 12px">${value || '-'}</td></tr>`
 
   try {
     await resend.emails.send({
       from: 'SOLARBACK <onboarding@resend.dev>',
-      to: ['artecagenzia@gmail.com'],
+      to: ['valerio@artecai.it'],
       replyTo: email,
-      subject: `Nuova candidatura da ${name} — ${company}`,
+      subject: `Nuova candidatura da ${name} - ${company}`,
       html: `
         <h2>Nuova candidatura SOLARBACK</h2>
         <table style="border-collapse:collapse;width:100%;font-family:sans-serif;font-size:15px">
-          <tr><td style="padding:8px 12px;font-weight:600;background:#f5f5f5">Nome</td><td style="padding:8px 12px">${name}</td></tr>
-          <tr><td style="padding:8px 12px;font-weight:600;background:#f5f5f5">Azienda</td><td style="padding:8px 12px">${company}</td></tr>
-          <tr><td style="padding:8px 12px;font-weight:600;background:#f5f5f5">Telefono</td><td style="padding:8px 12px"><a href="tel:${phone}">${phone}</a></td></tr>
-          <tr><td style="padding:8px 12px;font-weight:600;background:#f5f5f5">Email</td><td style="padding:8px 12px"><a href="mailto:${email}">${email}</a></td></tr>
-          <tr><td style="padding:8px 12px;font-weight:600;background:#f5f5f5">Richieste/mese</td><td style="padding:8px 12px">${leads}</td></tr>
-          <tr><td style="padding:8px 12px;font-weight:600;background:#f5f5f5">Canale richieste</td><td style="padding:8px 12px">${channel}</td></tr>
-          <tr><td style="padding:8px 12px;font-weight:600;background:#f5f5f5">Budget pubblicità</td><td style="padding:8px 12px">${spend || '—'}</td></tr>
-          <tr><td style="padding:8px 12px;font-weight:600;background:#f5f5f5">Orario chiamata</td><td style="padding:8px 12px">${when || '—'}</td></tr>
-          <tr><td style="padding:8px 12px;font-weight:600;background:#f5f5f5">Note</td><td style="padding:8px 12px">${notes || '—'}</td></tr>
+          ${row('Nome', name)}
+          ${row('Azienda', company)}
+          ${row('Telefono', `<a href="tel:${phone}">${phone}</a>`)}
+          ${row('Email', `<a href="mailto:${email}">${email}</a>`)}
+          ${row('Commerciali sopralluoghi', salesTeam)}
+          ${row('Installazioni/mese', installs)}
+          ${row('Canali richieste', channels)}
+          ${row('Budget pubblicità', marketingSpend)}
+          ${row('Obiettivo 12 mesi', goal12)}
+          ${row('Obiettivo fatturato', revenueGoal)}
         </table>
       `,
     })

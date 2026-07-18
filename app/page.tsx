@@ -4,10 +4,11 @@ import { Nav } from '@/components/Nav'
 import { Hero } from '@/components/Hero'
 import { PerditaClienti } from '@/components/PerditaClienti'
 import { Problema } from '@/components/Problema'
-import { Fit } from '@/components/Fit'
 import { Metodo } from '@/components/Metodo'
+import { DentroSOLARBACK } from '@/components/DentroSOLARBACK'
 import { Differenza } from '@/components/Differenza'
 import { Perche } from '@/components/Perche'
+import { Fit } from '@/components/Fit'
 import { Garanzia } from '@/components/Garanzia'
 import { Founder } from '@/components/Founder'
 import { FAQ } from '@/components/FAQ'
@@ -22,10 +23,11 @@ export default function Home() {
         <Hero />
         <PerditaClienti />
         <Problema />
-        <Fit />
         <Metodo />
+        <DentroSOLARBACK />
         <Differenza />
         <Perche />
+        <Fit />
         <Garanzia />
         <Founder />
         <FAQ />

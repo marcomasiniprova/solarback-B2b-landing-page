@@ -1,4 +1,4 @@
-'use client'
+use client'
 
 import { motion } from 'framer-motion'
 
@@ -10,10 +10,10 @@ export function Differenza() {
     <section id="differenza" className="sb-section">
       <div className="sb-container">
         <div className="head-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+          <motion.div initial={{ opacity:0, y:20 }} whileInView={{ opacity:1, y:0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <div className="eyebrow"><span className="dot" />Perché siamo diversi</div>
           </motion.div>
-          <motion.h2 className="sb-h2" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.08 }}>
+          <motion.h2 className="sb-h2" initial={{ opacity:0, y:20 }} whileInView={{ opacity:1, y:0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.08 }}>
             Le agenzie si fermano al lead.<br />
             <span className="gold-shine">Noi arriviamo al sopralluogo.</span>
           </motion.h2>

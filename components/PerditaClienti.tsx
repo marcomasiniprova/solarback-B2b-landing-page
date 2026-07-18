@@ -12,17 +12,17 @@ export function PerditaClienti() {
     <section id="perdita" className="sb-section">
       <div className="sb-container">
         <div className="head-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+          <motion.div initial={{ opacity:0, y:20 }} whileInView={{ opacity:1, y:0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <div className="eyebrow"><span className="dot" />Il rischio nascosto</div>
           </motion.div>
-          <motion.h2 className="sb-h2" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.08 }}>
+          <motion.h2 className="sb-h2" initial={{ opacity:0, y:20 }} whileInView={{ opacity:1, y:0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.08 }}>
             Perché gli installatori<br />perdono <span className="gold-shine">clienti e impianti</span>
           </motion.h2>
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity:0, y: 24 }}
+          whileInView={{ opacity:1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.12 }}
           style={{ maxWidth: 820, margin: '0 auto' }}

@@ -1,4 +1,4 @@
-'use client'
+use client'
 
 import { motion } from 'framer-motion'
 
@@ -9,7 +9,7 @@ const problems = [
   'I commerciali seguono i lead quando hanno tempo',
 ]
 
-const fadeUp = { hidden: { opacity: 0, y: 28 }, show: { opacity: 1, y: 0 } }
+const fadeUp = { hidden: { opacity:0, y: 28 }, show: { opacity:1, y: 0 } }
 const t = (d = 0) => ({ duration: 0.8, ease: 'easeOut' as const, delay: d })
 
 export function Problema() {

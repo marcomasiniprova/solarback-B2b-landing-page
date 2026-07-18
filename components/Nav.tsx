@@ -1,4 +1,4 @@
-'use client'
+use client'
 
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
@@ -16,8 +16,14 @@ export function Nav() {
   const [theme, setTheme]       = useState<'dark' | 'light'>('dark')
 
   useEffect(() => {
-    const t = document.documentElement.getAttribute('data-theme')
-    if (t === 'light' || t === 'dark') setTheme(t)
+    const sync = () => {
+      const t = document.documentElement.getAttribute('data-theme')
+      if (t === 'light' || t === 'dark') setTheme(t)
+    }
+    sync()
+    const mo = new MutationObserver(sync)
+    mo.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] })
+    return () => mo.disconnect()
   }, [])
 
   const toggleTheme = () => {
@@ -34,12 +40,21 @@ export function Nav() {
     return () => window.removeEventListener('scroll', fn)
   }, [])
 
+  const logoSrc = theme === 'light' ? '/LOGO PER SFONDO BIANCO.png' : '/solarback-logo.png'
+
   return (
     <>
-      <nav className={`top-nav${scrolled ? ' scrolled' : ''}`}>
+      <nav className={`top-nav${scrolled ? ' scrolled' : ''}`} data-theme-nav={theme}>
         <div className="nav-inner">
           <a href="#hero" className="nav-logo">
-            <Image src="/solarback-logo.png" alt="SOLARBACK" width={210} height={62} priority />
+            <Image
+              key={logoSrc}
+              src={logoSrc}
+              alt="SOLARBACK"
+              width={theme === 'light' ? 260 : 210}
+              height={theme === 'light' ? 113 : 62}
+              priority
+            />
           </a>
 
           <ul className="nav-menu">
@@ -56,14 +71,6 @@ export function Nav() {
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="4.5" /><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4" /></svg>
               )}
             </button>
-            <a href="#candidatura" className="sb-btn" style={{ display: 'none' }} id="nav-cta-desktop">
-              Prenota una chiamata
-              <span className="arrow">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                  <path d="M3 6h6M7 3l3 3L7 9" stroke="#1a0e00" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </span>
-            </a>
             <a href="#candidatura" className="sb-btn nav-cta-show">
               Prenota una chiamata
               <span className="arrow">
