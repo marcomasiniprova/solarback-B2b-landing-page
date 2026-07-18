@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Manrope } from 'next/font/google'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import './globals.css'
 
 const manrope = Manrope({
@@ -104,7 +105,6 @@ const jsonLd = {
       provider: { '@id': 'https://artecai.it/#organization' },
       serviceType: 'Lead Generation e Appointment Setting per Fotovoltaico',
       areaServed: { '@type': 'Country', name: 'Italy' },
-
     },
     {
       '@type': 'Service',
@@ -181,7 +181,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: "(function(){try{var t=localStorage.getItem('sb-theme');if(t==='light'){document.documentElement.setAttribute('data-theme','light');}}catch(e){}})();" }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <GoogleAnalytics gaId="G-VT411CNHWJ" />
+      </body>
     </html>
   )
 }
