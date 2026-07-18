@@ -3,19 +3,19 @@
 import { motion } from 'framer-motion'
 
 const agencySteps = ['Pubblicità', 'Lead', 'Fine.']
-const solarbackSteps = ['Marketing attivo', 'Richiesta', 'Contatto', 'Qualificazione', 'Appuntamento', 'Contratto']
+const solarbackSteps = ['Marketing', 'Richiesta', 'Contatto', 'Qualificazione', 'Sopralluogo', 'Commerciale del cliente', 'Contratto']
 
 export function Differenza() {
   return (
     <section id="differenza" className="sb-section">
       <div className="sb-container">
         <div className="head-center">
-          <motion.div initial={{ opacity:0, y:20 }} whileInView={{ opacity:1, y:0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <div className="eyebrow"><span className="dot" />Perché siamo diversi</div>
           </motion.div>
-          <motion.h2 className="sb-h2" initial={{ opacity:0, y:20 }} whileInView={{ opacity:1, y:0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.08 }}>
+          <motion.h2 className="sb-h2" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.08 }}>
             Le agenzie si fermano al lead.<br />
-            <span className="gold-shine">Noi portiamo il contratto.</span>
+            <span className="gold-shine">Noi arriviamo al sopralluogo.</span>
           </motion.h2>
         </div>
 
@@ -31,7 +31,7 @@ export function Differenza() {
           </div>
 
           <div style={{ border: '1px solid rgba(217,164,65,0.35)', borderRadius: '20px', padding: '2rem', background: 'rgba(217,164,65,0.04)' }}>
-            <h3 style={{ fontSize: '1.1rem', marginBottom: '1.5rem', color: 'var(--gold)' }}>SOLARBACK segue tutto il processo</h3>
+            <h3 style={{ fontSize: '1.1rem', marginBottom: '1.5rem', color: 'var(--gold)' }}>SOLARBACK arriva fino al sopralluogo</h3>
             {solarbackSteps.map((s, i) => (
               <div key={s}>
                 <div style={{ padding: '0.9rem 1.2rem', borderRadius: '12px', background: 'rgba(217,164,65,0.08)', color: 'var(--text)', fontWeight: 700 }}>{s}</div>
@@ -43,7 +43,7 @@ export function Differenza() {
 
         <p style={{ textAlign: 'center', marginTop: '2.5rem', fontSize: '1.1rem', color: 'var(--text-soft)', maxWidth: 760, margin: '2.5rem auto 0', lineHeight: 1.6 }}>
           SOLARBACK non è un'agenzia che genera lead:{' '}
-          <span style={{ color: 'var(--gold)', fontWeight: 600 }}>diventiamo il tuo reparto commerciale da remoto e chiudiamo il contratto</span>.
+          <span style={{ color: 'var(--gold)', fontWeight: 600 }}>diventiamo il tuo sistema esterno di acquisizione clienti, fino all'appuntamento. La vendita la fa il tuo commerciale.</span>
         </p>
       </div>
     </section>

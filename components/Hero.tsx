@@ -18,21 +18,24 @@ export function Hero() {
           <motion.div variants={item}>
             <div className="hero-tag">
               <span className="dot" />
-              Reparto Commerciale da Remoto · B2B e Residenziale
+              Reparto Acquisizione Clienti Esterno
             </div>
           </motion.div>
 
           <motion.h1 className="hero-h1" variants={item}>
-            Sei un installatore di fotovoltaico?<br />
-            Portiamo noi i <span className="gold-shine">nuovi contratti</span> nella tua azienda.<br />
-            Sopralluoghi pronti e <span className="gold-shine">già fissati</span><br />
-            nel calendario dei tuoi commerciali.
+            Installi fotovoltaico?<br />
+            Portiamo persone realmente interessate<br />
+            al fotovoltaico <span className="gold-shine">davanti ai tuoi commerciali</span>.
           </motion.h1>
 
           <motion.p className="hero-sub" variants={item}>
-            Non solo gestiamo le richieste che hai gi&agrave;: noi facciamo il marketing,
-            intercettiamo chi cerca il fotovoltaico e trasformiamo quel traffico in appuntamenti qualificati.
-            Tu pensi agli impianti. Noi riempiamo l'agenda.
+            Tu pensi agli impianti. Noi ci occupiamo di trovare i clienti
+            e portarli fino all'appuntamento. Generiamo richieste qualificate
+            e le trasformiamo in sopralluoghi pronti.
+          </motion.p>
+
+          <motion.p className="hero-sub" variants={item} style={{ color: 'var(--gold)', fontWeight: 600, marginTop: '0.4rem' }}>
+            Paghi solo a risultato.
           </motion.p>
 
           <motion.div className="hero-cta-row" variants={item}>
@@ -48,7 +51,7 @@ export function Hero() {
 
           <motion.div className="hero-stats" variants={item}>
             {[
-              { n: 'Nuovi contratti', l: 'Li portiamo noi' },
+              { n: 'Sopralluoghi pronti', l: 'Li portiamo noi' },
               { n: '7 giorni', l: 'Sei operativo' },
               { n: 'Zero', l: 'Canone fisso' },
             ].map(({ n, l }) => (

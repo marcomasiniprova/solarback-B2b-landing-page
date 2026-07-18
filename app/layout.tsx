@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
   },
   category: 'business',
-  classification: 'Lead Generation, Fotovoltaico, B2B, Marketing',
+  classification: 'Lead Generation, Fotovoltaico, Marketing, Acquisizione Clienti',
   other: {
     'article:author': 'Valerio Alieri — artec AI',
     'og:locale:alternate': 'it_IT',
@@ -71,7 +71,7 @@ const jsonLd = {
       email: 'team@artecai.it',
       founder: { '@type': 'Person', name: 'Valerio Alieri', jobTitle: 'Founder & CEO', url: 'https://artecai.it' },
       areaServed: { '@type': 'Country', name: 'Italy' },
-      knowsAbout: ['fotovoltaico', 'energia rinnovabile', 'lead generation B2B', 'lead generation residenziale', 'acquisizione clienti', 'marketing B2B', 'reparto commerciale da remoto', 'appuntamenti qualificati', 'contratti fotovoltaico'],
+      knowsAbout: ['fotovoltaico', 'energia rinnovabile', 'lead generation', 'acquisizione clienti', 'marketing', 'sistema esterno di acquisizione clienti', 'appuntamenti qualificati', 'impianti commerciali', 'impianti residenziali'],
       sameAs: ['https://artecai.it'],
     },
     {
@@ -99,7 +99,7 @@ const jsonLd = {
       '@type': 'ProfessionalService',
       '@id': 'https://artecai.it/#service',
       name: 'SOLARBACK — Acquisizione Sopralluoghi Qualificati per Fotovoltaico',
-      description: 'Acquisizione e qualificazione contatti per aziende installatrici di fotovoltaico in Italia. Lavoriamo a risultato, senza canoni fissi.',
+      description: 'Acquisizione e qualificazione contatti per aziende installatrici di fotovoltaico in Italia. Portiamo appuntamenti qualificati, lavoriamo a risultato, senza canoni fissi.',
       url: 'https://artecai.it',
       provider: { '@id': 'https://artecai.it/#organization' },
       serviceType: 'Lead Generation e Appointment Setting per Fotovoltaico',
@@ -108,10 +108,10 @@ const jsonLd = {
     },
     {
       '@type': 'Service',
-      serviceType: 'Acquisizione clienti fotovoltaico B2B e residenziale',
+      serviceType: 'Acquisizione clienti fotovoltaico commerciali e residenziali',
       provider: { '@id': 'https://artecai.it/#organization' },
       areaServed: { '@type': 'Country', name: 'Italia' },
-      description: 'SOLARBACK è il reparto commerciale da remoto che faccia il marketing e porta nuovi sopralluoghi e contratti qualificati per installatori di fotovoltaico, sia B2B che residenziale, su tutta Italia.',
+      description: 'SOLARBACK è il sistema esterno di acquisizione clienti che gestisce il marketing e porta nuovi sopralluoghi qualificati per installatori di fotovoltaico, sia impianti commerciali che residenziali, su tutta Italia.',
     },
     {
       '@type': 'FAQPage',
@@ -161,7 +161,7 @@ const jsonLd = {
           name: 'SOLARBACK opera in tutta Italia?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Sì, SOLARBACK lavora con installatori di fotovoltaico su tutto il territorio italiano — da Lombardia, Veneto e Piemonte al Sud. La qualificazione avviene da remoto, quindi serviamo efficacemente sia le grandi città che le zone periferiche. Se hai commerciali che coprono una o più regioni, possiamo strutturare il servizio sulla tua copertura geografica.',
+            text: 'Sì, SOLARBACK lavora con installatori di fotovoltaico su tutto il territorio italiano — da Lombardia, Veneto e Piemonte al Sud. La qualificazione avviene da remoto, quindi serviamo efficacemente sia le grandi città che le zone periferiche, sia per impianti commerciali che residenziali. Se hai commerciali che coprono una o più regioni, possiamo strutturare il servizio sulla tua copertura geografica.',
           },
         },
       ],

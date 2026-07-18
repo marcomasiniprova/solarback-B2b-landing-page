@@ -8,7 +8,6 @@ import { Fit } from '@/components/Fit'
 import { Metodo } from '@/components/Metodo'
 import { Differenza } from '@/components/Differenza'
 import { Perche } from '@/components/Perche'
-import { Pipeline } from '@/components/Pipeline'
 import { Garanzia } from '@/components/Garanzia'
 import { Founder } from '@/components/Founder'
 import { FAQ } from '@/components/FAQ'
@@ -27,7 +26,6 @@ export default function Home() {
         <Metodo />
         <Differenza />
         <Perche />
-        <Pipeline />
         <Garanzia />
         <Founder />
         <FAQ />

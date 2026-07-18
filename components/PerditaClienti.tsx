@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 
 const steps = [
-  'Facciamo marketing per trovare nuovi proprietari interessati',
+  'Gestiamo il marketing per trovare nuovi proprietari interessati',
   'Contattiamo ogni richiesta e la qualifichiamo',
   'Fissiamo il sopralluogo',
   'Consegniamo un appuntamento pronto ai tuoi commerciali',
@@ -16,7 +16,7 @@ export function PerditaClienti() {
             <div className="eyebrow"><span className="dot" />Il rischio nascosto</div>
           </motion.div>
           <motion.h2 className="sb-h2" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.08 }}>
-            Perché gli installatori<br />perdono <span className="gold-shine">clienti e contratti</span>
+            Perché gli installatori<br />perdono <span className="gold-shine">clienti e impianti</span>
           </motion.h2>
         </div>
 
@@ -28,10 +28,10 @@ export function PerditaClienti() {
           style={{ maxWidth: 820, margin: '0 auto' }}
         >
           <p style={{ fontSize: '1.15rem', lineHeight: 1.7, color: 'var(--text)' }}>
-            Ogni richiesta lasciata senza risposta entro pochi minuti ha ottime probabilità di trasformarsi in un contratto perso. E il problema pi&ugrave; grande è quando quei contatti non arrivano proprio.
+            Ogni richiesta lasciata senza risposta entro pochi minuti ha ottime probabilità di trasformarsi in un impianto perso. E il problema più grande è quando quei contatti non arrivano proprio.
           </p>
           <p style={{ fontSize: '1.15rem', lineHeight: 1.7, color: 'var(--gold)', fontWeight: 600, marginTop: '0.5rem' }}>
-            SOLARBACK nasce per evitare che questo accada: facciamo il marketing e portiamo nuovi sopralluoghi e contratti.
+            SOLARBACK nasce per evitare che questo accada: gestiamo il marketing e portiamo nuovi sopralluoghi.
           </p>
 
           <ul style={{ listStyle: 'none', padding: 0, margin: '2rem 0 0', display: 'grid', gap: '0.9rem' }}>

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 const problems = [
   'Non fanno abbastanza marketing per trovare nuovi clienti',
   'Richiamano i contatti troppo tardi',
-  'Non fanno follow-up ai lead',
+  'Non gestiscono i follow-up sui lead',
   'I commerciali seguono i lead quando hanno tempo',
 ]
 
@@ -22,13 +22,13 @@ export function Problema() {
           </motion.div>
           <motion.h2 className="sb-h2" initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeUp} transition={t(0.08)}>
             Il problema non è solo gestire le richieste.<br />
-            È <span className="gold-shine">portarne di nuove e chiuderle in contratti</span>.
+            È <span className="gold-shine">portarne di nuove e chiuderle in impianti</span>.
           </motion.h2>
         </div>
 
         <motion.div className="insight-card" initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeUp} transition={t(0.15)}>
           <p>
-            Molte aziende installatrici investono migliaia di euro e poi restano ferme: non hanno chi fa il marketing ogni giorno n&eacute; un reparto che segua i contatti fino in fondo. Così i contratti finiscono dai concorrenti.
+            Molte aziende installatrici investono migliaia di euro e poi restano ferme: non hanno chi fa il marketing ogni giorno né un reparto che segua i contatti fino in fondo. Così i contratti finiscono dai concorrenti.
           </p>
           <ul className="problem-list">
             {problems.map((p, i) => (
@@ -37,7 +37,7 @@ export function Problema() {
           </ul>
           <p className="resolve">
             SOLARBACK nasce per <span className="gold-shine">eliminare queste perdite</span> e
-            portare pi&ugrave; sopralluoghi e contratti nella tua azienda.
+            portare più sopralluoghi e impianti nella tua azienda.
           </p>
           <div className="insight-footer">
             Dal lavoro con installatori fotovoltaici in Italia

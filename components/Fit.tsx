@@ -9,7 +9,7 @@ const noList  = [
   "Cerchi un'agenzia che ti gestisca anche la pubblicità",
 ]
 const yesList = [
-  'Vuoi un reparto commerciale da remoto che porti nuovi contratti',
+  'Vuoi un sistema esterno di acquisizione clienti',
   'Ricevi già richieste ma poche diventano appuntamenti',
   'Hai commerciali pronti ad andare in sopralluogo',
   'Vuoi un partner che lavori a risultato, non a canone fisso',
@@ -33,20 +33,20 @@ export function Fit() {
     <section id="fit" className="sb-section">
       <div className="sb-container">
         <div className="head-center">
-          <motion.div initial={{ opacity:0, y:20 }} whileInView={{ opacity:1, y:0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <div className="eyebrow"><span className="dot" />Verifica onesta</div>
           </motion.div>
-          <motion.h2 className="sb-h2" initial={{ opacity:0, y:20 }} whileInView={{ opacity:1, y:0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.08 }}>
+          <motion.h2 className="sb-h2" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.08 }}>
             Non Siamo Adatti<br />a <span className="gold-shine">Tutti</span>
           </motion.h2>
-          <motion.p className="sb-lead" initial={{ opacity:0, y:20 }} whileInView={{ opacity:1, y:0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.16 }}>
+          <motion.p className="sb-lead" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.16 }}>
             Lavoriamo solo dove possiamo davvero portare risultati. Ecco quando
             SOLARBACK funziona, e quando è meglio cercare altrove.
           </motion.p>
         </div>
 
         <div className="fit-grid">
-          <motion.div className="fit-card no" initial={{ opacity:0, x:-24 }} whileInView={{ opacity:1, x:0 }} viewport={{ once: true }} transition={{ duration: 0.7, ease: 'easeOut' }}>
+          <motion.div className="fit-card no" initial={{ opacity: 0, x: -24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, ease: 'easeOut' }}>
             <h3>
               <span className="fit-mark">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M3 3l8 8M11 3l-8 8"/></svg>
@@ -60,7 +60,7 @@ export function Fit() {
             </ul>
           </motion.div>
 
-          <motion.div className="fit-card yes" initial={{ opacity:0, x:24 }} whileInView={{ opacity:1, x:0 }} viewport={{ once: true }} transition={{ duration: 0.7, ease: 'easeOut' }}>
+          <motion.div className="fit-card yes" initial={{ opacity: 0, x: 24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, ease: 'easeOut' }}>
             <h3>
               <span className="fit-mark">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg>

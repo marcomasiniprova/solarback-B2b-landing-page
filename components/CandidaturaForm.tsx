@@ -13,12 +13,10 @@ const schema = z.object({
   email:   z.string().email("Inserisci un'email valida"),
   salesTeam: z.string().min(1, "Seleziona un'opzione"),
   installs: z.string().min(1, "Seleziona un'opzione"),
-  revenueModel: z.string().optional(),
   channels: z.string().min(1, "Seleziona un'opzione"),
   marketingSpend: z.string().min(1, "Seleziona un'opzione"),
   goal12:   z.string().min(1, "Seleziona un'opzione"),
   revenueGoal: z.string().min(1, "Seleziona un'opzione"),
-  start:    z.string().min(1, "Seleziona un'opzione"),
   privacy: z.boolean().refine(v => v, 'Devi accettare i termini'),
 })
 type FormData = z.infer<typeof schema>
@@ -55,7 +53,6 @@ export function CandidaturaForm() {
   const marketingSpendVal= watch('marketingSpend')|| ''
   const goal12Val        = watch('goal12')         || ''
   const revenueGoalVal   = watch('revenueGoal')   || ''
-  const startVal         = watch('start')          || ''
 
   const onSubmit = async (data: FormData) => {
     setSending(true); setServerError('')
@@ -81,7 +78,7 @@ export function CandidaturaForm() {
             Verifica Se Possiamo<br /><span className="gold-shine">Aiutarti</span>
           </motion.h2>
           <motion.p className="form-sub" initial={{ opacity:0, y:20 }} whileInView={{ opacity:1, y:0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.16 }}>
-            Compila il form. Il nostro reparto commerciale è attivo adesso e ti contatterà a momenti.
+            Compila il form. Il nostro team è attivo adesso e ti contatterà a momenti.
           </motion.p>
 
           <AnimatePresence mode="wait">
@@ -169,13 +166,6 @@ export function CandidaturaForm() {
                     <RadioGroup name="revenueGoal" value={revenueGoalVal} onChange={v => setValue('revenueGoal', v, { shouldValidate: true })}
                       options={[{ value: '<500k', label: 'Sotto 500.000 €' }, { value: '500k-1m', label: '500.000 - 1M €' }, { value: '1m-3m', label: '1M - 3M €' }, { value: '3m-5m', label: '3M - 5M €' }, { value: '5m+', label: 'Oltre 5M €' }]}
                       error={errors.revenueGoal?.message} />
-                  </div>
-
-                  <div className="form-row">
-                    <label>Quando vorreste iniziare? <span className="req">*</span></label>
-                    <RadioGroup name="start" value={startVal} onChange={v => setValue('start', v, { shouldValidate: true })}
-                      options={[{ value: 'subito', label: 'Subito' }, { value: '30gg', label: 'Entro 30 giorni' }, { value: '1-3m', label: 'Tra 1-3 mesi' }, { value: 'valuto', label: 'Sto solo valutando' }]}
-                      error={errors.start?.message} />
                   </div>
                 </div>
 
