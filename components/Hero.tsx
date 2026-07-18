@@ -18,19 +18,20 @@ export function Hero() {
           <motion.div variants={item}>
             <div className="hero-tag">
               <span className="dot" />
-              Partner Selezionati · Pochi per Zona
+              Reparto Commerciale da Remoto · B2B e Residenziale
             </div>
           </motion.div>
 
           <motion.h1 className="hero-h1" variants={item}>
-            Installi fotovoltaico?<br />
-            Ti portiamo nuove richieste qualificate<br />
-            e le trasformiamo in <span className="gold-shine">sopralluoghi già fissati</span><br />
+            Sei un installatore di fotovoltaico?<br />
+            Portiamo noi i <span className="gold-shine">nuovi contratti</span> nella tua azienda.<br />
+            Sopralluoghi pronti e <span className="gold-shine">già fissati</span><br />
             nel calendario dei tuoi commerciali.
           </motion.h1>
 
           <motion.p className="hero-sub" variants={item}>
-            Più persone interessate al fotovoltaico davanti ai tuoi commerciali.
+            Non solo gestiamo le richieste che hai gi&agrave;: noi facciamo il marketing,
+            intercettiamo chi cerca il fotovoltaico e trasformiamo quel traffico in appuntamenti qualificati.
             Tu pensi agli impianti. Noi riempiamo l'agenda.
           </motion.p>
 
@@ -47,9 +48,9 @@ export function Hero() {
 
           <motion.div className="hero-stats" variants={item}>
             {[
+              { n: 'Nuovi contratti', l: 'Li portiamo noi' },
               { n: '7 giorni', l: 'Sei operativo' },
               { n: 'Zero', l: 'Canone fisso' },
-              { n: 'Paghi', l: 'Solo a risultato' },
             ].map(({ n, l }) => (
               <div key={l} style={{ textAlign: 'center' }}>
                 <div className="hero-stat-n">{n}</div>

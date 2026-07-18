@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 
-const ladder = ['Crescita prevedibile', 'Più contratti', 'Più sopralluoghi', 'Più richieste', 'Marketing']
+const ladder = ['Crescita prevedibile', 'Più contratti', 'Più sopralluoghi', 'Più richieste', 'Marketing attivo']
 
 export function Pipeline() {
   return (
@@ -27,8 +27,8 @@ export function Pipeline() {
         >
           <p style={{ color: 'var(--text-soft)', fontSize: '1.1rem', lineHeight: 1.7 }}>
             Non dipendere solo dal passaparola. Non sperare che il telefono squilli.
-            SOLARBACK costruisce un sistema che lavora ogni giorno per generare nuove
-            opportunità commerciali e trasformarle in sopralluoghi.
+            SOLARBACK &egrave; il tuo reparto commerciale da remoto: lavora ogni giorno per generare
+            nuove opportunit&agrave; commerciali e trasformarle in sopralluoghi e contratti, sia B2B che residenziale.
           </p>
 
           <div style={{ marginTop: '2.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.4rem' }}>

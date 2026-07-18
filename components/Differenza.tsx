@@ -3,19 +3,19 @@
 import { motion } from 'framer-motion'
 
 const agencySteps = ['Pubblicità', 'Lead', 'Fine.']
-const solarbackSteps = ['Richiesta', 'Contatto', 'Qualificazione', 'Appuntamento', 'Commerciale', 'Contratto']
+const solarbackSteps = ['Marketing attivo', 'Richiesta', 'Contatto', 'Qualificazione', 'Appuntamento', 'Contratto']
 
 export function Differenza() {
   return (
     <section id="differenza" className="sb-section">
       <div className="sb-container">
         <div className="head-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+          <motion.div initial={{ opacity:0, y:20 }} whileInView={{ opacity:1, y:0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <div className="eyebrow"><span className="dot" />Perché siamo diversi</div>
           </motion.div>
-          <motion.h2 className="sb-h2" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.08 }}>
+          <motion.h2 className="sb-h2" initial={{ opacity:0, y:20 }} whileInView={{ opacity:1, y:0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.08 }}>
             Le agenzie si fermano al lead.<br />
-            <span className="gold-shine">Noi no.</span>
+            <span className="gold-shine">Noi portiamo il contratto.</span>
           </motion.h2>
         </div>
 
@@ -43,7 +43,7 @@ export function Differenza() {
 
         <p style={{ textAlign: 'center', marginTop: '2.5rem', fontSize: '1.1rem', color: 'var(--text-soft)', maxWidth: 760, margin: '2.5rem auto 0', lineHeight: 1.6 }}>
           SOLARBACK non è un'agenzia che genera lead:{' '}
-          <span style={{ color: 'var(--gold)', fontWeight: 600 }}>diventiamo il partner che costruisce e gestisce il tuo sistema di acquisizione clienti</span>.
+          <span style={{ color: 'var(--gold)', fontWeight: 600 }}>diventiamo il tuo reparto commerciale da remoto e chiudiamo il contratto</span>.
         </p>
       </div>
     </section>

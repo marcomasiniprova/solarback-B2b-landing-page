@@ -3,15 +3,15 @@ import { motion } from 'framer-motion'
 const QUESTIONS = [
   {
     q: 'Quanto costa SOLARBACK?',
-    a: "Non c'è un canone fisso e non ci sono costi mensili: paghi solo quando portiamo appuntamenti qualificati nel calendario dei tuoi commerciali. L'importo preciso lo definiamo insieme nella chiamata di valutazione, perché dipende dal volume di richieste e dalla tua zona. Il nostro guadagno è allineato al tuo: lavoriamo a risultato.",
+    a: "Non c'è un canone fisso e non ci sono costi mensili: paghi solo quando portiamo appuntamenti qualificati nel calendario dei tuoi commerciali. L'importo preciso lo definiamo insieme nella chiamata di valutazione, perché dipende dal volume di nuovi contratti che vuoi generare e dalla tua zona. Il nostro guadagno è allineato al tuo: lavoriamo a risultato.",
   },
   {
     q: 'Quanto tempo serve per iniziare?',
-    a: "Ti attiviamo in 7 giorni. All'ottavo giorno partono le prime richieste qualificate e i primi appuntamenti cominciano a entrare nell'agenda. Niente mesi di setup come con le agenzie tradizionali.",
+    a: "Ti attiviamo in 7 giorni. All'ottavo giorno partono le prime campagne e i primi appuntamenti cominciano a entrare nell'agenda. Niente mesi di setup come con le agenzie tradizionali.",
   },
   {
-    q: "E se non funziona?",
-    a: "Definiamo insieme un obiettivo misurabile prima di partire. Se non lo raggiungiamo, continuiamo a lavorare senza costi aggiuntivi finché non lo centriamo. Tutto scritto nero su bianco prima di iniziare: il rischio è nostro, non tuo.",
+    q: 'E se non funziona?',
+    a: "Definiamo insieme un obiettivo misurabile di nuovi sopralluoghi e contratti prima di partire. Se non lo raggiungiamo, continuiamo a lavorare senza costi aggiuntivi finché non lo centriamo. Tutto scritto nero su bianco prima di iniziare: il rischio è nostro, non tuo.",
   },
   {
     q: 'Devo cambiare il mio CRM?',
@@ -19,15 +19,15 @@ const QUESTIONS = [
   },
   {
     q: 'Devo assumere o cambiare commerciali?',
-    a: "No. SOLARBACK è il tuo reparto acquisizione esterno: noi gestiamo generazione, qualificazione e fissazione appuntamenti. Tu usi i commerciali che hai già. Più richieste portiamo, più sopralluoghi fai - senza assumere nessuno.",
+    a: "No. SOLARBACK è il tuo reparto acquisizione esterno: noi facciamo il marketing, gestiamo generazione, qualificazione e fissazione appuntamenti. Tu usi i commerciali che hai già. Più richieste portiamo, più sopralluoghi fai - senza assumere nessuno.",
   },
   {
-    q: 'Fate anche la pubblicità su Meta (Facebook e Instagram)?',
-    a: "Sì. La pubblicità su Meta è uno dei nostri motori principali: creiamo e gestiamo le campagne, gli annunci e il follow-up. Ma non ci fermiamo lì: gestiamo anche email B2B, la riattivazione del tuo database e le landing page. Tutto converge in un unico obiettivo: riempire l'agenda dei tuoi commerciali.",
+    q: 'Fate pubblicità su Meta (Facebook e Instagram)?',
+    a: "Sì. La pubblicità su Meta è uno dei nostri motori principali per portare nuovi contratti, ma non ci fermiamo lì: gestiamo anche la ricerca su Google, le email B2B e le landing page. Tutto converge in un unico obiettivo: riempire l'agenda dei tuoi commerciali di appuntamenti qualificati.",
   },
   {
     q: 'Lavorate in tutta Italia?',
-    a: "Sì, su tutto il territorio italiano - dal Nord al Sud. La qualificazione e la prenotazione avvengono da remoto, quindi copriamo sia le grandi città che le zone periferiche. Se hai commerciali su una o più regioni, strutturiamo il servizio sulla tua copertura.",
+    a: "Sì, su tutto il territorio italiano - dal Nord al Sud. La qualificazione e la prenotazione avvengono da remoto, quindi copriamo sia le grandi città che le zone periferiche, sia il residenziale che il B2B. Se hai commerciali su una o più regioni, strutturiamo il servizio sulla tua copertura.",
   },
   {
     q: 'Quante aziende seguite oggi?',
@@ -40,15 +40,15 @@ export function FAQ() {
     <section className="sb-section" id="faq" style={{ borderTop: '1px solid var(--line)' }}>
       <div className="sb-container">
         <div className="head-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+          <motion.div initial={{ opacity:0, y:20 }} whileInView={{ opacity:1, y:0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <div className="eyebrow"><span className="dot" />Domande Frequenti</div>
           </motion.div>
-          <motion.h2 className="sb-h2" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.08 }}>
+          <motion.h2 className="sb-h2" initial={{ opacity:0, y:20 }} whileInView={{ opacity:1, y:0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.08 }}>
             Tutto Quello Che Vuoi<br />Sapere su <span className="gold-shine">SOLARBACK</span>
           </motion.h2>
         </div>
 
-        <motion.div className="faq-list" initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: 0.12 }}>
+        <motion.div className="faq-list" initial={{ opacity:0, y:24 }} whileInView={{ opacity:1, y:0 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: 0.12 }}>
           {QUESTIONS.map(({ q, a }, i) => (
             <details key={i} className="faq-item">
               <summary>

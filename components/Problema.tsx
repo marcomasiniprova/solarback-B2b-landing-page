@@ -3,9 +3,9 @@
 import { motion } from 'framer-motion'
 
 const problems = [
+  'Non fanno abbastanza marketing per trovare nuovi clienti',
   'Richiamano i contatti troppo tardi',
   'Non fanno follow-up ai lead',
-  'Non hanno un processo commerciale',
   'I commerciali seguono i lead quando hanno tempo',
 ]
 
@@ -21,17 +21,14 @@ export function Problema() {
             <div className="eyebrow"><span className="dot" />Il problema</div>
           </motion.div>
           <motion.h2 className="sb-h2" initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeUp} transition={t(0.08)}>
-            Il problema non è solo generare richieste.<br />
-            È <span className="gold-shine">trasformarle in sopralluoghi e contratti</span>.
+            Il problema non è solo gestire le richieste.<br />
+            È <span className="gold-shine">portarne di nuove e chiuderle in contratti</span>.
           </motion.h2>
         </div>
 
         <motion.div className="insight-card" initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeUp} transition={t(0.15)}>
           <p>
-            Ogni richiesta lasciata senza risposta entro pochi minuti è
-            un'opportunità che rischia di finire a un concorrente. Molte aziende
-            investono migliaia di euro in marketing, ma poi perdono clienti perché
-            non hanno un processo che li segua fino in fondo.
+            Molte aziende installatrici investono migliaia di euro e poi restano ferme: non hanno chi fa il marketing ogni giorno n&eacute; un reparto che segua i contatti fino in fondo. Così i contratti finiscono dai concorrenti.
           </p>
           <ul className="problem-list">
             {problems.map((p, i) => (
@@ -40,7 +37,7 @@ export function Problema() {
           </ul>
           <p className="resolve">
             SOLARBACK nasce per <span className="gold-shine">eliminare queste perdite</span> e
-            trasformare più richieste in sopralluoghi.
+            portare pi&ugrave; sopralluoghi e contratti nella tua azienda.
           </p>
           <div className="insight-footer">
             Dal lavoro con installatori fotovoltaici in Italia

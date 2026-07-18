@@ -11,11 +11,14 @@ const schema = z.object({
   company: z.string().min(2, "Inserisci il nome dell'azienda"),
   phone:   z.string().min(9, 'Inserisci un numero valido'),
   email:   z.string().email("Inserisci un'email valida"),
-  leads:   z.string().min(1, "Seleziona un'opzione"),
-  channel: z.string().min(1, "Seleziona un'opzione"),
-  spend:   z.string().optional(),
-  when:    z.string().optional(),
-  notes:   z.string().optional(),
+  salesTeam: z.string().min(1, "Seleziona un'opzione"),
+  installs: z.string().min(1, "Seleziona un'opzione"),
+  revenueModel: z.string().optional(),
+  channels: z.string().min(1, "Seleziona un'opzione"),
+  marketingSpend: z.string().min(1, "Seleziona un'opzione"),
+  goal12:   z.string().min(1, "Seleziona un'opzione"),
+  revenueGoal: z.string().min(1, "Seleziona un'opzione"),
+  start:    z.string().min(1, "Seleziona un'opzione"),
   privacy: z.boolean().refine(v => v, 'Devi accettare i termini'),
 })
 type FormData = z.infer<typeof schema>
@@ -46,8 +49,13 @@ export function CandidaturaForm() {
 
   const { register, handleSubmit, watch, setValue, formState: { errors } } = useForm<FormData>({ resolver: zodResolver(schema) })
 
-  const leadsVal   = watch('leads')   || ''
-  const channelVal = watch('channel') || ''
+  const salesTeamVal     = watch('salesTeam')     || ''
+  const installsVal      = watch('installs')      || ''
+  const channelsVal      = watch('channels')       || ''
+  const marketingSpendVal= watch('marketingSpend')|| ''
+  const goal12Val        = watch('goal12')         || ''
+  const revenueGoalVal   = watch('revenueGoal')   || ''
+  const startVal         = watch('start')          || ''
 
   const onSubmit = async (data: FormData) => {
     setSending(true); setServerError('')
@@ -66,19 +74,19 @@ export function CandidaturaForm() {
     <section id="candidatura">
       <div className="sb-container">
         <div className="form-wrap">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+          <motion.div initial={{ opacity:0, y:20 }} whileInView={{ opacity:1, y:0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <div className="eyebrow" style={{ marginBottom: '1.5rem' }}><span className="dot" />Candidatura Partner</div>
           </motion.div>
-          <motion.h2 className="form-h1" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.08 }}>
+          <motion.h2 className="form-h1" initial={{ opacity:0, y:20 }} whileInView={{ opacity:1, y:0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.08 }}>
             Verifica Se Possiamo<br /><span className="gold-shine">Aiutarti</span>
           </motion.h2>
-          <motion.p className="form-sub" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.16 }}>
-            Compila il form. Il nostro team è attivo adesso e ti contatterà a momenti.
+          <motion.p className="form-sub" initial={{ opacity:0, y:20 }} whileInView={{ opacity:1, y:0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.16 }}>
+            Compila il form. Il nostro reparto commerciale è attivo adesso e ti contatterà a momenti.
           </motion.p>
 
           <AnimatePresence mode="wait">
             {submitted ? (
-              <motion.div key="ok" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }}
+              <motion.div key="ok" initial={{ opacity:0, scale:0.95 }} animate={{ opacity:1, scale:1 }}
                 style={{ padding: '2.5rem 2rem', border: '1px solid rgba(217,164,65,0.4)', background: 'rgba(217,164,65,0.06)', borderRadius: '20px', textAlign: 'center' }}>
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="var(--gold)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ margin: '0 auto 1rem' }}>
                   <circle cx="24" cy="24" r="20"/><path d="M15 24l6 6 12-14"/>
@@ -87,73 +95,88 @@ export function CandidaturaForm() {
                 <p style={{ color: 'var(--text-soft)' }}>Stiamo già analizzando la tua richiesta. Ti contatteremo a momenti al numero che ci hai lasciato.</p>
               </motion.div>
             ) : (
-              <motion.form key="form" className="form-card" onSubmit={handleSubmit(onSubmit)} noValidate initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+              <motion.form key="form" className="form-card" onSubmit={handleSubmit(onSubmit)} noValidate initial={{ opacity:0 }} animate={{ opacity:1 }}>
 
-                <div className="form-row">
-                  <label htmlFor="f-name">Nome Completo <span className="req">*</span></label>
-                  <input className="input" id="f-name" {...register('name')} type="text" placeholder="Mario Rossi" />
-                  {errors.name && <p className="form-error">{errors.name.message}</p>}
+                <div className="form-block">
+                  <div className="form-block-title">Blocco 1 · I tuoi contatti</div>
+
+                  <div className="form-row">
+                    <label htmlFor="f-name">Nome e Cognome <span className="req">*</span></label>
+                    <input className="input" id="f-name" {...register('name')} type="text" placeholder="Mario Rossi" />
+                    {errors.name && <p className="form-error">{errors.name.message}</p>}
+                  </div>
+
+                  <div className="form-row">
+                    <label htmlFor="f-company">Azienda <span className="req">*</span></label>
+                    <input className="input" id="f-company" {...register('company')} type="text" placeholder="Energia Solare Srl" />
+                    {errors.company && <p className="form-error">{errors.company.message}</p>}
+                  </div>
+
+                  <div className="form-row phone">
+                    <label htmlFor="f-phone">Telefono <span className="req">*</span></label>
+                    <span className="flag" aria-hidden="true"><span className="g"/><span className="w"/><span className="r"/></span>
+                    <input className="input" id="f-phone" {...register('phone')} type="tel" placeholder="333 333 3333" />
+                    {errors.phone && <p className="form-error">{errors.phone.message}</p>}
+                  </div>
+
+                  <div className="form-row">
+                    <label htmlFor="f-email">Email <span className="req">*</span></label>
+                    <input className="input" id="f-email" {...register('email')} type="email" placeholder="info@tuaazienda.it" />
+                    {errors.email && <p className="form-error">{errors.email.message}</p>}
+                  </div>
                 </div>
 
-                <div className="form-row">
-                  <label htmlFor="f-company">Nome della tua azienda e provincia <span className="req">*</span></label>
-                  <input className="input" id="f-company" {...register('company')} type="text" placeholder="Energia Solare Srl, Milano" />
-                  {errors.company && <p className="form-error">{errors.company.message}</p>}
-                </div>
+                <div className="form-block">
+                  <div className="form-block-title">Blocco 2 · Qualificazione</div>
 
-                <div className="form-row phone">
-                  <label htmlFor="f-phone">Numero di Telefono <span className="req">*</span></label>
-                  <span className="flag" aria-hidden="true"><span className="g"/><span className="w"/><span className="r"/></span>
-                  <input className="input" id="f-phone" {...register('phone')} type="tel" placeholder="333 333 3333" />
-                  {errors.phone && <p className="form-error">{errors.phone.message}</p>}
-                </div>
+                  <div className="form-row">
+                    <label>Quanti commerciali effettuano sopralluoghi? <span className="req">*</span></label>
+                    <RadioGroup name="salesTeam" value={salesTeamVal} onChange={v => setValue('salesTeam', v, { shouldValidate: true })}
+                      options={[{ value: '0', label: 'Nessuno' }, { value: '1', label: '1' }, { value: '2-3', label: '2-3' }, { value: '4-6', label: '4-6' }, { value: '7+', label: '7+' }]}
+                      error={errors.salesTeam?.message} />
+                  </div>
 
-                <div className="form-row">
-                  <label htmlFor="f-email">Email <span className="req">*</span></label>
-                  <input className="input" id="f-email" {...register('email')} type="email" placeholder="info@tuaazienda.it" />
-                  {errors.email && <p className="form-error">{errors.email.message}</p>}
-                </div>
+                  <div className="form-row">
+                    <label>Quante installazioni completate mediamente al mese? <span className="req">*</span></label>
+                    <RadioGroup name="installs" value={installsVal} onChange={v => setValue('installs', v, { shouldValidate: true })}
+                      options={[{ value: '<10', label: 'Meno di 10' }, { value: '10-20', label: '10-20' }, { value: '21-40', label: '21-40' }, { value: '41-80', label: '41-80' }, { value: '80+', label: 'Oltre 80' }]}
+                      error={errors.installs?.message} />
+                  </div>
 
-                <div className="form-row">
-                  <label>Quanti sopralluoghi fate mediamente ogni mese? <span className="req">*</span></label>
-                  <RadioGroup name="leads" value={leadsVal} onChange={v => setValue('leads', v, { shouldValidate: true })}
-                    options={[{ value: '0-30', label: 'Meno di 30' }, { value: '30-100', label: 'Tra 30 e 100' }, { value: '100-300', label: 'Tra 100 e 300' }, { value: '300+', label: 'Più di 300' }]}
-                    error={errors.leads?.message} />
-                </div>
+                  <div className="form-row">
+                    <label>Come arrivano oggi le richieste? <span className="req">*</span></label>
+                    <RadioGroup name="channels" value={channelsVal} onChange={v => setValue('channels', v, { shouldValidate: true })}
+                      options={[{ value: 'passaparola', label: 'Passaparola' }, { value: 'meta', label: 'Meta Ads' }, { value: 'google', label: 'Google Ads' }, { value: 'portali', label: 'Portali' }, { value: 'multi', label: 'Più canali' }]}
+                      error={errors.channels?.message} />
+                  </div>
 
-                <div className="form-row">
-                  <label>Come ricevi oggi le richieste? <span className="req">*</span></label>
-                  <RadioGroup name="channel" value={channelVal} onChange={v => setValue('channel', v, { shouldValidate: true })}
-                    options={[{ value: 'phone', label: 'Telefono' }, { value: 'whatsapp', label: 'WhatsApp' }, { value: 'form', label: 'Form sul sito' }, { value: 'multi', label: 'Più canali insieme' }]}
-                    error={errors.channel?.message} />
-                </div>
+                  <div className="form-row">
+                    <label>Quanto investite oggi in pubblicità? <span className="req">*</span></label>
+                    <RadioGroup name="marketingSpend" value={marketingSpendVal} onChange={v => setValue('marketingSpend', v, { shouldValidate: true })}
+                      options={[{ value: '0', label: 'Non investiamo' }, { value: '<1k', label: 'Fino a 1.000 €' }, { value: '1k-3k', label: '1.000-3.000 €' }, { value: '3k-10k', label: '3.000-10.000 €' }, { value: '10k+', label: 'Oltre 10.000 €' }]}
+                      error={errors.marketingSpend?.message} />
+                  </div>
 
-                <div className="form-row">
-                  <label htmlFor="f-spend">Quanto investi al mese in pubblicità?</label>
-                  <select id="f-spend" {...register('spend')}>
-                    <option value="">Seleziona un&apos;opzione</option>
-                    <option value="<1k">Meno di 1.000 €</option>
-                    <option value="1k-3k">Tra 1.000 e 3.000 €</option>
-                    <option value="3k-7k">Tra 3.000 e 7.000 €</option>
-                    <option value="7k+">Più di 7.000 €</option>
-                    <option value="0">Non investo in pubblicità</option>
-                  </select>
-                </div>
+                  <div className="form-row">
+                    <label>Qual è il vostro obiettivo nei prossimi 12 mesi? <span className="req">*</span></label>
+                    <RadioGroup name="goal12" value={goal12Val} onChange={v => setValue('goal12', v, { shouldValidate: true })}
+                      options={[{ value: 'sopralluoghi', label: 'Aumentare i sopralluoghi' }, { value: 'contratti', label: 'Aumentare i contratti' }, { value: 'zone', label: 'Espandere nuove zone' }, { value: 'fatturato', label: 'Crescere il fatturato' }, { value: 'efficienza', label: 'Rendere più efficiente il commerciale' }]}
+                      error={errors.goal12?.message} />
+                  </div>
 
-                <div className="form-row">
-                  <label htmlFor="f-when">Quando ti chiameremmo?</label>
-                  <select id="f-when" {...register('when')}>
-                    <option value="">Seleziona un&apos;opzione</option>
-                    <option value="asap">Il prima possibile</option>
-                    <option value="morning">Mattina (9:00 – 13:00)</option>
-                    <option value="afternoon">Pomeriggio (14:00 – 18:00)</option>
-                    <option value="evening">Sera dopo le 18:00</option>
-                  </select>
-                </div>
+                  <div className="form-row">
+                    <label>Qual è il vostro obiettivo di fatturato? <span className="req">*</span></label>
+                    <RadioGroup name="revenueGoal" value={revenueGoalVal} onChange={v => setValue('revenueGoal', v, { shouldValidate: true })}
+                      options={[{ value: '<500k', label: 'Sotto 500.000 €' }, { value: '500k-1m', label: '500.000 - 1M €' }, { value: '1m-3m', label: '1M - 3M €' }, { value: '3m-5m', label: '3M - 5M €' }, { value: '5m+', label: 'Oltre 5M €' }]}
+                      error={errors.revenueGoal?.message} />
+                  </div>
 
-                <div className="form-row">
-                  <label htmlFor="f-notes">Vuoi aggiungere qualcosa? (opzionale)</label>
-                  <textarea id="f-notes" {...register('notes')} rows={3} placeholder="Raccontaci brevemente la tua situazione" />
+                  <div className="form-row">
+                    <label>Quando vorreste iniziare? <span className="req">*</span></label>
+                    <RadioGroup name="start" value={startVal} onChange={v => setValue('start', v, { shouldValidate: true })}
+                      options={[{ value: 'subito', label: 'Subito' }, { value: '30gg', label: 'Entro 30 giorni' }, { value: '1-3m', label: 'Tra 1-3 mesi' }, { value: 'valuto', label: 'Sto solo valutando' }]}
+                      error={errors.start?.message} />
+                  </div>
                 </div>
 
                 <label className="form-check">

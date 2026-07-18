@@ -5,8 +5,8 @@ import { motion } from 'framer-motion'
 const steps = [
   {
     num: '01',
-    title: 'Arriva una richiesta',
-    desc: 'Dal tuo sito, dalle tue pubblicità o dal passaparola online. Il contatto entra subito nel nostro processo: lo riconosciamo e lo lavoriamo in tempo reale.',
+    title: 'Facciamo arrivare le richieste',
+    desc: 'Noi facciamo il marketing: intercettiamo chi cerca il fotovoltaico online e portiamo nuove richieste nella tua azienda, non solo quelle che hai gi&agrave;.',
     icon: <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M13 3v8M9 7l4 4 4-4"/><path d="M4 17v3a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3"/></svg>,
   },
   {
@@ -42,8 +42,8 @@ export function Metodo() {
             nel <span className="gold-shine">Calendario dei Tuoi Commerciali</span>
           </motion.h2>
           <motion.p className="sb-lead" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.16 }}>
-            Quattro passaggi semplici. Nessun cambiamento nel tuo modo di lavorare.
-            Il processo parte dal primo contatto.
+            Quattro passaggi semplici. Noi facciamo il lavoro: marketing, contatti e appuntamenti.
+            Tu trovi l'agenda gi&agrave; piena quando apri la mattina.
           </motion.p>
         </div>
 

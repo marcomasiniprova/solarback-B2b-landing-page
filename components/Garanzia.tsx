@@ -6,8 +6,8 @@ export function Garanzia() {
       <div className="sb-container">
         <motion.div
           className="guarantee"
-          initial={{ opacity: 0, y: 32 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity:0, y:32 }}
+          whileInView={{ opacity:1, y:0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
@@ -28,7 +28,7 @@ export function Garanzia() {
           </h2>
 
           <p>
-            Definiamo insieme un obiettivo misurabile prima di partire. Se non lo
+            Definiamo insieme un obiettivo misurabile di nuovi sopralluoghi e contratti prima di partire. Se non lo
             raggiungiamo,{' '}
             <strong>
               continuiamo a lavorare senza costi aggiuntivi finché non lo centriamo

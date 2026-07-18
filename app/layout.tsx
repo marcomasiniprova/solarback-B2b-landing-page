@@ -71,7 +71,7 @@ const jsonLd = {
       email: 'team@artecai.it',
       founder: { '@type': 'Person', name: 'Valerio Alieri', jobTitle: 'Founder & CEO', url: 'https://artecai.it' },
       areaServed: { '@type': 'Country', name: 'Italy' },
-      knowsAbout: ['fotovoltaico', 'energia rinnovabile', 'lead generation B2B', 'acquisizione clienti', 'marketing B2B'],
+      knowsAbout: ['fotovoltaico', 'energia rinnovabile', 'lead generation B2B', 'lead generation residenziale', 'acquisizione clienti', 'marketing B2B', 'reparto commerciale da remoto', 'appuntamenti qualificati', 'contratti fotovoltaico'],
       sameAs: ['https://artecai.it'],
     },
     {
@@ -105,6 +105,13 @@ const jsonLd = {
       serviceType: 'Lead Generation e Appointment Setting per Fotovoltaico',
       areaServed: { '@type': 'Country', name: 'Italy' },
 
+    },
+    {
+      '@type': 'Service',
+      serviceType: 'Acquisizione clienti fotovoltaico B2B e residenziale',
+      provider: { '@id': 'https://artecai.it/#organization' },
+      areaServed: { '@type': 'Country', name: 'Italia' },
+      description: 'SOLARBACK è il reparto commerciale da remoto che faccia il marketing e porta nuovi sopralluoghi e contratti qualificati per installatori di fotovoltaico, sia B2B che residenziale, su tutta Italia.',
     },
     {
       '@type': 'FAQPage',
