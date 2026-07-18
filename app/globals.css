@@ -629,8 +629,15 @@ footer { background: var(--bg-2); border-top: 1px solid var(--line); padding: 5r
 @media (max-width: 540px) { .footer-grid { grid-template-columns: 1fr; } }
 .footer-logo-block { display: flex; flex-direction: column; gap: 1.2rem; }
 .footer-logo { display: inline-flex; align-items: center; gap: 0.7rem; text-decoration: none; }
-.footer-logo img { transition: filter 0.4s ease; }
-[data-theme="light"] .footer-logo img { filter: brightness(0) invert(1); }
+.footer-logo-fixed { position: relative; display: inline-block; width: 220px; height: 65px; }
+.footer-logo-img {
+  position: absolute; top: 50%; left: 0; transform: translateY(-50%);
+  width: 220px; height: auto; object-fit: contain; transition: opacity 0.2s ease;
+}
+.footer-logo-dark { opacity: 1; }
+.footer-logo-light { opacity: 0; }
+[data-theme="light"] .footer-logo-dark { opacity: 0; }
+[data-theme="light"] .footer-logo-light { opacity: 1; }
 .footer-logo-mark {
   width: 42px; height: 42px; border-radius: 50%;
   background: radial-gradient(circle at 30% 30%, #2a2a2a, #0a0a0a);
@@ -689,7 +696,7 @@ footer { background: var(--bg-2); border-top: 1px solid var(--line); padding: 5r
   /* Head center spacing */
   .head-center { margin-bottom: 2.5rem; }
 
-  /* Metodo: step padding piu compatto */
+  /* Metodo: step padding più compatto */
   .step { padding: 1.8rem 1.4rem 1.6rem; }
 
   /* Perche / Fit cards */
@@ -707,13 +714,13 @@ footer { background: var(--bg-2); border-top: 1px solid var(--line); padding: 5r
   .form-h1 { font-size: 2rem; }
 
   /* Footer logo: scala da 220x65 a 150x44 */
-  .footer-logo img { width: 150px !important; height: 44px !important; }
+  .footer-logo-fixed { width: 150px !important; height: 44px !important; }
+  .footer-logo-img { width: 150px !important; height: auto !important; }
   .footer-bar { flex-direction: column; text-align: center; }
   .footer-bar nav { gap: 1rem; flex-wrap: wrap; justify-content: center; }
 }
 
-/* tema chiaro - regola CSS corretta.
-   Prima era scritta senza \ e quindi INVALIDA: il tema chiaro non si applicava mai. */
+/* tema chiaro - regola CSS corretta. */
 [data-theme="light"] {
   --bg:          #FFFFFF;
   --bg-2:        #F5F2EA;

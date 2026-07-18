@@ -45,12 +45,21 @@ export function Nav() {
       <nav className={`top-nav${scrolled ? ' scrolled' : ''}`} data-theme-nav={theme}>
         <div className="nav-inner">
           <a href="#hero" className="nav-logo" aria-label="SOLARBACK">
-            {/* UN SOLO logo (nero). Nel tema chiaro lo si rende bianco
-                via filtro: dimensioni SEMPRE identiche, zero discrepanze. */}
+            {/* Due loghi reali (nero + bianco), posizione IDENTICA.
+                Cross-fade via opacity: nel tema scuro il nero, nel chiaro il bianco.
+                Nessun filtro (falliva sul PNG nero). Dimensioni sempre uguali. */}
             <span className="nav-logo-fixed">
               <Image
-                className="nav-logo-img"
+                className="nav-logo-img nav-logo-dark"
                 src="/solarback-logo.png"
+                alt="SOLARBACK"
+                width={210}
+                height={62}
+                priority
+              />
+              <Image
+                className="nav-logo-img nav-logo-light"
+                src="/LOGO PER SFONDO BIANCO.png"
                 alt="SOLARBACK"
                 width={210}
                 height={62}
@@ -118,9 +127,9 @@ export function Nav() {
         @media (max-width: 900px) { .nav-cta-show { display: none; } }
 
         /* Logo a dimensioni fisse identiche in entrambi i temi.
-           Il logo bianco ha LA STESSA IDENTICA posizione del nero:
-           stesso container (relative), stessa immagine (absolute, top:50% left:0,
-           translateY(-50%)). Cambia SOLO l'opacita (cross-fade), mai la posizione. */
+           I due loghi (nero + bianco) hanno LA STESSA posizione esatta:
+           stesso container (relative), entrambi absolute top:50% left:0,
+           translateY(-50%). Cambia SOLO l'opacity (cross-fade), mai la posizione. */
         .nav-logo-fixed {
           position: relative;
           display: inline-flex;
@@ -154,10 +163,6 @@ export function Nav() {
           transition: border-color .2s, color .2s, background .2s;
         }
         .theme-toggle:hover { border-color: var(--gold); color: var(--gold); }
-
-        /* FIX: logo navbar bianco nel tema chiaro (sfondo chiaro).
-           Stesso file nero + filtro -> dimensioni identiche, zero spostamenti. */
-        [data-theme="light"] .nav-logo-img { filter: brightness(0) invert(1); }
       `}</style>
     </>
   )

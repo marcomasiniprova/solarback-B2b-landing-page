@@ -20,12 +20,15 @@ export function Differenza() {
         </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem', marginTop: '1rem' }}>
-          {/* Box AGENZIE: bordo grigio medio ben visibile, sfondo scuro */}
-          <div style={{ border: '1px solid rgba(255,255,255,0.18)', borderRadius: '20px', padding: '2rem', background: 'rgba(255,255,255,0.05)', boxShadow: '0 8px 30px rgba(0,0,0,0.25)' }}>
-            <h3 style={{ fontSize: '1.1rem', marginBottom: '1.5rem', color: 'var(--text-soft)', fontWeight: 700 }}>Le agenzie marketing si fermano qui</h3>
+          {/* Box AGENZIE: bordo grigio visibile in ENTRAMBI i temi.
+              Nel tema chiaro il grigio chiaro spariva: uso un bordo scuro
+              e uno sfondo leggero ma visibile, così i due blocchi
+              (sinistra grigio / destra oro) sono coerenti. */}
+          <div style={{ border: '1.5px solid rgba(120,120,120,0.45)', borderRadius: '20px', padding: '2rem', background: 'rgba(128,128,128,0.10)', boxShadow: '0 8px 30px rgba(0,0,0,0.18)' }}>
+            <h3 style={{ fontSize: '1.1rem', marginBottom: '1.5rem', color: 'var(--text)', fontWeight: 700 }}>Le agenzie marketing si fermano qui</h3>
             {agencySteps.map((s, i) => (
               <div key={s}>
-                <div style={{ padding: '1rem 1.3rem', borderRadius: '12px', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', color: 'var(--text)', fontWeight: 600, fontSize: '1.05rem' }}>{s}</div>
+                <div style={{ padding: '1rem 1.3rem', borderRadius: '12px', background: 'rgba(128,128,128,0.12)', border: '1px solid rgba(120,120,120,0.35)', color: 'var(--text)', fontWeight: 600, fontSize: '1.05rem' }}>{s}</div>
                 {i < agencySteps.length - 1 && <div style={{ textAlign: 'center', color: 'var(--text-dim)', padding: '0.5rem 0', fontSize: '1.1rem' }}>↓</div>}
               </div>
             ))}
