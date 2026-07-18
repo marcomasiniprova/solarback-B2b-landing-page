@@ -1,7 +1,7 @@
 'use client'
 
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
@@ -18,6 +18,7 @@ const schema = z.object({
   marketingSpend: z.string().min(1, "Seleziona un'opzione"),
   goal12:   z.string().min(1, "Seleziona un'opzione"),
   revenueGoal: z.string().min(1, "Seleziona un'opzione"),
+  website: z.string().optional(),
   privacy: z.boolean().refine(v => v, 'Devi accettare i termini'),
 })
 type FormData = z.infer<typeof schema>
@@ -45,6 +46,7 @@ export function CandidaturaForm() {
   const [submitted, setSubmitted]     = useState(false)
   const [sending, setSending]         = useState(false)
   const [serverError, setServerError] = useState('')
+  const lastSubmitRef = useRef(0)
 
   const { register, handleSubmit, watch, setValue, formState: { errors } } = useForm<FormData>({ resolver: zodResolver(schema) })
 
@@ -56,10 +58,17 @@ export function CandidaturaForm() {
   const revenueGoalVal   = watch('revenueGoal')   || ''
 
   const onSubmit = async (data: FormData) => {
+    if (data.website) return
+    const elapsed = Date.now() - lastSubmitRef.current
+    if (elapsed < 10000) {
+      setServerError('Troppe richieste. Attendi qualche secondo e riprova.')
+      return
+    }
     setSending(true); setServerError('')
     try {
       const res = await fetch('/api/submit', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
       if (!res.ok) throw new Error('send failed')
+      lastSubmitRef.current = Date.now()
       setSubmitted(true)
     } catch (e) {
       setServerError("Errore nell'invio. Riprova o scrivici a team@artecai.it")
@@ -95,7 +104,12 @@ export function CandidaturaForm() {
             ) : (
               <motion.form key="form" className="form-card" onSubmit={handleSubmit(onSubmit)} noValidate initial={{ opacity:0 }} animate={{ opacity:1 }}>
 
-                <div className="form-block">
+                                    <div style={{ position: 'absolute', left: '-9999px' }} aria-hidden="true">
+                      <label htmlFor="f-website">Website</label>
+                      <input id="f-website" {...register('website')} type="text" tabIndex={-1} autoComplete="off" />
+                    </div>
+
+                    <div className="form-block">
                   <div className="form-block-title">Blocco 1 - I tuoi contatti</div>
 
                   <div className="form-row">
