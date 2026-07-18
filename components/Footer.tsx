@@ -18,7 +18,7 @@ const ICONS = {
   facebook: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M14 8h2V5h-2c-2 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V8.5c0-.3.2-.5.5-.5z"/></svg>,
 }
 
-/* social sempre visibili (desktop + mobile), ordine
+/* FIX 5A: social sempre visibili (desktop + mobile), ordine
    Instagram, Facebook, WhatsApp, Email. Tutti cliccabili. */
 const SOCIALS = [
   { label: 'Instagram', href: 'https://instagram.com/solarback',       icon: ICONS.instagram },
@@ -37,7 +37,7 @@ export function Footer() {
           <a href="#hero" className="footer-logo">
             <span className="footer-logo-fixed">
               <Image className="footer-logo-img footer-logo-dark" src="/solarback-logo.png" alt="SOLARBACK" width={220} height={65} />
-              <Image className="footer-logo-img footer-logo-light" src="/LOGO PER SFONDO BIANCO.png" alt="SOLARBACK" width={220} height={65} />
+              <Image className="footer-logo-img footer-logo-light" src="/LOGO%20PER%20SFONDO%20BIANCO.png" alt="SOLARBACK" width={220} height={65} />
             </span>
           </a>
           <p className="footer-tagline">

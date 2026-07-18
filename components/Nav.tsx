@@ -46,8 +46,8 @@ export function Nav() {
         <div className="nav-inner">
           <a href="#hero" className="nav-logo" aria-label="SOLARBACK">
             {/* Due loghi reali (nero + bianco), posizione IDENTICA.
-                Cross-fade via opacity: nel tema scuro il nero, nel chiaro il bianco.
-                Nessun filtro (falliva sul PNG nero). Dimensioni sempre uguali. */}
+                 Cross-fade via opacity: nel tema scuro il nero, nel chiaro il bianco.
+                 Nessun filtro (falliva sul PNG nero). Dimensioni sempre uguali. */}
             <span className="nav-logo-fixed">
               <Image
                 className="nav-logo-img nav-logo-dark"
@@ -59,7 +59,7 @@ export function Nav() {
               />
               <Image
                 className="nav-logo-img nav-logo-light"
-                src="/LOGO PER SFONDO BIANCO.png"
+                src="/LOGO%20PER%20SFONDO%20BIANCO.png"
                 alt="SOLARBACK"
                 width={210}
                 height={62}
@@ -126,10 +126,10 @@ export function Nav() {
         .nav-cta-show { display: inline-flex; }
         @media (max-width: 900px) { .nav-cta-show { display: none; } }
 
-        /* Logo a dimensioni fisse identiche in entrambi i temi.
-           I due loghi (nero + bianco) hanno LA STESSA posizione esatta:
-           stesso container (relative), entrambi absolute top:50% left:0,
-           translateY(-50%). Cambia SOLO l'opacity (cross-fade), mai la posizione. */
+        /* FIX 1: logo a dimensioni fisse identiche in entrambi i temi.
+           Il logo bianco ha LA STESSA IDENTICA posizione del nero:
+           stesso container (relative), stessa immagine (absolute, top:50% left:0,
+           translateY(-50%)). Cambia SOLO l'opacità (cross-fade), mai la posizione. */
         .nav-logo-fixed {
           position: relative;
           display: inline-flex;
