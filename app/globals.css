@@ -6,7 +6,7 @@
 
 /* ═════════════════════════════════════
    DESIGN TOKENS
-═════════════════════════════════════ */
+   ═════════════════════════════════════ */
 :root {
   --bg:          #0B0B0B;
   --bg-2:        #0E0E0E;
@@ -65,7 +65,7 @@ body::after {
 
 /* ═════════════════════════════════════
    GOLD TEXT
-═════════════════════════════════════ */
+   ═════════════════════════════════════ */
 .gold-shine {
   background: linear-gradient(180deg, #fff1c2 0%, #f0d27a 18%, #d9a441 38%, #a06c1c 52%, #d9a441 68%, #f0d27a 84%, #fff1c2 100%);
   background-size: 100% 220%;
@@ -88,7 +88,7 @@ body::after {
 
 /* ═════════════════════════════════════
    LAYOUT PRIMITIVES
-═════════════════════════════════════ */
+   ═════════════════════════════════════ */
 .sb-section {
   padding: var(--gap-section) 1.5rem;
   position: relative;
@@ -108,7 +108,7 @@ body::after {
 
 /* ═════════════════════════════════════
    EYEBROW
-═════════════════════════════════════ */
+   ═════════════════════════════════════ */
 .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -133,7 +133,7 @@ body::after {
 
 /* ═════════════════════════════════════
    SECTION HEADINGS
-═════════════════════════════════════ */
+   ═════════════════════════════════════ */
 .sb-h2 {
   font-weight: 800;
   font-size: clamp(1.9rem, 4.3vw, 3.3rem);
@@ -154,7 +154,7 @@ body::after {
 
 /* ═════════════════════════════════════
    BUTTON
-═════════════════════════════════════ */
+   ═════════════════════════════════════ */
 .sb-btn {
   display: inline-flex;
   align-items: center;
@@ -192,7 +192,7 @@ body::after {
 
 /* ═════════════════════════════════════
    NAV
-═════════════════════════════════════ */
+   ═════════════════════════════════════ */
 .top-nav {
   position: fixed; top: 0; left: 0; right: 0;
   z-index: 100;
@@ -281,7 +281,7 @@ body::after {
 
 /* ═════════════════════════════════════
    HERO
-═════════════════════════════════════ */
+   ═════════════════════════════════════ */
 #hero {
   min-height: 100vh;
   padding: 8.5rem 1.5rem 7rem;
@@ -323,7 +323,7 @@ body::after {
 
 /* ═════════════════════════════════════
    PROBLEMA
-═════════════════════════════════════ */
+   ═════════════════════════════════════ */
 #problema {
   background: var(--bg-2);
   border-top: 1px solid var(--line);
@@ -366,7 +366,7 @@ body::after {
 
 /* ═════════════════════════════════════
    METODO
-═════════════════════════════════════ */
+   ═════════════════════════════════════ */
 .flow {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -413,7 +413,7 @@ body::after {
 
 /* ═════════════════════════════════════
    FAQ
-═════════════════════════════════════ */
+   ═════════════════════════════════════ */
 .faq-list { max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.75rem; }
 .faq-item {
   border: 1px solid var(--line); border-radius: 16px;
@@ -442,7 +442,7 @@ body::after {
 
 /* ═════════════════════════════════════
    PERCHÉ
-═════════════════════════════════════ */
+   ═════════════════════════════════════ */
 #perche {
   background: var(--bg-2);
   border-top: 1px solid var(--line);
@@ -470,7 +470,7 @@ body::after {
 
 /* ═════════════════════════════════════
    FIT
-═════════════════════════════════════ */
+   ═════════════════════════════════════ */
 #fit {
   background: var(--bg-2);
   border-top: 1px solid var(--line);
@@ -507,7 +507,7 @@ body::after {
 
 /* ═════════════════════════════════════
    GARANZIA
-═════════════════════════════════════ */
+   ═════════════════════════════════════ */
 #garanzia { padding: var(--gap-section) 1.5rem; }
 .guarantee {
   max-width: 920px; margin: 0 auto;
@@ -539,7 +539,7 @@ body::after {
 
 /* ═════════════════════════════════════
    FOUNDER
-═════════════════════════════════════ */
+   ═════════════════════════════════════ */
 #founder {
   background: var(--bg-2);
   border-top: 1px solid var(--line);
@@ -567,7 +567,7 @@ body::after {
 
 /* ═════════════════════════════════════
    FORM
-═════════════════════════════════════ */
+   ═════════════════════════════════════ */
 #candidatura { padding: var(--gap-section) 1.5rem; text-align: center; }
 .form-wrap { max-width: 760px; margin: 0 auto; }
 .form-h1 {
@@ -635,7 +635,7 @@ body::after {
 
 /* ═════════════════════════════════════
    TECH VANTAGGI
-═════════════════════════════════════ */
+   ═════════════════════════════════════ */
 .tech-grid {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem;
 }
@@ -656,7 +656,7 @@ body::after {
 
 /* ═════════════════════════════════════
    FOOTER
-═════════════════════════════════════ */
+   ═════════════════════════════════════ */
 footer { background: var(--bg-2); border-top: 1px solid var(--line); padding: 5rem 1.5rem 0; }
 .footer-grid {
   max-width: var(--container); margin: 0 auto;
@@ -703,7 +703,7 @@ footer { background: var(--bg-2); border-top: 1px solid var(--line); padding: 5r
 /* ═════════════════════════════════════
    MOBILE OVERRIDES (≤ 600px)
    Desktop CSS above is untouched.
-═════════════════════════════════════ */
+   ═════════════════════════════════════ */
 @media (max-width: 600px) {
   :root { --gap-section: 5rem; }
 
@@ -781,7 +781,7 @@ footer { background: var(--bg-2); border-top: 1px solid var(--line); padding: 5r
 
 /* ═════════════════════════════════════
    Sezione "Dentro SOLARBACK"
-═════════════════════════════════════ */
+   ═════════════════════════════════════ */
 .dentro-stage { margin-top: 2.5rem; display: grid; gap: 1.5rem; }
 .dentro-hero-img { margin: 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: var(--card-bg); }
 /* FIX 3: immagini nitide, non sgranate. Proporzioni mantenute. */

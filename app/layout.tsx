@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+'import type { Metadata } from 'next'
 import { Manrope } from 'next/font/google'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import './globals.css'
