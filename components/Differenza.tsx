@@ -1,6 +1,5 @@
 'use client'
 
-
 import { motion } from 'framer-motion'
 
 const agencySteps = ['Pubblicità', 'Lead', 'Fine.']
@@ -20,23 +19,25 @@ export function Differenza() {
           </motion.h2>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem', marginTop: '1rem' }}>
-          <div style={{ border: '1px solid var(--line-2)', borderRadius: '20px', padding: '2rem', background: 'var(--card-bg)' }}>
-            <h3 style={{ fontSize: '1.1rem', marginBottom: '1.5rem', color: 'var(--text-dim)' }}>Le agenzie marketing si fermano qui</h3>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem', marginTop: '1rem' }}>
+          {/* Box AGENZIE: bordo grigio medio ben visibile, sfondo scuro */}
+          <div style={{ border: '1px solid rgba(255,255,255,0.18)', borderRadius: '20px', padding: '2rem', background: 'rgba(255,255,255,0.05)', boxShadow: '0 8px 30px rgba(0,0,0,0.25)' }}>
+            <h3 style={{ fontSize: '1.1rem', marginBottom: '1.5rem', color: 'var(--text-soft)', fontWeight: 700 }}>Le agenzie marketing si fermano qui</h3>
             {agencySteps.map((s, i) => (
               <div key={s}>
-                <div style={{ padding: '0.9rem 1.2rem', borderRadius: '12px', background: 'rgba(255,255,255,0.03)', color: 'var(--text-soft)', fontWeight: 600 }}>{s}</div>
-                {i < agencySteps.length - 1 && <div style={{ textAlign: 'center', color: 'var(--text-dim)', padding: '0.4rem 0' }}>↓</div>}
+                <div style={{ padding: '1rem 1.3rem', borderRadius: '12px', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', color: 'var(--text)', fontWeight: 600, fontSize: '1.05rem' }}>{s}</div>
+                {i < agencySteps.length - 1 && <div style={{ textAlign: 'center', color: 'var(--text-dim)', padding: '0.5rem 0', fontSize: '1.1rem' }}>↓</div>}
               </div>
             ))}
           </div>
 
-          <div style={{ border: '1px solid rgba(217,164,65,0.35)', borderRadius: '20px', padding: '2rem', background: 'rgba(217,164,65,0.04)' }}>
-            <h3 style={{ fontSize: '1.1rem', marginBottom: '1.5rem', color: 'var(--gold)' }}>SOLARBACK arriva fino al sopralluogo</h3>
+          {/* Box SOLARBACK: bordo oro ben visibile, sfondo oro tenue */}
+          <div style={{ border: '1.5px solid rgba(217,164,65,0.55)', borderRadius: '20px', padding: '2rem', background: 'rgba(217,164,65,0.07)', boxShadow: '0 8px 30px rgba(217,164,65,0.12)' }}>
+            <h3 style={{ fontSize: '1.1rem', marginBottom: '1.5rem', color: 'var(--gold)', fontWeight: 800 }}>SOLARBACK arriva fino al sopralluogo</h3>
             {solarbackSteps.map((s, i) => (
               <div key={s}>
-                <div style={{ padding: '0.9rem 1.2rem', borderRadius: '12px', background: 'rgba(217,164,65,0.08)', color: 'var(--text)', fontWeight: 700 }}>{s}</div>
-                {i < solarbackSteps.length - 1 && <div style={{ textAlign: 'center', color: 'var(--gold)', padding: '0.4rem 0' }}>↓</div>}
+                <div style={{ padding: '1rem 1.3rem', borderRadius: '12px', background: 'rgba(217,164,65,0.12)', border: '1px solid rgba(217,164,65,0.3)', color: 'var(--text)', fontWeight: 700, fontSize: '1.05rem' }}>{s}</div>
+                {i < solarbackSteps.length - 1 && <div style={{ textAlign: 'center', color: 'var(--gold)', padding: '0.5rem 0', fontSize: '1.1rem' }}>↓</div>}
               </div>
             ))}
           </div>
