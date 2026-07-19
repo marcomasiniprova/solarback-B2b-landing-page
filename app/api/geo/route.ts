@@ -49,8 +49,15 @@ export async function GET(req: NextRequest) {
     }
   }
 
+  const userIp = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
+    || req.headers.get('x-real-ip')
+    || ''
+
   try {
-    const ipRes = await fetch('http://ip-api.com/json/?fields=status,countryCode,regionName,city', { signal: AbortSignal.timeout(3000) })
+    const url = userIp
+      ? `http://ip-api.com/json/${userIp}?fields=status,countryCode,regionName,city`
+      : 'http://ip-api.com/json/?fields=status,countryCode,regionName,city'
+    const ipRes = await fetch(url, { signal: AbortSignal.timeout(3000) })
     const ipData = await ipRes.json() as { status: string; countryCode: string; regionName: string; city: string }
     if (ipData.status === 'success' && ipData.countryCode === 'IT') {
       return makeResponse(ipData.regionName ?? '', ipData.city ?? '')
