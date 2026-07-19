@@ -15,38 +15,47 @@ const IT_REGIONS: Record<string, string> = {
   '23': "Valle d'Aosta", '34': 'Veneto',
 }
 
-function getGeo(raw: string) {
+function parseGeo(raw: string) {
   try { return JSON.parse(raw) as Record<string, unknown> } catch {}
   try { return JSON.parse(decodeURIComponent(raw)) as Record<string, unknown> } catch {}
   return null
 }
 
-export async function GET(req: NextRequest) {
-  const cookie = req.cookies.get('geo')
-  if (cookie) {
-    try {
-      const val = JSON.parse(decodeURIComponent(cookie.value))
-      return NextResponse.json(val)
-    } catch {}
-  }
-
-  const raw = req.headers.get('x-nf-geo')
-  if (!raw) return NextResponse.json({ region: '', city: '' })
-
-  const parsed = getGeo(raw)
-  if (!parsed) return NextResponse.json({ region: '', city: '' })
-
-  const cnt = parsed.country as Record<string, string> | undefined
-  const sub = parsed.subdivision as Record<string, string> | undefined
-  const cty = parsed.city as Record<string, string> | undefined
-
-  if (cnt?.code !== 'IT') return NextResponse.json({ region: '', city: '' })
-
-  const region = sub?.code && IT_REGIONS[sub.code] ? IT_REGIONS[sub.code] : ''
-  const city = cty?.name ?? ''
+function makeResponse(region: string, city: string) {
   const res = NextResponse.json({ region, city })
   res.cookies.set('geo', JSON.stringify({ region, city }), {
     httpOnly: false, maxAge: 86400, sameSite: 'lax', path: '/',
   })
   return res
+}
+
+export async function GET(req: NextRequest) {
+  const cookie = req.cookies.get('geo')
+  if (cookie) {
+    try { return NextResponse.json(JSON.parse(decodeURIComponent(cookie.value))) } catch {}
+  }
+
+  const raw = req.headers.get('x-nf-geo')
+  if (raw) {
+    const parsed = parseGeo(raw)
+    if (parsed) {
+      const cnt = parsed.country as Record<string, string> | undefined
+      const sub = parsed.subdivision as Record<string, string> | undefined
+      const cty = parsed.city as Record<string, string> | undefined
+      if (cnt?.code === 'IT') {
+        const region = sub?.code && IT_REGIONS[sub.code] ? IT_REGIONS[sub.code] : ''
+        return makeResponse(region, cty?.name ?? '')
+      }
+    }
+  }
+
+  try {
+    const ipRes = await fetch('http://ip-api.com/json/?fields=status,countryCode,regionName,city', { signal: AbortSignal.timeout(3000) })
+    const ipData = await ipRes.json() as { status: string; countryCode: string; regionName: string; city: string }
+    if (ipData.status === 'success' && ipData.countryCode === 'IT') {
+      return makeResponse(ipData.regionName ?? '', ipData.city ?? '')
+    }
+  } catch {}
+
+  return NextResponse.json({ region: '', city: '' })
 }
