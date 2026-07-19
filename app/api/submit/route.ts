@@ -17,7 +17,18 @@ const schema = z.object({
 })
 
 const resendFrom = process.env.RESEND_FROM || 'SOLARBACK <noreply@artecai.it>'
+
+const RL_WINDOW = 10_000
+const RL_MAX_AGE = 60_000
+const RL_CLEANUP_EVERY = 100
 const rateLimit = new Map<string, number>()
+let rateCount = 0
+
+function getClientIp(req: NextRequest): string {
+  return req.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
+    || req.headers.get('x-real-ip')
+    || 'unknown'
+}
 
 export async function POST(req: NextRequest) {
   let data: Record<string, unknown>
@@ -31,15 +42,17 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Bot detected' }, { status: 400 })
   }
 
-  const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || req.headers.get('x-real-ip') || 'unknown'
+  const ip = getClientIp(req)
   const now = Date.now()
   const last = rateLimit.get(ip)
-  if (last && now - last < 10000) {
+  if (last && now - last < RL_WINDOW) {
     return NextResponse.json({ error: 'Troppe richieste. Attendi qualche secondo.' }, { status: 429 })
   }
   rateLimit.set(ip, now)
-  if (rateLimit.size > 10000) {
-    const cutoff = now - 60000
+
+  rateCount++
+  if (rateCount % RL_CLEANUP_EVERY === 0 && rateLimit.size > 1000) {
+    const cutoff = now - RL_MAX_AGE
     for (const [key, val] of rateLimit) {
       if (val < cutoff) rateLimit.delete(key)
     }
