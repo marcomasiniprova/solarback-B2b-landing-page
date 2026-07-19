@@ -38,7 +38,7 @@ export function Fit() {
             <div className="eyebrow"><span className="dot" />Verifica onesta</div>
           </motion.div>
           <motion.h2 className="sb-h2" initial={{ opacity:0, y:20 }} whileInView={{ opacity:1, y:0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.08 }}>
-            Non Siamo Adati<br />a <span className="gold-shine">Tutti</span>
+            Non Siamo Adatti<br />a <span className="gold-shine">Tutti</span>
           </motion.h2>
           <motion.p className="sb-lead" initial={{ opacity:0, y:20 }} whileInView={{ opacity:1, y:0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.16 }}>
             Lavoriamo solo dove possiamo davvero portare risultati. Ecco quando

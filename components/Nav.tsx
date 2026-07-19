@@ -30,7 +30,7 @@ export function Nav() {
     const next = theme === 'dark' ? 'light' : 'dark'
     setTheme(next)
     document.documentElement.setAttribute('data-theme', next)
-    try { localStorage.setItem('sb-theme', next) } catch (e) {}
+    try { localStorage.setItem('sb-theme', next) } catch { /* private browsing */ }
   }
 
   useEffect(() => {

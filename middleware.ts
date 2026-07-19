@@ -34,7 +34,9 @@ export function middleware(request: NextRequest) {
         })
         return response
       }
-    } catch {}
+    } catch {
+      /* geo header malformed */
+    }
   }
 
   const country = request.headers.get('x-vercel-ip-country')
