@@ -37,6 +37,24 @@ export async function GET(req: NextRequest) {
     } catch {}
   }
 
+  const { searchParams } = new URL(req.url)
+  const lat = searchParams.get('lat')
+  const lon = searchParams.get('lon')
+
+  if (lat && lon) {
+    try {
+      const nom = await fetch(
+        `https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lon}&format=json&zoom=10&accept-language=it`,
+        { headers: { 'User-Agent': 'SOLARBACK/1.0 (artecai.it)' }, signal: AbortSignal.timeout(4000) },
+      )
+      const d = await nom.json() as { address?: { state?: string; region?: string; country_code?: string } }
+      if (d?.address?.country_code === 'it') {
+        const reg = normalise(d.address.state || d.address.region || '')
+        if (reg) return makeRes(reg)
+      }
+    } catch {}
+  }
+
   const ua = req.headers.get('user-agent') || ''
   const isBot = !ua || ua.includes('bot') || ua.includes('curl') || ua.includes('fetch')
   if (isBot) return makeRes('')
