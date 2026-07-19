@@ -18,6 +18,7 @@ const schema = z.object({
   goal12:   z.string().min(1, "Seleziona un'opzione"),
   revenueGoal: z.string().min(1, "Seleziona un'opzione"),
   privacy: z.boolean().refine(v => v, 'Devi accettare i termini'),
+  website: z.string().optional(),
 })
 type FormData = z.infer<typeof schema>
 
@@ -311,6 +312,13 @@ export function CandidaturaForm() {
                     contattato da SOLARBACK.
                   </span>
                 </label>
+
+                <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, overflow: 'hidden' }}>
+                  <label>
+                    Non compilare questo campo
+                    <input {...register('website')} type="text" tabIndex={-1} autoComplete="off" />
+                  </label>
+                </div>
                 {errors.privacy && (
                   <p className="form-error" style={{ marginTop: '-1rem', marginBottom: '1rem' }}>
                     {errors.privacy.message}

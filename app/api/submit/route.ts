@@ -2,10 +2,19 @@ import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 import { z } from 'zod'
 
+function escapeHtml(input: unknown): string {
+  return String(input ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
+}
+
 const schema = z.object({
   name: z.string().min(2),
   company: z.string().min(2),
-  phone: z.string().min(9),
+  phone: z.string().min(9).regex(/^[0-9+\s().-]+$/, 'Telefono non valido'),
   email: z.string().email(),
   salesTeam: z.string().min(1),
   installs: z.string().min(1),
@@ -13,6 +22,7 @@ const schema = z.object({
   marketingSpend: z.string().min(1),
   goal12: z.string().min(1),
   revenueGoal: z.string().min(1),
+  privacy: z.boolean().refine(v => v, 'Devi accettare i termini'),
   website: z.string().optional(),
 })
 
@@ -63,7 +73,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Dati non validi' }, { status: 400 })
   }
 
-  const { name, company, phone, email, salesTeam, installs, channels, marketingSpend, goal12, revenueGoal } = parsed.data
+  const { name, company, phone, email, salesTeam, installs, channels, marketingSpend, goal12, revenueGoal, privacy } = parsed.data
 
   const apiKey = process.env.RESEND_API_KEY
   if (!apiKey) {
@@ -76,21 +86,21 @@ export async function POST(req: NextRequest) {
   const resend = new Resend(apiKey)
 
   const row = (label: string, value: string) =>
-    `<tr><td style="padding:8px 12px;font-weight:600;background:#f5f5f5">${label}</td><td style="padding:8px 12px">${value || '-'}</td></tr>`
+    `<tr><td style="padding:8px 12px;font-weight:600;background:#f5f5f5">${escapeHtml(label)}</td><td style="padding:8px 12px">${escapeHtml(value) || '-'}</td></tr>`
 
   try {
     await resend.emails.send({
       from: resendFrom,
       to: ['valerio@artecai.it'],
       replyTo: email,
-      subject: `Nuova candidatura da ${name} - ${company}`,
+      subject: `Nuova candidatura da ${escapeHtml(name)} - ${escapeHtml(company)}`,
       html: `
         <h2>Nuova candidatura SOLARBACK</h2>
         <table style="border-collapse:collapse;width:100%;font-family:sans-serif;font-size:15px">
           ${row('Nome', name)}
           ${row('Azienda', company)}
-          ${row('Telefono', `<a href="tel:${phone}">${phone}</a>`)}
-          ${row('Email', `<a href="mailto:${email}">${email}</a>`)}
+          ${row('Telefono', phone)}
+          ${row('Email', email)}
           ${row('Commerciali sopralluoghi', salesTeam)}
           ${row('Installazioni/mese', installs)}
           ${row('Canali richieste', channels)}
