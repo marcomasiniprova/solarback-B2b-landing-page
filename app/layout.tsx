@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Manrope } from 'next/font/google'
 import { GoogleAnalytics } from '@next/third-parties/google'
+import { headers } from 'next/headers'
 import './globals.css'
 
 const manrope = Manrope({
@@ -170,7 +171,9 @@ const jsonLd = {
   ],
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const nonce = (await headers()).get('x-nonce') ?? ''
+
   return (
     <html lang="it" className={manrope.variable}>
       <head>
@@ -179,6 +182,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <script
+          nonce={nonce || undefined}
           dangerouslySetInnerHTML={{ __html: "(function(){try{var t=localStorage.getItem('sb-theme');if(t==='light'){document.documentElement.setAttribute('data-theme','light');}}catch(e){}})();" }}
         />
       </head>

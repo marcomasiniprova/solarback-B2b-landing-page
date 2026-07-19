@@ -606,6 +606,9 @@ footer { background: var(--bg-2); border-top: 1px solid var(--line); padding: 5r
   position: absolute; top: 50%; left: 0; transform: translateY(-50%);
   width: 220px; height: auto; object-fit: contain; transition: opacity 0.2s ease;
 }
+@media (max-width: 880px) {
+  .footer-logo-fixed { width: 150px; height: 44px; }
+}
 .footer-logo-dark { opacity: 1; }
 .footer-logo-light { opacity: 0; }
 [data-theme="light"] .footer-logo-dark { opacity: 0; }
@@ -673,17 +676,6 @@ footer { background: var(--bg-2); border-top: 1px solid var(--line); padding: 5r
 
 .nav-cta-show { display: inline-flex; }
 @media (max-width: 900px) { .nav-cta-show { display: none; } }
-
-/* FOOTER LOGO — cross-fade dark/light */
-.footer-logo-fixed { width: 220px; height: 65px; }
-.footer-logo-img {
-  width: 220px !important;
-  height: 65px !important;
-  object-fit: contain !important;
-}
-@media (max-width: 880px) {
-  .footer-logo-fixed { width: 150px; height: 44px; }
-}
 
 /* DIFFERENZA SECTION */
 .diff-grid {
