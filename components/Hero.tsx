@@ -1,7 +1,6 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useGeo } from './useGeo'
 
 const container = {
   hidden: {},
@@ -13,9 +12,6 @@ const item = {
 }
 
 export function Hero() {
-  const { region } = useGeo()
-  const showZone = !!region
-
   return (
     <section id="hero">
       <div className="hero-content">
@@ -24,7 +20,7 @@ export function Hero() {
           <motion.div variants={item}>
             <div className="hero-tag">
               <span className="dot" />
-              Reparto Acquisizione Clienti Esterno {showZone && <>{region}</>}
+              Reparto Acquisizione Clienti Esterno
             </div>
           </motion.div>
 
@@ -35,7 +31,7 @@ export function Hero() {
           </motion.h1>
 
           <motion.p className="hero-sub" variants={item}>
-            Tu pensi agli impianti. Noi ci occupiamo di trovare i clienti{showZone ? ' nella tua zona' : ''}
+            Tu pensi agli impianti. Noi ci occupiamo di trovare i clienti
             e portarli fino all'appuntamento. Generiamo richieste qualificate
             e le trasformiamo in sopralluoghi pronti.
           </motion.p>
