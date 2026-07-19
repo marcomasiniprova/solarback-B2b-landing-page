@@ -14,8 +14,7 @@ const item = {
 
 export function Hero() {
   const { region } = useGeo()
-  const zone = region || 'Italia'
-  const showZone = zone !== 'Italia'
+  const showZone = !!region
 
   return (
     <section id="hero">
@@ -25,7 +24,7 @@ export function Hero() {
           <motion.div variants={item}>
             <div className="hero-tag">
               <span className="dot" />
-              Reparto Acquisizione Clienti Esterno {showZone && <>{zone}</>}
+              Reparto Acquisizione Clienti Esterno {showZone && <>{region}</>}
             </div>
           </motion.div>
 
