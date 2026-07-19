@@ -13,6 +13,8 @@ import { Garanzia } from '@/components/Garanzia'
 import { Founder } from '@/components/Founder'
 import { FAQ } from '@/components/FAQ'
 import { CandidaturaForm } from '@/components/CandidaturaForm'
+import { Pipeline } from '@/components/Pipeline'
+import { TechVantaggi } from '@/components/TechVantaggi'
 import { Footer } from '@/components/Footer'
 
 export default function Home() {
@@ -28,10 +30,12 @@ export default function Home() {
         <Differenza />
         <Perche />
         <Fit />
+        <Pipeline />
         <Garanzia />
         <Founder />
         <FAQ />
         <CandidaturaForm />
+        <TechVantaggi />
       </main>
       <Footer />
     </>

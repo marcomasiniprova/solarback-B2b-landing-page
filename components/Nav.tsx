@@ -42,15 +42,16 @@ export function Nav() {
 
   return (
     <>
-      <nav className={`top-nav${scrolled ? ' scrolled' : ''}`} data-theme-nav={theme}>
+      <nav className={`top-nav${scrolled ? ' scrolled' : ''}`}>
         <div className="nav-inner">
           <a href="#hero" className="nav-logo" aria-label="SOLARBACK">
-            {/* Entrambi i loghi nel DOM con dimensioni identiche:
-                il cambio tema NON sposta nulla, solo l'opacità cambia (cross-fade). */}
+            {/* Due loghi reali (nero + bianco), posizione IDENTICA.
+                Cross-fade via opacity: nel tema scuro il nero, nel chiaro il bianco.
+                Nessun filtro (falliva sul PNG nero). Dimensioni sempre uguali. */}
             <span className="nav-logo-fixed">
               <Image
                 className="nav-logo-img nav-logo-dark"
-                src="/solarback-logo.png"
+                src="/solarback-logo.webp"
                 alt="SOLARBACK"
                 width={210}
                 height={62}
@@ -58,7 +59,7 @@ export function Nav() {
               />
               <Image
                 className="nav-logo-img nav-logo-light"
-                src="/LOGO PER SFONDO BIANCO.png"
+                src="/LOGO%20PER%20SFONDO%20BIANCO.webp"
                 alt="SOLARBACK"
                 width={210}
                 height={62}
@@ -121,45 +122,7 @@ export function Nav() {
         </div>
       )}
 
-      <style>{`
-        .nav-cta-show { display: inline-flex; }
-        @media (max-width: 900px) { .nav-cta-show { display: none; } }
 
-        /* FIX 1: logo a dimensioni fisse identiche in entrambi i temi.
-           Nessuno shift: solo il colore/opacità cambia. */
-        .nav-logo-fixed {
-          position: relative;
-          display: inline-flex;
-          align-items: center;
-          width: 210px;
-          height: 62px;
-          flex-shrink: 0;
-        }
-        .nav-logo-img {
-          position: absolute;
-          top: 50%;
-          left: 0;
-          transform: translateY(-50%);
-          width: 210px;
-          height: 62px;
-          object-fit: contain;
-          transition: opacity 0.15s ease-in-out;
-        }
-        /* FIX 2: cross-fade istantaneo tra i due loghi (no flash, no glitch). */
-        .nav-logo-dark  { opacity: 1; }
-        .nav-logo-light { opacity: 0; }
-        [data-theme="light"] .nav-logo-dark  { opacity: 0; }
-        [data-theme="light"] .nav-logo-light { opacity: 1; }
-
-        .theme-toggle {
-          display: inline-flex; align-items: center; justify-content: center;
-          width: 40px; height: 40px; border-radius: 999px;
-          background: transparent; color: var(--text);
-          border: 1px solid var(--line-2); cursor: pointer;
-          transition: border-color .2s, color .2s, background .2s;
-        }
-        .theme-toggle:hover { border-color: var(--gold); color: var(--gold); }
-      `}</style>
     </>
   )
 }

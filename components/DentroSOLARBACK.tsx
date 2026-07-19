@@ -28,7 +28,7 @@ export function DentroSOLARBACK() {
         >
           <figure className="dentro-hero-img">
             <Image
-              src="/IMMAGINEWORKSTATION .png"
+              src="/IMMAGINEWORKSTATION.webp"
               alt="Workstation SOLARBACK: il sistema che monitora ogni richiesta"
               width={1717}
               height={916}
@@ -42,7 +42,7 @@ export function DentroSOLARBACK() {
             <figure className="dentro-card">
               <div className="dentro-img-wrap">
                 <Image
-                  src="/FOTO UOMO SOLARBACK CHE LAVORA.png"
+                  src="/FOTO-UOMO-SOLARBACK-CHE-LAVORA.webp"
                   alt="Pipeline CRM SOLARBACK: ogni lead segue uno stato preciso"
                   width={1536}
                   height={1024}
@@ -59,7 +59,7 @@ export function DentroSOLARBACK() {
             <figure className="dentro-card">
               <div className="dentro-img-wrap">
                 <Image
-                  src="/WHATSAPP BUSINESS LEADS CHAT.png"
+                  src="/WHATSAPP-BUSINESS-LEADS-CHAT.webp"
                   alt="Conversazioni WhatsApp SOLARBACK: risposta rapida e accompagnamento"
                   width={1720}
                   height={914}
