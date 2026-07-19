@@ -15,6 +15,18 @@ const IT_REGIONS: Record<string, string> = {
   '23': "Valle d'Aosta", '34': 'Veneto',
 }
 
+const EN_IT: Record<string, string> = {
+  'Abruzzo': 'Abruzzo', 'Basilicata': 'Basilicata', 'Calabria': 'Calabria',
+  'Campania': 'Campania', 'Emilia-Romagna': 'Emilia-Romagna',
+  'Friuli-Venezia Giulia': 'Friuli-Venezia Giulia', 'Lazio': 'Lazio',
+  'Liguria': 'Liguria', 'Lombardy': 'Lombardia', 'Marche': 'Marche',
+  'Molise': 'Molise', 'Piedmont': 'Piemonte', 'Apulia': 'Puglia',
+  'Sardinia': 'Sardegna', 'Sicily': 'Sicilia', 'Tuscany': 'Toscana',
+  'Trentino-Alto Adige': 'Trentino-Alto Adige', 'Umbria': 'Umbria',
+  "Valle d'Aosta": "Valle d'Aosta", 'Aosta Valley': "Valle d'Aosta",
+  'Veneto': 'Veneto',
+}
+
 function parseGeo(raw: string) {
   try { return JSON.parse(raw) as Record<string, unknown> } catch {}
   try { return JSON.parse(decodeURIComponent(raw)) as Record<string, unknown> } catch {}
@@ -61,7 +73,7 @@ export async function GET(req: NextRequest) {
     const ipRes = await fetch(url, { signal: AbortSignal.timeout(3000) })
     const ipData = await ipRes.json() as { status: string; countryCode: string; regionName: string; city: string }
     if (ipData.status === 'success' && ipData.countryCode === 'IT') {
-      return makeResponse(ipData.regionName ?? '', ipData.city ?? '')
+      return makeResponse(EN_IT[ipData.regionName] ?? ipData.regionName ?? '', '')
     }
   } catch {}
 
