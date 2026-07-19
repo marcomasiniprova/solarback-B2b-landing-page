@@ -2,12 +2,7 @@
 
 import { useEffect, useState } from 'react'
 
-type Geo = { region?: string; city?: string }
-
-function setGeoCookie(val: Geo) {
-  const raw = encodeURIComponent(JSON.stringify(val))
-  document.cookie = `geo=${raw}; path=/; max-age=86400; samesite=lax`
-}
+type Geo = { region?: string }
 
 export function useGeo(): Geo {
   const [geo, setGeo] = useState<Geo>({})
@@ -17,14 +12,13 @@ export function useGeo(): Geo {
     if (m) {
       try { setGeo(JSON.parse(decodeURIComponent(m[1]))); return } catch {}
     }
-
-    fetch('/api/geo')
-      .then(r => r.json())
-      .then(data => {
-        setGeo(data)
-        if (data.region || data.city) setGeoCookie(data)
-      })
-      .catch(() => {})
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone
+    if (tz === 'Europe/Rome') {
+      const val = { region: 'Italia' }
+      setGeo(val)
+      const raw = encodeURIComponent(JSON.stringify(val))
+      document.cookie = `geo=${raw}; path=/; max-age=86400; samesite=lax`
+    }
   }, [])
 
   return geo
