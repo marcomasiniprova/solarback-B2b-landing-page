@@ -7,7 +7,7 @@ const steps = [
   {
     num: '01',
     title: 'Arrivano le richieste',
-    desc: 'Gestiamo il tuo marketing: intercettiamo chi cerca il fotovoltaico online e portiamo nuove richieste nella tua azienda, non solo quelle che hai già.',
+    desc: 'Gestiamo il tuo marketing: intercettiamo chi cerca il fotovoltaico online nella tua zona e portiamo nuove richieste nella tua azienda, non solo quelle che hai già.',
     icon: <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M13 3v8M9 7l4 4 4-4"/><path d="M4 17v3a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3"/></svg>,
   },
   {

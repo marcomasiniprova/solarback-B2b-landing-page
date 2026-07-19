@@ -21,6 +21,5 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: 'https://artecai.it/sitemap.xml',
-    host: 'https://artecai.it',
   }
 }

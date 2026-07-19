@@ -18,8 +18,6 @@ const ICONS = {
   facebook: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M14 8h2V5h-2c-2 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V8.5c0-.3.2-.5.5-.5z"/></svg>,
 }
 
-/* FIX 5A: social sempre visibili (desktop + mobile), ordine
-   Instagram, Facebook, WhatsApp, Email. Tutti cliccabili. */
 const SOCIALS = [
   { label: 'Instagram', href: 'https://instagram.com/solarback',       icon: ICONS.instagram },
   { label: 'Facebook',   href: 'https://facebook.com/solarback',        icon: ICONS.facebook },
@@ -36,8 +34,8 @@ export function Footer() {
         <div className="footer-col footer-logo-block">
           <a href="#hero" className="footer-logo">
             <span className="footer-logo-fixed">
-              <Image className="footer-logo-img footer-logo-dark" src="/solarback-logo.png" alt="SOLARBACK" width={220} height={65} />
-              <Image className="footer-logo-img footer-logo-light" src="/LOGO%20PER%20SFONDO%20BIANCO.png" alt="SOLARBACK" width={220} height={65} />
+              <Image className="footer-logo-img footer-logo-dark" src="/solarback-logo.webp" alt="SOLARBACK" width={220} height={65} style={{ width: 220, height: 65, objectFit: 'contain' }} />
+              <Image className="footer-logo-img footer-logo-light" src="/LOGO%20PER%20SFONDO%20BIANCO.webp" alt="SOLARBACK" width={220} height={65} style={{ width: 220, height: 65, objectFit: 'contain' }} />
             </span>
           </a>
           <p className="footer-tagline">
@@ -100,11 +98,13 @@ export function Footer() {
       <div className="footer-bar">
         <p>© 2026 SOLARBACK. Tutti i diritti riservati.</p>
         <nav>
-          {['Privacy Policy','Cookie Policy','Termini'].map(t => (
-            <a key={t} href="#">{t}</a>
+          {[{ label: 'Privacy Policy', href: '/privacy' }, { label: 'Cookie Policy', href: '/cookie' }, { label: 'Termini', href: '/termini' }].map(t => (
+            <a key={t.label} href={t.href}>{t.label}</a>
           ))}
         </nav>
       </div>
+
+
     </footer>
   )
 }
