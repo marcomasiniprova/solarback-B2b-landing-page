@@ -10,10 +10,13 @@ export function useGeo(): Geo {
   useEffect(() => {
     const m = document.cookie.match(/\bgeo=([^;]+)/)
     if (m) {
-      try { setGeo(JSON.parse(decodeURIComponent(m[1]))) } catch {
-        // geo cookie malformed — skip
-      }
+      try { setGeo(JSON.parse(decodeURIComponent(m[1]))) } catch {}
+      return
     }
+    fetch('/api/geo')
+      .then(r => r.json())
+      .then(data => setGeo(data))
+      .catch(() => {})
   }, [])
 
   return geo
