@@ -65,5 +65,5 @@ export async function GET(req: NextRequest) {
     }
   } catch {}
 
-  return NextResponse.json({ region: '', city: '', debug: { userIp } })
+  return NextResponse.json({ region: '', city: '' })
 }
