@@ -681,13 +681,8 @@ footer { background: var(--bg-2); border-top: 1px solid var(--line); padding: 5r
   height: 65px !important;
   object-fit: contain !important;
 }
-@media (max-width: 600px) {
+@media (max-width: 880px) {
   .footer-logo-fixed { width: 150px; height: 44px; }
-  .footer-logo-img {
-    width: 150px !important;
-    height: 44px !important;
-    object-fit: contain !important;
-  }
 }
 
 /* DIFFERENZA SECTION */

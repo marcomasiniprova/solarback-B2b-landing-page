@@ -26,7 +26,7 @@ export function Founder() {
         >
           <div className="founder-photo">
             <Image
-              src="/marco-masini.webp"
+              src="/valerio-alieri.webp"
               alt="Valerio Alieri, fondatore SOLARBACK"
               width={220}
               height={220}
