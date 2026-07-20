@@ -2,7 +2,6 @@
 
 import { Nav } from '@/components/Nav'
 import { Hero } from '@/components/Hero'
-import { PerditaClienti } from '@/components/PerditaClienti'
 import { Problema } from '@/components/Problema'
 import { Metodo } from '@/components/Metodo'
 import { DentroSOLARBACK } from '@/components/DentroSOLARBACK'
@@ -22,7 +21,6 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <PerditaClienti />
         <Problema />
         <Metodo />
         <DentroSOLARBACK />

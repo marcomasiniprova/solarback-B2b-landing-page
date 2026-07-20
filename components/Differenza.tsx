@@ -4,7 +4,7 @@
 import { motion } from 'framer-motion'
 
 const agencySteps = ['Pubblicità', 'Lead', 'Fine.']
-const solarbackSteps = ['Marketing', 'Richiesta', 'Contatto', 'Qualificazione', 'Sopralluogo', 'Commerciale del cliente', 'Contratto']
+const solarbackSteps = ['Marketing', 'Richiesta', 'Contatto', 'Qualificazione', 'Sopralluogo']
 
 export function Differenza() {
   return (

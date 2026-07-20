@@ -1,13 +1,12 @@
 'use client'
 
-
 import { motion } from 'framer-motion'
 
 const problems = [
-  'Non fanno abbastanza marketing per trovare nuovi clienti',
-  'Richiamano i contatti troppo tardi',
-  'Non gestiscono i follow-up sui lead',
-  'I commerciali seguono i lead quando hanno tempo',
+  'flusso di richieste discontinuo;',
+  'pochi sopralluoghi realmente qualificati;',
+  'commerciali con giornate poco produttive;',
+  'crescita imprevedibile.',
 ]
 
 const fadeUp = { hidden: { opacity:0, y: 28 }, show: { opacity:1, y: 0 } }
@@ -19,17 +18,27 @@ export function Problema() {
       <div className="sb-container">
         <div className="head-center">
           <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeUp} transition={t()}>
-            <div className="eyebrow"><span className="dot" />Il problema</div>
+            <div className="eyebrow"><span className="dot" />Il contesto di mercato</div>
           </motion.div>
           <motion.h2 className="sb-h2" initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeUp} transition={t(0.08)}>
-            Il problema non è solo gestire le richieste.<br />
-            È <span className="gold-shine">portarne di nuove e chiuderle in impianti</span>.
+            Perché oggi molti installatori<br />
+            crescono <span className="gold-shine">meno del previsto</span>
           </motion.h2>
+          <motion.p className="sb-lead" initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeUp} transition={t(0.16)}>
+            Non basta lavorare bene. Per crescere servono nuove opportunità
+            commerciali ogni settimana.
+          </motion.p>
         </div>
 
         <motion.div className="insight-card" initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeUp} transition={t(0.15)}>
           <p>
-            Molte aziende installatrici investono migliaia di euro e poi restano ferme: non hanno chi fa il marketing ogni giorno né un reparto che segua i contatti fino in fondo. Così i contratti finiscono dai concorrenti.
+            Molte aziende dipendono ancora dal passaparola o da campagne
+            pubblicitarie gestite senza continuità. Il risultato è semplice:
+            alcuni mesi l'agenda è piena, altri è quasi vuota.
+          </p>
+          <p style={{ marginTop: '1rem' }}>
+            Nel frattempo i commerciali restano senza appuntamenti oppure
+            lavorano con contatti poco interessati.
           </p>
           <ul className="problem-list">
             {problems.map((p, i) => (
@@ -37,8 +46,7 @@ export function Problema() {
             ))}
           </ul>
           <p className="resolve">
-            SOLARBACK nasce per <span className="gold-shine">eliminare queste perdite</span> e
-            portare più sopralluoghi e impianti nella tua azienda.
+            È proprio questo il problema che <span className="gold-shine">SOLARBACK risolve</span>.
           </p>
           <div className="insight-footer">
             Dal lavoro con installatori fotovoltaici in Italia
