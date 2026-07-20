@@ -26,7 +26,7 @@ const schema = z.object({
   website: z.string().optional(),
 })
 
-const resendFrom = process.env.RESEND_FROM || 'SOLARBACK <noreply@artecai.it>'
+const resendFrom = process.env.RESEND_FROM || 'SOLARBACK <onboarding@resend.dev>'
 
 const RL_WINDOW = 10_000
 const RL_MAX_AGE = 60_000

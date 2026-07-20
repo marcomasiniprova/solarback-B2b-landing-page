@@ -609,10 +609,6 @@ footer { background: var(--bg-2); border-top: 1px solid var(--line); padding: 5r
 @media (max-width: 880px) {
   .footer-logo-fixed { width: 150px; height: 44px; }
 }
-.footer-logo-dark { opacity: 1; }
-.footer-logo-light { opacity: 0; }
-[data-theme="light"] .footer-logo-dark { opacity: 0; }
-[data-theme="light"] .footer-logo-light { opacity: 1; }
 
 .footer-tagline { color: var(--text-dim); font-size: 0.9rem; line-height: 1.65; max-width: 320px; }
 .footer-col h4 { font-weight: 700; font-size: 0.95rem; color: var(--text); margin-bottom: 1.2rem; }
@@ -661,18 +657,6 @@ footer { background: var(--bg-2); border-top: 1px solid var(--line); padding: 5r
   transition: opacity 0.15s ease-in-out;
 }
 .nav-logo-dark  { opacity: 1; }
-.nav-logo-light { opacity: 0; }
-[data-theme="light"] .nav-logo-dark  { opacity: 0; }
-[data-theme="light"] .nav-logo-light { opacity: 1; }
-
-.theme-toggle {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 40px; height: 40px; border-radius: 999px;
-  background: transparent; color: var(--text);
-  border: 1px solid var(--line-2); cursor: pointer;
-  transition: border-color .2s, color .2s, background .2s;
-}
-.theme-toggle:hover { border-color: var(--gold); color: var(--gold); }
 
 .nav-cta-show { display: inline-flex; }
 @media (max-width: 900px) { .nav-cta-show { display: none; } }
@@ -785,32 +769,6 @@ footer { background: var(--bg-2); border-top: 1px solid var(--line); padding: 5r
   .footer-bar { flex-direction: column; text-align: center; }
   .footer-bar nav { gap: 1rem; flex-wrap: wrap; justify-content: center; }
 }
-
-/* LIGHT THEME */
-[data-theme="light"] {
-  --bg:          #FFFFFF;
-  --bg-2:        #F5F2EA;
-  --bg-3:        #ECE8DE;
-  --text:        #16140F;
-  --text-dim:    rgba(22,20,15,0.58);
-  --text-soft:   rgba(22,20,15,0.80);
-  --line:        rgba(0,0,0,0.10);
-  --line-2:      rgba(0,0,0,0.16);
-  --card-bg:     rgba(0,0,0,0.035);
-  --glow:        0.12;
-}
-
-[data-theme="light"] .top-nav.scrolled {
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(20px) saturate(150%);
-  -webkit-backdrop-filter: blur(20px) saturate(150%);
-  border-bottom-color: rgba(217, 164, 65, 0.18);
-}
-[data-theme="light"] .nav-menu a { color: var(--text-soft); }
-[data-theme="light"] .nav-menu a:hover { color: var(--gold); }
-[data-theme="light"] .theme-toggle { color: var(--text); border-color: var(--line-2); }
-[data-theme="light"] .theme-toggle:hover { color: var(--gold); border-color: var(--gold); }
-[data-theme="light"] .hamburger span { background: var(--text); }
 
 /* DENTRO SOLARBACK */
 .dentro-stage { margin-top: 1.6rem; display: grid; gap: 0.9rem; }

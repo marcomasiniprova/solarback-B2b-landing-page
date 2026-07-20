@@ -4,16 +4,16 @@
 import { motion } from 'framer-motion'
 
 const noList  = [
-  'Non ricevi richieste regolari ogni mese',
-  'Non hai commerciali che fanno sopralluoghi',
-  'Non sei disposto a presentarti agli appuntamenti fissati',
-  "Cerchi un'agenzia che ti gestisca anche la pubblicità",
+  "Cerchi un'agenzia che ti venda semplicemente dei lead.",
+  'Non hai una squadra commerciale in grado di gestire i sopralluoghi.',
+  'Vuoi pagare un canone fisso indipendentemente dai risultati.',
+  'Cerchi un fornitore da cambiare ogni due mesi.',
 ]
 const yesList = [
-  'Vuoi un sistema esterno di acquisizione clienti',
-  'Ricevi già richieste ma poche diventano appuntamenti',
-  'Hai commerciali pronti ad andare in sopralluogo',
-  'Vuoi un partner che lavori a risultato, non a canone fisso',
+  'Vuoi aumentare i sopralluoghi, non semplicemente i contatti.',
+  'Hai un team commerciale pronto a trasformare gli appuntamenti in vendite.',
+  "Cerchi un partner che gestisca l'intero processo commerciale, dal primo contatto all'appuntamento.",
+  'Preferisci pagare in base ai risultati ottenuti.',
 ]
 
 const XIcon = () => (

@@ -178,9 +178,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <script
-          dangerouslySetInnerHTML={{ __html: "(function(){try{var t=localStorage.getItem('sb-theme');if(t==='light'){document.documentElement.setAttribute('data-theme','light');}}catch(e){}})();" }}
-        />
       </head>
       <body>
         {children}

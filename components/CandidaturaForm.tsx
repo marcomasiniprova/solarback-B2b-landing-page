@@ -147,7 +147,6 @@ export function CandidaturaForm() {
                 initial={{ opacity: 0 }} animate={{ opacity: 1 }}
               >
                 <div className="form-block">
-                  <div className="form-block-title">Blocco 1 - I tuoi contatti</div>
 
                   <div className="form-row">
                     <label htmlFor="f-name">
@@ -196,10 +195,6 @@ export function CandidaturaForm() {
                       <p className="form-error">{errors.email.message}</p>
                     )}
                   </div>
-                </div>
-
-                <div className="form-block">
-                  <div className="form-block-title">Blocco 2 - Qualificazione</div>
 
                   <div className="form-row">
                     <label>
