@@ -28,8 +28,8 @@ export function CookieConsent() {
         <div className="cookie-banner" role="dialog" aria-live="polite" aria-label="Consenso cookie">
           <div className="cookie-inner">
             <p className="cookie-text">
-              Usiamo cookie tecnici e Google Analytics (GA4) per capire come viene
-              usato il sito. GA4 viene attivato solo con il tuo consenso.
+              Usiamo alcuni dati di navigazione solo per migliorare il sito.
+              Niente parte senza il tuo OK.
             </p>
             <div className="cookie-actions">
               <button className="cookie-btn cookie-ghost" onClick={() => decide('denied')}>
