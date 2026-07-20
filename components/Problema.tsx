@@ -3,10 +3,10 @@
 import { motion } from 'framer-motion'
 
 const problems = [
-  'flusso di richieste discontinuo;',
-  'pochi sopralluoghi realmente qualificati;',
-  'commerciali con giornate poco produttive;',
-  'crescita imprevedibile.',
+  { title: 'Richieste discontinue', desc: 'Il flusso di nuove opportunità arriva a singhiozzo, senza costanza settimanale.' },
+  { title: 'Sopralluoghi poco qualificati', desc: 'Pochi appuntamenti realmente interessati e pronti a procedere.' },
+  { title: 'Commerciali fermi', desc: 'Giornate poco produttive quando l\'agenda resta vuota.' },
+  { title: 'Crescita imprevedibile', desc: 'Alcuni mesi pieni, altri quasi vuoti: impossibile pianificare.' },
 ]
 
 const fadeUp = { hidden: { opacity:0, y: 28 }, show: { opacity:1, y: 0 } }
@@ -42,7 +42,13 @@ export function Problema() {
           </p>
           <ul className="problem-list">
             {problems.map((p, i) => (
-              <li key={i}><span className="dash" />{p}</li>
+              <li key={i}>
+                <span className="problem-bullet">{String(i + 1).padStart(2, '0')}</span>
+                <div className="problem-body">
+                  <strong>{p.title}</strong>
+                  <span>{p.desc}</span>
+                </div>
+              </li>
             ))}
           </ul>
           <p className="resolve">

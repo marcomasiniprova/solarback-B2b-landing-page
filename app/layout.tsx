@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Manrope } from 'next/font/google'
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { CookieConsent } from '@/components/CookieConsent'
 import './globals.css'
 
 const manrope = Manrope({
@@ -181,7 +181,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         {children}
-        <GoogleAnalytics gaId="G-VT411CNHWJ" />
+        <CookieConsent />
       </body>
     </html>
   )

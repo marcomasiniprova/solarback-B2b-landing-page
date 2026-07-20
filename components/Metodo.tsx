@@ -67,16 +67,17 @@ export function Metodo() {
         </div>
 
         <motion.p
-          className="sb-lead"
+          className="metodo-final"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          style={{ maxWidth: 820, margin: '3rem auto 0', textAlign: 'center' }}
         >
-          Tu continui a installare impianti. Noi ci occupiamo ogni giorno di trovare
-          nuovi clienti, gestire il processo commerciale e riempire il calendario
-          dei tuoi commerciali.
+          Tu continui a installare impianti.{' '}
+          <span className="gold-shine">
+            Noi ci occupiamo ogni giorno di trovare nuovi clienti, gestire il
+            processo commerciale e riempire il calendario dei tuoi commerciali.
+          </span>
         </motion.p>
       </div>
     </section>
