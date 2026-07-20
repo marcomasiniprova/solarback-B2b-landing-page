@@ -14,9 +14,9 @@ export default function TerminiPage() {
         </h2>
         <p>
           Le presenti condizioni disciplinano il servizio <strong>SOLARBACK</strong>, erogato da
-          artec AI (Valerio Alieri): un reparto commerciale esterno che, per le aziende
-          installatrici di fotovoltaico, gestisce l&apos;acquisizione e la qualificazione delle
-          richieste e l&apos;organizzazione degli appuntamenti per i commerciali del cliente.
+          artec AI (Valerio Alieri): un reparto esterno dedicato all&apos;acquisizione di nuovi
+          clienti e all&apos;organizzazione di appuntamenti commerciali qualificati per le
+          aziende installatrici di impianti fotovoltaici.
         </p>
 
         <h2 style={{ color: 'var(--text)', fontWeight: 700, fontSize: '1.3rem', margin: '2.5rem 0 1rem' }}>
@@ -58,10 +58,29 @@ export default function TerminiPage() {
         </p>
 
         <h2 style={{ color: 'var(--text)', fontWeight: 700, fontSize: '1.3rem', margin: '2.5rem 0 1rem' }}>
-          6. Contatti
+          6. Proprietà intellettuale
+        </h2>
+        <p>
+          Tutti i contenuti presenti sul sito, inclusi testi, loghi, marchi, elementi grafici,
+          documentazione e materiali informativi, sono di proprietà del Titolare o dei
+          rispettivi aventi diritto e sono protetti dalla normativa applicabile in materia di
+          proprietà intellettuale. È vietata qualsiasi riproduzione, distribuzione o utilizzo
+          non autorizzato.
+        </p>
+
+        <h2 style={{ color: 'var(--text)', fontWeight: 700, fontSize: '1.3rem', margin: '2.5rem 0 1rem' }}>
+          7. Contatti
         </h2>
         <p>
           Per qualsiasi informazione scrivi a <strong>team@artecai.it</strong>.
+        </p>
+
+        <h2 style={{ color: 'var(--text)', fontWeight: 700, fontSize: '1.3rem', margin: '2.5rem 0 1rem' }}>
+          8. Legge applicabile
+        </h2>
+        <p>
+          Le presenti condizioni sono disciplinate dalla legge italiana. Per ogni controversia
+          sarà competente il foro previsto dalla normativa applicabile.
         </p>
       </div>
       <p style={{ marginTop: '3rem' }}>

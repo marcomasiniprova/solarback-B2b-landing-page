@@ -46,10 +46,11 @@ export default function PrivacyPage() {
           4. Modalità del trattamento
         </h2>
         <p>
-          I dati sono trattati con strumenti informatici e conservati su sistemi protetti
-          (Resend per la trasmissione delle email, server del fornitore). Adottiamo misure
-          tecniche e organizzative adeguate per prevenire accessi non autorizzati, perdita o
-          diffusione dei dati.
+          I dati sono trattati con strumenti informatici e conservati su sistemi protetti.
+          Possono essere trattati mediante fornitori tecnologici necessari all&apos;erogazione
+          del servizio (ad esempio servizi di hosting, posta elettronica e infrastrutture
+          cloud). Adottiamo misure tecniche e organizzative adeguate per prevenire accessi
+          non autorizzati, perdita o diffusione dei dati.
         </p>
 
         <h2 style={{ color: 'var(--text)', fontWeight: 700, fontSize: '1.3rem', margin: '2.5rem 0 1rem' }}>

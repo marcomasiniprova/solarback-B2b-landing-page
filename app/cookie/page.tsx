@@ -28,16 +28,16 @@ export default function CookiePage() {
         </p>
 
         <h2 style={{ color: 'var(--text)', fontWeight: 700, fontSize: '1.3rem', margin: '2.5rem 0 1rem' }}>
-          3. Google Analytics 4 (GA4)
+          3. Strumenti di analisi
         </h2>
         <p>
-          Con il tuo consenso, utilizziamo <strong>Google Analytics 4 (GA4)</strong> di Google
-          LLC per analizzare in forma aggregata e anonima come viene utilizzato il sito. GA4
-          è attivato <strong>solo dopo che hai accettato</strong> i cookie dal banner: fino a
-          quel momento nessun dato viene inviato a Google. L&apos;indirizzo IP viene anonimizzato.
-          Il trattamento avviene negli Stati Uniti ed è regolato dalle Clausole Contrattuali
-          Standard adottate da Google. Puoi revocare il consenso in qualsiasi momento
-          cancellando la preferenza dal tuo browser.
+          Con il tuo consenso, il sito può utilizzare strumenti di analisi forniti da terze
+          parti per comprendere in forma aggregata e anonima come viene utilizzato. Tali
+          strumenti sono attivati <strong>solo dopo che hai accettato</strong> i cookie dal
+          banner: fino a quel momento nessun dato viene trasmesso. I dati sono trattati secondo
+          le modalità descritte dal fornitore e in conformità alla configurazione adottata dal
+          Titolare. Puoi revocare il consenso in qualsiasi momento cancellando la preferenza
+          dal tuo browser.
         </p>
 
         <h2 style={{ color: 'var(--text)', fontWeight: 700, fontSize: '1.3rem', margin: '2.5rem 0 1rem' }}>
