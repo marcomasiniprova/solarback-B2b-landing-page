@@ -79,8 +79,6 @@ body::after {
   0%, 100% { opacity: 1; transform: scale(1); }
   50%       { opacity: 0.5; transform: scale(0.7); }
 }
-.dot-pulse { animation: dot-pulse 1.8s ease-in-out infinite; }
-
 /* LAYOUT PRIMITIVES */
 .sb-section {
   padding: var(--gap-section) 1.5rem;
@@ -167,8 +165,6 @@ body::after {
   display: inline-flex; align-items: center; justify-content: center;
   flex-shrink: 0;
 }
-.sb-btn.ghost .arrow { background: rgba(255,255,255,0.08); }
-
 /* NAV */
 .top-nav {
   position: fixed; top: 0; left: 0; right: 0;
@@ -644,8 +640,6 @@ footer { background: var(--bg-2); border-top: 1px solid var(--line); padding: 5r
 }
 .social-link svg { width: 20px; height: 20px; }
 .social-link:hover { background: rgba(217,164,65,0.12); border-color: rgba(217,164,65,0.5); color: var(--gold); transform: translateY(-2px); }
-[data-theme="light"] .social-link { color: #1c1c1c; border-color: rgba(0,0,0,0.18); background: rgba(0,0,0,0.04); }
-[data-theme="light"] .social-link:hover { color: #b8860b; border-color: rgba(184,134,11,0.5); background: rgba(184,134,11,0.1); }
 .footer-bar {
   border-top: 1px solid var(--line); padding: 1.6rem 0;
   max-width: var(--container); margin: 0 auto;
@@ -656,7 +650,6 @@ footer { background: var(--bg-2); border-top: 1px solid var(--line); padding: 5r
 .footer-bar nav a { color: var(--text-dim); text-decoration: none; font-size: 0.82rem; transition: color 0.2s; }
 .footer-bar nav a:hover { color: var(--gold); }
 
-/* NAV LOGO — cross-fade dark/light */
 .nav-logo-fixed {
   position: relative;
   display: inline-flex;
@@ -673,9 +666,7 @@ footer { background: var(--bg-2); border-top: 1px solid var(--line); padding: 5r
   width: 210px;
   height: 62px;
   object-fit: contain;
-  transition: opacity 0.15s ease-in-out;
 }
-.nav-logo-dark  { opacity: 1; }
 
 .nav-cta-show { display: inline-flex; }
 @media (max-width: 900px) { .nav-cta-show { display: none; } }

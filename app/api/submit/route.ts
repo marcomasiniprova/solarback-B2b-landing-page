@@ -24,21 +24,10 @@ const schema = z.object({
   revenueGoal: z.string().min(1),
   privacy: z.boolean().refine(v => v, 'Devi accettare i termini'),
   website: z.string().optional(),
+  _timestamp: z.number().optional(),
 })
 
 const resendFrom = process.env.RESEND_FROM || 'SOLARBACK <onboarding@resend.dev>'
-
-const RL_WINDOW = 10_000
-const RL_MAX_AGE = 60_000
-const RL_CLEANUP_EVERY = 100
-const rateLimit = new Map<string, number>()
-let rateCount = 0
-
-function getClientIp(req: NextRequest): string {
-  return req.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
-    || req.headers.get('x-real-ip')
-    || 'unknown'
-}
 
 export async function POST(req: NextRequest) {
   let data: Record<string, unknown>
@@ -52,20 +41,9 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Bot detected' }, { status: 400 })
   }
 
-  const ip = getClientIp(req)
-  const now = Date.now()
-  const last = rateLimit.get(ip)
-  if (last && now - last < RL_WINDOW) {
-    return NextResponse.json({ error: 'Troppe richieste. Attendi qualche secondo.' }, { status: 429 })
-  }
-  rateLimit.set(ip, now)
-
-  rateCount++
-  if (rateCount % RL_CLEANUP_EVERY === 0 && rateLimit.size > 1000) {
-    const cutoff = now - RL_MAX_AGE
-    for (const [key, val] of rateLimit) {
-      if (val < cutoff) rateLimit.delete(key)
-    }
+  const elapsed = typeof data._timestamp === 'number' ? Date.now() - data._timestamp : Infinity
+  if (elapsed < 3000 || elapsed > 86400000) {
+    return NextResponse.json({ error: 'Bot detected' }, { status: 400 })
   }
 
   const parsed = schema.safeParse(data)
@@ -77,9 +55,9 @@ export async function POST(req: NextRequest) {
 
   const apiKey = process.env.RESEND_API_KEY
   if (!apiKey) {
-    console.error('Resend error: RESEND_API_KEY non configurata')
+    console.error('Mittente email non configurato')
     return NextResponse.json(
-      { error: 'Server non configurato: manca RESEND_API_KEY' },
+      { error: 'Errore del server. Riprova o scrivici a team@artecai.it.' },
       { status: 500 }
     )
   }

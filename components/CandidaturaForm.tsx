@@ -67,7 +67,7 @@ export function CandidaturaForm() {
       const res = await fetch('/api/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, _timestamp: Date.now() }),
       })
       if (!res.ok) throw new Error('send failed')
       setSubmitted(true)

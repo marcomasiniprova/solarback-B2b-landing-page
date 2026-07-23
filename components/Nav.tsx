@@ -26,12 +26,9 @@ export function Nav() {
       <nav className={`top-nav${scrolled ? ' scrolled' : ''}`}>
         <div className="nav-inner">
           <a href="#hero" className="nav-logo" aria-label="SOLARBACK">
-            {/* Due loghi reali (nero + bianco), posizione IDENTICA.
-                Cross-fade via opacity: nel tema scuro il nero, nel chiaro il bianco.
-                Nessun filtro (falliva sul PNG nero). Dimensioni sempre uguali. */}
             <span className="nav-logo-fixed">
               <Image
-                className="nav-logo-img nav-logo-dark"
+                className="nav-logo-img"
                 src="/solarback-logo.webp"
                 alt="SOLARBACK"
                 width={210}

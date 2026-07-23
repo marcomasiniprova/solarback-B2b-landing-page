@@ -34,7 +34,7 @@ export function Footer() {
         <div className="footer-col footer-logo-block">
           <a href="#hero" className="footer-logo">
             <span className="footer-logo-fixed">
-              <Image className="footer-logo-img footer-logo-dark" src="/solarback-logo.webp" alt="SOLARBACK" width={220} height={65} style={{ width: 220, height: 65, objectFit: 'contain' }} />
+              <Image className="footer-logo-img" src="/solarback-logo.webp" alt="SOLARBACK" width={220} height={65} style={{ width: 220, height: 65, objectFit: 'contain' }} />
             </span>
           </a>
           <p className="footer-tagline">
