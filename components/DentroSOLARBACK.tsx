@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export function DentroSOLARBACK() {
   return (
-    <section id="dentro" className="sb-section dentro-section">
+    <section id="dentro" className="sb-section">
       <div className="sb-container">
         <div className="head-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>

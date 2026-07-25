@@ -303,7 +303,6 @@ body::after {
 .insight-card > p {
   font-size: 1.15rem; color: var(--text-soft); margin-bottom: 2rem;
 }
-.insight-card > p .accent { color: var(--gold); font-weight: 700; }
 .problem-list { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
 .problem-list li {
   display: flex; align-items: flex-start; gap: 1rem;
@@ -597,11 +596,6 @@ body::after {
 .form-submit { width: 100%; justify-content: center; margin-top: 0.5rem; }
 .form-error { color: #f87171; font-size: 0.82rem; margin-top: 0.4rem; }
 .form-block { margin-bottom: 2.5rem; }
-.form-block-title {
-  font-size: 0.85rem; font-weight: 700; letter-spacing: 0.12em;
-  text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem;
-  padding-bottom: 0.6rem; border-bottom: 1px solid var(--line);
-}
 .footer-contact { display: inline-flex; align-items: center; gap: 0.5rem; }
 .footer-contacts { display: flex; flex-direction: column; gap: 0.8rem; }
 
@@ -814,4 +808,45 @@ footer { background: var(--bg-2); border-top: 1px solid var(--line); padding: 5r
 
 @media (max-width: 900px) {
   .dentro-grid { grid-template-columns: 1fr; }
+}
+
+/* PAGINE LEGALI (privacy, cookie, termini) */
+.legal-page {
+  padding: 8rem 1.5rem 5rem;
+  max-width: 820px;
+  margin: 0 auto;
+}
+.legal-h1 {
+  font-weight: 800;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+.legal-body {
+  color: var(--text-soft);
+  line-height: 1.8;
+  font-size: 1rem;
+}
+.legal-body p + p { margin-top: 0.8rem; }
+.legal-h2 {
+  color: var(--text);
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin: 2.5rem 0 1rem;
+}
+.legal-list {
+  margin: 0.8rem 0 0 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.legal-back { margin-top: 3rem; }
+.legal-back a { color: var(--gold); text-decoration: none; }
+.legal-back a:hover { text-decoration: underline; }
+
+@media (max-width: 600px) {
+  .legal-page { padding: 6.5rem 1.1rem 4rem; }
+  .legal-h1 { font-size: 1.9rem; }
+  .legal-h2 { font-size: 1.15rem; }
 }

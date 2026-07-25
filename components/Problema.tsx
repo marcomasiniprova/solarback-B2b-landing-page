@@ -34,7 +34,7 @@ export function Problema() {
           <p>
             Molte aziende dipendono ancora dal passaparola o da campagne
             pubblicitarie gestite senza continuità. Il risultato è semplice:
-            alcuni mesi l'agenda è piena, altri è quasi vuota.
+            alcuni mesi l&apos;agenda è piena, altri è quasi vuota.
           </p>
           <p style={{ marginTop: '1rem' }}>
             Nel frattempo i commerciali restano senza appuntamenti oppure

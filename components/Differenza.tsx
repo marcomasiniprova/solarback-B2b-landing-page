@@ -43,8 +43,8 @@ export function Differenza() {
         </div>
 
         <p className="diff-outro">
-          SOLARBACK non è un'agenzia che genera lead:{' '}
-          <strong>diventiamo il tuo sistema esterno di acquisizione clienti, fino all'appuntamento. La vendita la fa il tuo commerciale.</strong>
+          SOLARBACK non è un&apos;agenzia che genera lead:{' '}
+          <strong>diventiamo il tuo sistema esterno di acquisizione clienti, fino all&apos;appuntamento. La vendita la fa il tuo commerciale.</strong>
         </p>
       </div>
     </section>

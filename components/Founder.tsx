@@ -13,7 +13,7 @@ export function Founder() {
             <div className="eyebrow"><span className="dot" />Il fondatore</div>
           </motion.div>
           <motion.h2 className="sb-h2" initial={{ opacity:0, y:20 }} whileInView={{ opacity:1, y:0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.08 }}>
-            Chi c'è Dietro <span className="gold-shine">SOLARBACK</span>
+            Chi c&apos;è Dietro <span className="gold-shine">SOLARBACK</span>
           </motion.h2>
         </div>
 
@@ -38,10 +38,10 @@ export function Founder() {
             <div className="founder-name">Valerio Alieri</div>
             <div className="founder-role">Fondatore SOLARBACK</div>
             <p className="founder-bio">
-              SOLARBACK nasce da un'idea semplice: le aziende che installano fotovoltaico
+              SOLARBACK nasce da un&apos;idea semplice: le aziende che installano fotovoltaico
               non hanno bisogno di più richieste, ma di un sistema che le trasformi in
               sopralluoghi e impianti. Noi siamo quel sistema: gestiamo il marketing,
-              intercettiamo i clienti e portiamo l'appuntamento pronto, così i tuoi commerciali chiudono.
+              intercettiamo i clienti e portiamo l&apos;appuntamento pronto, così i tuoi commerciali chiudono.
             </p>
           </div>
         </motion.div>

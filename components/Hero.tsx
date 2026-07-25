@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { ArrowIcon } from '@/components/ArrowIcon'
 
 const container = {
   hidden: {},
@@ -32,7 +33,7 @@ export function Hero() {
 
           <motion.p className="hero-sub" variants={item}>
             Tu pensi agli impianti. Noi ci occupiamo di trovare i clienti
-            e portarli fino all'appuntamento. Generiamo richieste qualificate
+            e portarli fino all&apos;appuntamento. Generiamo richieste qualificate
             e le trasformiamo in sopralluoghi pronti.
           </motion.p>
 
@@ -43,11 +44,7 @@ export function Hero() {
           <motion.div className="hero-cta-row" variants={item}>
             <a href="#candidatura" className="sb-btn xl">
               Prenota una chiamata
-              <span className="arrow">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                  <path d="M3 6h6M7 3l3 3L7 9" stroke="#1a0e00" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </span>
+              <ArrowIcon />
             </a>
           </motion.div>
 

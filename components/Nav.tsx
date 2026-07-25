@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
+import { ArrowIcon } from '@/components/ArrowIcon'
 
 const LINKS = [
   { href: '#metodo',   label: 'Metodo' },
@@ -47,11 +48,7 @@ export function Nav() {
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
             <a href="#candidatura" className="sb-btn nav-cta-show">
               Prenota una chiamata
-              <span className="arrow">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                  <path d="M3 6h6M7 3l3 3L7 9" stroke="#1a0e00" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </span>
+              <ArrowIcon />
             </a>
             <button className="hamburger" onClick={() => setOpen(v => !v)} aria-label="Menu">
               <span style={{ transform: open ? 'translateY(7px) rotate(45deg)' : undefined }} />
@@ -75,11 +72,7 @@ export function Nav() {
             <a href="#candidatura" className="sb-btn xl" onClick={() => setOpen(false)}
                style={{ display: 'inline-flex', width: '100%', justifyContent: 'center' }}>
               Prenota una chiamata
-              <span className="arrow">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                  <path d="M3 6h6M7 3l3 3L7 9" stroke="#1a0e00" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </span>
+              <ArrowIcon />
             </a>
           </div>
         </div>

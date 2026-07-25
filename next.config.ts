@@ -1,5 +1,7 @@
 import type { NextConfig } from "next";
 
+const isDev = process.env.NODE_ENV !== "production";
+
 const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
@@ -29,7 +31,27 @@ const nextConfig: NextConfig = {
           },
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' https://www.google-analytics.com https://www.googletagmanager.com data:; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com; font-src 'self' data:; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'",
+            value: [
+              "default-src 'self'",
+              // 'unsafe-eval' serve solo in sviluppo (HMR di Turbopack).
+              // In produzione non viene emesso: nessun eval()/new Function()
+              // è usato nel codice applicativo.
+              `script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com 'unsafe-inline'${
+                isDev ? " 'unsafe-eval'" : ''
+              }`,
+              // 'unsafe-inline' su style-src è necessario: i componenti usano
+              // l'attributo style={{...}} di React, che non supporta nonce.
+              "style-src 'self' 'unsafe-inline'",
+              "img-src 'self' https://www.google-analytics.com https://www.googletagmanager.com data:",
+              "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com",
+              "font-src 'self' data:",
+              "frame-src 'none'",
+              "frame-ancestors 'none'",
+              "object-src 'none'",
+              "base-uri 'self'",
+              "form-action 'self'",
+              'upgrade-insecure-requests',
+            ].join('; '),
           },
         ],
       },

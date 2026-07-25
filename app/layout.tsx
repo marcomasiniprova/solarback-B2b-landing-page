@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Manrope } from 'next/font/google'
 import { GoogleAnalytics } from '@next/third-parties/google'
+import { buildFaqJsonLd } from '@/lib/faq'
 import './globals.css'
 
 const manrope = Manrope({
@@ -52,7 +53,6 @@ export const metadata: Metadata = {
   },
   category: 'business',
   classification: 'Lead Generation, Fotovoltaico, Marketing, Acquisizione Clienti',
-  icons: { icon: '/favicon.ico', apple: '/favicon.ico' },
   other: {
     'article:author': 'Valerio Alieri — artec AI',
     'og:locale:alternate': 'it_IT',
@@ -114,59 +114,7 @@ const jsonLd = {
       areaServed: { '@type': 'Country', name: 'Italia' },
       description: 'SOLARBACK è il sistema esterno di acquisizione clienti che gestisce il marketing e porta nuovi sopralluoghi qualificati per installatori di fotovoltaico, sia impianti commerciali che residenziali, su tutta Italia.',
     },
-    {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: "Cos'è SOLARBACK e cosa fa esattamente?",
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "SOLARBACK è il partner che costruisce il sistema di acquisizione clienti per aziende installatrici di fotovoltaico in Italia. Non ci limitiamo a passarti contatti: portiamo appuntamenti già fissati con chi vuole il fotovoltaico. Contattiamo ogni lead entro pochi minuti via WhatsApp, verifichiamo interesse reale e disponibilità, poi fissiamo l'appuntamento direttamente.",
-          },
-        },
-        {
-          '@type': 'Question',
-          name: "SOLARBACK è l'agenzia giusta per la mia azienda?",
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "SOLARBACK è adatto alle aziende che installano fotovoltaico, ricevono già richieste ogni settimana ma faticano a fissarle come appuntamenti, e hanno commerciali pronti a uscire. Se invece cerchi un'agenzia che gestisca anche la tua pubblicità o non hai ancora commerciali attivi, siamo onesti: non siamo il servizio giusto per te.",
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Quanto costa il servizio SOLARBACK?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'SOLARBACK lavora esclusivamente a risultato. Paghi solo quando portiamo appuntamenti qualificati nel tuo calendario: nessun canone fisso, nessun costo mensile. L\'investimento preciso lo definiamo insieme nella chiamata di valutazione, perché dipende dal volume di richieste e dalla tua zona operativa. Il rischio è nostro.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Quali risultati posso aspettarmi e in quanto tempo?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Nella maggior parte dei casi attiviamo il sistema entro 48 ore dalla firma. I primi sopralluoghi qualificati arrivano già nella prima settimana. I numeri esatti dipendono dal volume di richieste che ricevi e dalla tua zona operativa — definiamo insieme l\'obiettivo preciso prima di partire, nero su bianco.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Come funziona il processo di qualificazione?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Ogni richiesta che arriva dal tuo sito o dalle tue pubblicità entra nel nostro sistema. Entro pochi minuti scriviamo al contatto su WhatsApp. Poi lo chiamiamo, verifichiamo: tipo di abitazione, consumo attuale, interesse concreto e disponibilità di budget. Solo chi supera questi criteri viene inserito nell'agenda del tuo commerciale.",
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'SOLARBACK opera in tutta Italia?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Sì, SOLARBACK lavora con installatori di fotovoltaico su tutto il territorio italiano — da Lombardia, Veneto e Piemonte al Sud. La qualificazione avviene da remoto, quindi serviamo efficacemente sia le grandi città che le zone periferiche, sia per impianti commerciali che residenziali. Se hai commerciali che coprono una o più regioni, possiamo strutturare il servizio sulla tua copertura geografica.',
-          },
-        },
-      ],
-    },
+    buildFaqJsonLd(),
   ],
 }
 

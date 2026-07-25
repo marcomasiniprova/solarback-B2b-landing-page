@@ -1,10 +1,11 @@
 'use client'
 
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { motion, AnimatePresence } from 'framer-motion'
+import { ArrowIcon } from '@/components/ArrowIcon'
 
 const schema = z.object({
   name:    z.string().min(2, 'Inserisci il tuo nome'),
@@ -50,6 +51,12 @@ export function CandidaturaForm() {
   const [sending, setSending]         = useState(false)
   const [serverError, setServerError] = useState('')
 
+  // Istante in cui il form è stato montato: serve a calcolare quanto tempo
+  // l'utente ha impiegato a compilarlo (anti-bot lato server).
+  // Va preso al mount, NON al submit, altrimenti misurerebbe solo la latenza
+  // di rete e bloccherebbe ogni utente reale.
+  const mountedAt = useRef<number>(Date.now())
+
   const { register, handleSubmit, watch, setValue, formState: { errors } } =
     useForm<FormData>({ resolver: zodResolver(schema) })
 
@@ -67,9 +74,19 @@ export function CandidaturaForm() {
       const res = await fetch('/api/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...data, _timestamp: Date.now() }),
+        body: JSON.stringify({ ...data, _elapsed: Date.now() - mountedAt.current }),
       })
-      if (!res.ok) throw new Error('send failed')
+      if (!res.ok) {
+        // Se il server manda un messaggio utile (es. rate limit) lo mostriamo,
+        // altrimenti ricadiamo su un messaggio generico.
+        const payload = await res.json().catch(() => null)
+        setServerError(
+          res.status === 429 && payload?.error
+            ? payload.error
+            : "Errore nell'invio. Riprova o scrivici a team@artecai.it"
+        )
+        return
+      }
       setSubmitted(true)
     } catch {
       setServerError("Errore nell'invio. Riprova o scrivici a team@artecai.it")
@@ -336,13 +353,7 @@ export function CandidaturaForm() {
                 >
                   {sending ? 'Invio in corso...' : 'Prenota una chiamata'}
                   {!sending && (
-                    <span className="arrow">
-                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                        <path d="M3 6h6M7 3l3 3L7 9" stroke="#1a0e00"
-                          strokeWidth="1.8" strokeLinecap="round"
-                          strokeLinejoin="round"/>
-                      </svg>
-                    </span>
+                    <ArrowIcon />
                   )}
                 </motion.button>
               </motion.form>
