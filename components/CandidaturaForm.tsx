@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { motion, AnimatePresence } from 'framer-motion'
+import { sendGAEvent } from '@next/third-parties/google'
 import { ArrowIcon } from '@/components/ArrowIcon'
 import { reveal } from '@/lib/motion'
 
@@ -89,6 +90,18 @@ export function CandidaturaForm() {
         return
       }
       setSubmitted(true)
+
+      // Evento di conversione GA4: 'generate_lead' è un evento standard
+      // riconosciuto sia da GA4 sia da Google Ads (se in futuro colleghi
+      // campagne a pagamento, questo evento è già pronto da usare come
+      // obiettivo). Va segnato come "evento chiave" nella UI di GA4 —
+      // il codice da solo non lo marca come conversione.
+      sendGAEvent('event', 'generate_lead', {
+        currency: 'EUR',
+        // Nessun valore economico certo per lead: 0 evita di falsare
+        // report di revenue mentre resta un evento di conversione valido.
+        value: 0,
+      })
     } catch {
       setServerError("Errore nell'invio. Riprova o scrivici a team@artecai.it")
     } finally {
