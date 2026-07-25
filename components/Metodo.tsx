@@ -2,6 +2,7 @@
 
 
 import { motion } from 'framer-motion'
+import { reveal } from '@/lib/motion'
 
 const steps = [
   {
@@ -35,14 +36,14 @@ export function Metodo() {
     <section id="metodo" className="sb-section">
       <div className="sb-container">
         <div className="head-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+          <motion.div {...reveal()}>
             <div className="eyebrow"><span className="dot" />Il metodo</div>
           </motion.div>
-          <motion.h2 className="sb-h2" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.08 }}>
+          <motion.h2 className="sb-h2" {...reveal(0.08)}>
             Come funziona il nostro<br />
             <span className="gold-shine">reparto commerciale esterno</span>
           </motion.h2>
-          <motion.p className="sb-lead" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.16 }}>
+          <motion.p className="sb-lead" {...reveal(0.16)}>
             Quattro passaggi. Noi ci occupiamo ogni giorno di trovare nuovi clienti,
             gestire il processo commerciale e riempire il calendario dei tuoi commerciali.
           </motion.p>
@@ -68,10 +69,7 @@ export function Metodo() {
 
         <motion.p
           className="metodo-final"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          {...reveal()}
         >
           Tu continui a installare impianti.{' '}
           <span className="gold-shine">

@@ -2,16 +2,17 @@
 
 import { motion } from 'framer-motion'
 import { FAQ_ENTRIES } from '@/lib/faq'
+import { reveal } from '@/lib/motion'
 
 export function FAQ() {
   return (
     <section className="sb-section" id="faq" style={{ borderTop: '1px solid var(--line)' }}>
       <div className="sb-container">
         <div className="head-center">
-          <motion.div initial={{ opacity:0, y:20 }} whileInView={{ opacity:1, y:0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+          <motion.div {...reveal()}>
             <div className="eyebrow"><span className="dot" />Domande Frequenti</div>
           </motion.div>
-          <motion.h2 className="sb-h2" initial={{ opacity:0, y:20 }} whileInView={{ opacity:1, y:0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.08 }}>
+          <motion.h2 className="sb-h2" {...reveal(0.08)}>
             Tutto Quello Che Vuoi<br />Sapere su <span className="gold-shine">SOLARBACK</span>
           </motion.h2>
         </div>

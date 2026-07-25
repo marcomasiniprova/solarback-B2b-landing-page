@@ -6,6 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowIcon } from '@/components/ArrowIcon'
+import { reveal } from '@/lib/motion'
 
 const schema = z.object({
   name:    z.string().min(2, 'Inserisci il tuo nome'),
@@ -100,10 +101,7 @@ export function CandidaturaForm() {
       <div className="sb-container">
         <div className="form-wrap">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            {...reveal()}
           >
             <div className="eyebrow" style={{ marginBottom: '1.5rem' }}>
               <span className="dot" />Candidatura Partner
@@ -111,19 +109,13 @@ export function CandidaturaForm() {
           </motion.div>
           <motion.h2
             className="form-h1"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.08 }}
+            {...reveal(0.08)}
           >
             Verifica Se Possiamo<br /><span className="gold-shine">Aiutarti</span>
           </motion.h2>
           <motion.p
             className="form-sub"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.16 }}
+            {...reveal(0.16)}
           >
             Compila il form. Il nostro team è attivo adesso e ti contatterà a momenti.
           </motion.p>

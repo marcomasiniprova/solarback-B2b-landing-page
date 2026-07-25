@@ -2,6 +2,7 @@
 
 
 import { motion } from 'framer-motion'
+import { reveal } from '@/lib/motion'
 
 const noList  = [
   "Cerchi un'agenzia che ti venda semplicemente dei lead.",
@@ -34,13 +35,13 @@ export function Fit() {
     <section id="fit" className="sb-section">
       <div className="sb-container">
         <div className="head-center">
-          <motion.div initial={{ opacity:0, y:20 }} whileInView={{ opacity:1, y:0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+          <motion.div {...reveal()}>
             <div className="eyebrow"><span className="dot" />Verifica onesta</div>
           </motion.div>
-          <motion.h2 className="sb-h2" initial={{ opacity:0, y:20 }} whileInView={{ opacity:1, y:0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.08 }}>
+          <motion.h2 className="sb-h2" {...reveal(0.08)}>
             Non Siamo Adatti<br />a <span className="gold-shine">Tutti</span>
           </motion.h2>
-          <motion.p className="sb-lead" initial={{ opacity:0, y:20 }} whileInView={{ opacity:1, y:0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.16 }}>
+          <motion.p className="sb-lead" {...reveal(0.16)}>
             Lavoriamo solo dove possiamo davvero portare risultati. Ecco quando
             SOLARBACK funziona, e quando è meglio cercare altrove.
           </motion.p>

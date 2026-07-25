@@ -3,16 +3,17 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { reveal } from '@/lib/motion'
 
 export function Founder() {
   return (
     <section id="founder" className="sb-section">
       <div className="sb-container">
         <div className="head-center" style={{ marginBottom: '4rem' }}>
-          <motion.div initial={{ opacity:0, y:20 }} whileInView={{ opacity:1, y:0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+          <motion.div {...reveal()}>
             <div className="eyebrow"><span className="dot" />Il fondatore</div>
           </motion.div>
-          <motion.h2 className="sb-h2" initial={{ opacity:0, y:20 }} whileInView={{ opacity:1, y:0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.08 }}>
+          <motion.h2 className="sb-h2" {...reveal(0.08)}>
             Chi c&apos;è Dietro <span className="gold-shine">SOLARBACK</span>
           </motion.h2>
         </div>
