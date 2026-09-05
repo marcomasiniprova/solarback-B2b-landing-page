@@ -1,41 +1,23 @@
-# SOLARBACK — Landing Page
+# SolarBack — Growth & Agents (branch operativo)
 
-Landing page per SOLARBACK, il sistema esterno di acquisizione clienti per installatori di fotovoltaico in Italia.
+Questo **non** è il codice del sito. Questo branch (`Solarback-Growth-Agents`) è
+il **workspace operativo** di SolarBack: strategia, go-to-market, marketing,
+acquisizione clienti, automazioni e memoria dell'agente AI.
 
-## Tech Stack
+- Il **codice della landing page** (`artecai.it`) vive sul branch **`main`** —
+  non si tocca da qui.
+- Qui dentro si lavora a **portare clienti, lead ed esecuzione**: la parte che
+  oggi manca all'azienda.
 
-- **Next.js 16** — App Router + Turbopack
-- **React 19**
-- **Tailwind CSS v4** — utility-first styling
-- **Framer Motion** — animazioni
-- **Resend** — invio email candidatura
-- **Zod** — validazione form (client + server)
+## Da dove si parte (per umani e per l'AI)
 
-## Getting Started
+1. `CLAUDE.md` — brief dell'agente, si legge per primo.
+2. `STATO-ATTUALE.md` — dove siamo ora.
+3. `SPRINT-26-OTTOBRE.md` — la missione in corso.
+4. `TODO.md` — cosa fare adesso.
 
-```bash
-npm install
-npm run dev
-```
+La cartella `docs/` contiene la knowledge base completa (business model, ICP,
+posizionamento, funnel, canali). `private/` (git-ignored) contiene i dati
+sensibili come le liste contatti.
 
-## Deploy
-
-Automatico su Netlify via `@netlify/plugin-nextjs`.
-
-## Environment
-
-```bash
-# OBBLIGATORIA — senza questa il form di candidatura non invia email
-RESEND_API_KEY=re_xxxxx
-
-# OPZIONALE — mittente delle email di candidatura.
-# Default: "SOLARBACK <onboarding@resend.dev>" (mittente di test Resend,
-# funziona senza verificare un dominio). Una volta verificato artecai.it
-# su Resend, impostare qui: SOLARBACK <noreply@artecai.it>
-RESEND_FROM=
-```
-
-Le candidature vengono recapitate a `valerio@artecai.it`.
-
-Google Search Console è verificato a livello di **dominio** (record DNS), quindi
-non serve alcun meta tag di verifica nel codice.
+**CEO:** Valerio Alieri · SolarBack by artec AI · https://artecai.it
