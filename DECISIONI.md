@@ -46,12 +46,23 @@
   NON è il suo tempo, ma l'OFFERTA e la fiducia/chiusura. Massimo volume di
   outreach/vendita sostenibile.
 
-### 2026-09-05 — Costruzione offerta guidata da ricerca (Hormozi + mercato)
-- **Decisione:** prima di lanciare l'outreach, costruire un'offerta
-  "irrinunciabile" basata su ricerca reale: pain del mercato, teardown competitor
-  (Edilhub, MF Digital, "sopralluoghi in agenda", altri), framework Hormozi
-  $100M Offers. Il fondatore vuole rigore, non un'offerta improvvisata.
-- **Stato:** 🟡 in corso (3 subagenti di ricerca lanciati 2026-09-05).
+### 2026-09-05 — Offerta costruita su ricerca (Hormozi + mercato + competitor)
+- **Decisione:** offerta v1 costruita e documentata in `docs/07-offerta.md`,
+  ricerca completa in `docs/08-ricerca-mercato.md`.
+- **Sostanza:**
+  - **Apri-porta = Struttura B "Recupero Sopralluoghi"** (speed-to-lead sui lead
+    che il cliente GIÀ riceve e perde) → aggira l'errore della DB reactivation
+    (non dipende da un asset che il cliente non ha). Poi upsell a Struttura A
+    (ads, budget cliente) per scalare. Contenitore = "Founding Partner"
+    (prezzo bloccato a vita + esclusiva di zona + testimonianza pattuita).
+  - **Differenziazione:** performance pura vs pacchetto prepagato (Edilhub), lead
+    dedicati vs riciclati, trasparenza di prezzo, sistema integrato a 4 motori.
+  - **Garanzia:** "8 sopralluoghi qualificati/30gg o lavoro gratis finché (cap
+    60gg)" + sostituzione fuori criteri + mai pagare il no-show.
+  - **Prezzo:** resta 99€/sopralluogo + 400€/contratto; niente setup fee
+    nell'apri-porta (fase 2: setup + revenue share).
+- **Stato:** 🟡 v1 pronta, **in attesa di validazione CEO** (round-3, vedi
+  `docs/07-offerta.md` §12).
 
 ---
 

@@ -58,12 +58,12 @@ acquisizione**.
 - Deficit di fiducia (0 recensioni/case study).
 
 ## In corso adesso
-- 🔬 **3 subagenti di ricerca** lanciati: teardown competitor · pain di mercato
-  installatori · framework offerte B2B. → poi sintesi + offerta.
-- ⛔ **Commit/push bloccati** dal classifier dell'ambiente: serve che Valerio
-  abiliti i comandi git per salvare il lavoro su GitHub.
+- ✅ **Ricerca completata** (competitor + VOC + framework) → `docs/08-ricerca-mercato.md`.
+- ✅ **Offerta v1 costruita** → `docs/07-offerta.md`. Apri-porta = Struttura B
+  ("Recupero Sopralluoghi"), contenitore Founding Partner, garanzia forte cappata.
+- 🟡 **In attesa validazione CEO** (round-3) sui parametri finali dell'offerta.
 
 ## Prossime 3 mosse (dettaglio in TODO.md)
-1. Sintetizzare la ricerca → **costruire l'offerta** (+ offerta pilota founding partner).
-2. Verificare lo stato reale delle automazioni n8n (delivery-readiness).
-3. Costruire lista installatori + script del primo canale e partire con l'outreach.
+1. Validare l'offerta col CEO (round-3) e congelare la v1.
+2. Verificare le automazioni n8n (lo speed-to-lead è il cuore della Struttura B).
+3. Costruire lista installatori + script cold call + CRM → partire con l'outreach.

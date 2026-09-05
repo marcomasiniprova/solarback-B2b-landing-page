@@ -5,10 +5,13 @@
 
 ## 🔴 ADESSO (Settimana 0 — questa settimana)
 
-- [ ] **Round-2 domande al CEO** (popup): definizione "cliente pagante" per il
-      26/10 · budget mensile tool · ok wedge DB-reactivation · co-founder/Marco?
+- [ ] **Round-3 domande al CEO** (popup): validare l'offerta v1 (apri-porta
+      Struttura B · tetto founding vs 30 · setup fee/deposito · livello garanzia ·
+      residenziale+zona vs tutta Italia). Vedi `docs/07-offerta.md` §12.
 - [ ] **Verifica automazioni n8n**: cosa c'è, cosa funziona, cosa manca per un
-      servizio di delivery completo e ripetibile in ≤7 giorni.
+      servizio di delivery completo e ripetibile in ≤7 giorni. (La Struttura B
+      dipende dallo speed-to-lead: è la prima cosa da avere collaudata.)
+- [ ] **Chiarire co-founder/Marco** (contenuti/LinkedIn).
 - [ ] **ICP + lista installatori v1** (150–300 aziende Fascia A/B): nome azienda,
       titolare, telefono/WhatsApp diretto, email, città, segnali di qualifica.
       Salvare in `private/`.
@@ -40,4 +43,6 @@
 - [x] 2026-09-05 — Analisi completa business + sito + funnel.
 - [x] 2026-09-05 — Pulizia branch `Solarback-Growth-Agents` + setup sistema
       operativo del repo (CLAUDE.md, docs, sprint, todo, decisioni).
-- [x] 2026-09-05 — Round-1 domande al CEO (stato, canale, delivery, chi esegue).
+- [x] 2026-09-05 — Round-1 + round-2 domande al CEO.
+- [x] 2026-09-05 — Ricerca (competitor + VOC + framework) → `docs/08`.
+- [x] 2026-09-05 — Offerta v1 costruita → `docs/07-offerta.md`.
