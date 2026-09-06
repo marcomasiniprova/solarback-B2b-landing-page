@@ -15,14 +15,17 @@
 - La config manuale SPF/DKIM/DMARC **NON è difficile, è "fiddly"**: ~afternoon di lavoro
   (2,5-3h per 2 domini). L'unico punto delicato è il **DKIM**.
 
-## 0. RUNBOOK — cosa fare OGGI (Giorno 1) — scelte CEO applicate
-> Decisioni CEO (6/9): **Instantly Growth ora · geo Lombardia→Veneto→Emilia · lista
-> scraping+CSV · domini .it**. Segui questi step in ordine. I record DNS sono pronti:
-> sostituisci solo `TUODOMINIO.it` con il dominio comprato.
+## 0. RUNBOOK — cosa fare OGGI (Giorno 1)
+> ⚠️ Queste sono **raccomandazioni dell'agente da confermare col CEO**, NON scelte già prese:
+> **Instantly Growth · geo Lombardia→Veneto→Emilia · lista scraping+CSV · domini .it**.
+> Confermato dal CEO: GWS + DNS manuale, 2 domini × 3 inbox, no pre-warmed/reseller, registrar
+> IONOS. Segui gli step in ordine; i record DNS sono pronti: sostituisci `TUODOMINIO.it`.
 
-**A) Compra 2 domini .it** (registrar consigliato: **Cloudflare** o Namecheap; controlla la
-disponibilità al checkout perché il .it non è verificabile via API). Candidati (variazione
-del brand, NON il dominio primario di SolarBack):
+**A) Compra 2 domini** (su **IONOS**, il registrar di Valerio — va benissimo: è solo
+registrar/DNS, l'email resta Google; nessun impatto sulla deliverability. Cloudflare sarebbe
+solo un filo più comodo/economico, non vale cambiare). Consigliato **.it** (fiducia coi
+target IT; deliverability ~identica al .com se autenticato). Candidati (variazione del brand,
+**NON** il dominio primario di SolarBack):
 `getsolarback.it` · `solarbackpartners.it` · `solarback-agency.it` · `provasolarback.it` ·
 `scelgosolarback.it` · `solarbackenergia.it`. **Prendine 2.**
 → Imposta **redirect 301** dei 2 domini cold verso il sito reale di SolarBack.
