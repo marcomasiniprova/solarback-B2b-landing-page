@@ -60,3 +60,20 @@
 - **Q4 stato n8n →** ancora da verificare direttamente (prossima mossa).
 - **Q6 co-founder/Marco →** non ancora chiarito (skill `solarback-content-engine`
   cita "Marco co-founder"); Valerio nel round-1 ha detto "solo io". Da chiarire.
+
+**Round-4 — 2026-09-06 (obiettivo valutazione):**
+- **€200k →** cassa incassata nei ~50 giorni. ✅
+- **Valutazione €1M →** traguardo/leva: **c'è un acquirente che compra se arriva a
+  €1M entro il 26/10.** ✅
+- **Nicchia →** pivot solo se il FV è morto → la ricerca dice **NON è morto** in
+  autunno/inverno → **resto FV** (+ hook fiscale, upsell accumulo, PDC opzionale).
+  Vedi `docs/12`. ✅
+
+## 🔴 NUOVE domande aperte (acquisizione — critiche)
+- **Chi è l'acquirente e con che METODO valuta?** (multiplo su EBITDA/SDE? su
+  cassa? su contratti ricorrenti? cosa vuole vedere in due diligence?) → determina
+  su cosa ottimizzare per il €1M.
+- **Struttura del deal:** compra il 100%? earn-out? cosa considera "valutazione
+  raggiunta" (una perizia? un accordo? un multiplo concordato)?
+- **Il "€200k cassa" conta per lui** ai fini della valutazione, o guarda solo il
+  run-rate ricorrente?

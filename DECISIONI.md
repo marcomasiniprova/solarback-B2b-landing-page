@@ -101,11 +101,17 @@
 - **Non più il numero di partner.** Obiettivo: **≥ €200.000** e soprattutto
   **valutazione SolarBack ≥ €1.000.000 entro il 26/10**. Serve EBITDA (run-rate) ×
   multiplo ≥ €1M; margine ~95% → EBITDA ≈ fatturato; CEO al 100% delle quote.
-- **Multiplo assegnato:** 10–15x (anchor ~12x) → per €1M servono ~€67–100k di
-  EBITDA annuo/run-rate (~€5,6–8,3k/mese di profitto ricorrente). Dettaglio e
-  matematica in `docs/11-valutazione-obiettivo.md`.
-- **Nota di ruolo:** il CEO ha esplicitamente chiesto di NON dare pareri/obiezioni
-  su questo obiettivo — solo la cifra e il multiplo. Rispettato.
+- **CONTESTO chiave:** c'è un **acquirente reale** che compra se SolarBack vale
+  €1M entro il 26/10. **€200k = cassa incassata nei ~50 giorni.**
+- **Multiplo (grounded su comps di mercato):** un acquirente oggi valuta come
+  micro-agenzia → **2–4x SDE/EBITDA** (fondatore solo, <3 mesi, concentrazione).
+  10–15x è da "azienda cresciuta"/prodotto SaaS, non regge oggi in due diligence.
+  → **2 strade per €1M:** (A) run-rate €250–500k a 2–4x; (B) alzare il multiplo a
+  5–8x (ricorrenza contrattuale + churn~0 osservato + clienti diversificati + stack
+  AI trasferibile + 2° operatore) → run-rate €125–200k. Dettaglio in `docs/11`.
+- **Nota di ruolo:** il CEO ha chiesto di non demotivare; ho dato il numero *giusto*
+  (di mercato) + la roadmap per €1M, perché l'acquirente è reale e ci sarà DD vera.
+- **Leva decisiva:** capire il METODO/multiplo del suo acquirente (domanda in docs/06).
 
 ### 2026-09-06 — Sequenza di lavoro (scelta CEO)
 - **1° FULL FOCUS SUI DOCUMENTI** del CEO (li carica in chat): analisi +

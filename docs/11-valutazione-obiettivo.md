@@ -16,28 +16,42 @@
 **Valutazione = EBITDA annuo (run-rate) × multiplo.**
 Con margine 95%, EBITDA ≈ fatturato → **Valutazione ≈ fatturato annuo (run-rate) × multiplo.**
 
-## Il multiplo (come richiesto dal CEO)
-Per un'azienda **AI-native, margine ~95%, ricavi ricorrenti, churn ~0%, scalabile
-e snella**, il range difendibile è **10–15x**. **Anchor di lavoro: ~12x.**
-(La ricerca comps confermerà/affinerà; le leve per stare in alto sono in fondo.)
+## Contesto NUOVO (dal CEO, 6/9): c'è un ACQUIRENTE reale
+Una persona ha detto che **se SolarBack arriva a €1M di valutazione entro il 26/10,
+compra l'azienda**. Quindi ci sarà una **due diligence vera** → serve il numero che
+regge in trattativa, non un numero-fantasia. **€200k = cassa incassata nei ~50 giorni**
+(definizione CEO).
 
-## Quanto serve per €1M di valutazione
-| Multiplo | EBITDA annuo (run-rate) necessario | ≈ profitto ricorrente / mese |
-|---|---|---|
-| **10x** | **€100.000** | ~€8.300 |
-| **12x** (anchor) | **€83.300** | ~€6.950 |
-| **15x** | **€66.700** | ~€5.560 |
+## Il multiplo — la verità di mercato (ricerca comps 2025-2026)
+Un acquirente reale, oggi, valuta SolarBack come **micro-agenzia a servizio**
+(fondatore solo = key-person risk massimo, <3 mesi di storia, concentrazione clienti
+alta all'inizio). Multiplo di mercato per questo profilo: **~2–4x SDE/EBITDA annuo.**
+- Agenzie lead-gen **specialist/retainer** mature: 5–8x. Agenzie top/specializzate
+  con team+storico+clienti diversificati: 8–12x.
+- **10–15x** è un multiplo da "azienda cresciuta" (EBITDA milionario, 2–3 anni,
+  team che gira senza il fondatore, clienti diversificati) **oppure** da vero
+  PRODOTTO software con ARR ricorrente. Oggi, a 3 mesi e fondatore solo, non regge
+  in due diligence — **per quanto alto sia il margine**.
+- (Te lo dico dritto proprio perché l'acquirente è reale: meglio il numero giusto.)
 
-→ **In pratica:** basta arrivare a **~€7.000/mese di profitto ricorrente** (run-rate)
-entro il 26/10 per giustificare **€1M a 12x**. Con margine 95%, è ~€7.400/mese di
-fatturato ricorrente.
+## Due STRADE per arrivare a €1M (si possono combinare)
+| Strada | Multiplo | EBITDA annuo/run-rate per €1M | Come |
+|---|---|---|---|
+| **A — così com'è oggi** | 2–4x | **€250.000–500.000** | Portare il run-rate lì (~€21–42k/mese ricorrenti; margine 95% ≈ stesso fatturato). |
+| **B — alzando il multiplo** | 5–8x | **€125.000–200.000** | Ricavi **ricorrenti contrattualizzati** + **churn ~0 OSSERVATO** + **clienti diversificati** + **stack AI documentato/trasferibile** (uccide il key-person risk) + un 2° operatore → ~€10–17k/mese ricorrenti. |
 
-## Contesto di scala
-- **1 cliente a regime ≈ €600.000/anno** (dato CEO) = ~€50.000/mese.
-  → a 12x, **~14% del run-rate di UN solo cliente** supera già €1M di valutazione.
-- I **€200.000**: se sono run-rate annuo di EBITDA, a 12x = **€2,4M** di valutazione
-  (ampiamente > €1M). ⚠️ Da chiarire col CEO se "€200k" = cassa nei ~50 giorni,
-  oppure run-rate mensile, oppure annuo (cambia la lettura, non il metodo).
+- **1 cliente a regime ≈ €600k/anno** (dato CEO): a regime **un solo cliente pieno
+  supera €1M anche a 2x.** Il punto non è "un cliente", è **dimostrarne il run-rate
+  ricorrente** entro il 26/10.
+- **€200k di CASSA nei 50 giorni** è una PROVA di domanda fortissima e ottima leva
+  negoziale, ma un acquirente valuta il **run-rate ricorrente**, non la cassa
+  una-tantum: se quei ricavi si ripetono, alzano il run-rate (→ Strada A/B).
+
+## La leva decisiva: il metodo del SUO acquirente
+Il multiplo lo decide **quell'acquirente col suo criterio.** La cosa più preziosa
+ora è sapere: **con che metodo/multiplo ragiona, e cosa vuole vedere** (contratti
+ricorrenti? MRR? churn? processi documentati? cassa?). Con quel criterio ottimizziamo
+tutto per il SUO metro. → domanda aperta in `docs/06`.
 
 ## Leve che spingono il multiplo verso l'alto (10x → 15x+)
 - Ricavi **ricorrenti contrattualizzati** (non one-shot).
