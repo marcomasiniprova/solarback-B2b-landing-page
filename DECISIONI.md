@@ -79,6 +79,22 @@
 - **Stato:** ✅ offerta v2 in `docs/07-offerta.md`. Rischio chiave = capacità di
   delivery (n8n deve reggere il volume) → verifica n8n prioritaria.
 
+### 2026-09-05 — Architettura delivery n8n (dopo ispezione + scelte CEO)
+- **Priorità:** delivery production-ready PRIMA, partendo dall'anello intake.
+- **Intake Meta = MULTI-TENANT** (leadgen webhook a livello di app Meta, routing per
+  page/form id → Campagne_Attive). **NO a un workflow per partner.** Si accende al
+  primo partner (serve la sua pagina); si pre-costruisce ora.
+- **DB-react M2 = numero WhatsApp DEDICATO** (scelta CEO): seconda segreteria su
+  numero separato → evita il conflitto "un numero = un webhook".
+- **Alessandro = segreteria condivisa multi-partner** (un numero, ramifica per
+  config); si aggiungeranno altri numeri/segretari.
+- **Primo passo operativo:** mappare i fogli + **collaudo end-to-end simulato**
+  (WhatsApp è live + template approvati) col numero di Valerio come lead di test.
+- **Regola confermata:** fare domande e proporre PRIMA di modificare i workflow;
+  le modifiche gravi si fanno solo dopo OK del CEO.
+- **Stato:** 🟡 data model ricostruito (`docs/09`); in attesa da Valerio: numero
+  WhatsApp test + OK ad attivare per il collaudo (+ opz. re-auth Composio Sheets).
+
 ---
 
 ## ⚠️ Decisioni ANCORA da prendere (vedi docs/06-domande-aperte.md)

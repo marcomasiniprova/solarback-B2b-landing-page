@@ -116,6 +116,48 @@ Alessandro qualifica → prenota su Calendar → notifica titolare. Idem DB-reac
 (numero come lead dormiente → M1 → risposta). L'unico pezzo non provabile fino al
 partner #1 = l'auto-feed live Meta→webhook (che pre-costruiamo).
 
+## 📊 Data model (ricostruito dai workflow) + onboarding per partner
+> Lettura diretta dei fogli via Composio bloccata da scope insufficiente (403) —
+> link di ri-autorizzazione generato per Valerio. Sotto: modello ricostruito dai
+> nodi (da confermare sui fogli veri quando l'accesso è a posto).
+
+**Foglio "SolarBack - Configurazione Clienti"** (`1nJFPyuMC…`):
+- Tab **Campagne_Attive** (config per partner/campagna): `ID_Chiave_Form`,
+  `Nome_Azienda`, `Nome_Pagina_FB`, `Offerta_Ads`, `Zona_Competenza`,
+  `Telefono_Titolare` (per la notifica titolare).
+- Tab **Lead_Attivi** (lead live): `Nome`, `Telefono`, `ID_del_Form_cliente`,
+  `Nome_Azienda`, `Nome_Pagina_FB`, `Offerta_Ads`, `Stato_Invio_primo msg`,
+  `ora di submit`, `data di submit`.
+
+**Foglio "ARTEC - M1 Clienti Config (Database Reactivation)"** (`1iEhQU5…`, Foglio1):
+`cliente_id`, `nome_cliente`, `attivo` (SI/NO), `quota_giornaliera`, `waba_phone_id`,
+`waba_nome`, `template`, `ragione_sociale`, `settore_prodotto`, `spreadsheet_id`,
+`gid`. → ogni cliente punta al proprio foglio di lead dormienti (`ID Lead`, `Nome`,
+`Telefono`, `Stato`, `Ultimo Contatto`, `Note Sistema M1`).
+
+**Foglio "SolarBack - Social Proof"** (`14FiYek…`, tab "casi studio"): usato da
+Alessandro per il social proof; include almeno città/zona, risultato e `Link immagine`.
+
+### Checklist onboarding di UN partner (bozza)
+1. **Campagne_Attive**: 1 riga (azienda, pagina FB, offerta ads, zona, tel titolare,
+   ID_Chiave_Form = `form_id` della sua Meta Lead Form).
+2. **Intake Meta**: collega la sua pagina FB all'app Meta (leadgen webhook).
+3. **Speed-to-lead**: nessun nuovo workflow (multi-tenant).
+4. **DB-react** (se attivo): riga in config DB-react + il suo foglio lead dormienti
+   + (decisione CEO) **numero WhatsApp dedicato** per la segreteria DB-react.
+5. **Social Proof**: aggiungi eventuali casi studio della sua zona.
+
+## 🧪 Piano di collaudo (cosa serve da Valerio)
+1. **Numero WhatsApp di Valerio** da usare come "lead" di test.
+2. **OK ad attivare in modo controllato** i 2 workflow service per il test
+   (speed-to-lead intake + Alessandro), poi ri-disattivare.
+3. (Opz.) **ri-autorizzare Composio** (lettura Sheets) per verificare i fogli veri.
+4. Per la DB-react: un **secondo numero WhatsApp** (segreteria dedicata) — se non
+   c'è ancora, si collauda dopo, con numero di test.
+Sequenza test: creo riga config di TEST → POST al webhook col numero di Valerio →
+verifico template `conferma_requisiti_alessandro` → rispondo → Alessandro qualifica
+→ prenota su Calendar → notifica titolare → cleanup.
+
 ## 🔴 Sicurezza (da sistemare)
 Alcuni nodi HTTP hanno **API key hardcodate in chiaro** (Deepgram, Mistral) dentro
 il workflow. Rischio: finiscono negli export/backup e sono visibili a chiunque
