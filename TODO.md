@@ -5,13 +5,16 @@
 
 ## 🔴 ADESSO (Settimana 0 — questa settimana)
 
-- [ ] **Round-3 domande al CEO** (popup): validare l'offerta v1 (apri-porta
-      Struttura B · tetto founding vs 30 · setup fee/deposito · livello garanzia ·
-      residenziale+zona vs tutta Italia). Vedi `docs/07-offerta.md` §12.
-- [ ] **Verifica automazioni n8n**: cosa c'è, cosa funziona, cosa manca per un
-      servizio di delivery completo e ripetibile in ≤7 giorni. (La Struttura B
-      dipende dallo speed-to-lead: è la prima cosa da avere collaudata.)
-- [ ] **Chiarire co-founder/Marco** (contenuti/LinkedIn).
+- [ ] **Verifica automazioni n8n** (PRIORITÀ #1): speed-to-lead + qualifica AI +
+      booking. Cosa c'è, cosa funziona, cosa manca per reggere **100–300
+      sopralluoghi/mese per partner**. È ciò che rende sostenibile la garanzia.
+- [ ] **Lista installatori ICP v1** (150–300): aziende affamate, che **già
+      investono in ads**, strutturate (più squadre/commerciali). Titolare +
+      tel/WhatsApp diretto + email + città. → `private/`.
+- [ ] **CRM/pipeline partner** (Airtable o Notion): stati + KPI acquisizione/delivery.
+- [ ] **Script cold call** completo (base: one-liner `docs/07` §10) + sequenza email.
+- [ ] **Setup Instantly** (domini + warmup) per la spinta email di metà sprint.
+- [ ] **Primo contenuto LinkedIn** (autorità/founder) + chiarire ruolo Marco.
 - [ ] **ICP + lista installatori v1** (150–300 aziende Fascia A/B): nome azienda,
       titolare, telefono/WhatsApp diretto, email, città, segnali di qualifica.
       Salvare in `private/`.
@@ -45,4 +48,4 @@
       operativo del repo (CLAUDE.md, docs, sprint, todo, decisioni).
 - [x] 2026-09-05 — Round-1 + round-2 domande al CEO.
 - [x] 2026-09-05 — Ricerca (competitor + VOC + framework) → `docs/08`.
-- [x] 2026-09-05 — Offerta v1 costruita → `docs/07-offerta.md`.
+- [x] 2026-09-05 — Offerta costruita e **v2 congelata** (round-3, numeri reali) → `docs/07`.

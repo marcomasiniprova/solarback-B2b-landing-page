@@ -1,182 +1,157 @@
-# 07 — L'OFFERTA SolarBack (v1, costruita su ricerca)
+# 07 — L'OFFERTA SolarBack (v2 — numeri reali del CEO)
 
-> Costruita il 2026-09-05 con 3 ricerche parallele: teardown competitor, pain di
-> mercato (VOC + economia), framework offerte B2B (Hormozi $100M Offers).
-> Framework: `offer-creation`. Stato: **v1, da validare col CEO** (vedi §12).
+> v2 del 2026-09-05, dopo la ricalibrazione del CEO. **Numeri veri di SolarBack**,
+> non da manuale. Ricerca a supporto: `docs/08-ricerca-mercato.md`.
+> Decisioni round-3 recepite (vedi §12). Framework: `offer-creation` (Hormozi).
 
 ---
 
-## 0. Il principio che governa tutto
-- **Il rischio di SolarBack è TEMPO, non CASSA** (le ads le paga il cliente).
-  → possiamo offrire garanzie forti *a patto di controllare la fonte lead*.
-- **La DB Reactivation è fallita perché dipendeva da un input che il cliente non
-  aveva** (DB vuoto). Regola d'oro: **mai garantire su un input che non
-  controlliamo** (né la DB del cliente, né la chiusura del suo commerciale).
+## 0. I NUMERI VERI (la scala di SolarBack — non sottovalutarla mai)
+- **100–300 sopralluoghi qualificati / mese** per partner (SolarBack li porta).
+- Il **cliente investe ~100 €/giorno in ads = ~3.000 €/mese** (budget suo).
+- **30–100 impianti chiusi / mese** attesi per partner.
+- SolarBack incassa **99 €/sopralluogo effettuato + 400 €/contratto firmato**.
+- → valore SolarBack per partner: **~22k–70k €/mese** (coerente coi 30–50k+ del CEO).
+- **Regola per l'agente:** ragiona SEMPRE a questa scala. Niente numeri da
+  principianti (es. "8 sopralluoghi"): quella è la scala dei mediocri, non la nostra.
 
-## 1. Il varco di posizionamento (differenziazione vs mercato)
-Dalla ricerca competitor: *"sopralluoghi/appuntamenti in agenda"* lo dicono TUTTI
-(Edilhub, Adsolar, Trein, Clientium…) → **è il minimo, non differenzia.** I 5
-varchi reali dove SolarBack vince:
-1. **Performance pura vs pacchetto prepagato.** Edilhub/MF Digital (il competitor
-   più aggressivo) vende **pacchetti prepagati** ("30 sopralluoghi garantiti in 30
-   giorni") → rischio a monte sull'installatore. Noi: **paghi solo il sopralluogo
-   già effettuato.** Messaggio: *"Loro ti fanno prepagare e sperare. Noi ci fai
-   pagare solo quando il sopralluogo è già successo."*
-2. **Lead dedicati vs riciclati.** I loro sopralluoghi vengono da un **portale
-   comparatore** → il cliente arriva "già bruciato con 3-5 preventivi". Noi
-   generiamo **domanda dedicata e non condivisa** per singolo partner.
-3. **Trasparenza di prezzo come arma.** 8 competitor su 10 non pubblicano prezzi.
-   Noi diciamo apertamente 99€/400€ → atto di fiducia che nessuno fa.
+## 1. Il principio che governa tutto
+- **Il rischio di SolarBack è TEMPO, non CASSA** (le ads le paga il cliente) →
+  possiamo offrire garanzie forti, *a patto di controllare la fonte lead* (le
+  nostre campagne, non un portale condiviso).
+- **La DB Reactivation è fallita** perché dipendeva da un input che il cliente non
+  aveva. Regola d'oro: **mai garantire su un input che non controlliamo.**
+- **Vendiamo confidenza, non un pilotino timido.** L'ICP giusto (affamato, con
+  capacità e budget) si chiude con numeri grossi + garanzia seria, non con lo
+  sconticino.
+
+## 2. Il varco di posizionamento (differenziazione vs mercato)
+"Sopralluoghi in agenda" lo dicono tutti → è il minimo. I 5 varchi dove vinciamo
+(fonte: teardown competitor):
+1. **Performance pura vs pacchetto prepagato** (Edilhub/MF Digital fanno prepagare
+   e sperare; noi ci fai pagare solo quando il sopralluogo è già avvenuto).
+2. **Lead dedicati vs riciclati** (loro rivendono lo stesso lead dal portale a 5
+   aziende; noi campagne dedicate e non condivise).
+3. **Trasparenza di prezzo** (8 su 10 non pubblicano prezzi; noi 99€/400€ chiari).
 4. **Proof verificabile + garanzia sulla conversione reale** (nessuno ce l'ha).
 5. **Sistema integrato "reparto commerciale esterno"** (Ads + Cold Email +
-   Speed-to-Lead AI + Reactivation) — il mercato è frammentato in specialisti;
-   nessuno comunica il sistema completo.
+   Speed-to-Lead AI + Reactivation) che nessuno comunica come sistema unico.
 
-## 2. ICP (a chi diciamo di sì)
-> **Titolare di azienda installatrice di fotovoltaico residenziale in Italia,
-> 5–20 persone, 6–10 tecnici, 2–5 commerciali, fatturato ~700k–3M, che HA un
-> flusso di richieste ma ne trasforma troppo poche in sopralluoghi/contratti, e
-> vuole crescere.** (Dettaglio e scoring → `02-icp-partner-scoring.md`.)
+## 3. ICP (a chi diciamo SÌ — ricalibrato dal CEO)
+> **Aziende installatrici di fotovoltaico con MENTALITÀ DI CRESCITA e CAPACITÀ
+> REALE**: hanno commerciali e squadre tecniche per assorbire **100–300
+> sopralluoghi/mese e chiudere 30–100 impianti/mese**, e sono **disposte a
+> investire ≥3.000 €/mese in ads**. Affamate, vogliono scalare, vogliono fare
+> marketing sul serio.
 
-## 3. Dream Outcome (cosa vuole davvero)
-Non "lead" né "marketing". Vuole: **agenda piena di sopralluoghi + più contratti
-firmati, senza assumere e gestire commerciali.** Da comunicare in euro suoi:
-*"8 sopralluoghi qualificati/mese → al 30% di chiusura sono ~2-3 impianti in più
-al mese"* (contratto medio residenziale ~12.000€ → fonte ricerca VOC).
+**A chi diciamo NO (senza pietà):** artigiani/chiusi da 5–10 impianti/mese,
+mentalità "provo gratis / vediamo", chi non vuole investire in ads, chi non ha
+capacità commerciale/installativa per assorbire il volume. Un ICP sbagliato non
+riesce a gestire i numeri e brucia il caso studio. (Dettaglio scoring →
+`02-icp-partner-scoring.md`.)
 
-**Il conto che chiude la vendita** (dalla ricerca economica):
-- Un commerciale interno costa **35–60k€/anno FISSI** e può non performare.
-- Un'agenda vuota vale **~-36.000€/mese** (3 contratti persi × ~12k).
-- SolarBack a performance = una **frazione** di quel costo, e solo a risultato.
-- *(Numeri di settore = stime plausibili, non bilanci certificati. Usare come
-  ordine di grandezza in vendita.)*
+## 4. Dream Outcome + il conto che chiude la vendita
+Il titolare vuole: **più impianti firmati e crescita, senza montare e gestire un
+reparto commerciale interno.**
 
-## 4. L'architettura dell'offerta — 3 strutture + sequenza
-Tre "forme" della stessa offerta, usate in sequenza per lo sprint dei 51 giorni.
+**Il conto (a numeri suoi):**
+- Un commerciale interno costa **35–60k €/anno FISSI** e può non performare.
+- Con SolarBack: investe ~3k/mese in ads + paga solo a risultato →
+  con **100 sopralluoghi/mese** e **30 impianti chiusi** (contratto medio ~12k):
+  **~360k € di fatturato/mese** generato, a fronte di ~**25k €** tra ads e fee
+  SolarBack. Fino a 100 impianti/mese la leva cresce ancora.
+- Messaggio: *"Non paghi un dipendente che magari non vende. Paghi solo gli
+  impianti e i sopralluoghi che arrivano davvero."*
+*(Contratto medio ~12k e costi commerciale = stime di settore, `docs/08`.)*
 
-### 🟢 STRUTTURA B — "Recupero Sopralluoghi" (APRI-PORTA, attrito minimo)
-- **Cosa:** NON tocchiamo ads né DB vecchio. Attacchiamo l'**AI Speed-to-Lead +
-  qualifica** sui lead che il cliente **già riceve e non converte** (form sito,
-  portali, lead comprati non richiamati in tempo, WhatsApp non gestiti).
-- **Perché batte la DB Reactivation:** quella chiedeva "hai vecchi contatti?" →
-  "no/pochi". Questa chiede *"quanti lead ti arrivano ogni mese che non richiami
-  entro 5 minuti?"* → **tutti** ne hanno (falla universale del settore, VOC).
-- **Zero nuovo esborso, zero dipendenza da asset che non ha, valore ovvio.**
-- **Incasso SolarBack:** 99€/sopralluogo effettuato (+400€/contratto). Costo per
-  SolarBack ~0 (n8n già pronto) → puro margine, volume limitato dai suoi lead.
-- **Ruolo:** il **primo sì rapido** + la prima dimostrazione della macchina.
+## 5. L'offerta (decisione CEO: MOTORE COMPLETO DIRETTO)
+**Al primo contatto proponiamo il motore completo**, non un pilotino. L'ICP giusto
+investe: chi non è disposto a mettere ~3k/mese in ads si auto-esclude (ed è
+esattamente chi NON vogliamo).
 
-### 🔵 STRUTTURA A — "Sprint Sopralluoghi 30 giorni" (SCALA il volume)
-- **Cosa:** campagna Meta dedicata + speed-to-lead + qualifica + prenotazione.
-  Il cliente mette un **budget ads minimo concordato** (es. 600–1.000€ / 30gg).
-- **Incasso:** 99€/sopralluogo effettuato + 400€/contratto.
-- **Ruolo:** una volta guadagnata la fiducia con B, si **scala** con A (fonte lead
-  fresca e controllata da noi). ⚠️ Nota: le ads verso il *consumatore* le paga il
-  cliente — coerente con "ads verso installatori (nostre) rimandate".
-
-### 🟡 STRUTTURA C — "Founding Partner" (CONTENITORE commerciale)
-Impacchetta B (o A) dentro uno status "fondatore":
-- **Prezzo bloccato a vita** (99€/400€ anche quando alzeremo i prezzi).
-- **Esclusiva di zona** (un solo installatore partner per area).
-- **Accesso diretto al founder** + posti limitati.
-- **In cambio:** il partner si impegna a dare **testimonianza video + accesso ai
-  numeri** quando l'obiettivo è centrato (baratto esplicito → così i primi partner
-  producono il case study, che è il vero output strategico).
-
-**➡️ SEQUENZA CONSIGLIATA (cold call → chiusura):**
-apri con **B** (attrito minimo, "recupero i lead che già perdi", niente budget
-ads da discutere subito) → dentro il framing **C** (Founding Partner, esclusiva
-di zona, posti limitati) → dimostrata la macchina, **upsell ad A** (ads, budget
-cliente) per scalare i volumi. Aggira sia il muro della DB reactivation sia la
-trappola del "gratis".
-
-## 5. Offer Stack (valore percepito alto, costo per noi ~0)
-| Deliverable (già disponibile / costo ~0) | Valore ancorato |
+**Cosa include (offer stack):**
+| Deliverable | Valore percepito |
 |---|---|
-| Setup campagna Meta + creatività FV (in Struttura A) | ~1.500 € |
-| AI Speed-to-Lead <30s (n8n già pronto) | ~2.000 €/mese |
-| Qualifica AI su criteri concordati | ~1.000 €/mese |
-| Prenotazione automatica in agenda | ~800 €/mese |
-| Dashboard KPI + report settimanale | ~500 €/mese |
-| Script di chiusura per il suo commerciale (bonus) | ~500 € |
-| Esclusiva di zona + prezzo bloccato a vita (founding) | (impagabile) |
-| Garanzia sopralluoghi + sostituzione fuori criteri | (il rischio è nostro) |
+| Setup + gestione campagne Meta dedicate (creatività FV incluse) | ~2.000 € |
+| AI Speed-to-Lead <30s (n8n) — nessun lead si raffredda | ~2.000 €/mese |
+| Qualifica AI su criteri concordati (solo persone vere) | ~1.500 €/mese |
+| Prenotazione automatica in agenda del commerciale | ~1.000 €/mese |
+| Cold Email B2B + Database Reactivation (dove utile) come motori extra | ~1.500 €/mese |
+| Dashboard KPI + report settimanale (trasparenza totale) | ~800 €/mese |
+| Script di chiusura per il commerciale del partner (bonus) | ~500 € |
+| **Esclusiva di zona + prezzo bloccato a vita** (Founding) | (impagabile) |
+| **Garanzia sopralluoghi + sostituzione fuori criteri** | (il rischio è nostro) |
 
-→ Valore percepito impilato **8.000–10.000 €**; prezzo reale **paghi solo 99€ a
-sopralluogo**. Il delta genera il "sì". I bonus a costo zero per noi (script,
-dashboard, report) sono i più efficienti.
+> **Strumento opzionale, non l'apri-porta:** il "Recupero Sopralluoghi"
+> (speed-to-lead sui lead che il cliente già perde) resta un'arma utile per un
+> quick-win nei primi giorni, ma NON è più il gancio principale. La DB
+> Reactivation resta scartata come offerta autonoma.
 
-## 6. La Garanzia (la leva #1 con 0 case study)
-**Combinazione consigliata:** performance condizionata + qualità/sostituzione +
-"lavoro gratis finché" *cappata*. Formulazione:
+## 6. Founding Partner (contenitore + scarsità — decisione CEO)
+- **Esclusiva di zona: UN solo partner per area/provincia.** Scarsità reale e
+  fortissima leva di FOMO — e **compatibile con 30+ partner** su 30+ zone diverse
+  (quindi non frena l'obiettivo del 26/10).
+- **Prezzo bloccato a vita** (99€/400€ anche quando alzeremo i prezzi).
+- **Accesso diretto al founder.**
+- **In cambio:** testimonianza video + accesso ai numeri quando l'obiettivo è
+  centrato (baratto esplicito → i primi partner producono il case study).
+- **Nessun filtro economico extra** (decisione CEO): il budget ads ~3k/mese è già
+  il filtro anti-perditempo. Zero attrito aggiuntivo per chiudere più in fretta.
 
-> *"Nei primi 30 giorni ti porto almeno **8 sopralluoghi qualificati** in agenda.
-> Paghi solo quelli **effettivamente svolti**, 99€ l'uno. Ogni appuntamento fuori
-> dai criteri concordati **non lo paghi e te lo sostituisco**. Se non arrivo a 8
-> entro 30 giorni, **continuo a lavorare senza compenso finché non ci arrivo**
-> (max 60 giorni, a parità del budget/flusso lead concordato)."*
+## 7. La Garanzia (decisione CEO: floor prudente + target alto)
+Scriviamo un **minimo garantito che battiamo anche nel peggiore dei casi**, mentre
+dichiariamo il target reale. Formulazione:
 
-È credibile (numeri specifici), **non ci fa fallire** (cassa a rischio zero, cap
-temporale, criteri scritti) e ribalta il rischio in modo visibile.
-⚠️ **Mai addebitare il no-show** (nel settore si paga solo l'appuntamento svolto —
-VOC). Il nostro "99€ a sopralluogo *effettuato*" è già allineato.
+> *"Target: 100–300 sopralluoghi qualificati al mese. Ti GARANTISCO per iscritto
+> un minimo di **50 sopralluoghi qualificati nel primo mese**: paghi solo quelli
+> **effettivamente svolti** (99€ l'uno). Se non arrivo a 50, **lavoro gratis
+> finché non ci arrivo** (a parità del budget ads concordato). Ogni appuntamento
+> fuori dai criteri concordati **non lo paghi e te lo sostituisco**."*
 
-## 7. Criteri di "sopralluogo qualificato" (da fissare per iscritto)
-Bozza da concordare col partner PRIMA di partire (protegge lui e noi):
-- Decisore presente all'appuntamento (proprietario/titolare).
-- Immobile di proprietà / titolo a decidere.
-- Interesse reale a valutare un impianto (non solo curiosità/prezzo).
-- Zona coperta dal commerciale del partner.
-- Finestra temporale definita (data/ora confermata).
-- (Opz.) consumi/bolletta o requisito minimo concordato.
-> Senza criteri scritti si litiga su ogni fattura da 99€. Questa è anche la
-> nostra "garanzia qualità".
+- **Floor scritto = 50/mese** (prudente, sempre battibile). **Target = 100–300.**
+  Under-promise, over-deliver → protegge il PRIMO partner (una garanzia mancata
+  senza case study è letale). *Il floor esatto è tarabile (50→80) man mano che
+  arrivano i dati.*
+- **Mai addebitare il no-show** (nel settore si paga solo lo svolto — VOC).
+- ⚠️ La garanzia regge SOLO se il delivery regge il volume → vedi §11.
 
 ## 8. Pricing
-- **Performance pura (fase attuale):** 99€/sopralluogo effettuato + 400€/contratto
-  residenziale. Grandi impianti: % concordata.
-- **Founding Partner:** prezzo bloccato a vita + esclusiva di zona + posti limitati.
-- **Nessun setup fee nell'apri-porta** (abbassa l'attrito, valida l'offerta).
-  Il setup fee (150–200€) e il revenue share 5–10% sono **fase 2**, dopo i case
-  study (vedi `01-business-model-economia.md` → evoluzione pricing).
+- **Performance pura:** 99€/sopralluogo effettuato + 400€/contratto residenziale.
+  Grandi impianti (commerciale/industriale): % concordata.
+- **Founding:** prezzo bloccato a vita + esclusiva di zona.
+- **Nessun setup fee ora** (decisione CEO). Setup fee (150–200€) e revenue share
+  5–10% = fase 2, dopo i case study.
 
-## 9. Naming (per pilota/materiali)
-- Contenitore: **"Programma Founding Partner SolarBack"**
-- Promessa dentro: **"Agenda Piena FV — almeno 8 sopralluoghi in 30 giorni"**
-- Alternative: "Reparto Sopralluoghi Chiavi in Mano" · "Sopralluoghi Garantiti,
-  Paghi Solo a Risultato".
+## 9. Criteri di "sopralluogo qualificato" (da fissare per iscritto col partner)
+Decisore presente · immobile di proprietà/titolo a decidere · interesse reale
+(non solo prezzo) · zona coperta dal commerciale · data/ora confermata · (opz.)
+consumo/bolletta minima. → è anche la nostra "garanzia qualità".
 
-## 10. La one-liner da cold call (e varianti)
-**Principale (apri con Struttura B):**
-> *"Recupero i sopralluoghi dai lead che oggi stai già perdendo — quelli che non
-> richiami entro 5 minuti — e te li porto qualificati in agenda. Paghi solo 99€
-> a sopralluogo effettivamente svolto. Esclusiva sulla tua zona, sei uno dei miei
-> primi partner fondatori con prezzo bloccato a vita. E se non ti porto almeno 8
-> sopralluoghi in 30 giorni, lavoro gratis finché non ci arrivo."*
+## 10. La one-liner da cold call (scala reale)
+> *"Divento il tuo reparto acquisizione: ti porto **100–300 sopralluoghi
+> qualificati al mese** in agenda, con circa **3.000€/mese di ads che investi tu**.
+> Paghi **99€ solo per ogni sopralluogo effettivamente svolto** + 400€ a contratto
+> firmato. **Esclusiva sulla tua zona.** E ti garantisco per iscritto un minimo il
+> primo mese: se non lo raggiungo, lavoro gratis finché non ci arrivo."*
 
-**Gancio "beat-your-number" (se conosci il suo dato):**
-> *"Quanti sopralluoghi fai oggi al mese? Te ne porto di più — o non mi paghi."*
+**Gancio "beat-your-number":** *"Quanti impianti chiudi oggi al mese? Io ti porto
+il volume per farne molti di più — o non mi paghi."*
 
-## 11. Gestione obiezioni (mappata ai pain reali — VOC)
-- *"Anche voi lead riciclati?"* → No: con la Struttura B lavoro **i TUOI lead**
-  (nessuno li condivide); con le ads sono **dedicate a te**, non un portale.
-- *"Ho già buttato soldi in agenzie che promettono in 6 mesi."* → Zero canone,
-  zero setup: **paghi solo il sopralluogo svolto**. Operativi in 7 giorni.
-- *"E se non si presenta (no-show)?"* → Non lo paghi. Paghi solo gli svolti.
-- *"E se sparite dopo che pago?"* (memoria truffe settore) → Non paghi nulla in
-  anticipo; paghi *dopo* che il sopralluogo è avvenuto. Il rischio è nostro.
-- *"Non ho vecchi contatti da riattivare."* → Non servono: lavoro i lead **nuovi**
-  che già ti arrivano e perdi. (← aggira l'obiezione che affossò la DB react.)
+## 11. ⚠️ Il vero rischio: la CAPACITÀ DI DELIVERY
+Promettere 100–300 sopralluoghi/mese per N partner è un carico enorme per un
+solo operatore + AI. Quindi:
+- **Lo speed-to-lead + qualifica + booking su n8n devono essere solidi e
+  scalabili PRIMA di chiudere volumi.** È la priorità #1 di delivery.
+- La garanzia (§7) è sostenibile solo se la macchina regge. Verificare n8n è
+  urgente (vedi `TODO.md`).
 
-## 12. ⚠️ Decisioni da confermare col CEO (round-3)
-1. **Apri-porta = Struttura B ("Recupero Sopralluoghi")** al posto della DB
-   reactivation: confermi?
-2. **"Founding Partner": tetto rigido (es. 5) o coorte a scaglioni?** L'esclusiva
-   di zona è compatibile con molti partner (1 per zona) → per l'obiettivo 30 la
-   scarsità va usata come leva di chiusura, non come cap rigido a 5.
-3. **Setup fee nell'apri-porta: 0 (consigliato) o piccolo deposito convertibile**
-   (es. 300€ che diventano credito sui primi sopralluoghi, come filtro anti-curiosi)?
-4. **Livello di garanzia:** sei a tuo agio con "8 sopralluoghi/30gg + lavoro gratis
-   finché (cap 60gg)"? Alzare/abbassare la soglia?
-5. **Focus:** residenziale (pricing chiaro) come primo segmento e una zona pilota
-   per fare densità, o tutta Italia da subito?
+## 12. Decisioni CEO recepite (round-3, 2026-09-05)
+1. ✅ **Apri-porta = motore completo diretto** (no pilotino; il budget ads filtra).
+2. ✅ **Garanzia = floor prudente scritto (≈50/mese) + target dichiarato 100–300.**
+3. ✅ **Nessun filtro economico extra**: basta il budget ads ~3k/mese.
+4. ✅ **Scarsità = esclusiva di zona, 1 partner per area** (compatibile con 30+).
+
+### Ancora da decidere
+- Floor esatto della garanzia (50 vs 80) — parto da 50, si alza coi dati.
+- Focus residenziale vs anche commerciale/industriale nei primi partner.
+- Zona/e di partenza per le liste outbound.

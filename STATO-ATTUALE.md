@@ -57,13 +57,22 @@ acquisizione**.
 - Chiusura debole (0/5 storico): offerta e script di vendita da affilare.
 - Deficit di fiducia (0 recensioni/case study).
 
+## Numeri VERI (ricalibrati dal CEO, 5/9) — ragionare a QUESTA scala
+- **100–300 sopralluoghi qualificati/mese** per partner · cliente investe
+  **~3.000 €/mese in ads** (100€/gg) · **30–100 impianti chiusi/mese** ·
+  valore SolarBack **~22–70k €/mese** per partner.
+- **ICP:** aziende affamate, con capacità reale e disposte a investire. NO ai
+  piccoli/chiusi/"provo gratis".
+
 ## In corso adesso
-- ✅ **Ricerca completata** (competitor + VOC + framework) → `docs/08-ricerca-mercato.md`.
-- ✅ **Offerta v1 costruita** → `docs/07-offerta.md`. Apri-porta = Struttura B
-  ("Recupero Sopralluoghi"), contenitore Founding Partner, garanzia forte cappata.
-- 🟡 **In attesa validazione CEO** (round-3) sui parametri finali dell'offerta.
+- ✅ **Ricerca completata** (competitor + VOC + framework) → `docs/08`.
+- ✅ **Offerta v2 CONGELATA** (numeri reali) → `docs/07-offerta.md`: motore
+  completo diretto · garanzia floor ~50/mese + target 100–300 · esclusiva di zona ·
+  99€/400€ · nessun setup fee ora.
+- ⚠️ **Rischio chiave = delivery**: n8n deve reggere il volume promesso.
 
 ## Prossime 3 mosse (dettaglio in TODO.md)
-1. Validare l'offerta col CEO (round-3) e congelare la v1.
-2. Verificare le automazioni n8n (lo speed-to-lead è il cuore della Struttura B).
-3. Costruire lista installatori + script cold call + CRM → partire con l'outreach.
+1. **Verificare/completare le automazioni n8n** (speed-to-lead + qualifica +
+   booking): è ciò che rende la garanzia sostenibile.
+2. **Lista installatori ICP** (affamati, che già investono in ads) + **CRM/pipeline**.
+3. **Script cold call** (one-liner in `docs/07` §10) → partire con l'outreach.

@@ -61,8 +61,23 @@
     60gg)" + sostituzione fuori criteri + mai pagare il no-show.
   - **Prezzo:** resta 99€/sopralluogo + 400€/contratto; niente setup fee
     nell'apri-porta (fase 2: setup + revenue share).
-- **Stato:** 🟡 v1 pronta, **in attesa di validazione CEO** (round-3, vedi
-  `docs/07-offerta.md` §12).
+- **Stato:** ✅ **v2 congelata** dopo ricalibrazione CEO (round-3). Vedi sotto.
+
+### 2026-09-05 — Ricalibrazione CEO + offerta v2 congelata (round-3)
+- **Numeri VERI (non da manuale):** 100–300 sopralluoghi/mese per partner; il
+  cliente investe ~3.000 €/mese in ads (100€/gg); 30–100 impianti chiusi/mese;
+  valore SolarBack ~22–70k €/mese per partner. **Ragionare sempre a questa scala.**
+- **ICP ricalibrato verso l'alto:** aziende affamate, con capacità reale (assorbono
+  100–300 sopralluoghi/mese) e disposte a investire ≥3k/mese in ads. NO ad
+  artigiani/chiusi/"provo gratis". Vedi `docs/02`.
+- **Round-3 (4 decisioni):**
+  1. ✅ Apri-porta = **motore completo diretto** (no pilotino; il budget ads filtra).
+  2. ✅ Garanzia = **floor prudente scritto (~50/mese) + target dichiarato 100–300**
+     (under-promise/over-deliver per proteggere il primo partner).
+  3. ✅ **Nessun filtro economico extra**: basta il budget ads ~3k/mese.
+  4. ✅ Scarsità = **esclusiva di zona, 1 partner per area** (compatibile con 30+).
+- **Stato:** ✅ offerta v2 in `docs/07-offerta.md`. Rischio chiave = capacità di
+  delivery (n8n deve reggere il volume) → verifica n8n prioritaria.
 
 ---
 

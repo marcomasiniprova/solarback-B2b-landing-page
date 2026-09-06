@@ -3,6 +3,21 @@
 > Chi contattare, chi evitare, come dare un punteggio. Serve per costruire le
 > liste di outreach e per qualificare i partner in ingresso.
 
+## ⚠️ RICALIBRAZIONE DEL CEO (2026-09-05) — leggi PRIMA
+Le fasce del documento strategico (sotto) restano riferimento, ma il CEO ha
+alzato e affilato l'asticella reale:
+- **Target = aziende AFFAMATE, con mentalità di crescita e CAPACITÀ REALE** di
+  assorbire **100–300 sopralluoghi/mese** e chiudere **30–100 impianti/mese**.
+- **Devono essere disposte a investire ≥3.000 €/mese in ads** (il budget lo mette
+  il cliente). Chi non vuole investire in marketing NON è nostro cliente.
+- **NO senza pietà a:** artigiani/chiusi da 5–10 impianti/mese, mentalità "provo
+  gratis / vediamo", chi non ha capacità commerciale-installativa per il volume.
+- Frase del CEO: *"Voglio quelli che vogliono crescere, che hanno sete, che
+  vogliono fare marketing sul serio — non le aziende chiuse."*
+- Implicazione liste: privilegiare installatori strutturati, che **già investono
+  in advertising** e hanno più squadre/commerciali (segnali di capacità e
+  mentalità). Un ICP sbagliato non regge i numeri e brucia il case study.
+
 ## Il cliente NON è "azienda fotovoltaica" (troppo generico)
 Il cliente è: **installatore fotovoltaico ad alto ticket, che vende tramite
 sopralluogo e ha capacità inutilizzata** (commerciale e/o installativa). Il

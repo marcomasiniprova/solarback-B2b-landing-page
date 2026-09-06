@@ -1,9 +1,14 @@
 # 🎯 SPRINT — Deadline 26 ottobre 2026
 
-> **Obiettivo del CEO:** 30 clienti (partner installatori) paganti entro il
-> **26/10/2026**. Oggi 2026-09-05 → **51 giorni**. Partenza da **0 clienti, 0
-> recensioni**. Questo file è il piano di guerra. `v1` — assunzioni marcate ⚠️,
-> da confermare nel round-2 di domande (`docs/06-domande-aperte.md`).
+> **Obiettivo del CEO:** 30 partner installatori **attivi/paganti** ("pagante" =
+> partner attivo che genera risultati) entro il **26/10/2026**. Oggi 2026-09-05 →
+> **51 giorni**. Partenza da **0 clienti, 0 recensioni**. Questo file è il piano
+> di guerra.
+>
+> ⚠️ **OFFERTA DI RIFERIMENTO = `docs/07-offerta.md` (v2, numeri reali).** Scala
+> reale per partner: **100–300 sopralluoghi/mese**, cliente ~3k/mese ads,
+> **30–100 impianti/mese**. Le sezioni §2–§3 sotto (vecchio wedge) sono storiche;
+> l'offerta valida è la v2. Rischio chiave: **capacità di delivery** (n8n).
 
 ---
 
