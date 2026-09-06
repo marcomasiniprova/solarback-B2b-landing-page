@@ -193,6 +193,41 @@ al contesto "lead vecchio riattivato" (non nuovo), **config partner unificata**
 collegare dopo). Stessi tool (calendar, qualifica, notifica titolare, social
 proof), stesso sistema buffer/lock Redis. È l'unico pezzo mancante dei 4.
 
+## 🗄️ Migrazione Google Sheets → Airtable (2026-09-06)
+Decisione CEO: sostituire TUTTI i nodi Google Sheets con Airtable (risolve anche il
+buco della credenziale Google per i Fogli). Fatto:
+- **Base Airtable creata:** "SolarBack — Operativo" — `app3DAWI67LKIGLXO`
+  (credenziale n8n usata: `Airtable - Valerio Alieri`, id `NYTtV3vWLqXxfcty`).
+- **Tabelle** (nomi campi identici ai vecchi fogli → espressioni invariate):
+  - Campagne_Attive `tblZHgseG0MJbhCTK` (config partner per gli Alessandro)
+  - Lead_Attivi `tblYyKlr4lgqjnXhq` (lead ads)
+  - Clienti_Config_DBReact `tblJdBNWVMad9eRlx` (config sender DB-react; arricchita
+    con Nome_Azienda/Offerta_Ads/Zona_Competenza/Telefono_Titolare per la conversazione)
+  - Lead_Dormienti `tblo6UugmpnEsOj00` (lead vecchi, unificati con `cliente_id`)
+  - Casi_Studio `tblo2HmOoS2AQq4V2` (social proof)
+- **Workflow migrati (Sheets→Airtable, 0 warning):**
+  - ✅ M1 speed-to-lead (intake): Get row → Campagne_Attive; Append → Lead_Attivi.
+  - ✅ M2 speed-to-lead (Alessandro): Get Lead → Lead_Attivi; Get Config →
+    Campagne_Attive; Cerca Casi Studio (tool) → Casi_Studio.
+  - ✅ M1 DB-react: Leggi CLIENTI_CONFIG → Clienti_Config_DBReact; Leggi Lead
+    Dormienti → Lead_Dormienti (filtro `cliente_id`); Writeback ×2 → upsert su
+    match `ID Lead`.
+- ⏳ **M2 DB-react (duplicato "M2 - AI speed to lead copy")**: NON ancora
+  modificabile → **"Available in MCP" è OFF**. Valerio deve attivarlo (card
+  workflow o impostazioni). Poi: migro i suoi 3 nodi Sheets (Get Lead →
+  Lead_Dormienti by Telefono; Get Config → Clienti_Config_DBReact by cliente_id;
+  Casi Studio → Casi_Studio), riscrivo il prompt al contesto "lead riattivato",
+  rinomino, trigger sul numero dedicato.
+- 📋 **Dati:** le tabelle sono VUOTE (solo struttura). I vecchi fogli non erano
+  leggibili via Composio (scope) e comunque i dati reali sono ~0. Onboarding
+  partner = si riempiono le righe Airtable.
+
+## ⚠️ Nota: il Calendar resta Google
+La migrazione riguarda i FOGLI. Il **booking usa Google Calendar** (Get-Availability,
+Crea/Modifica/Cancella Appuntamento su `artecagenzia@gmail.com`) → serve ancora una
+**credenziale Google Calendar** in n8n (o si valuta un booking alternativo). Il
+buco "credenziale Google" ora riguarda solo il Calendar, non più i Fogli.
+
 ## 🔴 Sicurezza (da sistemare)
 Alcuni nodi HTTP hanno **API key hardcodate in chiaro** (Deepgram, Mistral) dentro
 il workflow. Rischio: finiscono negli export/backup e sono visibili a chiunque

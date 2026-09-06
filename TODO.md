@@ -9,10 +9,16 @@
 - [x] **Sicurezza n8n**: chiavi Deepgram/Mistral spostate su credenziali (M2 speed).
 - [x] **Fix difetto**: "Crea Appuntamento" resource/operation espliciti (M2 speed).
 - [x] **Reorg layout**: M1 speed-to-lead (intake) riorganizzato.
+- [x] **Migrazione Sheets → Airtable** dei 3 workflow originali (base "SolarBack —
+      Operativo" `app3DAWI67LKIGLXO`, 5 tabelle). Vedi `docs/09`.
 - [ ] 🔴 **Valerio: RUOTARE le chiavi Deepgram e Mistral** (erano esposte).
-- [ ] 🔴 **Valerio: verificare credenziale Google** (Sheets/Calendar) — non risulta
-      tra le 18 credenziali n8n; senza, i workflow non girano.
-- [ ] **Costruire M2 Database Reactivation** (clone Alessandro adattato + numero dedicato).
+- [ ] 🔴 **Valerio: attivare "Available in MCP"** sul duplicato "M2 - AI speed to
+      lead copy" → poi lo adatto a M2 Database Reactivation.
+- [ ] 🔴 **Valerio: credenziale Google Calendar** in n8n (il booking usa ancora
+      Google Calendar; i Fogli non servono più).
+- [ ] **Adattare M2 Database Reactivation** (dopo attivazione MCP): migro nodi ad
+      Airtable (Lead_Dormienti/Clienti_Config_DBReact), riscrivo prompt "lead
+      riattivato", trigger numero dedicato.
 - [ ] **Reorg layout** dei restanti: M2 speed-to-lead (Alessandro) + M1 DB-react.
 - [ ] **Collaudo end-to-end** appena Valerio ha un telefono/numero di test.
 - [ ] **Lista installatori ICP v1** (150–300): aziende affamate, che **già
