@@ -151,13 +151,17 @@
   (sequenze 3-5 touch + re-contact ogni 90gg). Collo di bottiglia = qualità lista + offerta.
   Geo di partenza: **Lombardia → Veneto → Emilia-Romagna**.
 
+### 2026-09-06 (sera) — Round-6: 4 scelte CEO sull'infra email
+- ✅ **Instantly: Growth ($47/mese) ORA** (non il trial a 2 caselle). Genera API key → agente pilota.
+- ✅ **Geo: regionale, Lombardia → Veneto → Emilia-Romagna** (poi allargare).
+- ✅ **Lista: scraping esterno + CSV** (Google Maps/LinkedIn/ENF/Pagine Gialle + enrichment),
+  no Lead Database Instantly (risparmio). Costruzione Tier-1 Lombardia avviata.
+- ✅ **Domini: .it** (variazione del brand). Nomi candidati proposti (getsolarback.it,
+  solarbackpartners.it, ...); disponibilità .it non verificabile via API → check al checkout.
+- 🔲 **Da Valerio (in chat):** qual è il dominio primario di SolarBack (solarback.it/.com?) da
+  proteggere e usare come target del redirect 301 dei domini cold.
+
 ## ⚠️ Decisioni ANCORA da prendere (vedi docs/06-domande-aperte.md)
-- **Domini cold:** quali 2 nomi (variazione del brand SolarBack) + qual è il dominio brand
-  primario da proteggere.
-- **Instantly Growth ($47) ORA** sì/no (o prima un test sul trial a 2 caselle).
-- **Geo di partenza:** regionale (Lombardia first) come consiglia la ricerca, o nazionale.
-- **Costruzione lista:** scraping+enrichment esterno → CSV (evita il costo Lead Database di
-  Instantly) vs Lead Finder di Instantly (a pagamento).
 - Struttura finale dell'offerta + offerta pilota "founding partner" (in ricerca).
 - Numero-target reale: 30 entro il 26/10 vs. filosofia "pochi partner/anno" del
   documento strategico — come li conciliamo.

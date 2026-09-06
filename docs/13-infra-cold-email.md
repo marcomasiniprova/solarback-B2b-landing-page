@@ -15,6 +15,52 @@
 - La config manuale SPF/DKIM/DMARC **NON è difficile, è "fiddly"**: ~afternoon di lavoro
   (2,5-3h per 2 domini). L'unico punto delicato è il **DKIM**.
 
+## 0. RUNBOOK — cosa fare OGGI (Giorno 1) — scelte CEO applicate
+> Decisioni CEO (6/9): **Instantly Growth ora · geo Lombardia→Veneto→Emilia · lista
+> scraping+CSV · domini .it**. Segui questi step in ordine. I record DNS sono pronti:
+> sostituisci solo `TUODOMINIO.it` con il dominio comprato.
+
+**A) Compra 2 domini .it** (registrar consigliato: **Cloudflare** o Namecheap; controlla la
+disponibilità al checkout perché il .it non è verificabile via API). Candidati (variazione
+del brand, NON il dominio primario di SolarBack):
+`getsolarback.it` · `solarbackpartners.it` · `solarback-agency.it` · `provasolarback.it` ·
+`scelgosolarback.it` · `solarbackenergia.it`. **Prendine 2.**
+→ Imposta **redirect 301** dei 2 domini cold verso il sito reale di SolarBack.
+
+**B) Crea 2 Google Workspace** (1 per dominio), **3 utenti/caselle ciascuno**. Nomi umani,
+es. `valerio@`, `commerciale@`, `partner@`. Business Starter, ~€6,90/utente/mese (+IVA).
+
+**C) DNS per OGNI dominio** (nel pannello del registrar). Copia-incolla:
+```
+# MX (ricevere risposte)
+Tipo MX    Host @              Valore smtp.google.com                 Priorità 1
+# SPF (un solo record TXT!)
+Tipo TXT   Host @              Valore v=spf1 include:_spf.google.com ~all
+# DMARC (parti in monitor)
+Tipo TXT   Host _dmarc         Valore v=DMARC1; p=none; rua=mailto:dmarc@TUODOMINIO.it; adkim=r; aspf=r; pct=100
+# DKIM: NON inventarlo. Generalo in Google Admin (step D) e incolla il valore che ti dà Google:
+Tipo TXT   Host google._domainkey   Valore v=DKIM1; k=rsa; p=<CHIAVE-LUNGA-DA-GOOGLE>
+# Tracking domain (il target lo dà Instantly nelle sue impostazioni)
+Tipo CNAME Host track          Valore <target-da-Instantly>
+```
+
+**D) DKIM in Google Admin Console** (per ogni dominio): Apps → Google Workspace → Gmail →
+Authenticate email → **Generate new record (2048-bit)** → copia host+valore nel DNS (step C)
+→ ⚠️ **torna in Admin e clicca "Start authentication".** (Senza questo click il DKIM è spento.)
+
+**E) Verifica** (dopo 1-48h di propagazione): controlla SPF/DKIM/DMARC su **MXToolbox**.
+
+**F) Instantly:** sottoscrivi **Growth ($47/mese)** → **Settings → Integrations → API →
+genera API key** (poi me la passi, così piloto io). Imposta il **tracking domain** custom.
+
+**G) Collega le 6 caselle a Instantly via OAuth** (~15 min, ti guido: §7). NON delegabile all'API.
+
+**H) Tocca a me:** accendo il **warmup** su tutte e 6 (14gg), preparo campagne+sequenze, e —
+in parallelo, già in corso — costruisco la **lista Tier-1 Lombardia**. A warmup finito (~gg 16)
+partiamo a volume basso e rampiamo.
+
+---
+
 ## 1. Google Workspace — prezzo e la "trappola alias"
 - **Business Starter, Italia 2026:** €6,90/utente/mese (flexible, disdici quando vuoi)
   oppure **€69/utente/anno = €5,75/mese** (impegno 12 mesi, -16%). **IVA 22% esclusa** →
