@@ -176,6 +176,20 @@
 preso uno; il sito è su `artecai.it`). Serve per: (a) identità brand, (b) target del redirect
 301 dei domini cold.
 
+### 2026-09-06 — Brand, nicchia e architettura domini
+- **Nicchia: si RESTA sul fotovoltaico.** Ricerca (docs/12 + dati gen-lug 2026: +13%, 3,7 GW, 86%
+  residenziale con accumulo): il FV **non è morto d'inverno**, domanda più stabile tutto l'anno,
+  picco connessioni nov-dic per scadenza fiscale. Nessun pivot ora.
+- **Naming risolto (leva chiave):** **artec AI = agenzia madre** (nome flessibile) · **SolarBack =
+  brand verticale FV** (specifico → converte di più nel cold). Se un domani si aggiunge una nicchia
+  (es. pompe di calore), nuovo brand verticale sotto artec AI → **SolarBack non si rinomina.** Così
+  Valerio ha specificità ORA + flessibilità DOPO, senza rischio rebranding.
+- **Domini:** `solarback.it` (disponibile, Valerio lo compra) = **sito + email vera del brand**, da
+  proteggere. **2 domini secondari `.it`** = SOLO cold email (redirect a solarback.it). Registrar IONOS.
+- **CLAUDE.md ristrutturato:** tagliato da 140 → ~40 righe (best practice: corto = rispettato); il
+  dettaglio persona/regole/stato spostato in **`memory.md`** (nuovo, memoria permanente).
+- **Regola CEO:** a ogni prompt → 4 domande popup (fase discovery), appuntare tutto in memory.md.
+
 ## ⚠️ Decisioni ANCORA da prendere (vedi docs/06-domande-aperte.md)
 - Struttura finale dell'offerta + offerta pilota "founding partner" (in ricerca).
 - Numero-target reale: 30 entro il 26/10 vs. filosofia "pochi partner/anno" del
