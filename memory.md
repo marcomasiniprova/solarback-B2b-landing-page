@@ -73,11 +73,26 @@
 - **Team:** **solo Valerio + AI.** Niente Marco (la skill che lo cita NON riflette la realtà).
 - **Collo di bottiglia #1 (sua auto-diagnosi):** **trovare/contattare i lead giusti** (liste +
   outreach). → è la priorità operativa: lista ICP + motore di outreach.
+- **KPI:** vuole una **dashboard vera** (cruscotto live) da aprire quando vuole (Airtable/custom).
+- **DEVE approvare SEMPRE (il resto lo faccio io):** ① spese sopra soglia ② scrivere/contattare
+  a suo nome (email/msg reali a prospect) ③ cambiare offerta/prezzi ④ pubblicare contenuti pubblici.
+- **Tempo:** full, **7+ ore/giorno, tutti i giorni** fino al 26/10 → risponde in giornata.
+
+## 6-ter. ASSET LISTA ICP (in costruzione — priorità #1)
+- Valerio carica **~5000 lead** in **file sparsi** (scrape provincia-per-provincia via **Apify**,
+  tutte le 107 province; + **email personali di titolari** già raccolte in passato).
+- **Mio compito:** consolidare tutti i file → **deduplica** → **arricchimento** (email/titolare
+  mancanti) → **UN CSV pulito e ordinato** = lista target ICP. Salvare in **`private/`** (git-ignored,
+  contiene contatti reali). Filtrare sull'ICP (docs/02): via micro/artigiani, tieni strutturati.
+- **Tool:** **Apify via Composio** (connesso: `apify`, `apify_mcp`) — usare gli attori col credito
+  di Valerio per scrapare/arricchire il mancante. Non ri-scrapare ciò che lui ha già.
+- **Stato:** ⏸️ IN ATTESA che Valerio carichi i file in chat.
 
 ## 7. DOVE SIAMO (aggiornare!) — 2026-09-06
 - 0 clienti. Sto montando la **1ª infrastruttura cold email** (setup in `docs/13`).
-- **In attesa da Valerio:** (a) comprare `solarback.it` + 2 domini secondari su IONOS; (b) aprire Google
-  Workspace (6 caselle); (c) decidere se pagare Instantly Growth ora; (d) caricare i suoi DOCUMENTI in chat.
+- **PROSSIMA MOSSA (scelta CEO): costruire la lista ICP** dai suoi ~5000 lead → vedi §6-ter. ⏸️ aspetto i file.
+- **In attesa da Valerio:** (a) **carica i file lead** (priorità); (b) comprare `solarback.it` + 2 domini
+  secondari su IONOS; (c) aprire Google Workspace (6 caselle); (d) decidere se pagare Instantly Growth ora.
 - Ricerca fatta: infra email (costi ~€80-95/mese), mercato (ICP ~3-5k, `docs/02`), valutazione (`docs/11`),
   stagionalità FV (`docs/12`).
 - FV 2026: gen-lug +13% (3,7 GW), 86% residenziale con accumulo → domanda più stabile tutto l'anno. **Niche valida.**
