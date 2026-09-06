@@ -1,9 +1,13 @@
 # 🎯 SPRINT — Deadline 26 ottobre 2026
 
-> **Obiettivo del CEO:** 30 partner installatori **attivi/paganti** ("pagante" =
-> partner attivo che genera risultati) entro il **26/10/2026**. Oggi 2026-09-05 →
-> **51 giorni**. Partenza da **0 clienti, 0 recensioni**. Questo file è il piano
-> di guerra.
+> **⚠️ OBIETTIVO AGGIORNATO dal CEO (2026-09-06) — sostituisce i "30 partner":**
+> l'obiettivo NON è più il numero di partner. È **(1) fare almeno €200.000** e,
+> soprattutto, **(2) portare SolarBack a una VALUTAZIONE di ≥ €1.000.000 entro il
+> 26/10/2026.** Non servono €1M di fatturato: serve abbastanza **EBITDA (run-rate)
+> × multiplo ≥ €1M**. Margine netto ~95% → EBITDA ≈ fatturato. Il CEO possiede il
+> 100% delle quote. Vedi la matematica in `docs/11-valutazione-obiettivo.md`.
+> Oggi 2026-09-06 → ~50 giorni. I 30 partner NON sono più il target (il numero di
+> clienti conta solo in quanto genera EBITDA/valutazione).
 >
 > ⚠️ **OFFERTA DI RIFERIMENTO = `docs/07-offerta.md` (v2, numeri reali).** Scala
 > reale per partner: **100–300 sopralluoghi/mese**, cliente ~3k/mese ads,

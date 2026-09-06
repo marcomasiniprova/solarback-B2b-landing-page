@@ -3,6 +3,24 @@
 > Ordine = priorità. Spunta `[x]` quando fatto, sposta i completati in fondo,
 > aggiorna a fine sessione. Dettaglio piano → `SPRINT-26-OTTOBRE.md`.
 
+## 🎯 OBIETTIVO ATTUALE (aggiornato 6/9) — sostituisce "30 partner"
+**≥ €200.000** e **valutazione SolarBack ≥ €1.000.000 entro il 26/10.** Multiplo
+~10-15x (anchor 12x) → servono ~€67-100k EBITDA annuo/run-rate. Matematica in
+`docs/11-valutazione-obiettivo.md`. (Il n° di clienti conta solo in quanto genera EBITDA.)
+
+## 📄 FASE ATTUALE: DOCUMENTI DEL CEO (full focus)
+Protocollo per OGNI documento che il CEO carica in chat (log in `docs/10-materiale-CEO.md`):
+1. [ ] Leggo tutto a fondo.
+2. [ ] Estraggo i punti che generano azione (offerta, ICP, messaggi, funnel, pricing, processi).
+3. [ ] Dico cosa implemento subito e cosa va in TODO/arretrati.
+4. [ ] Aggiorno i `docs/` giusti + il log `docs/10`.
+5. [ ] Committo. Se un doc contraddice quanto scritto → lo segnalo, non sovrascrivo in silenzio.
+
+## 🔎 In corso (ricerche di mercato — 6/9)
+- [ ] Multipli di valutazione per azienda AI-native (→ affina `docs/11`).
+- [ ] Stagionalità FV autunno/inverno + nicchie adiacenti (pompe di calore ecc.):
+      capire se restare sul FV o affiancare/deviare (contro-stagionalità).
+
 ## 🚦 GO-LIVE DELIVERY — checklist da NON mancare (n8n pronto, manca solo questo)
 1. [ ] **Credenziale Google Calendar** in n8n (`artecagenzia@gmail.com`) — il booking
    la usa ancora (Airtable ha sostituito solo i Fogli).

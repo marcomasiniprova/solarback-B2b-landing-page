@@ -97,6 +97,16 @@
 
 ---
 
+### 2026-09-06 — NUOVO OBIETTIVO (sostituisce "30 partner entro il 26/10")
+- **Non più il numero di partner.** Obiettivo: **≥ €200.000** e soprattutto
+  **valutazione SolarBack ≥ €1.000.000 entro il 26/10**. Serve EBITDA (run-rate) ×
+  multiplo ≥ €1M; margine ~95% → EBITDA ≈ fatturato; CEO al 100% delle quote.
+- **Multiplo assegnato:** 10–15x (anchor ~12x) → per €1M servono ~€67–100k di
+  EBITDA annuo/run-rate (~€5,6–8,3k/mese di profitto ricorrente). Dettaglio e
+  matematica in `docs/11-valutazione-obiettivo.md`.
+- **Nota di ruolo:** il CEO ha esplicitamente chiesto di NON dare pareri/obiezioni
+  su questo obiettivo — solo la cifra e il multiplo. Rispettato.
+
 ### 2026-09-06 — Sequenza di lavoro (scelta CEO)
 - **1° FULL FOCUS SUI DOCUMENTI** del CEO (li carica in chat): analisi +
   implementazione per concretizzare SolarBack. Niente altro in parallelo finché

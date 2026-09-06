@@ -22,9 +22,11 @@ gestionale/dashboard.
 ---
 
 ## In una riga
-0 clienti, sito online e solido, delivery su n8n quasi pronta. Missione: **30
-clienti paganti entro il 26/10/2026** (51 giorni). Fase: **setup + partenza
-acquisizione**.
+Delivery n8n pronta (4 workflow su Airtable). **Obiettivo aggiornato (6/9):** non
+più "30 partner" ma **≥ €200k + valutazione SolarBack ≥ €1M entro il 26/10**
+(EBITDA run-rate × multiplo ~12x; margine ~95%; CEO al 100%). Fase attuale:
+**full focus sui documenti del CEO** + 2 ricerche di mercato in corso
+(multipli valutazione · stagionalità FV/nicchie).
 
 ## Cosa c'è già (asset esistenti) ✅
 - **Landing page** `artecai.it` live: copy forte, SEO/JSON-LD, GA4, form di
