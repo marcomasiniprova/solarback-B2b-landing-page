@@ -97,6 +97,19 @@
 
 ---
 
+### 2026-09-06 — Sequenza di lavoro (scelta CEO)
+- **1° FULL FOCUS SUI DOCUMENTI** del CEO (li carica in chat): analisi +
+  implementazione per concretizzare SolarBack. Niente altro in parallelo finché
+  non li abbiamo assorbiti. Log in `docs/10-materiale-CEO.md`.
+- **2° Dashboard/gestionale CUSTOM** (non solo Airtable) — scelta CEO "custom";
+  interpretata come priorità SUBITO DOPO i documenti (non in parallelo, per non
+  spezzare il focus). ⚠️ da confermare.
+- **3° Asset acquisizione**: lista ICP + outreach engine.
+- **4° Infrastruttura cold email**: Google Workspace + domini + SPF/DKIM/DMARC +
+  warmup Instantly (per ~100-150 email/gg AI). Dopo i documenti (scelta CEO).
+- **Skill `copertura-prompt`**: installata nel repo, obbligatoria su ogni prompt
+  multi-istruzione (regola in CLAUDE.md §0-bis).
+
 ## ⚠️ Decisioni ANCORA da prendere (vedi docs/06-domande-aperte.md)
 - Struttura finale dell'offerta + offerta pilota "founding partner" (in ricerca).
 - Numero-target reale: 30 entro il 26/10 vs. filosofia "pochi partner/anno" del
