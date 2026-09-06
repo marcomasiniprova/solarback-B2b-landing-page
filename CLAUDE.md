@@ -18,6 +18,15 @@
 
 > Se salti questo rituale, perdi il contesto e fai perdere tempo al CEO. Non farlo.
 
+### 0-bis. Skill OBBLIGATORIE
+
+- **`copertura-prompt` → USALA SEMPRE** su ogni messaggio del CEO che contiene più
+  di una richiesta / lista / punti numerati / brief lungo / vincoli multipli.
+  Installata nel repo in `.claude/skills/copertura-prompt/`. Serve a NON omettere
+  mai in silenzio un pezzo di prompt: fai l'inventario delle istruzioni atomiche,
+  eseguile per dipendenza, e chiudi SEMPRE col blocco `--- COPERTURA: n/tot ---`.
+  Non attivarla solo su domande secche a risposta unica.
+
 ---
 
 ## 1. Il capo

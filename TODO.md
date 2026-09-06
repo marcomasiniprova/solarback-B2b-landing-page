@@ -3,6 +3,25 @@
 > Ordine = priorità. Spunta `[x]` quando fatto, sposta i completati in fondo,
 > aggiorna a fine sessione. Dettaglio piano → `SPRINT-26-OTTOBRE.md`.
 
+## 🚦 GO-LIVE DELIVERY — checklist da NON mancare (n8n pronto, manca solo questo)
+1. [ ] **Credenziale Google Calendar** in n8n (`artecagenzia@gmail.com`) — il booking
+   la usa ancora (Airtable ha sostituito solo i Fogli).
+2. [ ] **Numero WhatsApp dedicato** per M2 Database Reactivation → poi collego il trigger.
+3. [ ] **(Opz.) CSV dei 3 fogli** se contengono dati veri → import in Airtable
+   (Composio Sheets bloccato da scope app).
+4. [ ] **Collaudo end-to-end** quando Valerio ha un telefono: attiviamo i workflow +
+   simuliamo un lead (template → Alessandro qualifica → prenota → notifica titolare)
+   per ads-path e DB-react-path. Solo dopo questo si va live.
+
+## 📌 Note operative acquisizione (da tenere a mente)
+- **Cold email:** Valerio farà **~100-150 email/giorno ultra-personalizzate (AI)**
+  con **Instantly AI**.
+- **Infrastruttura email da settare (con l'agente):** Google Workspace + domini
+  secondari + **SPF / DKIM / DMARC** + warmup su Instantly, PRIMA di andare a volume
+  (warmup ~2-3 settimane → va avviato presto per la deadline 26/10).
+- **Prima di:** ICP list building e setup Instantly, il CEO ha **molti documenti**
+  da farci analizzare e implementare per concretizzare SolarBack.
+
 ## 🔴 ADESSO (Settimana 0 — questa settimana)
 
 - [x] **Verifica automazioni n8n** → fatta, `docs/09` (il motore è ben costruito).

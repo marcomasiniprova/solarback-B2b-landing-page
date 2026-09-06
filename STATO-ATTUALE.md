@@ -2,8 +2,12 @@
 
 > Foto della situazione in tempo reale. **Aggiornare a fine di ogni sessione.**
 
-**Ultimo aggiornamento:** 2026-09-06 — kickoff: setup repo, offerta v2, ricerca, e
-collaudo n8n a livello nodi (fix sicurezza + difetto calendar + reorg intake).
+**Ultimo aggiornamento:** 2026-09-06 — delivery n8n completata (4 workflow su
+Airtable, sicurezza, reorg estetico). Skill `copertura-prompt` installata nel repo
+(`.claude/skills/`) e resa obbligatoria in CLAUDE.md. GO-LIVE checklist + note
+acquisizione in `TODO.md`. **Prossima fase (in scelta col CEO):** analisi/implementazione
+dei documenti SolarBack, poi asset (lista ICP + outreach engine + infra email), poi
+gestionale/dashboard.
 
 > **FATTO 6/9:** tutti e 4 i workflow su **Airtable** (base "SolarBack —
 > Operativo" `app3DAWI67LKIGLXO`, 5 tabelle) — incluso il 4°, **M2 - Database
