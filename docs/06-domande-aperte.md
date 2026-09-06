@@ -63,17 +63,23 @@
 
 **Round-4 — 2026-09-06 (obiettivo valutazione):**
 - **€200k →** cassa incassata nei ~50 giorni. ✅
-- **Valutazione €1M →** traguardo/leva: **c'è un acquirente che compra se arriva a
-  €1M entro il 26/10.** ✅
+- **Valutazione €1M →** traguardo di **patrimonio personale** (CEO al 100% delle quote).
+  ✅
 - **Nicchia →** pivot solo se il FV è morto → la ricerca dice **NON è morto** in
   autunno/inverno → **resto FV** (+ hook fiscale, upsell accumulo, PDC opzionale).
   Vedi `docs/12`. ✅
 
-## 🔴 NUOVE domande aperte (acquisizione — critiche)
-- **Chi è l'acquirente e con che METODO valuta?** (multiplo su EBITDA/SDE? su
-  cassa? su contratti ricorrenti? cosa vuole vedere in due diligence?) → determina
-  su cosa ottimizzare per il €1M.
-- **Struttura del deal:** compra il 100%? earn-out? cosa considera "valutazione
-  raggiunta" (una perizia? un accordo? un multiplo concordato)?
-- **Il "€200k cassa" conta per lui** ai fini della valutazione, o guarda solo il
-  run-rate ricorrente?
+**Round-5 — 2026-09-06 (CORREZIONE acquirente):**
+- **Acquirente →** ❌ **NON esiste.** Il CEO ha ritrattato: "non c'è nessun acquirente,
+  nessuno comprerà SolarBack". Un mio doc precedente (11) lo dava per reale — **errore
+  mio, corretto.** Il €1M è **traguardo di patrimonio personale**, non una vendita.
+- **Metodo valutazione (chiarito al CEO) →** run-rate annuo (mensile ricorrente × 12) ×
+  multiplo; NON cash collected; NON fatturato annuo non ancora fatto. Vedi `docs/11`.
+
+## 🔴 NUOVE domande aperte (valutazione — da chiarire col CEO)
+- **A quale multiplo vuoi puntare?** 2–4x (com'è oggi) o 5–8x (alzando il multiplo con
+  ricorrenza/churn0/diversificazione)? Determina il run-rate-target (griglia in `docs/11`).
+- **Serve una stima "certificata"** (perizia del commercialista, term sheet di un
+  investitore) o basta la stima interna difendibile? → cambia cosa dobbiamo produrre.
+- **Priorità 26/10:** massimizzare la **cassa €200k** o il **run-rate ricorrente** (che
+  regge la valutazione)? Sono leve diverse; ideale = ricorrenza, che serve entrambi.

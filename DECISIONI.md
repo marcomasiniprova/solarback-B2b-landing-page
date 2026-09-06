@@ -98,20 +98,28 @@
 ---
 
 ### 2026-09-06 — NUOVO OBIETTIVO (sostituisce "30 partner entro il 26/10")
-- **Non più il numero di partner.** Obiettivo: **≥ €200.000** e soprattutto
-  **valutazione SolarBack ≥ €1.000.000 entro il 26/10**. Serve EBITDA (run-rate) ×
-  multiplo ≥ €1M; margine ~95% → EBITDA ≈ fatturato; CEO al 100% delle quote.
-- **CONTESTO chiave:** c'è un **acquirente reale** che compra se SolarBack vale
-  €1M entro il 26/10. **€200k = cassa incassata nei ~50 giorni.**
-- **Multiplo (grounded su comps di mercato):** un acquirente oggi valuta come
-  micro-agenzia → **2–4x SDE/EBITDA** (fondatore solo, <3 mesi, concentrazione).
-  10–15x è da "azienda cresciuta"/prodotto SaaS, non regge oggi in due diligence.
-  → **2 strade per €1M:** (A) run-rate €250–500k a 2–4x; (B) alzare il multiplo a
-  5–8x (ricorrenza contrattuale + churn~0 osservato + clienti diversificati + stack
-  AI trasferibile + 2° operatore) → run-rate €125–200k. Dettaglio in `docs/11`.
-- **Nota di ruolo:** il CEO ha chiesto di non demotivare; ho dato il numero *giusto*
-  (di mercato) + la roadmap per €1M, perché l'acquirente è reale e ci sarà DD vera.
-- **Leva decisiva:** capire il METODO/multiplo del suo acquirente (domanda in docs/06).
+- **Non più il numero di partner.** Obiettivo: **≥ €200.000** di cassa e soprattutto
+  **valutazione SolarBack ≥ €1.000.000 entro il 26/10**. Serve profitto annuo (run-rate)
+  × multiplo ≥ €1M; margine ~95% → profitto ≈ fatturato; CEO al 100% delle quote.
+- **CORREZIONE (stesso giorno):** **NON c'è nessun acquirente.** Un mio doc precedente
+  parlava di "un acquirente reale che compra a €1M" — **errato, ritrattato dal CEO**
+  ("non c'è nessun acquirente, nessuno comprerà SolarBack"). Il **€1M è un traguardo di
+  PATRIMONIO PERSONALE**: diventare milionario possedendo il 100% di un'azienda che
+  *vale* ≥ €1M. Nessuna vendita, nessuna due diligence di un compratore.
+- **Implicazione:** senza transazione, la valutazione è una **STIMA**. Per dire
+  credibilmente "valgo €1M" servono numeri che un compratore/investitore razionale
+  *pagherebbe* €1M. Quindi ottimizziamo per una stima **difendibile**.
+- **La formula (chiarita al CEO):** Valutazione = **run-rate annuo (fatturato mensile
+  ricorrente × 12) × multiplo**. NON il cash collected una-tantum; NON un fatturato
+  annuo non ancora fatto. Es.: €10k/mese ricorrenti → €120k run-rate → si moltiplica 120k.
+- **Multiplo (grounded su comps di mercato):** micro-agenzia oggi → **2–4x** (fondatore
+  solo, <3 mesi, concentrazione). 10–15x è da azienda cresciuta/prodotto SaaS, non regge
+  oggi. **€8–10k/mese fa €1M solo a 10x**; a 2–4x servono ~€21–42k/mese ricorrenti.
+  → **2 strade:** (A) run-rate €250–500k a 2–4x; (B) alzare il multiplo a 5–8x
+  (ricorrenza contrattuale + churn~0 osservato + clienti diversificati + stack AI
+  trasferibile) → run-rate €125–200k. Dettaglio e griglia in `docs/11`.
+- **Nota di ruolo:** il CEO ha chiesto di non demotivare **e** di non vendere false
+  promesse → do il numero di mercato (2–4x) + la roadmap concreta per €1M, senza gonfiare.
 
 ### 2026-09-06 — Sequenza di lavoro (scelta CEO)
 - **1° FULL FOCUS SUI DOCUMENTI** del CEO (li carica in chat): analisi +
