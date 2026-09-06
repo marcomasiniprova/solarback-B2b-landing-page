@@ -17,9 +17,10 @@
       Google Calendar; i Fogli non servono più).
 - [ ] 🔴 **Valerio: numero WhatsApp dedicato** per il trigger di M2 DB-react
       (poi collego la credenziale del trigger).
-- [ ] **Dati fogli → Airtable**: completare ri-auth Composio Sheets (link) o export
-      CSV. (Dati reali ~0, forse nulla da migrare.)
-- [ ] **Reorg layout** dei restanti: Alessandro + M1 DB-react + M2 DB-react.
+- [ ] **Dati fogli → Airtable**: Composio Sheets dà 403 anche dopo ri-auth →
+      è la config scope dell'app Composio, non l'auth. Serve **export CSV** dei 3
+      fogli (o abilitare lo scope Sheets-read nella dashboard Composio). Dati reali ~0.
+- [x] **Reorg layout estetico** di tutti e 4 i workflow (corsie, flusso leggibile).
 - [ ] **Collaudo end-to-end** appena Valerio ha un telefono/numero di test.
 - [ ] **Lista installatori ICP v1** (150–300): aziende affamate, che **già
       investono in ads**, strutturate (più squadre/commerciali). Titolare +

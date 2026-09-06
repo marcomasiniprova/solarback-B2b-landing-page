@@ -218,12 +218,15 @@ buco della credenziale Google per i Fogli). Fatto:
   cliente_id; Casi Studio → Casi_Studio), **prompt riscritto** per il ricontatto
   di lead vecchi, rinominato. ⏳ Resta da collegare il **trigger WhatsApp sul
   numero dedicato** (credenziale del secondo numero, quando disponibile).
-- 📋 **Dati NON migrati:** le tabelle sono VUOTE (solo struttura). La lettura dei
-  fogli via Composio è ancora bloccata (403 scope). Per portare i dati serve: (a)
-  completare la ri-auth Composio Google Sheets, oppure (b) export CSV dei fogli.
-  I dati reali sono comunque ~0 (0 clienti) → probabilmente non c'è nulla da
-  migrare. Struttura verificata SOLO contro i riferimenti dei workflow (possibili
-  colonne non usate dai workflow non replicate).
+- 📋 **Dati NON migrati:** tabelle VUOTE (solo struttura). Composio Sheets dà 403
+  **anche dopo due ri-auth** (2026-09-06) → NON è l'autorizzazione utente, è la
+  **config degli scope dell'app Google Sheets in Composio** (manca Sheets-read).
+  Il link di ri-auth NON risolve. Per i dati serve: (a) abilitare lo scope
+  Sheets-read nella dashboard Composio, oppure (b) **export CSV** dei 3 fogli →
+  import in Airtable. Dati reali ~0 (0 clienti) → probabilmente nulla da migrare.
+  Struttura verificata SOLO contro i riferimenti dei workflow.
+- ✅ **Layout estetico** riorganizzato su tutti e 4 i workflow (corsie, flusso
+  leggibile sinistra→destra, sub-nodi agente sotto, cleanup a destra).
 
 ## ⚠️ Nota: il Calendar resta Google
 La migrazione riguarda i FOGLI. Il **booking usa Google Calendar** (Get-Availability,
