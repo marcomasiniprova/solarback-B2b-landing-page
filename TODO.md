@@ -6,12 +6,15 @@
 ## 🔴 ADESSO (Settimana 0 — questa settimana)
 
 - [x] **Verifica automazioni n8n** → fatta, `docs/09` (il motore è ben costruito).
-- [ ] **Rendere n8n production-ready** (PRIORITÀ #1, gap in `docs/09`):
-      (a) attivare + collaudo end-to-end live con numero WA reale;
-      (b) verificare l'anello intake **ads→lead→"Lead_Attivi"→speed-to-lead**;
-      (c) 🔴 spostare le **API key hardcodate** (Deepgram/Mistral) nelle Credentials
-      e **ruotarle**; (d) pulire i doppioni (M1 vs M2); (e) verificare credenziali
-      (WhatsApp Business API + template, Redis, Supabase, Google).
+- [x] **Sicurezza n8n**: chiavi Deepgram/Mistral spostate su credenziali (M2 speed).
+- [x] **Fix difetto**: "Crea Appuntamento" resource/operation espliciti (M2 speed).
+- [x] **Reorg layout**: M1 speed-to-lead (intake) riorganizzato.
+- [ ] 🔴 **Valerio: RUOTARE le chiavi Deepgram e Mistral** (erano esposte).
+- [ ] 🔴 **Valerio: verificare credenziale Google** (Sheets/Calendar) — non risulta
+      tra le 18 credenziali n8n; senza, i workflow non girano.
+- [ ] **Costruire M2 Database Reactivation** (clone Alessandro adattato + numero dedicato).
+- [ ] **Reorg layout** dei restanti: M2 speed-to-lead (Alessandro) + M1 DB-react.
+- [ ] **Collaudo end-to-end** appena Valerio ha un telefono/numero di test.
 - [ ] **Lista installatori ICP v1** (150–300): aziende affamate, che **già
       investono in ads**, strutturate (più squadre/commerciali). Titolare +
       tel/WhatsApp diretto + email + città. → `private/`.

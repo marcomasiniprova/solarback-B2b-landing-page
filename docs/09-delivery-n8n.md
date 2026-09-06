@@ -158,6 +158,41 @@ Sequenza test: creo riga config di TEST → POST al webhook col numero di Valeri
 verifico template `conferma_requisiti_alessandro` → rispondo → Alessandro qualifica
 → prenota su Calendar → notifica titolare → cleanup.
 
+## 🔧 Collaudo a livello di nodi — interventi (2026-09-05)
+> Fatto via MCP con `update_workflow` (ops granulari) + storico versioni come rete
+> di sicurezza. Test end-to-end rimandato (Valerio senza telefono) → collaudo
+> strutturale/validatore.
+
+**M1 speed-to-lead (`6Kik…`)** ✅ layout riorganizzato (flusso lineare
+sinistra→destra, ramo NoOp sotto). Nessuna modifica funzionale.
+
+**M2 speed-to-lead / Alessandro (`IN43…`)**:
+- ✅ **Sicurezza:** chiavi **Deepgram** e **Mistral** tolte dai nodi HTTP (erano
+  hardcodate in chiaro) → ora usano credenziali n8n (`ZB Deepgram` httpHeaderAuth;
+  `Mistral AI` predefinedCredentialType). Chiavi rimosse dal JSON del workflow.
+  🔴 **DA FARE (Valerio):** RUOTARE comunque le 2 chiavi lato Deepgram/Mistral
+  (erano esposte, cambiarle invalida quelle vecchie).
+- ✅ **Difetto risolto:** il tool **"Crea Appuntamento"** (Google Calendar) non
+  aveva `resource`/`operation` espliciti (girava sui default) → resi espliciti
+  (`event`/`create`). Il validatore ora non lo segnala più.
+- ⚠️ Warning cosmetico residuo: `headerParameters` vuoto sui 2 nodi HTTP (innocuo
+  a runtime; sistemabile in UI togliendo la riga header vuota).
+- ⏳ Layout: riorganizzazione estetica dei 40 nodi ancora da fare.
+
+## ⚠️ Blocco credenziali Google (da verificare con Valerio)
+Tra le 18 credenziali n8n **non compare nessuna credenziale Google** (Sheets /
+Calendar), ma i workflow usano nodi Google Sheets e Google Calendar
+(`artecagenzia@gmail.com`). O la credenziale è in un altro progetto/istanza, o
+manca. **Senza credenziale Google, speed-to-lead e DB-react non girano.** Da
+sistemare prima del collaudo live.
+
+## 🏗️ M2 Database Reactivation — spec di build (prossimo step)
+Da costruire (decisioni CEO): **clone di Alessandro** con: persona/prompt adattati
+al contesto "lead vecchio riattivato" (non nuovo), **config partner unificata**
+(stessa "Configurazione Clienti"), **numero WhatsApp dedicato** (trigger + cred da
+collegare dopo). Stessi tool (calendar, qualifica, notifica titolare, social
+proof), stesso sistema buffer/lock Redis. È l'unico pezzo mancante dei 4.
+
 ## 🔴 Sicurezza (da sistemare)
 Alcuni nodi HTTP hanno **API key hardcodate in chiaro** (Deepgram, Mistral) dentro
 il workflow. Rischio: finiscono negli export/backup e sono visibili a chiunque
