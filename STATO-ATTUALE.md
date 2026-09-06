@@ -2,7 +2,13 @@
 
 > Foto della situazione in tempo reale. **Aggiornare a fine di ogni sessione.**
 
-**Ultimo aggiornamento:** 2026-09-05 — kickoff con Valerio: setup repo + round-2 domande + avvio ricerca offerta.
+**Ultimo aggiornamento:** 2026-09-06 — kickoff: setup repo, offerta v2, ricerca, e
+collaudo n8n a livello nodi (fix sicurezza + difetto calendar + reorg intake).
+
+> **BLOCCATO SU VALERIO (3 azioni):** (1) ruotare chiavi Deepgram+Mistral; (2)
+> verificare/collegare credenziale Google (Sheets/Calendar) — non risulta tra le
+> 18; (3) duplicare in n8n "M2 - AI speed to lead" → rinominare "M2 - Database
+> Reactivation" così l'agente lo adatta ai lead riattivati. Dettagli in `docs/09`.
 
 ---
 
