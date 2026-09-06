@@ -81,6 +81,52 @@ i risultati.
   passivo. Mentalità giusta: *"se funziona, investo e aumento"* (non "proviamo
   gratis e vediamo").
 
+## Dimensione del mercato (TAM) — quante aziende ICP in Italia (ricerca 2026-09-06)
+> Domanda del CEO: "se mando 100 email/gg = ~3.000/mese, finisco il mercato in un mese?
+> Dubito sia più di ~1.500 lead." **Verdetto: hai ragione SOLO sul Tier-1 premium; sul
+> totale sei troppo pessimista. E a 100/gg non esaurisci nulla, se usi le sequenze.**
+
+**I 3 numeri da tenere a mente:**
+- **~72.000** = tetto ATECO 43.21.01 ("installazione impianti illuminazione e fotovoltaici").
+  ⚠️ È l'universo elettricisti (illuminazione, EV, antincendio...): **sovrastima**, non usarlo.
+- **~12.000** = installatori PV "veri" (stima centrale difendibile; ancorata a Symbola: ~14.760
+  imprese in installazione rinnovabili, e al volume 2025 di ~199k impianti residenziali ÷ 20-60
+  impianti/installatore/anno). Mercato in **consolidamento** post-Superbonus (meno player, più
+  strutturati) → buono per noi.
+- **~3.000-5.000** = **ICP raggiungibile via cold email**, e **riciclabile**. Questo è il numero
+  operativo.
+
+**Dal bacino all'ICP (matematica esplicita, su base ~12.000):**
+| Definizione ICP | % bacino | Aziende ICP | Con email valida (~65%) |
+|---|---|---|---|
+| **Stretto** (≥10 addetti, strutturata, budget ads pronto) | 10-15% | ~1.200-1.800 | **~1.000** |
+| **Sensato** (≥5 addetti, core-PV, growth-minded, incl. micro-alte ambiziose) | 20-30% | ~2.500-3.600 | **~2.000** |
+| **Allargato** (+ adiacenze PDC/HVAC/efficienza che fanno anche PV) | 30-40% | ~4.000-6.000 | **~3.250** |
+
+Il "~1.500" del CEO = **corretto per l'ICP stretto (Tier-1)**. Allentando di un gradino (sensato),
+che ha senso per un servizio a performance, **raddoppia**.
+
+**A 3.000 invii/mese quanto dura?** (3.000 invii ≠ 3.000 aziende: best practice = **3-5 touch per
+contatto**). Lista sensata ~2.000 × 4 touch = 8.000 invii → **~2,7 mesi** per una passata.
+Poi **re-contact ogni ~90 gg** con angolo/offerta nuovi → 3.000 aziende × 4 cicli/anno = **12.000
+occasioni-contatto/anno** → **100/gg è sostenibile all'infinito.** Il collo di bottiglia NON è la
+dimensione del mercato: è **qualità lista + offerta.**
+
+**Tiering operativo:** Tier-1 strutturati (≥10 addetti) → Tier-2 micro-alte growth (5-9) →
+Tier-3 adiacenze (HVAC/PDC/efficienza che vendono anche PV). **Multicanale sulla stessa lista**
+(email + LinkedIn DM + cold call, canali già di Valerio) = più touch per nome, meno dipendenza dal
+volume.
+
+**Dove partire (geografia):** installatori concentrati al Nord. Ordine di attacco consigliato:
+**1) Lombardia · 2) Veneto · 3) Emilia-Romagna** (max densità di domanda E di aziende ICP —
+ENF Solar: Lombardia ~530, Veneto ~385, Emilia ~310 installatori listati), poi Piemonte, Lazio,
+Campania, Puglia. Partire regionale = testare offerta/copy senza bruciare la lista nazionale.
+
+**Fonti scrapabili per la lista:** Google Maps (per provincia), Pagine Gialle, LinkedIn (titolari),
+siti aziendali, ENF Solar (~2.900 con contatti pronti), mappa Realizzatori GSE. Fonti dati:
+Italia Solare/Terna-Gaudì, Symbola, ANIE Rinnovabili, GSE, ENF Solar (dettaglio URL in `docs/13`
+e nel report ricerca 2026-09-06).
+
 ## Come si mappa sul form del sito
 Il form di candidatura (`artecai.it`) raccoglie già i dati per lo scoring:
 n° commerciali che fanno sopralluoghi · installazioni/mese · canali richieste

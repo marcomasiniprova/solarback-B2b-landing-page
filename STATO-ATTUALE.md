@@ -2,12 +2,14 @@
 
 > Foto della situazione in tempo reale. **Aggiornare a fine di ogni sessione.**
 
-**Ultimo aggiornamento:** 2026-09-06 — delivery n8n completata (4 workflow su
-Airtable, sicurezza, reorg estetico). Skill `copertura-prompt` installata nel repo
-(`.claude/skills/`) e resa obbligatoria in CLAUDE.md. GO-LIVE checklist + note
-acquisizione in `TODO.md`. **Prossima fase (in scelta col CEO):** analisi/implementazione
-dei documenti SolarBack, poi asset (lista ICP + outreach engine + infra email), poi
-gestionale/dashboard.
+**Ultimo aggiornamento:** 2026-09-06 (sera) — chiarita la **matematica della
+valutazione €1M** (run-rate ricorrente × multiplo; NON cash collected) e **corretto
+l'errore "acquirente"**: NON esiste, il €1M è patrimonio personale (`docs/11`).
+Completata la **ricerca infrastruttura cold email** (`docs/13`: costi, DNS, Instantly,
+timeline) e la **dimensione del mercato ICP** (`docs/02`: ~12k installatori reali,
+~3-5k ICP raggiungibili). **Cambio di sequenza del CEO:** parte SUBITO l'infra email
+(prima dei documenti, che non sono ancora arrivati). In attesa delle sue decisioni
+(domini, Instantly Growth, geo) → popup posto.
 
 > **FATTO 6/9:** tutti e 4 i workflow su **Airtable** (base "SolarBack —
 > Operativo" `app3DAWI67LKIGLXO`, 5 tabelle) — incluso il 4°, **M2 - Database
@@ -22,11 +24,13 @@ gestionale/dashboard.
 ---
 
 ## In una riga
-Delivery n8n pronta (4 workflow su Airtable). **Obiettivo aggiornato (6/9):** non
-più "30 partner" ma **≥ €200k + valutazione SolarBack ≥ €1M entro il 26/10**
-(EBITDA run-rate × multiplo ~12x; margine ~95%; CEO al 100%). Fase attuale:
-**full focus sui documenti del CEO** + 2 ricerche di mercato in corso
-(multipli valutazione · stagionalità FV/nicchie).
+Delivery n8n pronta (4 workflow su Airtable). **Obiettivo (6/9):** non più "30
+partner" ma **≥ €200k cassa + valutazione SolarBack ≥ €1M entro il 26/10**.
+**Valutazione = run-rate annuo ricorrente × multiplo** (NON cash collected):
+€20-40k/mese ricorrenti a 2-5x → ≥ €1M. Multiplo di mercato oggi 2-4x; 5-8x con
+ricorrenza+churn0+diversificazione+stack trasferibile. **NESSUN acquirente** (era un
+mio errore): €1M = patrimonio personale, CEO al 100%. Fase attuale: **setup infra
+cold email** (scelta CEO, parte ora).
 
 ## Cosa c'è già (asset esistenti) ✅
 - **Landing page** `artecai.it` live: copy forte, SEO/JSON-LD, GA4, form di
@@ -93,8 +97,11 @@ più "30 partner" ma **≥ €200k + valutazione SolarBack ≥ €1M entro il 26
   pulizia doppioni + verifica credenziali/intake + fix chiavi hardcodate.
 
 ## Prossime 3 mosse (dettaglio in TODO.md)
-1. **Attivare e collaudare n8n end-to-end** (gap in `docs/09`): è ciò che rende
-   la garanzia sostenibile. Priorità: attivazione+test, anello intake ads→lead,
-   fix chiavi API hardcodate.
-2. **Lista installatori ICP** (affamati, che già investono in ads) + **CRM/pipeline**.
-3. **Script cold call** (one-liner in `docs/07` §10) → partire con l'outreach.
+1. **Infra cold email** (`docs/13`): Valerio compra 2 domini + 6 caselle Google
+   Workspace + Instantly Growth, fa DNS (SPF/DKIM/DMARC), collega le caselle via
+   OAuth, genera API key → io piloto campagne/warmup/lead via Composio. In attesa
+   delle sue decisioni (popup: domini, Instantly ora, geo, come fare la lista).
+2. **Lista installatori ICP** (~3-5k raggiungibili, `docs/02`) — Tier-1 Lombardia/
+   Veneto/Emilia, poi allargare. Scraping (Google Maps/LinkedIn/ENF) + enrichment → CSV.
+3. **Copy cold email** (personalizzato, umano) + sequenze 3-5 touch, durante i 14gg
+   di warmup. In parallelo: attivare/collaudare n8n (`docs/09`) per reggere gli appuntamenti.

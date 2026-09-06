@@ -134,7 +134,30 @@
 - **Skill `copertura-prompt`**: installata nel repo, obbligatoria su ogni prompt
   multi-istruzione (regola in CLAUDE.md §0-bis).
 
+### 2026-09-06 (sera) — Cambio sequenza: INFRA COLD EMAIL prima dei documenti
+- **Decisione CEO:** anche se aveva scelto "documenti prima", ora vuole **settare
+  subito l'infrastruttura cold email** (i documenti non sono ancora arrivati in chat).
+  Parte l'infra email; i documenti restano parcheggiati e si riprendono quando li carica.
+- **Vincoli CEO:** NO domini pre-warmed, NO reseller domini/inbox di Instantly (vincolato
+  al trial). → strada **Google Workspace + config DNS manuale**. Piano: **2 domini × 3
+  inbox = 6 caselle**, warmup 14gg. Budget: rientra nel "max ~100 €/mese" (~€80-95/mese).
+- **Ricerca (docs/13):** piano validato e conservativo. Costo ~€80-95/mese; upfront
+  ~€110-130. DNS non difficile (~2,5-3h/2 domini; critico il DKIM). Prima cold ~gg 16-17.
+- **Instantly:** free trial limitato a 2 caselle → setup vero su **Growth ($47/mese)**.
+  API su tutti i piani a pagamento; **connettore Composio (~115 azioni)**: con la API key
+  piloto io campagne/warmup/lead. **OAuth caselle = click umano** di Valerio (non delegabile).
+- **Mercato (docs/02):** ~12k installatori PV reali; **ICP raggiungibile ~3-5k, riciclabile**.
+  Il "1.500" del CEO vale solo per il Tier-1 stretto. A 100/gg NON si esaurisce il mercato
+  (sequenze 3-5 touch + re-contact ogni 90gg). Collo di bottiglia = qualità lista + offerta.
+  Geo di partenza: **Lombardia → Veneto → Emilia-Romagna**.
+
 ## ⚠️ Decisioni ANCORA da prendere (vedi docs/06-domande-aperte.md)
+- **Domini cold:** quali 2 nomi (variazione del brand SolarBack) + qual è il dominio brand
+  primario da proteggere.
+- **Instantly Growth ($47) ORA** sì/no (o prima un test sul trial a 2 caselle).
+- **Geo di partenza:** regionale (Lombardia first) come consiglia la ricerca, o nazionale.
+- **Costruzione lista:** scraping+enrichment esterno → CSV (evita il costo Lead Database di
+  Instantly) vs Lead Finder di Instantly (a pagamento).
 - Struttura finale dell'offerta + offerta pilota "founding partner" (in ricerca).
 - Numero-target reale: 30 entro il 26/10 vs. filosofia "pochi partner/anno" del
   documento strategico — come li conciliamo.

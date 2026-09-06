@@ -4,22 +4,37 @@
 > aggiorna a fine sessione. Dettaglio piano → `SPRINT-26-OTTOBRE.md`.
 
 ## 🎯 OBIETTIVO ATTUALE (aggiornato 6/9) — sostituisce "30 partner"
-**≥ €200.000** e **valutazione SolarBack ≥ €1.000.000 entro il 26/10.** Multiplo
-~10-15x (anchor 12x) → servono ~€67-100k EBITDA annuo/run-rate. Matematica in
-`docs/11-valutazione-obiettivo.md`. (Il n° di clienti conta solo in quanto genera EBITDA.)
+**≥ €200.000** cassa e **valutazione SolarBack ≥ €1.000.000 entro il 26/10.**
+**Valutazione = run-rate annuo ricorrente × multiplo** (NON cash collected). Multiplo
+di mercato oggi **2-4x** (micro-agenzia, fondatore solo); **5-8x** con ricorrenza
+contrattuale + churn0 osservato + clienti diversificati + stack AI trasferibile.
+→ €20-40k/mese ricorrenti = €1M a 2-5x. **NESSUN acquirente** (era un errore): €1M =
+patrimonio personale, CEO al 100%. Matematica in `docs/11`. (I clienti contano in
+quanto generano run-rate RICORRENTE.)
 
-## 📄 FASE ATTUALE: DOCUMENTI DEL CEO (full focus)
-Protocollo per OGNI documento che il CEO carica in chat (log in `docs/10-materiale-CEO.md`):
-1. [ ] Leggo tutto a fondo.
-2. [ ] Estraggo i punti che generano azione (offerta, ICP, messaggi, funnel, pricing, processi).
-3. [ ] Dico cosa implemento subito e cosa va in TODO/arretrati.
-4. [ ] Aggiorno i `docs/` giusti + il log `docs/10`.
-5. [ ] Committo. Se un doc contraddice quanto scritto → lo segnalo, non sovrascrivo in silenzio.
+## 🚀 FASE ATTUALE (scelta CEO 6/9): INFRA COLD EMAIL — parte ora
+Piano completo in `docs/13-infra-cold-email.md`. **In attesa decisioni CEO (popup posto):**
+domini, Instantly Growth ora sì/no, geo di partenza, come costruire la lista.
+Azioni CEO (una tantum) → poi io piloto via Composio:
+- [ ] Comprare **2 domini** (variazione brand, mai il primario) — registrar Cloudflare.
+- [ ] Creare **2 Google Workspace** (3 utenti/caselle l'uno) — ~€50/mese incl. IVA.
+- [ ] DNS per dominio: **MX + SPF + DKIM (+"Start authentication") + DMARC(p=none) + CNAME tracking**.
+- [ ] Sottoscrivere **Instantly Growth** ($47/mese) + generare **API key** → passarmela.
+- [ ] Collegare le **6 caselle a Instantly via OAuth** (~15 min, guido io).
+- [ ] Io: accendo warmup (14gg) + creo campagne/sequenze + carico lead + analytics.
 
-## 🔎 In corso (ricerche di mercato — 6/9)
-- [ ] Multipli di valutazione per azienda AI-native (→ affina `docs/11`).
-- [ ] Stagionalità FV autunno/inverno + nicchie adiacenti (pompe di calore ecc.):
-      capire se restare sul FV o affiancare/deviare (contro-stagionalità).
+## 📄 FASE PARCHEGGIATA: DOCUMENTI DEL CEO (quando li carica in chat)
+Il CEO aveva scelto "documenti prima", poi ha dato priorità all'infra email. I documenti
+non sono ancora arrivati. Protocollo per OGNI documento (log in `docs/10-materiale-CEO.md`):
+1. [ ] Leggo tutto a fondo. 2. [ ] Estraggo i punti azionabili. 3. [ ] Dico cosa implemento
+subito e cosa va in TODO. 4. [ ] Aggiorno i `docs/` + log `docs/10`. 5. [ ] Committo (se un
+doc contraddice, lo segnalo, non sovrascrivo in silenzio).
+
+## 🔎 Ricerche di mercato — FATTE (6/9)
+- [x] Multipli di valutazione (→ `docs/11`: 2-4x oggi, 5-8x con le leve; formula run-rate).
+- [x] Stagionalità FV + nicchie (→ `docs/12`: FV non morto, resto FV + hook fiscale).
+- [x] Infrastruttura cold email: costi/DNS/Instantly/timeline (→ `docs/13`).
+- [x] Dimensione mercato ICP: ~12k installatori reali, ~3-5k raggiungibili (→ `docs/02`).
 
 ## 🚦 GO-LIVE DELIVERY — checklist da NON mancare (n8n pronto, manca solo questo)
 1. [ ] **Credenziale Google Calendar** in n8n (`artecagenzia@gmail.com`) — il booking
