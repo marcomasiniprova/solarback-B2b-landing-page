@@ -64,6 +64,16 @@
 - Acquisizione: **Instantly AI** (cold email; free trial → serve **Growth $47** per 6 caselle), LinkedIn, cold call.
 - MCP disponibili: n8n, Airtable, Composio (ha connettore **Instantly**), Notion, Supabase, Resend, GitHub, Netlify, Railway, Dropbox, Sentry.
 
+## 6-bis. PROFILO VALERIO (round-3, 2026-09-06)
+- **Esperienza:** mix discreto — ha **già avuto un'agenzia / venduto servizi simili** + sa
+  vendere (cold call), ma il lato **agenzia/marketing/tech è in parte nuovo** → non spiegargli le
+  basi di vendita, MA spiega bene tech/marketing/automazioni.
+- **Budget reale 50 giorni:** **€150-400/mese** se serve per partire (aggiorna il vecchio "max
+  ~100€/mese", che valeva solo per i tool). L'infra (~€100-130/mese) ci sta comoda.
+- **Team:** **solo Valerio + AI.** Niente Marco (la skill che lo cita NON riflette la realtà).
+- **Collo di bottiglia #1 (sua auto-diagnosi):** **trovare/contattare i lead giusti** (liste +
+  outreach). → è la priorità operativa: lista ICP + motore di outreach.
+
 ## 7. DOVE SIAMO (aggiornare!) — 2026-09-06
 - 0 clienti. Sto montando la **1ª infrastruttura cold email** (setup in `docs/13`).
 - **In attesa da Valerio:** (a) comprare `solarback.it` + 2 domini secondari su IONOS; (b) aprire Google
