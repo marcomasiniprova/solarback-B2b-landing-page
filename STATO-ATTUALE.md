@@ -5,12 +5,15 @@
 **Ultimo aggiornamento:** 2026-09-06 — kickoff: setup repo, offerta v2, ricerca, e
 collaudo n8n a livello nodi (fix sicurezza + difetto calendar + reorg intake).
 
-> **FATTO 6/9:** migrati TUTTI i nodi Google Sheets → Airtable nei 3 workflow
-> originali (base "SolarBack — Operativo" `app3DAWI67LKIGLXO`, 5 tabelle).
-> **BLOCCATO SU VALERIO (3 azioni):** (1) ruotare chiavi Deepgram+Mistral; (2)
-> attivare "Available in MCP" sul duplicato "M2 - AI speed to lead copy" → poi lo
-> adatto a M2 DB-react; (3) collegare una credenziale **Google Calendar** in n8n
-> (il booking la usa ancora; i Fogli non servono più). Dettagli in `docs/09`.
+> **FATTO 6/9:** tutti e 4 i workflow su **Airtable** (base "SolarBack —
+> Operativo" `app3DAWI67LKIGLXO`, 5 tabelle) — incluso il 4°, **M2 - Database
+> Reactivation** (prompt riscritto per lead riattivati). Chiavi Deepgram/Mistral
+> ruotate da Valerio; MCP attivato sul duplicato.
+> **RESTA DA FARE:** (1) **dati** dei fogli non migrati — Composio lettura ancora
+> 403: completare ri-auth o export CSV (ma dati reali ~0); (2) credenziale
+> **Google Calendar** in n8n (il booking la usa ancora); (3) **numero WhatsApp
+> dedicato** per il trigger di M2 DB-react; (4) reorg estetico Alessandro/DB-react;
+> (5) collaudo end-to-end quando c'è un telefono. Dettagli in `docs/09`.
 
 ---
 

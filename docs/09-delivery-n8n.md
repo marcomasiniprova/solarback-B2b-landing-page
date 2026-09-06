@@ -212,15 +212,18 @@ buco della credenziale Google per i Fogli). Fatto:
   - ✅ M1 DB-react: Leggi CLIENTI_CONFIG → Clienti_Config_DBReact; Leggi Lead
     Dormienti → Lead_Dormienti (filtro `cliente_id`); Writeback ×2 → upsert su
     match `ID Lead`.
-- ⏳ **M2 DB-react (duplicato "M2 - AI speed to lead copy")**: NON ancora
-  modificabile → **"Available in MCP" è OFF**. Valerio deve attivarlo (card
-  workflow o impostazioni). Poi: migro i suoi 3 nodi Sheets (Get Lead →
-  Lead_Dormienti by Telefono; Get Config → Clienti_Config_DBReact by cliente_id;
-  Casi Studio → Casi_Studio), riscrivo il prompt al contesto "lead riattivato",
-  rinomino, trigger sul numero dedicato.
-- 📋 **Dati:** le tabelle sono VUOTE (solo struttura). I vecchi fogli non erano
-  leggibili via Composio (scope) e comunque i dati reali sono ~0. Onboarding
-  partner = si riempiono le righe Airtable.
+- ✅ **M2 - Database Reactivation** (`LlS1T24dRdXtZiNF`, ex duplicato): MCP
+  attivato da Valerio → adattato. Nodi ad Airtable per il contesto DB-react
+  (Get Lead → Lead_Dormienti by Telefono; Get Config → Clienti_Config_DBReact by
+  cliente_id; Casi Studio → Casi_Studio), **prompt riscritto** per il ricontatto
+  di lead vecchi, rinominato. ⏳ Resta da collegare il **trigger WhatsApp sul
+  numero dedicato** (credenziale del secondo numero, quando disponibile).
+- 📋 **Dati NON migrati:** le tabelle sono VUOTE (solo struttura). La lettura dei
+  fogli via Composio è ancora bloccata (403 scope). Per portare i dati serve: (a)
+  completare la ri-auth Composio Google Sheets, oppure (b) export CSV dei fogli.
+  I dati reali sono comunque ~0 (0 clienti) → probabilmente non c'è nulla da
+  migrare. Struttura verificata SOLO contro i riferimenti dei workflow (possibili
+  colonne non usate dai workflow non replicate).
 
 ## ⚠️ Nota: il Calendar resta Google
 La migrazione riguarda i FOGLI. Il **booking usa Google Calendar** (Get-Availability,

@@ -11,15 +11,15 @@
 - [x] **Reorg layout**: M1 speed-to-lead (intake) riorganizzato.
 - [x] **Migrazione Sheets → Airtable** dei 3 workflow originali (base "SolarBack —
       Operativo" `app3DAWI67LKIGLXO`, 5 tabelle). Vedi `docs/09`.
-- [ ] 🔴 **Valerio: RUOTARE le chiavi Deepgram e Mistral** (erano esposte).
-- [ ] 🔴 **Valerio: attivare "Available in MCP"** sul duplicato "M2 - AI speed to
-      lead copy" → poi lo adatto a M2 Database Reactivation.
+- [x] 🔴 **Valerio: ruotate le chiavi Deepgram e Mistral** (fatto).
+- [x] **Adattato M2 Database Reactivation** (Airtable + prompt lead riattivati).
 - [ ] 🔴 **Valerio: credenziale Google Calendar** in n8n (il booking usa ancora
       Google Calendar; i Fogli non servono più).
-- [ ] **Adattare M2 Database Reactivation** (dopo attivazione MCP): migro nodi ad
-      Airtable (Lead_Dormienti/Clienti_Config_DBReact), riscrivo prompt "lead
-      riattivato", trigger numero dedicato.
-- [ ] **Reorg layout** dei restanti: M2 speed-to-lead (Alessandro) + M1 DB-react.
+- [ ] 🔴 **Valerio: numero WhatsApp dedicato** per il trigger di M2 DB-react
+      (poi collego la credenziale del trigger).
+- [ ] **Dati fogli → Airtable**: completare ri-auth Composio Sheets (link) o export
+      CSV. (Dati reali ~0, forse nulla da migrare.)
+- [ ] **Reorg layout** dei restanti: Alessandro + M1 DB-react + M2 DB-react.
 - [ ] **Collaudo end-to-end** appena Valerio ha un telefono/numero di test.
 - [ ] **Lista installatori ICP v1** (150–300): aziende affamate, che **già
       investono in ads**, strutturate (più squadre/commerciali). Titolare +
