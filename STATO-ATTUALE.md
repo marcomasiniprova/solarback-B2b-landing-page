@@ -69,10 +69,15 @@ acquisizione**.
 - ✅ **Offerta v2 CONGELATA** (numeri reali) → `docs/07-offerta.md`: motore
   completo diretto · garanzia floor ~50/mese + target 100–300 · esclusiva di zona ·
   99€/400€ · nessun setup fee ora.
-- ⚠️ **Rischio chiave = delivery**: n8n deve reggere il volume promesso.
+- ✅ **Delivery n8n verificato** → `docs/09`. Il motore È costruito sul serio
+  (speed-to-lead multimodale con agente AI "Alessandro", booking calendar, social
+  proof, notifica titolare, multi-tenant; + DB reactivation con anti-ban). NON è
+  uno scheletro. Ma è tutto **inattivo**: manca attivazione + collaudo live +
+  pulizia doppioni + verifica credenziali/intake + fix chiavi hardcodate.
 
 ## Prossime 3 mosse (dettaglio in TODO.md)
-1. **Verificare/completare le automazioni n8n** (speed-to-lead + qualifica +
-   booking): è ciò che rende la garanzia sostenibile.
+1. **Attivare e collaudare n8n end-to-end** (gap in `docs/09`): è ciò che rende
+   la garanzia sostenibile. Priorità: attivazione+test, anello intake ads→lead,
+   fix chiavi API hardcodate.
 2. **Lista installatori ICP** (affamati, che già investono in ads) + **CRM/pipeline**.
 3. **Script cold call** (one-liner in `docs/07` §10) → partire con l'outreach.

@@ -5,9 +5,13 @@
 
 ## 🔴 ADESSO (Settimana 0 — questa settimana)
 
-- [ ] **Verifica automazioni n8n** (PRIORITÀ #1): speed-to-lead + qualifica AI +
-      booking. Cosa c'è, cosa funziona, cosa manca per reggere **100–300
-      sopralluoghi/mese per partner**. È ciò che rende sostenibile la garanzia.
+- [x] **Verifica automazioni n8n** → fatta, `docs/09` (il motore è ben costruito).
+- [ ] **Rendere n8n production-ready** (PRIORITÀ #1, gap in `docs/09`):
+      (a) attivare + collaudo end-to-end live con numero WA reale;
+      (b) verificare l'anello intake **ads→lead→"Lead_Attivi"→speed-to-lead**;
+      (c) 🔴 spostare le **API key hardcodate** (Deepgram/Mistral) nelle Credentials
+      e **ruotarle**; (d) pulire i doppioni (M1 vs M2); (e) verificare credenziali
+      (WhatsApp Business API + template, Redis, Supabase, Google).
 - [ ] **Lista installatori ICP v1** (150–300): aziende affamate, che **già
       investono in ads**, strutturate (più squadre/commerciali). Titolare +
       tel/WhatsApp diretto + email + città. → `private/`.
