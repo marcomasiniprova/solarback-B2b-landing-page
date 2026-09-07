@@ -130,6 +130,11 @@
   **REGOLA MERGE (Valerio 8/9):** dai contatti trovati sul sito, PRIORITÀ alle email NOMINATIVE del titolare
   (nome.cognome@) sopra le generiche info@/amministrazione@; e **prendi ANCHE cellulare/WhatsApp/altri punti di contatto**,
   non solo l'email. In mancanza del preferito, prendi il migliore disponibile. Ogni email trovata → ri-verifica col verifier.
+- **ARRICCHIMENTO — RUN NAZIONALE FATTO (8/9):** Apify `vdrmota/contact-info-scraper` home-only su 2.674 domini
+  (2.500 ok, 174 siti morti), costo **$5,00**. Dataset Apify persistente: **`N3kvzIbboJMnpGPJL`** (run `Yc0sB8RKpVikGuKae`).
+  Trovato: 1.831 domini con email (402 con NOMINATIVA titolare), 680 cellulari nuovi, 327 WhatsApp; 2.228 email uniche.
+  **DA FARE (DB dinamico!):** ri-verificare le 2.228 email col verifier fisso (batch 100, fase1) → merge nel DB
+  (EMAIL_1 dove manca + MOBILE_DA_SITO/WHATSAPP) → ri-bucket → nuova versione asset + audit. Il DB NON è fermo: si aggiorna.
 - **PROSSIMI PASSI:** (1) repo privato → resta com'è (già committato) · (2) Instantly: warmup 14gg → campagna 1 con le 1.452 email
   (Tier A+B, **tutta Italia**) · (3) arricchimento di TUTTE le aziende senza email ma con sito (2.738, nazionale): Apify Contact Details Scraper (sito "chi siamo"/contatti) → ri-verifica → aggiorna DB
   GMaps contact-details (**NO openapi.com: troppo caro, scelta CEO**) · (4) Valerio parte con le cold call sui tab con
