@@ -93,9 +93,22 @@
   (oro per il cold) · telefono + città/provincia.
 - **Qualità:** c'è rumore (elettricisti/generici) → **filtro io** per tenere solo installatori FV strutturati.
 - **Apify: NON ora** (scelta CEO) — prima consolidare e vedere cosa manca, poi eventuale arricchimento.
-- **Pipeline:** consolida tutti i file → dedup → filtro ICP (via non-FV) → tiering (Tier-1 strutturati
-  → Tier-2 micro-alte) → **1 CSV pulito in `private/`** + report di cosa c'è e cosa manca.
-- **Stato:** ⏸️ IN ATTESA che Valerio carichi i file in chat. Poi parto.
+- **Stato: ✅ COSTRUITA (2026-09-07).** Script riproducibile `scripts/build_lista_target.py` (30s a rilanciare).
+  Output in `private/out/` (git-ignored): `LISTA_TARGET_SOLARBACK.xlsx` (multi-tab) + CSV + `LOG.json`. Inviato a Valerio in chat.
+- **Numeri:** 27.132 righe grezze → 8.498 aziende uniche → **6.668 in Lista Target** + 1.830 SCARTI (con motivo,
+  recuperabili). Tab: EMAIL_TITOLARE **1.004** · EMAIL_GENERICA 551 · EMAIL+MOBILE_TITOLARE 267 · EMAIL+MOBILE_GENERICA
+  299 · SOLO_MOBILE 2.569 · SOLO_FISSO 1.582 · SOLO_SOCIAL 396. Email totali 2.121 (1.271 nominative) · mobile 3.135 ·
+  FB_ADS_ATTIVE 610 · Tier A 507 / B 1.711 / C 4.450 · Lombardia 837. PERSONE: 5.777.
+- **Scelte applicate:** storico chiamate ignorato · 1 riga = 1 azienda + titolare · nominative vs info@ in tab separati ·
+  filtro aggressivo (in dubbio → SCARTI). Regola dedup: fusione solo tra nomi compatibili + valvola (max 3 nomi/cluster).
+- **Limiti onesti:** email NON ancora verificate (→ verificare PRIMA di Instantly: MillionVerifier ~$39/10k o verifier
+  Instantly); 549 "possibili doppioni" segnalati (colonna CONDIVIDE_CONTATTO_CON) non fusi per prudenza; ~30% senza
+  provincia; 72 PEC (mai per cold); rumore residuo possibile (regole) → Valerio segnala, io rifinisco.
+- **PROSSIMI PASSI:** (1) verifica email tab 1_EMAIL_TITOLARE (Tier A+B, Lombardia-first) → Instantly dopo warmup;
+  (2) arricchimento SOLO Tier A/B senza titolare/email: sito "chi siamo" → FB about → openapi.com Stakeholders (€0,095/az.)
+  → Apify GMaps contact-details; (3) RPO (Registro Opposizioni) OBBLIGATORIO prima di qualsiasi cold call (~€2/1000);
+  (4) WhatsApp solo dopo consenso (call/risposta); (5) LinkedIn DM solo Tier A (max 100 inviti/sett.).
+- ⚠️ I file lead grezzi sono su `main` (contatti reali): se il repo è pubblico = esposizione GDPR → proporre rimozione.
 
 ## 7. DOVE SIAMO (aggiornare!) — 2026-09-06
 - 0 clienti. Sto montando la **1ª infrastruttura cold email** (setup in `docs/13`).
