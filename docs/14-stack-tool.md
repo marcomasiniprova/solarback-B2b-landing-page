@@ -27,8 +27,8 @@
 | **Apify** | scraping liste + verifica email + arricchimento | via **Composio** (o API credential `api.apify.com`) | ✅ già usato |
 | **GitHub** | repo, branch, asset | **MCP GitHub** | ✅ già collegato |
 | **n8n** (self-hosted) | delivery: speed-to-lead, booking, WhatsApp | **MCP n8n** (+ eventuale API key n8n) | ✅ MCP presente |
-| **Airtable** | **DB/CRM vivo** dei contatti e della pipeline | **MCP Airtable** / via Composio | ✅ MCP presente |
-| **Supabase** | DB SQL se serve scala | **MCP Supabase** | ✅ MCP presente |
+| **Supabase** | **DB VIVO** della Lista Target + pipeline (progetto `solarback`, $10/mese, SQL, righe illimitate) | **MCP Supabase** (schema/query) + REST PostgREST per i bulk (script) | ✅ in uso dall'8/9 |
+| **Airtable** | SOLO base operativa n8n "SolarBack — Operativo" (delivery). NON il DB contatti (Free = 1.000 record/base) | **MCP Airtable** | ✅ MCP presente |
 | **Netlify** | sito (deploy) | **MCP Netlify** | ✅ MCP presente |
 | **Railway** | hosting servizi/n8n | **MCP Railway** | ✅ MCP presente |
 | **Resend** | email transazionali | **MCP Resend** | ✅ MCP presente |
@@ -53,7 +53,9 @@
 - Ordine consigliato di collegamento (per lo sprint acquisizione): **Instantly → Composio (Gmail/Sheets/WABA) →
   Google Calendar → n8n**, poi i tool contenuti (HeyGen/KIE/YT/Unipile/Omnisocials).
 
-## Nota "database vivo"
-Il DB dei contatti NON è un file fermo: ogni nuovo dato (arricchimento, risposte, esiti call) lo aggiorna. Oggi vive
-come CSV/xlsx in `private/out`; il passo naturale per renderlo davvero "vivo" e query-abile è portarlo in **Airtable**
-(via Composio/MCP) — così ci scrivo e aggiorno stato dei Contatti/Interessati/Qualificati/Partner in tempo reale.
+## Nota "database vivo" (deciso 8/9: SUPABASE)
+Il DB dei contatti NON è un file fermo: ogni nuovo dato (arricchimento, risposte, esiti call) lo aggiorna. Dall'8/9 vive
+su **Supabase** (progetto `solarback`, tabelle `aziende`/`persone`/`verifica_email`, campi vivi `stato`, `ultimo_contatto`,
+`canale_ultimo`, `note_operative`; viste `v_cold_email`, `v_cold_call`). Aggiornamenti piccoli → MCP `execute_sql`;
+bulk → `scripts/supabase_load.py` (PostgREST). Sicurezza: RLS attivo senza policy + revoke ad `anon` → la chiave
+publishable non legge nulla; si entra solo da pannello/MCP. I vecchi CSV/XLSX sono stati eliminati dopo l'audit.

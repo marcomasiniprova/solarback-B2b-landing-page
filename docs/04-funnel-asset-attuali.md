@@ -52,7 +52,8 @@ n8n · Airtable · Notion · Supabase · Resend · Composio · GitHub · Netlify
 Railway · Dropbox · Sentry. + **Instantly AI** (fuori MCP, cold email) + software di **LinkedIn DM automation**.
 **Apify (via Composio)** = scraping + **verificatore email FISSO `blessiticus/email-verifier-pro`** ($0,85/1k; piano
 free: 100 email/run, 4 run paralleli, run async). **NO openapi.com** per l'arricchimento (troppo caro, scelta CEO 7/9).
-Lista Target: `scripts/build_lista_target.py` + `scripts/audit_lista_target.py` (output in `private/out/`).
+Lista Target: `scripts/build_lista_target.py` + `scripts/audit_lista_target.py` → dall'8/9 **vive su Supabase**
+(progetto `solarback`, tabelle `aziende`/`persone`/`verifica_email`; schema `scripts/supabase_schema.sql`).
 
 ## Gap del funnel (da chiudere)
 1. **CRM/pipeline** assente → crearlo.

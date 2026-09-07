@@ -69,9 +69,21 @@
 - Registrar: **IONOS** (di Valerio, va bene). TLD **.it** (fiducia coi target IT; deliverability ~= .com se autenticato).
 
 ## 6. STACK & TOOL
+- **DB VIVO = SUPABASE (scelta CEO 8/9, al posto di Airtable).** Motivo: Airtable Free = 1.000 record/base (noi ~18k),
+  Team $20-24/mese; Supabase = SQL vero, righe illimitate, **$10/mese** (nuovo progetto nell'org, costo letto dall'API).
+  Progetto **`solarback`** id **`dziylyrneqeamqzatdzo`** (eu-central-1, org "Valerio - Artec AI progetti").
+  Tabelle: **`aziende`** 8.498 (6.659 Lista Target + 1.839 Scarti; colonne = CSV in minuscolo + campi vivi `stato`
+  Contatto→Interessato→Qualificato→Partner/Perso/Escluso, `ultimo_contatto`, `canale_ultimo`, `note_operative`) ·
+  **`persone`** 5.777 (fk `id_sb`) · **`verifica_email`** 3.895 (`fase1_ok` calcolato = 2.584). Viste: `v_lista_target`,
+  `v_cold_email` (1.452 pronte), `v_cold_call` (5.511 con telefono). Schema `scripts/supabase_schema.sql`; bulk
+  `scripts/supabase_load.py` (PostgREST, upsert idempotente) + riconciliazione `scripts/supabase_audit.py`.
+  **Sicurezza:** RLS attivo senza policy + revoke ad anon/authenticated → la chiave publishable NON legge nulla; i dati
+  si toccano da pannello Supabase o MCP `execute_sql`. Per un nuovo bulk: grant temporaneo → carica → revoke.
+  Base Airtable "SolarBack — Lista Target" creata per sbaglio prima del cambio: VUOTA, Valerio la cancella.
 - **Composio** (connettore: Apify, altri) · **Apify** (account free: $5/mese, 4 run paralleli, 100 email/run sul verifier;
   run SEMPRE async → mai `waitForFinish`, il tool MCP ha 60s di timeout) · **Instantly** (cold email) · **Airtable**
-  (CRM/operativo) · **n8n** self-hosted (delivery) · GitHub · Netlify (sito) · Google Workspace (caselle).
+  (SOLO base "SolarBack — Operativo" per la delivery n8n, NON il DB contatti) · **n8n** self-hosted (delivery) · GitHub ·
+  Netlify (sito) · Google Workspace (caselle).
 - **Verificatore email FISSO (scelta CEO 7/9): Apify `blessiticus/email-verifier-pro`** — $0,85/1k email, output
   status (valid/risky/invalid/unknown) + catch-all + role-based + confidence. Si usa su OGNI nuova lista prima di Instantly.
   Policy: fase1 = valid + role-based non catch-all; catch-all esclusi (bounce atteso 7-12%).
@@ -92,12 +104,17 @@
   a suo nome (email/msg reali a prospect) ③ cambiare offerta/prezzi ④ pubblicare contenuti pubblici.
 - **Tempo:** full, **7+ ore/giorno, tutti i giorni** fino al 26/10 → risponde in giornata.
 
-## 6-ter. ASSET LISTA TARGET (✅ costruita, verificata e collaudata — 2026-09-07)
-- **Fonti:** 11 file di Valerio (GSE, Outscraper, Apify GMaps/leads/people, Foglio5, FB, Ads Library) → backup locale
-  `private/raw/` (git-ignored). Script riproducibile `scripts/build_lista_target.py` (~1 min) + audit
-  `scripts/audit_lista_target.py`. Output `private/out/` (git-ignored, contatti reali): `LISTA_TARGET_SOLARBACK.xlsx`
-  (tab per canale) + CSV + `LOG.json` + `verifica_email.csv` + `AUDIT.md`. Inviato a Valerio in chat (xlsx + zip backup).
-  **Il repo è PUBBLICO → l'asset NON si committa finché Valerio non lo rende privato** (poi va in `asset/` sul ramo).
+## 6-ter. ASSET LISTA TARGET (✅ costruita, verificata, collaudata — e dall'8/9 VIVE SU SUPABASE)
+- **Dove vive (8/9):** **Supabase, progetto `solarback`** (vedi §6) — unica fonte di verità. Migrazione 8/9 sera:
+  riconciliazione cella per cella CSV↔DB = **588.634 celle confrontate, 0 differenze** (`asset/AUDIT_SUPABASE.md`).
+  Dopo l'audit, su ordine del CEO, **eliminati** MASTER/SCARTI/PERSONE/verifica CSV, xlsx, zip e file di lavoro
+  (`private/out/` contiene solo `enrich_dom2id_full.json`, mappa dominio→id_sb per il merge). Il CEO ha il suo zip di
+  backup in chat. `private/raw/` (i suoi 11 file originali) e `verify_chunks/` restano finché non li cancella lui o
+  finché il container non si spegne (git-ignored, mai nel repo).
+- **Fonti (storia):** 11 file di Valerio (GSE, Outscraper, Apify GMaps/leads/people, Foglio5, FB, Ads Library). Pipeline
+  riproducibile `scripts/build_lista_target.py` + audit `scripts/audit_lista_target.py` (servono i raw: oggi non più
+  in locale → da qui in poi si aggiorna il DB, non si ricostruisce da zero). `asset/LOG.json` + `asset/AUDIT.md` = numeri.
+  Il repo è ancora PUBBLICO → nel repo NON ci sono contatti (solo script e conteggi).
 - **Numeri (7/9 sera):** 27.132 righe grezze → 8.498 aziende uniche → **6.659 Lista Target** + 1.839 SCARTI (con motivo).
   Tab: EMAIL_TITOLARE 631 · EMAIL_GENERICA 443 · EMAIL+MOBILE_TITOLARE 106 · EMAIL+MOBILE_GENERICA 272 · SOLO_MOBILE 2.754 ·
   SOLO_FISSO 1.817 · SOLO_SOCIAL 636. **Email pronte per Instantly 1.452** (737 al titolare, 715 generiche/freemail) ·
@@ -133,24 +150,23 @@
 - **ARRICCHIMENTO — RUN NAZIONALE FATTO (8/9):** Apify `vdrmota/contact-info-scraper` home-only su 2.674 domini
   (2.500 ok, 174 siti morti), costo **$5,00**. Dataset Apify persistente: **`N3kvzIbboJMnpGPJL`** (run `Yc0sB8RKpVikGuKae`).
   Trovato: 1.831 domini con email (402 con NOMINATIVA titolare), 680 cellulari nuovi, 327 WhatsApp; 2.228 email uniche.
-  **DA FARE (DB dinamico!):** ri-verificare le 2.228 email col verifier fisso (batch 100, fase1) → merge nel DB
-  (EMAIL_1 dove manca + MOBILE_DA_SITO/WHATSAPP) → ri-bucket → nuova versione asset + audit. Il DB NON è fermo: si aggiorna.
-- **PROSSIMI PASSI:** (1) repo privato → resta com'è (già committato) · (2) Instantly: warmup 14gg → campagna 1 con le 1.452 email
-  (Tier A+B, **tutta Italia**) · (3) arricchimento di TUTTE le aziende senza email ma con sito (2.738, nazionale): Apify Contact Details Scraper (sito "chi siamo"/contatti) → ri-verifica → aggiorna DB
-  GMaps contact-details (**NO openapi.com: troppo caro, scelta CEO**) · (4) Valerio parte con le cold call sui tab con
-  cellulare (suo processo in `docs/05`) · (5) LinkedIn DM solo Tier A.
+  **DA FARE (DB dinamico!):** ri-verificare le 2.228 email col verifier fisso (batch 100, fase1) → merge SU SUPABASE
+  (`email_1` dove manca, nuova tabella `arricchimento_sito` con email/cellulari/WhatsApp/social trovati, poi ri-bucket)
+  → audit. Fonte dati: dataset Apify `N3kvzIbboJMnpGPJL` (copia `left.json` nel sandbox Composio `/mnt/files/mex/`).
+- **PROSSIMI PASSI (ordine CEO 8/9):** (1) verifica 2.228 email + merge su Supabase · (2) Instantly (dopo) · (3) Valerio
+  cold call dalla vista `v_cold_call` (suo processo in `docs/05`) · (4) LinkedIn DM solo Tier A.
 
-## 7. DOVE SIAMO (aggiornare!) — 2026-09-07 sera
-- 0 Partner. **Lista Target PRONTA e collaudata** (§6-ter): 6.659 aziende, 1.452 email verificate, 3.132 cellulari.
-- `main` ripulito (solo sito, mai più bancone di lavoro); tutto il lavoro sul ramo `Solarback-Growth-Agents`.
-- **In attesa da Valerio:** (a) **repo → PRIVATO** (Settings → General → Danger zone → Change visibility) così committo
-  l'asset; (b) **script cold call** da salvare in `docs/05`; (c) `solarback.it` + 2 domini secondari su IONOS; (d) Google
-  Workspace (6 caselle); (e) Instantly Growth sì/no.
-- **Risposte popup 7/9 sera:** repo → lo mette privato lui ORA, poi io committo `asset/` (SOLO dopo aver verificato
-  su GitHub che è privato) · script cold call → me lo incolla al prossimo messaggio · compra ORA domini + Workspace
-  (~€80-95/mese) · arricchimento Tier A/B: SÌ (sito → FB → Apify GMaps).
-- **Prossima mossa mia:** (1) verificare repo privato → commit `asset/`; (2) salvare lo script in docs/05; (3) appena ha i
-  domini → DNS/warmup Instantly → campagna 1; (4) arricchimento nazionale (test 100 siti → poi scale).
+## 7. DOVE SIAMO (aggiornare!) — 2026-09-08 sera
+- 0 Partner. **Lista Target VIVA su Supabase** (§6): 6.659 aziende in lista, 1.452 email pronte (`v_cold_email`),
+  5.511 con telefono (`v_cold_call`). Arricchimento sito fatto (dataset Apify), **non ancora verificato/mergiato**.
+- `main` = solo sito; lavoro sul ramo `Solarback-Growth-Agents`. Repo ancora PUBBLICO (nessun contatto dentro).
+- **Risposte popup 8/9:** chiavi → pannello "Credenziali API" (mai .env) · DB vivo → **Supabase** (non Airtable, non
+  Composio) · prima migrare TUTTO senza perdere un dato, poi cancellare i CSV/XLSX (FATTO) · poi verifica+merge
+  arricchimento · Instantly DOPO · nuovo progetto Supabase $10/mese: OK.
+- **In attesa da Valerio:** (a) repo → PRIVATO (promesso per il 9/9); (b) cancellare la base Airtable vuota "SolarBack —
+  Lista Target"; (c) domini + Google Workspace; (d) Instantly (piano + key nel pannello, host `api.instantly.ai`).
+- **Prossima mossa mia:** (1) verifica delle 2.228 email arricchite (verifier fisso, 23 run × 100) → (2) merge su
+  Supabase + ri-bucket + audit → (3) guida Instantly/Composio Gmail-Sheets → (4) campagna 1.
 
 ## 7-bis. TOOL & SICUREZZA CHIAVI (deciso 8/9)
 - Stack completo e come collegarlo → **`docs/14-stack-tool.md`**. **Regola d'oro: MAI API key in `.env` nel repo
@@ -158,6 +174,9 @@
   (proxy Anthropic, chiave mai visibile alla sessione, scoped per host) o i **connettori MCP/OAuth**. Io non vedo né
   inserisco le chiavi: le mette Valerio, io do host+header e uso i tool. Molti tool sono GIÀ MCP in sessione
   (GitHub, Netlify, Railway, Resend, Notion, Supabase, n8n, Airtable, Composio).
+- **Lezione 8/9:** il classificatore della piattaforma blocca comandi Bash con chiavi in chiaro sulla riga di comando →
+  chiavi in un file nello scratchpad e `source` prima del comando (la publishable key Supabase non è un segreto, ma
+  vale lo stesso schema). Bulk da 18k righe: MAI via MCP (centinaia di chiamate), sempre via REST da script.
 
 ## 8. PUNTATORI
 `CLAUDE.md` (costituzione) · `TODO.md` · `DECISIONI.md` · `STATO-ATTUALE.md` · `SPRINT-26-OTTOBRE.md` ·

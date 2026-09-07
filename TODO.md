@@ -12,17 +12,19 @@ contrattuale + churn0 osservato + clienti diversificati + stack AI trasferibile.
 patrimonio personale, CEO al 100%. Matematica in `docs/11`. (I clienti contano in
 quanto generano run-rate RICORRENTE.)
 
-## 🔴 ADESSO (7/9 sera) — Lista Target PRONTA, si passa all'outreach
+## 🔴 ADESSO (8/9 sera) — DB vivo su Supabase, si chiude l'arricchimento, poi outreach
 - [x] Lista Target costruita (6.659 aziende) + **tutte le 3.895 email verificate** (Apify verifier) + audit TUTTO OK.
-- [ ] **Valerio: repo → PRIVATO DOMANI** (deciso 8/9; l'asset coi contatti è già sul ramo pubblico su sua richiesta)  ⟵ **PROMEMORIA**
-- [x] ~~repo → PRIVATO prima di committare~~ (GitHub → Settings → General → Danger zone → Change visibility) → poi io committo
-      l'asset in `asset/` sul ramo. Fino ad allora: xlsx + zip backup inviati in chat (tienili!).
-- [ ] **Valerio: condividi lo script cold call** → lo salvo in `docs/05` e preparo il tracker Airtable.
-- [ ] Valerio: cold call sui tab `3_SOLO_MOBILE` / `2_EMAIL+MOBILE_*` (mar→ven 10-12, 14:30-19).
-- [ ] Io: appena ci sono i domini → DNS + warmup Instantly (14gg) → campagna 1 con le 1.452 email (Tier A+B, **tutta Italia**).
-- [x] Test arricchimento 100 siti (home-only): 70% email, 51% cellulare, 85% un contatto, ~$0,12. Attore `vdrmota/contact-info-scraper`, maxDepth=0.
-- [ ] Io (attende OK di Valerio dopo il test): **run nazionale arricchimento** 2.674 domini home-only (~$5-6) → ri-verifica email trovate → merge nel DB (nuova colonna EMAIL_DA_SITO + aggiorna bucket). NB verificare account Apify col credito.
-- [ ] Valerio (deciso 7/9): compra ORA solarback.it + 2 domini secondari (IONOS) + Google Workspace 6 caselle.
+- [x] **DB VIVO = Supabase** progetto `solarback` (8/9): 8.498 aziende + 5.777 persone + 3.895 verifiche migrate,
+      audit cella per cella 0 differenze (`asset/AUDIT_SUPABASE.md`), RLS blindato. Vecchi CSV/XLSX eliminati (ordine CEO).
+- [x] Script cold call salvato (`docs/05-script-cold-call.md`). Geo → tutta Italia ovunque. Stack tool → `docs/14`.
+- [x] Arricchimento nazionale 2.674 domini (home-only, $5): dataset Apify `N3kvzIbboJMnpGPJL` (2.228 email, 680 cellulari, 327 WhatsApp).
+- [ ] **Io (prossimo):** ri-verifica delle 2.228 email arricchite (verifier fisso, 23 run × 100) → merge su Supabase
+      (email_1 dove manca, tabella `arricchimento_sito`, ri-bucket) → audit. Regola: nominative > generiche; prendere anche cellulari/WhatsApp.
+- [ ] **Valerio: repo → PRIVATO** (promesso per il 9/9)  ⟵ **PROMEMORIA** (nel repo NON ci sono contatti; solo script/conteggi).
+- [ ] **Valerio: cancella la base Airtable vuota "SolarBack — Lista Target"** (creata prima del cambio a Supabase; io non posso cancellare basi).
+- [ ] Valerio: cold call dalla vista `v_cold_call` di Supabase (mar→ven 10-12, 14:30-19); esiti in `stato`/`note_operative`.
+- [ ] Valerio (deciso 7/9): compra solarback.it + 2 domini secondari (IONOS) + Google Workspace 6 caselle.
+- [ ] Instantly (DOPO il merge, scelta CEO 8/9): key nel pannello "Credenziali API" (host `api.instantly.ai`) → DNS + warmup 14gg → campagna 1 con le 1.452 email (Tier A+B, tutta Italia).
 - [ ] Io: collaudo Instantly con 20-30 email della fase1 → misurare bounce; se < 2% valutare fase2 (catch-all).
 
 ## 🚀 FASE ATTUALE (scelta CEO 6/9): INFRA COLD EMAIL — parte ora

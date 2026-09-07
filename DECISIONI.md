@@ -209,6 +209,21 @@ preso uno; il sito è su `artecai.it`). Serve per: (a) identità brand, (b) targ
 - ✅ **Affidabilità = audit automatico** (`scripts/audit_lista_target.py`, riconciliazione grezzo→lista + invarianti +
   campioni), non controllo manuale riga per riga. Esito 7/9: TUTTO OK dopo 3 correzioni trovate dall'audit.
 
+### 2026-09-08 — DB vivo su SUPABASE, chiavi nel pannello, arricchimento nazionale
+- ✅ **Geo: TUTTA ITALIA** — tolta ogni priorità Lombardia/nord da pipeline e documenti.
+- ✅ **Chiavi API: MAI in `.env` né nel riquadro Variabili d'ambiente** → pannello "Credenziali API" (proxy, scoped per
+  host) o connettori MCP/OAuth. Stack completo in `docs/14`.
+- ✅ **DB VIVO = SUPABASE (non Airtable).** Prima scelta del CEO era Airtable nativo; cambiata quando ho mostrato i
+  limiti: Free = 1.000 record/base (noi ~18.170), Team $20-24/mese. Supabase: SQL, righe illimitate, **nuovo progetto
+  `solarback` $10/mese** (costo letto dall'API, confermato dal CEO). Airtable resta SOLO per la base operativa n8n.
+- ✅ **Migrazione "millimetrica"**: 8.498 aziende + 5.777 persone + 3.895 verifiche caricate via REST; audit cella per
+  cella = 588.634 celle, 0 differenze. **Poi, su ordine del CEO, eliminati tutti i CSV/XLSX/zip/raw locali**: Supabase
+  è l'unica fonte; il CEO tiene il suo zip in chat.
+- ✅ **Sicurezza DB:** RLS attivo senza policy + revoke ad anon → la chiave publishable non legge nulla.
+- ✅ **Arricchimento nazionale** (2.674 domini, home-only, $5): fatto; **regola merge**: email nominative del titolare >
+  generiche; prendere ANCHE cellulari/WhatsApp/social; ogni email trovata si ri-verifica prima di entrare nel DB.
+- ✅ **Ordine dei lavori (CEO):** Supabase → cancella vecchi file → verifica+merge arricchimento → Instantly (dopo).
+
 ## ⚠️ Decisioni ANCORA da prendere (vedi docs/06-domande-aperte.md)
 - Struttura finale dell'offerta + offerta pilota "founding partner" (in ricerca).
 - Numero-target reale: 30 entro il 26/10 vs. filosofia "pochi partner/anno" del

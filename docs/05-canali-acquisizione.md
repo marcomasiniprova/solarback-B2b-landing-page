@@ -25,7 +25,7 @@ la **fiducia** (0 recensioni). Quindi ogni canale deve: (a) arrivare al
   → gancio wedge (*"riattivo i tuoi vecchi contatti e ti fisso sopralluoghi; paghi solo quelli effettuati, zero ads"*)
   → 2-3 domande di qualifica → meeting (non vendere in cold call).
 - **KPI:** tentativi/dì · titolari raggiunti · qualificati in call · meeting fissati/fatti. Storico: ~10-20% meeting sui
-  titolari raggiunti. Tracker: CRM (Airtable).
+  titolari raggiunti. Tracker: DB vivo Supabase (tabella `aziende`: `stato`, `ultimo_contatto`, `canale_ultimo`, `note_operative`; vista `v_cold_call`).
 
 ## 🥈 Cold email B2B — Instantly AI (costruisci ORA, raccogli a metà sprint)
 - **Perché:** scalabile e low-cost, ma serve **warmup domini/inbox (~2–3 sett.)**

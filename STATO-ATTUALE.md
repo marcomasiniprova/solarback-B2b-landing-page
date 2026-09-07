@@ -2,11 +2,16 @@
 
 > Foto della situazione in tempo reale. **Aggiornare a fine di ogni sessione.**
 
-**Ultimo aggiornamento:** 2026-09-07 (sera) — **Lista Target costruita, verificata e collaudata**:
-27.132 righe grezze → 8.498 aziende → **6.659 in lista** (+1.839 scarti motivati); **3.895 email verificate** con
-Apify email-verifier-pro (policy fase1: 2.584 usabili, 1.452 in lista come EMAIL_1); audit di riconciliazione
-TUTTO OK (`private/out/AUDIT.md`). `main` ripulito (solo sito). Regole CEO registrate (cold call = solo Valerio,
-orari, B2B-only, verifier fisso, no openapi). **In attesa:** repo privato (poi commit asset), script cold call, domini.
+**Ultimo aggiornamento:** 2026-09-08 (sera) — **La Lista Target VIVE su SUPABASE** (progetto `solarback`,
+$10/mese, scelta CEO al posto di Airtable): tabelle `aziende` 8.498 (6.659 in lista + 1.839 scarti), `persone` 5.777,
+`verifica_email` 3.895; viste `v_cold_email` (1.452 email pronte) e `v_cold_call` (5.511 con telefono). Migrazione
+riconciliata cella per cella (588.634 celle, 0 differenze — `asset/AUDIT_SUPABASE.md`); vecchi CSV/XLSX eliminati su
+ordine CEO. Geo = tutta Italia. Script cold call salvato (`docs/05-script-cold-call.md`). Arricchimento nazionale
+fatto (dataset Apify, 2.228 email + 680 cellulari da verificare/mergiare). Stack tool + regola chiavi in `docs/14`.
+**In attesa:** repo privato (9/9), domini + Workspace, Instantly (dopo il merge).
+
+**Aggiornamento precedente:** 2026-09-07 (sera) — Lista Target costruita, verificata e collaudata: 27.132 righe
+grezze → 8.498 aziende → 6.659 in lista; 3.895 email verificate (policy fase1: 2.584 usabili); audit TUTTO OK.
 
 **Aggiornamento precedente:** 2026-09-06 (sera) — chiarita la **matematica della
 valutazione €1M** (run-rate ricorrente × multiplo; NON cash collected) e **corretto
