@@ -194,5 +194,6 @@
 
 ## 8. PUNTATORI
 `CLAUDE.md` (costituzione) · `TODO.md` · `DECISIONI.md` · `STATO-ATTUALE.md` · `SPRINT-26-OTTOBRE.md` ·
-`docs/01` business · `docs/02` ICP · `docs/07` offerta · `docs/08` mercato · `docs/09` n8n · `docs/11`
-valutazione · `docs/12` stagionalità · `docs/13` infra cold email · `docs/14` stack tool & sicurezza chiavi.
+`docs/01` business · `docs/02` ICP · `docs/03` posizionamento · `docs/05` script cold call · `docs/07` offerta ✅ ·
+`docs/08` mercato · `docs/09` n8n · `docs/11` valutazione · `docs/12` stagionalità · `docs/13` infra cold email ·
+`docs/14` stack tool & sicurezza chiavi · `docs/15` LinkedIn company page (asset Social&Trust #1, voce brand).

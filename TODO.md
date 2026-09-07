@@ -20,7 +20,11 @@ quanto generano run-rate RICORRENTE.)
 - [x] Arricchimento nazionale 2.674 domini (home-only, $5): dataset Apify `N3kvzIbboJMnpGPJL` (2.228 email, 680 cellulari, 327 WhatsApp).
 - [x] **Verifica + merge arricchimento (8/9 sera):** 1.954 email verificate (960 in policy) → 1.818 aziende aggiornate su
       Supabase: +784 email_1, +706 cellulari, +350 fissi, +262 PEC; bucket ricalcolati. Report `asset/MERGE_ARRICCHIMENTO.md`.
+- [x] **Offerta:** già finalizzata (`docs/07` v2). **LinkedIn company page** (voce brand, senza faccia): scritta `docs/15`, pronta da pubblicare.
+- [ ] **Scraping mirato TITOLARI (attesa Valerio):** Valerio manda il suo attore + OK al test; io propongo `microworlds/leads-finder`
+      (email+cellulare da dominio, $0,003/lead) e `harvestapi/linkedin-company-employees` (via LinkedIn azienda). Test 100 domini (~$1) → ri-verifica → merge Supabase.
 - [ ] **Io (prossimo):** guida Instantly + Composio Gmail/Sheets (chiavi nel pannello) → warmup → campagna 1 da `v_cold_email`.
+- [ ] Prossimi asset Social&Trust: casi studio (al primo risultato reale) · coerenza sito solarback.it.
 - [ ] **Valerio: repo → PRIVATO** (promesso per il 9/9)  ⟵ **PROMEMORIA** (nel repo NON ci sono contatti; solo script/conteggi).
 - [x] Base Airtable "SolarBack — Lista Target" verificata VUOTA (0 record) e lasciata morta: non l'ho eliminata io, non serve toccarla.
 - **NOTE VINCOLANTI 8/9:** Supabase `solarback` = DB vivo **+ backend dashboard CEO** (cruscotto da costruire) · Apify ora via **connettore nativo** (`mcp__Apify__*`), NON più via Composio.

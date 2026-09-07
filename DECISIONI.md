@@ -235,6 +235,15 @@ preso uno; il sito è su `artecai.it`). Serve per: (a) identità brand, (b) targ
   Il verifier email e gli attori restano gli stessi, richiamati dal nativo.
 - ✅ **Base Airtable "SolarBack — Lista Target":** verificata vuota, lasciata morta (non eliminata da me). Il DB è Supabase.
 
+### 2026-09-08 sera (round popup) — direzione asset
+- ✅ **Scraping Apify = MIRATO AI TITOLARI**, non più aziende (il buco: solo 19 email nominative dal sito). Attori: MIX
+  (Valerio ne ha già uno in mente + io cerco/propongo i migliori) → test 50-100 → ri-verifica + merge su Supabase.
+- ✅ **Social & Trust:** ordine = **Offerta (già fatta, docs/07) → LinkedIn**. LinkedIn = **Company Page SolarBack +
+  contenuti a VOCE BRAND, SENZA FACCIA** (niente personal brand personale, niente "Marco": la skill che lo cita NON
+  riflette la realtà → team = solo Valerio + AI).
+- ✅ **Asset obbligatori SolarBack (ordine di leva):** ① DB ✅ · ② Offerta ✅ (docs/07) · ③ Infra cold email (attesa Valerio)
+  · ④ Social&Trust (LinkedIn brand + casi studio) · ⑤ Sito/landing con prove · ⑥ Delivery n8n ✅ · ⑦ Dashboard CEO su Supabase.
+
 ## ⚠️ Decisioni ANCORA da prendere (vedi docs/06-domande-aperte.md)
 - Struttura finale dell'offerta + offerta pilota "founding partner" (in ricerca).
 - Numero-target reale: 30 entro il 26/10 vs. filosofia "pochi partner/anno" del
