@@ -161,8 +161,16 @@
   262 PEC · 872 email fuori policy → `email_scartate_verifica` · 178 di terzi → `email_sospette` · 1.135 bucket cambiati.
   Report numeri: `asset/MERGE_ARRICCHIMENTO.md`. Lezione: le home espongono quasi solo info@ (nominative rare):
   per i titolari servono LinkedIn/persone, non il crawl del sito.
-- **PROSSIMI PASSI (ordine CEO 8/9):** (1) Instantly: key nel pannello → warmup → campagna 1 · (2) Valerio cold call
-  dalla vista `v_cold_call` (suo processo in `docs/05`) · (3) LinkedIn DM solo Tier A.
+- **SCRAPING TITOLARI a cascata (8/9, connettore Apify NATIVO):** L1 `microworlds/leads-finder` su Tier A+B (1.128 domini,
+  ruoli decisore+commerciale+marketing, IT, email verificata). **Esito onesto:** A completato + B interrotto → account Apify
+  **NATIVO a credito esaurito (abort a $1,88)**. Raccolti **246 lead utili** (69 decisori, 129 commerciali, 48 marketing) su
+  **111 aziende**, salvati in Supabase tabella `leads_titolari` (durevole, id_sb mappato). **Cellulari veri: 12** — LEZIONE:
+  Apollo/leads-finder NON dà i cellulari dei titolari PMI italiane (i cellulari ce li abbiamo già da GMaps per la cold call);
+  copertura Apollo dei piccoli installatori ~1/3. **DA FARE (no credito):** verifica le 246 email col verifier (Composio) →
+  promuovi il decisore a `email_1`/`titolare_*` su `aziende` (retrocedi info@) + carica come `persone`.
+  **SERVE RICARICA account Apify NATIVO** per finire il Tier B (452 domini rimasti) + Tier C + cascata L2/L3.
+- **PROSSIMI PASSI (ordine CEO 8/9):** (1) verifica+promozione delle 246 email titolari → (2) Instantly: key nel pannello →
+  warmup → campagna 1 · (3) Valerio cold call dalla vista `v_cold_call` (docs/05) · (4) LinkedIn (docs/15).
 
 ## 7. DOVE SIAMO (aggiornare!) — 2026-09-08 sera
 - 0 Partner. **Lista Target VIVA su Supabase** (§6): 6.659 aziende in lista; dopo il merge dell'arricchimento (8/9 sera)

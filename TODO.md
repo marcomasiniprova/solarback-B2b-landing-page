@@ -24,6 +24,9 @@ quanto generano run-rate RICORRENTE.)
 - [ ] **Scraping TITOLARI a CASCATA (deciso 9/9, crediti ok, ~1.000-3.000 titolari):** L1 `microworlds/leads-finder` (email+cellulare da dominio)
       → se manca L2 `harvestapi/linkedin-company-employees` (via LinkedIn azienda) → se manca L3 `dev_fusion/Linkedin-Profile-Scraper` (email+telefono da profilo).
       Solo aziende in **Lista Target** (ICP già filtrato, niente elettricisti/artigiani), ruoli Owner/Titolare/CEO/Amministratore. Poi ri-verifica → merge Supabase. Input perfetto per ogni attore.
+- [x] **Scraping titolari L1 (leads-finder, Tier A+B):** 246 lead utili (69 decisori) su 111 aziende → Supabase `leads_titolari`. Cellulari ~0 (Apollo non li ha per PMI IT).
+- [ ] **Io (prossimo, no credito):** verifica le 246 email (verifier Composio) → promuovi decisore a `email_1`/`titolare_*` su `aziende` + carica `persone`.
+- [ ] **Valerio: RICARICA account Apify NATIVO** (credito esaurito, abort a $1,88) per finire Tier B (452 domini) + Tier C + cascata L2/L3.
 - [ ] **Io (prossimo):** guida Instantly + Composio Gmail/Sheets (chiavi nel pannello) → warmup → campagna 1 da `v_cold_email`.
 - [ ] Prossimi asset Social&Trust: casi studio (al primo risultato reale) · coerenza sito solarback.it.
 - [ ] **Valerio: repo → PRIVATO** (promesso per il 9/9)  ⟵ **PROMEMORIA** (nel repo NON ci sono contatti; solo script/conteggi).

@@ -245,6 +245,15 @@ preso uno; il sito è su `artecai.it`). Serve per: (a) identità brand, (b) targ
 - ✅ **Asset obbligatori SolarBack (ordine di leva):** ① DB ✅ · ② Offerta ✅ (docs/07) · ③ Infra cold email (attesa Valerio)
   · ④ Social&Trust (LinkedIn brand + casi studio) · ⑤ Sito/landing con prove · ⑥ Delivery n8n ✅ · ⑦ Dashboard CEO su Supabase.
 
+### 2026-09-08 sera — scraping titolari: cosa funziona e cosa no (dati veri)
+- ✅ **`microworlds/leads-finder` (Apollo-like) dà email NOMINATIVE verificate dei decisori, NON i cellulari** dei titolari
+  PMI italiane (12 su 246). Copertura Apollo dei piccoli installatori ~1/3. → si usa per le EMAIL nominative (colma il buco
+  dei 19 nominativi), non per i cellulari (quelli restano da GMaps/altro). Il merge promuove il decisore a `email_1`.
+- ✅ **Account Apify NATIVO ≠ account Composio**: il nativo aveva pochissimo credito (run abortita a $1,88). Per scalare
+  (finire B, Tier C, cascata L2 `harvestapi/linkedin-company-employees` / L3 `dev_fusion`) serve ricarica del NATIVO.
+- ✅ **Filtri anti-rumore nel merge:** scartare domini "gonfiati" (>15 lead = brand grandi/reseller tipo unoenergy.it), tenere
+  solo ruoli decisore/commerciale/marketing, ri-verificare le email col verifier prima di promuoverle.
+
 ## ⚠️ Decisioni ANCORA da prendere (vedi docs/06-domande-aperte.md)
 - Struttura finale dell'offerta + offerta pilota "founding partner" (in ricerca).
 - Numero-target reale: 30 entro il 26/10 vs. filosofia "pochi partner/anno" del
