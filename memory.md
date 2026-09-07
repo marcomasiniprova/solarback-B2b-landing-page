@@ -168,9 +168,14 @@
   Apollo/leads-finder NON dà i cellulari dei titolari PMI italiane (i cellulari ce li abbiamo già da GMaps per la cold call);
   copertura Apollo dei piccoli installatori ~1/3. **DA FARE (no credito):** verifica le 246 email col verifier (Composio) →
   promuovi il decisore a `email_1`/`titolare_*` su `aziende` (retrocedi info@) + carica come `persone`.
-  **SERVE RICARICA account Apify NATIVO** per finire il Tier B (452 domini rimasti) + Tier C + cascata L2/L3.
-- **PROSSIMI PASSI (ordine CEO 8/9):** (1) verifica+promozione delle 246 email titolari → (2) Instantly: key nel pannello →
-  warmup → campagna 1 · (3) Valerio cold call dalla vista `v_cold_call` (docs/05) · (4) LinkedIn (docs/15).
+  (Storico; superato sotto.)
+- **SCRAPING TITOLARI — CHIUSO 9/9 (dopo ricarica +$10 nativo):** completato Tier A+B+**C** (top 1.500 per ICP score).
+  Totale **331 lead utili su 169 aziende** (101 decisori) in `leads_titolari`; **194 email verificate** (143 valid, 39 risky,
+  8 invalid, 4 unknown); **102 aziende** con titolare nominativo promosso a `email_1` (info@→email_2); 331 caricati come
+  `persone` (tot 6.108). Bucket: 1_EMAIL_TITOLARE 646 · 2_EMAIL+MOBILE_TITOLARE 103 (749 nominative) · v_cold_email 2.246.
+  **Cellulari da leads-finder ≈ 0** (Apollo non li ha per PMI IT). DB riblindato (401 con chiave publishable).
+- **PROSSIMI PASSI:** (1) Instantly: key nel pannello → warmup → campagna 1 da `v_cold_email` · (2) Valerio cold call da
+  `v_cold_call` (docs/05) · (3) LinkedIn brand+personaggio AI (docs/15) · (opz.) più titolari: Tier C oltre 1.500 + cascata L2/L3.
 
 ## 7. DOVE SIAMO (aggiornare!) — 2026-09-08 sera
 - 0 Partner. **Lista Target VIVA su Supabase** (§6): 6.659 aziende in lista; dopo il merge dell'arricchimento (8/9 sera)

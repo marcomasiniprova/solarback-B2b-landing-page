@@ -253,6 +253,10 @@ preso uno; il sito è su `artecai.it`). Serve per: (a) identità brand, (b) targ
   (finire B, Tier C, cascata L2 `harvestapi/linkedin-company-employees` / L3 `dev_fusion`) serve ricarica del NATIVO.
 - ✅ **Filtri anti-rumore nel merge:** scartare domini "gonfiati" (>15 lead = brand grandi/reseller tipo unoenergy.it), tenere
   solo ruoli decisore/commerciale/marketing, ri-verificare le email col verifier prima di promuoverle.
+- ✅ **ESEGUITO 9/9 (dopo ricarica +$10 nativo):** cascata Tier A+B+C (1.500 domini C top-score). 331 lead utili su 169
+  aziende, 194 email verificate (verifier NATIVO), **102 aziende** con titolare nominativo promosso a email_1 (info@→email_2),
+  331 persone. Regola promozione: miglior decisore fase1 (valid) per azienda; un decisore batte anche un'email nominativa
+  esistente. Cellulari da leads-finder ≈ 0 (confermato su 3 run) → per i cellulari titolare serve altra fonte (o restano i GMaps).
 
 ## ⚠️ Decisioni ANCORA da prendere (vedi docs/06-domande-aperte.md)
 - Struttura finale dell'offerta + offerta pilota "founding partner" (in ricerca).
