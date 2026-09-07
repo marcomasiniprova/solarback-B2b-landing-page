@@ -21,15 +21,17 @@ quanto generano run-rate RICORRENTE.)
 - [x] **Verifica + merge arricchimento (8/9 sera):** 1.954 email verificate (960 in policy) → 1.818 aziende aggiornate su
       Supabase: +784 email_1, +706 cellulari, +350 fissi, +262 PEC; bucket ricalcolati. Report `asset/MERGE_ARRICCHIMENTO.md`.
 - [x] **Offerta:** già finalizzata (`docs/07` v2). **LinkedIn company page** (voce brand, senza faccia): scritta `docs/15`, pronta da pubblicare.
-- [ ] **Scraping mirato TITOLARI (attesa Valerio):** Valerio manda il suo attore + OK al test; io propongo `microworlds/leads-finder`
-      (email+cellulare da dominio, $0,003/lead) e `harvestapi/linkedin-company-employees` (via LinkedIn azienda). Test 100 domini (~$1) → ri-verifica → merge Supabase.
+- [ ] **Scraping TITOLARI a CASCATA (deciso 9/9, crediti ok, ~1.000-3.000 titolari):** L1 `microworlds/leads-finder` (email+cellulare da dominio)
+      → se manca L2 `harvestapi/linkedin-company-employees` (via LinkedIn azienda) → se manca L3 `dev_fusion/Linkedin-Profile-Scraper` (email+telefono da profilo).
+      Solo aziende in **Lista Target** (ICP già filtrato, niente elettricisti/artigiani), ruoli Owner/Titolare/CEO/Amministratore. Poi ri-verifica → merge Supabase. Input perfetto per ogni attore.
 - [ ] **Io (prossimo):** guida Instantly + Composio Gmail/Sheets (chiavi nel pannello) → warmup → campagna 1 da `v_cold_email`.
 - [ ] Prossimi asset Social&Trust: casi studio (al primo risultato reale) · coerenza sito solarback.it.
 - [ ] **Valerio: repo → PRIVATO** (promesso per il 9/9)  ⟵ **PROMEMORIA** (nel repo NON ci sono contatti; solo script/conteggi).
 - [x] Base Airtable "SolarBack — Lista Target" verificata VUOTA (0 record) e lasciata morta: non l'ho eliminata io, non serve toccarla.
 - **NOTE VINCOLANTI 8/9:** Supabase `solarback` = DB vivo **+ backend dashboard CEO** (cruscotto da costruire) · Apify ora via **connettore nativo** (`mcp__Apify__*`), NON più via Composio.
 - [ ] Valerio: cold call dalla vista `v_cold_call` di Supabase (mar→ven 10-12, 14:30-19); esiti in `stato`/`note_operative`.
-- [ ] Valerio (deciso 7/9): compra solarback.it + 2 domini secondari (IONOS) + Google Workspace 6 caselle.
+- [ ] **Valerio (PROMEMORIA da non perdere): compra `solarback.it` → collega alla LANDING PAGE → collega all'EMAIL PRINCIPALE aziendale.** (Dominio primario da proteggere.)
+- [ ] Valerio (deciso 7/9): 2 domini secondari cold-email (Cloudflare/IONOS) + Google Workspace caselle.
 - [ ] Instantly (DOPO il merge, scelta CEO 8/9): key nel pannello "Credenziali API" (host `api.instantly.ai`) → DNS + warmup 14gg → campagna 1 con le 1.452 email (Tier A+B, tutta Italia).
 - [ ] Io: collaudo Instantly con 20-30 email della fase1 → misurare bounce; se < 2% valutare fase2 (catch-all).
 

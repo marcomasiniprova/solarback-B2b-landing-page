@@ -1,8 +1,11 @@
-# 15 — LinkedIn Company Page SolarBack (voce BRAND, senza faccia)
+# 15 — LinkedIn Company Page SolarBack (pagina BRAND + personaggio AI ricorrente)
 
-> Asset Social & Trust #1 (deciso 8/9: contenuti a voce brand SolarBack, nessun personal brand personale).
+> Asset Social & Trust #1. **Deciso 9/9 (correzione):** la pagina LinkedIn è AZIENDALE (SolarBack), ma i contenuti hanno
+> una **FACCIA**: un **personaggio maschile ricorrente generato in AI** (video iper-realistici **Veo 3.1** + caroselli),
+> coerente e riconoscibile (nome di lavoro tipo "Valerio"), presentato come **membro del team SolarBack** che fa video
+> informativi per i potenziali clienti. NON è personal brand di una persona reale: è un volto/avatar AI unico del brand.
 > Fonti: posizionamento `docs/03`, offerta `docs/07`. Tono: imprenditore→imprenditore, vende il RISULTATO, zero tecnicismi.
-> Pronto da incollare su LinkedIn → Crea pagina aziendale. Copy in italiano umano (rifinibile con la skill `copywriting-italiano-umano-2026`).
+> Copy in italiano umano (rifinibile con la skill `copywriting-italiano-umano-2026`).
 
 ## Identità pagina
 - **Nome:** SolarBack
@@ -41,11 +44,20 @@ Pulsante pagina: **"Contattaci"** → link a solarback.it (o WhatsApp/form). Nel
 4. **Mito vs realtà del "fotovoltaico è morto":** perché il mercato c'è ancora e come intercettarlo (`docs/12` stagionalità/nicchie).
 5. **Esclusiva di zona:** post ricorrenti che comunicano la scarsità ("zona X ancora libera / zona Y presa"). Leva FOMO reale.
 
+## Formato contenuti (deciso 9/9): personaggio AI ricorrente
+- **Volto:** personaggio maschile unico e coerente, generato in AI (Veo 3.1) — stessa faccia in ogni video, così diventa
+  riconoscibile come "la faccia di SolarBack". Nome di lavoro provvisorio: "Valerio" (da confermare).
+- **Chi è (narrativa):** un membro del team SolarBack che spiega, in modo semplice e diretto, come portiamo sopralluoghi
+  agli installatori. Parla da persona del settore, non da markettaro.
+- **Formati:** video AI verticali (30-60s) per i 5 filoni sopra + caroselli quando serve testo/numeri.
+- **Pubblicazione:** dalla pagina aziendale SolarBack (il personaggio è "team", non un profilo personale separato).
+- **Coerenza:** stesso volto, stessa voce, stesso tono in tutti i contenuti (identità di marca).
+
 ## Cosa NON fare (vincoli dal posizionamento)
 - Mai parlare di "strumenti/AI/n8n" come gancio: si vende il risultato (agenda piena), non la tecnologia.
+  (L'AI la usiamo per PRODURRE i video, ma non è l'argomento dei video.)
 - Niente promesse gonfiate senza prove: oggi 0 case study → il messaggio azzera il rischio (garanzia, pay-per-result), non millanta.
 - Niente tono "agenzia markettara": imprenditore→imprenditore, diretto.
-- Nessuna faccia personale: la voce è SolarBack (deciso 8/9).
 
 ## TODO collegati
 - [ ] Valerio: crea la pagina su LinkedIn e incolla questo copy (guido io se serve).

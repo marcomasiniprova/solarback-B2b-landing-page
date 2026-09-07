@@ -238,9 +238,10 @@ preso uno; il sito è su `artecai.it`). Serve per: (a) identità brand, (b) targ
 ### 2026-09-08 sera (round popup) — direzione asset
 - ✅ **Scraping Apify = MIRATO AI TITOLARI**, non più aziende (il buco: solo 19 email nominative dal sito). Attori: MIX
   (Valerio ne ha già uno in mente + io cerco/propongo i migliori) → test 50-100 → ri-verifica + merge su Supabase.
-- ✅ **Social & Trust:** ordine = **Offerta (già fatta, docs/07) → LinkedIn**. LinkedIn = **Company Page SolarBack +
-  contenuti a VOCE BRAND, SENZA FACCIA** (niente personal brand personale, niente "Marco": la skill che lo cita NON
-  riflette la realtà → team = solo Valerio + AI).
+- ✅ **Social & Trust:** ordine = **Offerta (già fatta, docs/07) → LinkedIn**. LinkedIn = **Company Page SolarBack**;
+  **CORREZIONE 9/9: i contenuti HANNO una faccia = personaggio maschile ricorrente generato in AI (video Veo 3.1 +
+  caroselli), coerente/riconoscibile ("Valerio" provvisorio), presentato come membro del team SolarBack.** NON è personal
+  brand di una persona reale né "Marco" (skill da ignorare): è un avatar AI unico del brand. Dettaglio → `docs/15`.
 - ✅ **Asset obbligatori SolarBack (ordine di leva):** ① DB ✅ · ② Offerta ✅ (docs/07) · ③ Infra cold email (attesa Valerio)
   · ④ Social&Trust (LinkedIn brand + casi studio) · ⑤ Sito/landing con prove · ⑥ Delivery n8n ✅ · ⑦ Dashboard CEO su Supabase.
 
