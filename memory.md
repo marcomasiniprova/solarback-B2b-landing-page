@@ -120,9 +120,13 @@
 - **⚠️ PROMEMORIA REPO (deciso 8/9):** Valerio rende il repo **PRIVATO DOMANI** (Settings→General→Danger zone→Change
   visibility). Su sua richiesta esplicita l'asset coi contatti è GIÀ committato sul ramo pubblico ORA (se ne assume il
   rischio; io l'ho segnalato). Appena è privato: ok, resta com'è.
-- **ARRICCHIMENTO (deciso 8/9):** attore fisso **Apify `vdrmota/contact-info-scraper` / Contact Details Scraper**
-  (~$0,0045 per contatto TROVATO, si paga solo sui hit) sui siti delle aziende senza email; poi ri-verifica col verifier
-  fisso; **tutta Italia**, tutte le 2.738 con sito (prima A+B, poi C), **test 100 siti prima di scalare**. NO openapi.
+- **ARRICCHIMENTO (deciso 8/9, attore fisso):** Apify **`vdrmota/contact-info-scraper`** (Contact Details Scraper),
+  pricing **$0,002/pagina** (add-on OFF). **USARE maxDepth=0 (solo home)**: a profondità 1 il crawler si mangia il budget
+  sui primi siti (lezione appresa). Poi ri-verifica le email trovate col verifier fisso. Tutta Italia, 2.674 domini con sito.
+  **TEST 100 siti (7/9): resa 70% email · 51% cellulare nuovo · 85% almeno un contatto; costo ~$0,0015/sito.**
+  → **run nazionale completo stimato ~$5-6** (crawl ~$4 + ri-verifica ~$1,6) → ~1.870 email + ~1.360 cellulari recuperati.
+  NO openapi. NB: le run girano sull'account Apify id 3SPijJU… (il verifier girava su 9bQ1u9…): controllare che il
+  credito ricaricato sia su quello giusto prima del run completo.
 - **PROSSIMI PASSI:** (1) repo privato → resta com'è (già committato) · (2) Instantly: warmup 14gg → campagna 1 con le 1.452 email
   (Tier A+B, **tutta Italia**) · (3) arricchimento di TUTTE le aziende senza email ma con sito (2.738, nazionale): Apify Contact Details Scraper (sito "chi siamo"/contatti) → ri-verifica → aggiorna DB
   GMaps contact-details (**NO openapi.com: troppo caro, scelta CEO**) · (4) Valerio parte con le cold call sui tab con

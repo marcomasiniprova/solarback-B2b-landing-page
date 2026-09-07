@@ -20,7 +20,8 @@ quanto generano run-rate RICORRENTE.)
 - [ ] **Valerio: condividi lo script cold call** → lo salvo in `docs/05` e preparo il tracker Airtable.
 - [ ] Valerio: cold call sui tab `3_SOLO_MOBILE` / `2_EMAIL+MOBILE_*` (mar→ven 10-12, 14:30-19).
 - [ ] Io: appena ci sono i domini → DNS + warmup Instantly (14gg) → campagna 1 con le 1.452 email (Tier A+B, **tutta Italia**).
-- [ ] Io: arricchimento NAZIONALE di tutte le 2.738 aziende senza email ma con sito (Apify Contact Details Scraper ~$0,0045/hit → ri-verifica; NO openapi). **Test 100 siti prima di scalare** (deciso 8/9). Ordine: A+B poi C.
+- [x] Test arricchimento 100 siti (home-only): 70% email, 51% cellulare, 85% un contatto, ~$0,12. Attore `vdrmota/contact-info-scraper`, maxDepth=0.
+- [ ] Io (attende OK di Valerio dopo il test): **run nazionale arricchimento** 2.674 domini home-only (~$5-6) → ri-verifica email trovate → merge nel DB (nuova colonna EMAIL_DA_SITO + aggiorna bucket). NB verificare account Apify col credito.
 - [ ] Valerio (deciso 7/9): compra ORA solarback.it + 2 domini secondari (IONOS) + Google Workspace 6 caselle.
 - [ ] Io: collaudo Instantly con 20-30 email della fase1 → misurare bounce; se < 2% valutare fase2 (catch-all).
 
