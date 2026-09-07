@@ -17,3 +17,7 @@ Thumbs.db
 *.tmp
 /tmp/
 private/
+
+# Python
+__pycache__/
+*.pyc
