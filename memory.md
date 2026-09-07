@@ -127,7 +127,11 @@
 - **In attesa da Valerio:** (a) **repo → PRIVATO** (Settings → General → Danger zone → Change visibility) così committo
   l'asset; (b) **script cold call** da salvare in `docs/05`; (c) `solarback.it` + 2 domini secondari su IONOS; (d) Google
   Workspace (6 caselle); (e) Instantly Growth sì/no.
-- **Prossima mossa mia:** appena ha i domini → DNS/warmup Instantly → campagna 1. Intanto: arricchimento Tier A/B.
+- **Risposte popup 7/9 sera:** repo → lo mette privato lui ORA, poi io committo `asset/` (SOLO dopo aver verificato
+  su GitHub che è privato) · script cold call → me lo incolla al prossimo messaggio · compra ORA domini + Workspace
+  (~€80-95/mese) · arricchimento Tier A/B: SÌ (sito → FB → Apify GMaps).
+- **Prossima mossa mia:** (1) verificare repo privato → commit `asset/`; (2) salvare lo script in docs/05; (3) appena ha i
+  domini → DNS/warmup Instantly → campagna 1; (4) arricchimento Tier A/B (prima Lombardia).
 
 ## 8. PUNTATORI
 `CLAUDE.md` (costituzione) · `TODO.md` · `DECISIONI.md` · `STATO-ATTUALE.md` · `SPRINT-26-OTTOBRE.md` ·

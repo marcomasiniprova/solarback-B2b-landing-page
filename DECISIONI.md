@@ -204,6 +204,8 @@ preso uno; il sito è su `artecai.it`). Serve per: (a) identità brand, (b) targ
   in call → meeting a calendario. Script suo, da salvare in `docs/05` quando lo condivide.
 - ✅ **Cellulari/WhatsApp dei titolari si chiamano; email a qualsiasi azienda/titolare (B2B). Mai B2C.** L'agente non
   cita più vincoli tipo RPO/consenso.
+- ✅ **Popup 7/9 sera:** repo → privato subito (poi asset in `asset/`) · script cold call incollato da lui · compra ora domini +
+  Workspace · arricchimento Tier A/B approvato (sito → FB → Apify GMaps, dentro il free tier Apify).
 - ✅ **Affidabilità = audit automatico** (`scripts/audit_lista_target.py`, riconciliazione grezzo→lista + invarianti +
   campioni), non controllo manuale riga per riga. Esito 7/9: TUTTO OK dopo 3 correzioni trovate dall'audit.
 

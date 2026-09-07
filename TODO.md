@@ -19,7 +19,8 @@ quanto generano run-rate RICORRENTE.)
 - [ ] **Valerio: condividi lo script cold call** → lo salvo in `docs/05` e preparo il tracker Airtable.
 - [ ] Valerio: cold call sui tab `3_SOLO_MOBILE` / `2_EMAIL+MOBILE_*` (mar→ven 10-12, 14:30-19).
 - [ ] Io: appena ci sono i domini → DNS + warmup Instantly (14gg) → campagna 1 con le 1.452 email (Tier A+B, Lombardia→Veneto→Emilia).
-- [ ] Io: arricchimento Tier A/B senza email (sito → FB → Apify GMaps contact-details; NO openapi).
+- [ ] Io: arricchimento Tier A/B senza email (sito → FB → Apify GMaps contact-details; NO openapi) — **approvato 7/9**, parto da Lombardia Tier A.
+- [ ] Valerio (deciso 7/9): compra ORA solarback.it + 2 domini secondari (IONOS) + Google Workspace 6 caselle.
 - [ ] Io: collaudo Instantly con 20-30 email della fase1 → misurare bounce; se < 2% valutare fase2 (catch-all).
 
 ## 🚀 FASE ATTUALE (scelta CEO 6/9): INFRA COLD EMAIL — parte ora
