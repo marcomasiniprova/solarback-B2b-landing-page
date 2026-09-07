@@ -152,7 +152,14 @@
 - **Prossima mossa mia:** (1) verificare repo privato → commit `asset/`; (2) salvare lo script in docs/05; (3) appena ha i
   domini → DNS/warmup Instantly → campagna 1; (4) arricchimento nazionale (test 100 siti → poi scale).
 
+## 7-bis. TOOL & SICUREZZA CHIAVI (deciso 8/9)
+- Stack completo e come collegarlo → **`docs/14-stack-tool.md`**. **Regola d'oro: MAI API key in `.env` nel repo
+  né nel riquadro Variabili d'ambiente** (visibili/auto-caricate = leak). Usare il pannello **"Credenziali API"**
+  (proxy Anthropic, chiave mai visibile alla sessione, scoped per host) o i **connettori MCP/OAuth**. Io non vedo né
+  inserisco le chiavi: le mette Valerio, io do host+header e uso i tool. Molti tool sono GIÀ MCP in sessione
+  (GitHub, Netlify, Railway, Resend, Notion, Supabase, n8n, Airtable, Composio).
+
 ## 8. PUNTATORI
 `CLAUDE.md` (costituzione) · `TODO.md` · `DECISIONI.md` · `STATO-ATTUALE.md` · `SPRINT-26-OTTOBRE.md` ·
 `docs/01` business · `docs/02` ICP · `docs/07` offerta · `docs/08` mercato · `docs/09` n8n · `docs/11`
-valutazione · `docs/12` stagionalità · `docs/13` infra cold email.
+valutazione · `docs/12` stagionalità · `docs/13` infra cold email · `docs/14` stack tool & sicurezza chiavi.
