@@ -127,6 +127,9 @@
   → **run nazionale completo stimato ~$5-6** (crawl ~$4 + ri-verifica ~$1,6) → ~1.870 email + ~1.360 cellulari recuperati.
   NO openapi. NB: le run girano sull'account Apify id 3SPijJU… (il verifier girava su 9bQ1u9…): controllare che il
   credito ricaricato sia su quello giusto prima del run completo.
+  **REGOLA MERGE (Valerio 8/9):** dai contatti trovati sul sito, PRIORITÀ alle email NOMINATIVE del titolare
+  (nome.cognome@) sopra le generiche info@/amministrazione@; e **prendi ANCHE cellulare/WhatsApp/altri punti di contatto**,
+  non solo l'email. In mancanza del preferito, prendi il migliore disponibile. Ogni email trovata → ri-verifica col verifier.
 - **PROSSIMI PASSI:** (1) repo privato → resta com'è (già committato) · (2) Instantly: warmup 14gg → campagna 1 con le 1.452 email
   (Tier A+B, **tutta Italia**) · (3) arricchimento di TUTTE le aziende senza email ma con sito (2.738, nazionale): Apify Contact Details Scraper (sito "chi siamo"/contatti) → ri-verifica → aggiorna DB
   GMaps contact-details (**NO openapi.com: troppo caro, scelta CEO**) · (4) Valerio parte con le cold call sui tab con
