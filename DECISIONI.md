@@ -190,6 +190,23 @@ preso uno; il sito è su `artecai.it`). Serve per: (a) identità brand, (b) targ
   dettaglio persona/regole/stato spostato in **`memory.md`** (nuovo, memoria permanente).
 - **Regola CEO:** a ogni prompt → 4 domande popup (fase discovery), appuntare tutto in memory.md.
 
+### 2026-09-07 — Lista Target, verifica email, regole outreach (scelte CEO in chat)
+- ✅ **`main` = solo sito** (Netlify). Ripulito: rimosso il commit coi file lead; "mai più bancone di lavoro".
+- ✅ **Repo da rendere PRIVATO** (lo fa Valerio) e SOLO DOPO l'asset va nel ramo (`asset/`). Vecchi file grezzi eliminati
+  dal repo (backup locale `private/raw/`).
+- ✅ **Excel minimal** (header bold, filtri, freeze; niente colori). **Doppioni lasciati separati con flag.**
+- ✅ **Verificatore email PER SEMPRE = Apify `blessiticus/email-verifier-pro`** (via Composio, $0,85/1k). Verificate
+  tutte le 3.895 email. **Policy fase1:** valid + risky role-based non catch-all (2.584); catch-all esclusi perché la
+  ricerca dice bounce atteso 7-12% (soglie Google/Outlook: bounce < 2%, spam < 0,1%). Fase2 (catch-all) solo se il
+  bounce misurato resta < 2%.
+- ✅ **NO openapi.com** per l'arricchimento (troppo caro). Arricchimento Tier A/B con sito/FB/Apify.
+- ✅ **Cold call = solo Valerio**, mar→ven 10-12 e 14:30-19, lunedì mai; flusso chiama → richiama → script → qualifica
+  in call → meeting a calendario. Script suo, da salvare in `docs/05` quando lo condivide.
+- ✅ **Cellulari/WhatsApp dei titolari si chiamano; email a qualsiasi azienda/titolare (B2B). Mai B2C.** L'agente non
+  cita più vincoli tipo RPO/consenso.
+- ✅ **Affidabilità = audit automatico** (`scripts/audit_lista_target.py`, riconciliazione grezzo→lista + invarianti +
+  campioni), non controllo manuale riga per riga. Esito 7/9: TUTTO OK dopo 3 correzioni trovate dall'audit.
+
 ## ⚠️ Decisioni ANCORA da prendere (vedi docs/06-domande-aperte.md)
 - Struttura finale dell'offerta + offerta pilota "founding partner" (in ricerca).
 - Numero-target reale: 30 entro il 26/10 vs. filosofia "pochi partner/anno" del

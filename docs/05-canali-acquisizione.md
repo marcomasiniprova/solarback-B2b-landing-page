@@ -12,18 +12,18 @@ la **fiducia** (0 recensioni). Quindi ogni canale deve: (a) arrivare al
 
 ---
 
-## 🥇 Cold call (canale primario, cash-now)
-- **Perché:** costo ~0, arriva al decisore, feedback immediato, è il muscolo di
-  Valerio. Storico: ~10–20% di meeting sui titolari raggiunti.
-- **Cosa serve:** lista con **WhatsApp/telefono diretto del titolare**, script,
-  tracker chiamate nel CRM.
-- **Script (struttura da costruire):**
-  1. Apertura onesta + permesso ("30 secondi?").
-  2. Gancio wedge: *"riattivo i tuoi vecchi contatti e ti fisso sopralluoghi;
-     paghi solo quelli effettuati, zero ads, zero setup."*
-  3. 2–3 domande di qualifica (commerciali? installazioni/mese? DB vecchi lead?).
-  4. Chiudi il **meeting** (non vendere in cold call: porta in call solo i validi).
-- **KPI:** tentativi/dì · titolari raggiunti · meeting fissati · meeting fatti.
+## 🥇 Cold call (canale primario, cash-now) — LA FA SOLO VALERIO
+- **Chi:** Valerio in persona. È l'unico outreach manuale suo; l'agente prepara liste, script e tracker, non chiama.
+- **Quando (suo processo, 7/9):** **martedì → venerdì, 10:00-12:00 e 14:30-19:00. Lunedì MAI.**
+- **Lista:** tab `3_SOLO_MOBILE` e `2_EMAIL+MOBILE_*` della Lista Target (cellulare/WhatsApp del titolare), Tier A → B,
+  Lombardia → Veneto → Emilia. Cellulari e WhatsApp dei titolari si chiamano tranquillamente (B2B).
+- **Flusso:** chiama → **non risponde → richiama (follow-up)** → risponde → **script** → **interessato → qualifica in
+  chiamata** (commerciali? installazioni/mese? DB vecchi lead?) → **meeting fissato sul calendario**.
+- **Script:** lo condivide Valerio (da salvare QUI appena arriva). Struttura consigliata: apertura + permesso ("30 secondi?")
+  → gancio wedge (*"riattivo i tuoi vecchi contatti e ti fisso sopralluoghi; paghi solo quelli effettuati, zero ads"*)
+  → 2-3 domande di qualifica → meeting (non vendere in cold call).
+- **KPI:** tentativi/dì · titolari raggiunti · qualificati in call · meeting fissati/fatti. Storico: ~10-20% meeting sui
+  titolari raggiunti. Tracker: CRM (Airtable).
 
 ## 🥈 Cold email B2B — Instantly AI (costruisci ORA, raccogli a metà sprint)
 - **Perché:** scalabile e low-cost, ma serve **warmup domini/inbox (~2–3 sett.)**
@@ -58,6 +58,7 @@ la **fiducia** (0 recensioni). Quindi ogni canale deve: (a) arrivare al
 5. Pubblica il **primo contenuto LinkedIn**.
 
 ## Nota su liste e dati
-Le liste con contatti dei titolari sono **dati sensibili** → cartella `private/`
-(git-ignored). Rispettare le norme su contatti B2B/GDPR (base giuridica, opt-out
-nelle email a freddo, ecc.).
+Le liste con i contatti dei titolari sono dati riservati → cartella `private/` (git-ignored) finché il repo non è
+privato. Regole CEO: **solo B2B** (aziende e titolari), **mai consumatori**; email e cellulari dei titolari si usano
+liberamente. Prima di Instantly: **verifica sempre** con il verifier fisso (`docs/04`) e usa solo valid + role-based
+non catch-all.

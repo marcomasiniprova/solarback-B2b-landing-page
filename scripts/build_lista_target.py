@@ -13,7 +13,7 @@ Regole (scelte CEO 2026-09-06):
 Terminologia: ICP = criteri · Lista Target = la lista · Contatto/Interessato/Qualificato/Partner.
 """
 import os, re, sys, json, unicodedata, glob
-from collections import defaultdict
+from collections import Counter, defaultdict
 import pandas as pd
 import phonenumbers
 from phonenumbers import PhoneNumberType as PT
@@ -23,6 +23,32 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW = os.path.join(ROOT, "private", "raw")
 OUT = os.path.join(ROOT, "private", "out")
 os.makedirs(OUT, exist_ok=True)
+
+# --- VERIFICA EMAIL (attore Apify blessiticus/email-verifier-pro, $0.85/1k) ---------------------
+VERIF_CSV = os.path.join(OUT, "verifica_email.csv")      # colonne: email,status,confidence,is_catch_all,is_role_based,is_free_provider
+VERIF_POLICY = os.environ.get("VERIF_POLICY", "fase1")
+# fase1 (domini nuovi, ricerca 2026-09-07): SOLO status=valid, PIU' le caselle generiche (info@...) confermate via SMTP su domini
+#   NON catch-all (l'attore le marca "risky" solo perché role-based). Catch-all ESCLUSE a prescindere (bounce atteso 7-12%). Unknown escluse.
+# fase2 (dopo 3-4 settimane con bounce <2%): come fase1 + catch-all con confidence=high (questo attore non la produce: resta = fase1).
+verif = {}
+if os.path.exists(VERIF_CSV):
+    _v = pd.read_csv(VERIF_CSV, dtype=str).fillna("")
+    for _, _r in _v.iterrows():
+        _e = str(_r.get("email", "")).strip().lower()
+        if _e: verif[_e] = {"status": str(_r.get("status","")).strip().lower(), "conf": str(_r.get("confidence","")).strip().lower(),
+                            "catchall": str(_r.get("is_catch_all","")).lower() == "true", "role": str(_r.get("is_role_based","")).lower() == "true",
+                            "free": str(_r.get("is_free_provider","")).lower() == "true"}
+def vinfo(e):
+    return verif.get((e or "").strip().lower())
+def email_ok(e):
+    """Email ammessa in campagna secondo la policy. Se non esiste ancora una verifica, passano tutte."""
+    if not verif: return True
+    v = vinfo(e)
+    if v is None: return False
+    if v["status"] == "valid": return True
+    if v["status"] == "risky" and v["role"] and not v["catchall"] and v["conf"] in ("medium", "high"): return True   # info@ confermata, dominio non catch-all
+    if VERIF_POLICY == "fase2" and v["status"] == "risky" and v["catchall"] and v["conf"] == "high": return True
+    return False
 
 # ----------------------------------------------------------------------------
 # 0. Geografia italiana: sigla -> (provincia, regione)
@@ -212,6 +238,8 @@ def parse_phones(*cells):
                 nat = str(n.national_number)
                 if tipo == "ALTRO" and nat.startswith("3") and len(nat) in (9, 10): tipo = "MOBILE"
                 if tipo == "ALTRO" and nat.startswith("0"): tipo = "FISSO"
+                if tipo == "MOBILE" and not nat.startswith("3"): tipo = "ALTRO"          # es. +39434... = fisso senza lo 0, non un cellulare
+                if re.match(r"^(\d)\1{6,}$", nat): tipo = "ALTRO"                       # placeholder tipo 5555555555
             out.append({"e164": e164, "tipo": tipo})
     return out
 
@@ -250,9 +278,17 @@ def classify_email(e):
     else: tipo = "NOMINATIVA_AZIENDALE"
     return {"email": s, "dominio": dom, "tipo": tipo}
 
+FIRST_NAMES = set()   # riempito prima del loop finale con i nomi propri visti nelle PERSONE
+def freemail_persona(email):
+    """gmail/libero ecc.: e' del titolare solo se il local-part sembra una persona (nome.cognome, o inizia con un nome proprio)."""
+    local = re.sub(r"[\d_]+", "", email.split("@")[0].lower())
+    parts = [t for t in re.split(r"[.\-]", local) if t]
+    if len(parts) >= 2 and all(len(t) >= 3 and t.isalpha() for t in parts[:2]): return True
+    return any(local.startswith(nm) and len(local) > len(nm) + 2 for nm in FIRST_NAMES if len(nm) >= 4)
 def is_nominativa(em):
-    """Email che arriva a UNA persona (titolare): nominativa aziendale o freemail personale."""
-    return em["tipo"] in ("NOMINATIVA_AZIENDALE", "FREEMAIL")
+    """Email che arriva a UNA persona (titolare): nominativa aziendale, o freemail che sembra personale."""
+    if em["tipo"] == "NOMINATIVA_AZIENDALE": return True
+    return em["tipo"] == "FREEMAIL" and freemail_persona(em["email"])
 
 def domain_key(u):
     if u is None or (isinstance(u, float) and pd.isna(u)): return None
@@ -838,8 +874,12 @@ def pick(g):
     fis = [p["e164"] for p in g["phones"] if p["tipo"] == "FISSO"]
     ver = [p["e164"] for p in g["phones"] if p["tipo"] == "VERDE"]
     valid = [e for e in g["emails"] if e["tipo"] not in ("INVALIDA","USA_GETTA","PEC")]
+    terzi = [e["email"] for e in valid if e["email"] in EMAIL_TERZI]
+    valid = [e for e in valid if e["email"] not in EMAIL_TERZI]
+    scartate_ver = [e["email"] for e in valid if not email_ok(e["email"])]
+    valid = [e for e in valid if email_ok(e["email"])]
     nomin = [e for e in valid if is_nominativa(e)]
-    gener = [e for e in valid if e["tipo"] == "GENERICA"]
+    gener = [e for e in valid if e["tipo"] == "GENERICA" or (e["tipo"] == "FREEMAIL" and not is_nominativa(e))]   # freemail "aziendale" (es. ecocalor@libero.it) = generica
     pec = [e["email"] for e in g["emails"] if e["tipo"] == "PEC"]
     # coerenza email-azienda: nominativa aziendale il cui dominio non c'entra con sito/nome -> sospetta (in coda)
     dk = domain_key(g["sito"])
@@ -855,7 +895,7 @@ def pick(g):
     tit_email = tit["email"] if tit and tit.get("email") else None
     if tit_email and tit_email in [e["email"] for e in nomin]:
         nomin = [e for e in nomin if e["email"] == tit_email] + [e for e in nomin if e["email"] != tit_email]
-    return dict(mobile=mob, fisso=fis, verde=ver, nomin=nomin, gener=gener, pec=pec, sospette=[e["email"] for e in nomin if not coerente(e)])
+    return dict(mobile=mob, fisso=fis, verde=ver, nomin=nomin, gener=gener, pec=pec, sospette=[e["email"] for e in nomin if not coerente(e)] + terzi, scartate_ver=scartate_ver)
 
 rows_master, rows_scarti, rows_persone = [], [], []
 sb = 0
@@ -872,6 +912,11 @@ def tier(g, c):
     s += min(GEO_PRIORITY.get(g["regione"] or "", 0), 2)
     return ("A" if s >= 7 else "B" if s >= 4 else "C"), s
 
+# email presenti in >=3 aziende diverse (non fuse perche' nomi incompatibili) = email di terzi (web agency, studio, consulente)
+_cnt = Counter(e["email"] for g in golden for e in {e["email"]: e for e in g["emails"]}.values())
+EMAIL_TERZI = {e for e, k in _cnt.items() if k >= 3}
+FIRST_NAMES = {p["nome"].strip().lower() for g in golden for p in g["persone"] if p.get("nome") and len(p["nome"].strip()) >= 4}
+CONTATTI_ID = {}
 for g in sorted(golden, key=lambda g: (g["regione"] or "zz", g["provincia"] or "zz", g["azienda"].lower())):
     c = pick(g)
     motivo = scarta(g)
@@ -904,6 +949,10 @@ for g in sorted(golden, key=lambda g: (g["regione"] or "zz", g["provincia"] or "
         "EMAIL_3": (c["nomin"][1:] + c["gener"])[1]["email"] if len(c["nomin"][1:] + c["gener"]) > 1 else None,
         "EMAIL_TUTTE": " | ".join(e["email"] for e in c["nomin"] + c["gener"]) or None,
         "EMAIL_SOSPETTE": " | ".join(c["sospette"]) or None, "PEC": " | ".join(c["pec"]) or None,
+        "EMAIL_1_VERIFICA": (vinfo(c["nomin"][0]["email"] if c["nomin"] else (c["gener"][0]["email"] if c["gener"] else "")) or {}).get("status"),
+        "EMAIL_1_CONFIDENZA": (vinfo(c["nomin"][0]["email"] if c["nomin"] else (c["gener"][0]["email"] if c["gener"] else "")) or {}).get("conf"),
+        "EMAIL_1_CATCHALL": ("SI" if (vinfo(c["nomin"][0]["email"] if c["nomin"] else (c["gener"][0]["email"] if c["gener"] else "")) or {}).get("catchall") else "NO") if verif else None,
+        "EMAIL_SCARTATE_VERIFICA": " | ".join(f"{e} ({(vinfo(e) or {}).get('status','?')}/{(vinfo(e) or {}).get('conf','?')})" for e in c["scartate_ver"]) or None,
         "MOBILE_1": c["mobile"][0] if c["mobile"] else None, "MOBILE_2": c["mobile"][1] if len(c["mobile"]) > 1 else None,
         "FISSO_1": c["fisso"][0] if c["fisso"] else None, "FISSO_2": c["fisso"][1] if len(c["fisso"]) > 1 else None,
         "NUMERO_VERDE": c["verde"][0] if c["verde"] else None, "TEL_TUTTI": " | ".join(p["e164"] + f" ({p['tipo']})" for p in g["phones"]) or None,
@@ -917,9 +966,11 @@ for g in sorted(golden, key=lambda g: (g["regione"] or "zz", g["provincia"] or "
         "NOTE": g["note"], "MOTIVO_SCARTO": motivo,
     }
     (rows_scarti if motivo else rows_master).append(row)
+    if not motivo:
+        CONTATTI_ID[id_sb] = {p["e164"] for p in g["phones"] if p["tipo"] in ("MOBILE","FISSO")} | {e["email"] for e in c["nomin"] + c["gener"]}
     for p in g["persone"]:
         rows_persone.append({"ID_P": None, "ID_SB": id_sb, "AZIENDA": g["azienda"], "NOME": p["nome"], "COGNOME": p["cognome"], "RUOLO": p["titolo"],
-                             "EMAIL": p["email"], "EMAIL_TIPO": (classify_email(p["email"]) or {}).get("tipo") if p["email"] else None,
+                             "EMAIL": p["email"], "EMAIL_TIPO": (classify_email(p["email"]) or {}).get("tipo") if p["email"] else None, "EMAIL_VERIFICA": (vinfo(p["email"]) or {}).get("status") if p["email"] else None,
                              "LINKEDIN": p["linkedin"], "E_TITOLARE_PRINCIPALE": "SI" if tit and p is g["titolare"] else "NO",
                              "AZIENDA_IN": "MASTER" if not motivo else "SCARTI", "PROVINCIA": g["provincia"], "REGIONE": g["regione"]})
 for i, p in enumerate(rows_persone, 1): p["ID_P"] = f"P-{i:05d}"
@@ -927,10 +978,12 @@ for i, p in enumerate(rows_persone, 1): p["ID_P"] = f"P-{i:05d}"
 master = pd.DataFrame(rows_master); scarti = pd.DataFrame(rows_scarti); persone = pd.DataFrame(rows_persone)
 # contatti CONDIVISI tra aziende diverse (non fuse per prudenza): segnalo con chi, così non li contatti due volte
 share = defaultdict(set)
-for col in ("MOBILE_1", "MOBILE_2", "FISSO_1", "FISSO_2", "EMAIL_1", "EMAIL_2"):
-    for val, grp in master.groupby(col)["ID_SB"]:
-        if val and len(grp) > 1:
-            for i in grp: share[i] |= (set(grp) - {i})
+_owner = defaultdict(set)
+for i, cs in CONTATTI_ID.items():
+    for k in cs: _owner[k].add(i)
+for k, ids in _owner.items():
+    if len(ids) > 1:
+        for i in ids: share[i] |= (ids - {i})
 master["CONDIVIDE_CONTATTO_CON"] = master["ID_SB"].map(lambda i: ", ".join(sorted(share[i])) if i in share else None)
 master["POSSIBILE_DOPPIONE"] = master["CONDIVIDE_CONTATTO_CON"].map(lambda v: "SI" if (v is not None and not (isinstance(v, float) and pd.isna(v)) and str(v).strip()) else "NO")
 log["possibili_doppioni_segnalati"] = int((master["POSSIBILE_DOPPIONE"] == "SI").sum())
@@ -952,6 +1005,9 @@ log.update({"aziende_uniche_totali": len(golden), "in_master": len(master), "in_
             "email_nominative_in_master": int(master["EMAIL_1_TIPO"].isin(["NOMINATIVA_AZIENDALE","FREEMAIL"]).sum()) if len(master) else 0,
             "con_mobile_in_master": int((master["HA_WHATSAPP"] == "SI").sum()) if len(master) else 0})
 
+if verif:
+    _st = pd.Series([v["status"] + "/" + v["conf"] for v in verif.values()]).value_counts()
+    log["verifica_email"] = {"policy": VERIF_POLICY, "email_verificate": len(verif), "per_stato": dict(_st)}
 xlsx = os.path.join(OUT, "LISTA_TARGET_SOLARBACK.xlsx")
 with pd.ExcelWriter(xlsx, engine="openpyxl") as w:
     readme = pd.DataFrame({"LISTA TARGET SOLARBACK — come leggerla": [
@@ -959,7 +1015,7 @@ with pd.ExcelWriter(xlsx, engine="openpyxl") as w:
         "1_EMAIL_TITOLARE = email nominativa (persona) e NESSUN mobile (può avere fisso) -> campagna email Instantly, priorità.",
         "1_EMAIL_GENERICA = solo email generiche (info@...) e nessun mobile -> campagna email separata.",
         "2_EMAIL+MOBILE_* = email + cellulare (WhatsApp) -> email + cold call.",
-        "3_SOLO_MOBILE = solo cellulare -> cold call / WhatsApp (dopo consenso).  4_SOLO_FISSO = solo fisso -> chiamata mattina.",
+        "3_SOLO_MOBILE = solo cellulare -> cold call / WhatsApp.  4_SOLO_FISSO = solo fisso -> chiamata mattina.",
         "5_SOLO_SOCIAL = solo LinkedIn/Facebook/Instagram -> DM da profilo personale.  6_SCARTI = fuori target/spazzatura, con MOTIVO (recuperabili).",
         "PERSONE = tutti i titolari/contatti persona trovati, collegati all'ID_SB. MASTER = tutto insieme.",
         "ICP_TIER A/B/C = punteggio su segnali pubblici (ads attive, recensioni, rating, sito, mobile, email nominativa, geo). Parti dalla A.",
@@ -967,6 +1023,7 @@ with pd.ExcelWriter(xlsx, engine="openpyxl") as w:
         "EMAIL_1_TIPO: NOMINATIVA_AZIENDALE (nome@azienda) · FREEMAIL (gmail/libero del titolare) · GENERICA (info@). PEC mai per cold email (Garante).",
         "EMAIL_SOSPETTE = email nominativa con dominio incoerente con l'azienda (probabile errore dello scraper): verificare prima di usarla.",
         "Storico chiamate precedente IGNORATO per scelta CEO: ogni Contatto è nuovo.",
+        (f"VERIFICA EMAIL: fatta con l'attore Apify email-verifier-pro su {len(verif)} email. Policy = {VERIF_POLICY}. Le email che non passano stanno in EMAIL_SCARTATE_VERIFICA (non nei tab campagna)." if verif else "VERIFICA EMAIL: non ancora applicata."),
         f"Generato: {pd.Timestamp.now():%Y-%m-%d %H:%M}. Righe grezze in ingresso: {log['righe_grezze_totali']}. Aziende uniche: {len(golden)}. In MASTER: {len(master)}. In SCARTI: {len(scarti)}.",
     ]})
     readme.to_excel(w, sheet_name="LEGGIMI", index=False)
@@ -979,6 +1036,7 @@ with pd.ExcelWriter(xlsx, engine="openpyxl") as w:
     # formattazione leggera
     for ws in w.book.worksheets:
         ws.freeze_panes = "B2"
+        ws.auto_filter.ref = ws.dimensions
         for cell in ws[1]:
             cell.font = cell.font.copy(bold=True)
         for col in ws.columns:

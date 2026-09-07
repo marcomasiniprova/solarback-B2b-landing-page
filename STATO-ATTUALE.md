@@ -2,7 +2,13 @@
 
 > Foto della situazione in tempo reale. **Aggiornare a fine di ogni sessione.**
 
-**Ultimo aggiornamento:** 2026-09-06 (sera) — chiarita la **matematica della
+**Ultimo aggiornamento:** 2026-09-07 (sera) — **Lista Target costruita, verificata e collaudata**:
+27.132 righe grezze → 8.498 aziende → **6.659 in lista** (+1.839 scarti motivati); **3.895 email verificate** con
+Apify email-verifier-pro (policy fase1: 2.584 usabili, 1.452 in lista come EMAIL_1); audit di riconciliazione
+TUTTO OK (`private/out/AUDIT.md`). `main` ripulito (solo sito). Regole CEO registrate (cold call = solo Valerio,
+orari, B2B-only, verifier fisso, no openapi). **In attesa:** repo privato (poi commit asset), script cold call, domini.
+
+**Aggiornamento precedente:** 2026-09-06 (sera) — chiarita la **matematica della
 valutazione €1M** (run-rate ricorrente × multiplo; NON cash collected) e **corretto
 l'errore "acquirente"**: NON esiste, il €1M è patrimonio personale (`docs/11`).
 Completata la **ricerca infrastruttura cold email** (`docs/13`: costi, DNS, Instantly,

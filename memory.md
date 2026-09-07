@@ -36,6 +36,11 @@
     **ICP** = i criteri (non una lista) · **Lista Target** = le aziende che sembrano in target ·
     funnel: **Contatto → Interessato → Qualificato → Partner** · cliente finale = **Partner**.
     Vietato usare in chat: "prospect/suspect/lead", "lista ICP", "cliente".
+- **13. Cold call = SOLO Valerio.** È l'unico outreach che fa lui a mano; io non "faccio" chiamate, gli preparo liste e
+  script. Mar→ven 10-12 e 14:30-19, lunedì mai (dettaglio `docs/05`).
+- **14. MAI più citare vincoli tipo RPO/consenso WhatsApp** (mi ha detto "smettila"): i cellulari/WhatsApp dei titolari
+  si chiamano tranquillamente; le email si mandano a qualsiasi azienda/titolare (B2B). L'unico limite vero: **mai B2C.**
+- **15. Verificatore email fisso = Apify `blessiticus/email-verifier-pro`** (via Composio). **NO openapi.com** (troppo caro).
 
 ## 3. COS'È SOLARBACK
 - Reparto acquisizione clienti esterno per **installatori fotovoltaici in Italia** (B2B PMI,
@@ -63,10 +68,14 @@
 - Registrar: **IONOS** (di Valerio, va bene). TLD **.it** (fiducia coi target IT; deliverability ~= .com se autenticato).
 
 ## 6. STACK & TOOL
-- Sito: Next.js su Netlify (`artecai.it` oggi). Form → Resend → `valerio@artecai.it`. GA4 `G-VT411CNHWJ`.
-- Delivery: **n8n** self-hosted (speed-to-lead + agente WhatsApp "Alessandro"). CRM: **Airtable** (base `app3DAWI67LKIGLXO`).
-- Acquisizione: **Instantly AI** (cold email; free trial → serve **Growth $47** per 6 caselle), LinkedIn, cold call.
-- MCP disponibili: n8n, Airtable, Composio (ha connettore **Instantly**), Notion, Supabase, Resend, GitHub, Netlify, Railway, Dropbox, Sentry.
+- **Composio** (connettore: Apify, altri) · **Apify** (account free: $5/mese, 4 run paralleli, 100 email/run sul verifier;
+  run SEMPRE async → mai `waitForFinish`, il tool MCP ha 60s di timeout) · **Instantly** (cold email) · **Airtable**
+  (CRM/operativo) · **n8n** self-hosted (delivery) · GitHub · Netlify (sito) · Google Workspace (caselle).
+- **Verificatore email FISSO (scelta CEO 7/9): Apify `blessiticus/email-verifier-pro`** — $0,85/1k email, output
+  status (valid/risky/invalid/unknown) + catch-all + role-based + confidence. Si usa su OGNI nuova lista prima di Instantly.
+  Policy: fase1 = valid + role-based non catch-all; catch-all esclusi (bounce atteso 7-12%).
+- **Arricchimento:** sito "chi siamo" → FB about → Apify GMaps contact-details. **NO openapi.com** (scelta CEO: troppo caro).
+- **Pipeline dati:** Python (`scripts/`), pandas, phonenumbers, rapidfuzz; audit riproducibile.
 
 ## 6-bis. PROFILO VALERIO (round-3, 2026-09-06)
 - **Esperienza:** mix discreto — ha **già avuto un'agenzia / venduto servizi simili** + sa
@@ -82,42 +91,43 @@
   a suo nome (email/msg reali a prospect) ③ cambiare offerta/prezzi ④ pubblicare contenuti pubblici.
 - **Tempo:** full, **7+ ore/giorno, tutti i giorni** fino al 26/10 → risponde in giornata.
 
-## 6-ter. ASSET LISTA ICP (in costruzione — priorità #1)
-- Valerio carica **~5000 lead** in **file sparsi** (scrape provincia-per-provincia via **Apify**,
-  tutte le 107 province; + **email personali di titolari** già raccolte in passato).
-- **Mio compito:** consolidare tutti i file → **deduplica** → **arricchimento** (email/titolare
-  mancanti) → **UN CSV pulito e ordinato** = lista target ICP. Salvare in **`private/`** (git-ignored,
-  contiene contatti reali). Filtrare sull'ICP (docs/02): via micro/artigiani, tieni strutturati.
-- **Formato file:** MISTI (export Apify, screenshot, PDF, testo) → normalizzo io.
-- **Campi presenti:** nome azienda + sito · email aziendale (info@) · **email personale titolare**
-  (oro per il cold) · telefono + città/provincia.
-- **Qualità:** c'è rumore (elettricisti/generici) → **filtro io** per tenere solo installatori FV strutturati.
-- **Apify: NON ora** (scelta CEO) — prima consolidare e vedere cosa manca, poi eventuale arricchimento.
-- **Stato: ✅ COSTRUITA (2026-09-07).** Script riproducibile `scripts/build_lista_target.py` (30s a rilanciare).
-  Output in `private/out/` (git-ignored): `LISTA_TARGET_SOLARBACK.xlsx` (multi-tab) + CSV + `LOG.json`. Inviato a Valerio in chat.
-- **Numeri:** 27.132 righe grezze → 8.498 aziende uniche → **6.668 in Lista Target** + 1.830 SCARTI (con motivo,
-  recuperabili). Tab: EMAIL_TITOLARE **1.004** · EMAIL_GENERICA 551 · EMAIL+MOBILE_TITOLARE 267 · EMAIL+MOBILE_GENERICA
-  299 · SOLO_MOBILE 2.569 · SOLO_FISSO 1.582 · SOLO_SOCIAL 396. Email totali 2.121 (1.271 nominative) · mobile 3.135 ·
-  FB_ADS_ATTIVE 610 · Tier A 507 / B 1.711 / C 4.450 · Lombardia 837. PERSONE: 5.777.
-- **Scelte applicate:** storico chiamate ignorato · 1 riga = 1 azienda + titolare · nominative vs info@ in tab separati ·
-  filtro aggressivo (in dubbio → SCARTI). Regola dedup: fusione solo tra nomi compatibili + valvola (max 3 nomi/cluster).
-- **Limiti onesti:** email NON ancora verificate (→ verificare PRIMA di Instantly: MillionVerifier ~$39/10k o verifier
-  Instantly); 549 "possibili doppioni" segnalati (colonna CONDIVIDE_CONTATTO_CON) non fusi per prudenza; ~30% senza
-  provincia; 72 PEC (mai per cold); rumore residuo possibile (regole) → Valerio segnala, io rifinisco.
-- **PROSSIMI PASSI:** (1) verifica email tab 1_EMAIL_TITOLARE (Tier A+B, Lombardia-first) → Instantly dopo warmup;
-  (2) arricchimento SOLO Tier A/B senza titolare/email: sito "chi siamo" → FB about → openapi.com Stakeholders (€0,095/az.)
-  → Apify GMaps contact-details; (3) RPO (Registro Opposizioni) OBBLIGATORIO prima di qualsiasi cold call (~€2/1000);
-  (4) WhatsApp solo dopo consenso (call/risposta); (5) LinkedIn DM solo Tier A (max 100 inviti/sett.).
-- ⚠️ I file lead grezzi sono su `main` (contatti reali): se il repo è pubblico = esposizione GDPR → proporre rimozione.
+## 6-ter. ASSET LISTA TARGET (✅ costruita, verificata e collaudata — 2026-09-07)
+- **Fonti:** 11 file di Valerio (GSE, Outscraper, Apify GMaps/leads/people, Foglio5, FB, Ads Library) → backup locale
+  `private/raw/` (git-ignored). Script riproducibile `scripts/build_lista_target.py` (~1 min) + audit
+  `scripts/audit_lista_target.py`. Output `private/out/` (git-ignored, contatti reali): `LISTA_TARGET_SOLARBACK.xlsx`
+  (tab per canale) + CSV + `LOG.json` + `verifica_email.csv` + `AUDIT.md`. Inviato a Valerio in chat (xlsx + zip backup).
+  **Il repo è PUBBLICO → l'asset NON si committa finché Valerio non lo rende privato** (poi va in `asset/` sul ramo).
+- **Numeri (7/9 sera):** 27.132 righe grezze → 8.498 aziende uniche → **6.659 Lista Target** + 1.839 SCARTI (con motivo).
+  Tab: EMAIL_TITOLARE 631 · EMAIL_GENERICA 443 · EMAIL+MOBILE_TITOLARE 106 · EMAIL+MOBILE_GENERICA 272 · SOLO_MOBILE 2.754 ·
+  SOLO_FISSO 1.817 · SOLO_SOCIAL 636. **Email pronte per Instantly 1.452** (737 al titolare, 715 generiche/freemail) ·
+  mobile 3.132 · FB_ADS attive 608 · Tier A 435 / B 1.632 / C 4.592 · Lombardia 837 · PERSONE 5.777 · 608 possibili
+  doppioni (flag `POSSIBILE_DOPPIONE`, lasciati separati per scelta CEO).
+- **Verifica email (fatta 7/9):** tutte le 3.895 email → Apify `blessiticus/email-verifier-pro` via Composio (39 run × 100,
+  ~$3,4). Esito: 1.841 valid · 1.742 risky (970 catch-all, 770 role-based) · 123 invalid · 189 unknown.
+  **Policy fase1 (scelta CEO dopo ricerca):** in lista solo valid + risky role-based NON catch-all = 2.584 email usabili;
+  catch-all/unknown/invalid ESCLUSE (colonna `EMAIL_SCARTATE_VERIFICA`; 773 aziende hanno perso l'email e sono scese nei
+  tab telefono). Fase2 (aggiungere catch-all) solo se il bounce della fase1 resta < 2%.
+- **Audit automatico (`AUDIT.md`): TUTTO OK.** Riconciliazione righe grezze → aziende: 19.898 lette = 19.898 presenti
+  (nessuna persa, nessuna assegnata due volte); tab = partizione; contatti condivisi tutti flaggati; email tutte verificate
+  e in policy; PEC mai come EMAIL_1; mobili tutti +393. L'audit ha trovato e ho corretto: 3 "cellulari" +39434… (fissi
+  senza lo 0), 61 email di terzi presenti su ≥3 aziende (sportelli, web agency → `EMAIL_SOSPETTE`), freemail aziendali
+  (es. nomeazienda@libero.it) spostate nel tab GENERICA. Campioni per controllo a mano: `AUDIT_CAMPIONI.csv` (100 righe).
+- **Regole applicate:** storico chiamate ignorato · 1 riga = 1 azienda + titolare · filtro aggressivo (in dubbio → SCARTI) ·
+  fusione solo tra nomi compatibili + valvola max 3 nomi/cluster · Excel minimal (header bold, filtri, freeze).
+- **Limiti onesti:** ~30% senza provincia · 72 PEC (mai cold) · rumore residuo possibile (Valerio segnala, io rifinisco) ·
+  l'audit prova la coerenza interna, NON che un'azienda sia davvero in target (lo dice solo la call).
+- **PROSSIMI PASSI:** (1) repo privato → commit `asset/` · (2) Instantly: warmup 14gg → campagna 1 con le 1.452 email
+  (Tier A+B, Lombardia→Veneto→Emilia) · (3) arricchimento SOLO Tier A/B senza email: sito "chi siamo" → FB about → Apify
+  GMaps contact-details (**NO openapi.com: troppo caro, scelta CEO**) · (4) Valerio parte con le cold call sui tab con
+  cellulare (suo processo in `docs/05`) · (5) LinkedIn DM solo Tier A.
 
-## 7. DOVE SIAMO (aggiornare!) — 2026-09-06
-- 0 clienti. Sto montando la **1ª infrastruttura cold email** (setup in `docs/13`).
-- **PROSSIMA MOSSA (scelta CEO): costruire la lista ICP** dai suoi ~5000 lead → vedi §6-ter. ⏸️ aspetto i file.
-- **In attesa da Valerio:** (a) **carica i file lead** (priorità); (b) comprare `solarback.it` + 2 domini
-  secondari su IONOS; (c) aprire Google Workspace (6 caselle); (d) decidere se pagare Instantly Growth ora.
-- Ricerca fatta: infra email (costi ~€80-95/mese), mercato (ICP ~3-5k, `docs/02`), valutazione (`docs/11`),
-  stagionalità FV (`docs/12`).
-- FV 2026: gen-lug +13% (3,7 GW), 86% residenziale con accumulo → domanda più stabile tutto l'anno. **Niche valida.**
+## 7. DOVE SIAMO (aggiornare!) — 2026-09-07 sera
+- 0 Partner. **Lista Target PRONTA e collaudata** (§6-ter): 6.659 aziende, 1.452 email verificate, 3.132 cellulari.
+- `main` ripulito (solo sito, mai più bancone di lavoro); tutto il lavoro sul ramo `Solarback-Growth-Agents`.
+- **In attesa da Valerio:** (a) **repo → PRIVATO** (Settings → General → Danger zone → Change visibility) così committo
+  l'asset; (b) **script cold call** da salvare in `docs/05`; (c) `solarback.it` + 2 domini secondari su IONOS; (d) Google
+  Workspace (6 caselle); (e) Instantly Growth sì/no.
+- **Prossima mossa mia:** appena ha i domini → DNS/warmup Instantly → campagna 1. Intanto: arricchimento Tier A/B.
 
 ## 8. PUNTATORI
 `CLAUDE.md` (costituzione) · `TODO.md` · `DECISIONI.md` · `STATO-ATTUALE.md` · `SPRINT-26-OTTOBRE.md` ·

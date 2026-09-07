@@ -12,6 +12,16 @@ contrattuale + churn0 osservato + clienti diversificati + stack AI trasferibile.
 patrimonio personale, CEO al 100%. Matematica in `docs/11`. (I clienti contano in
 quanto generano run-rate RICORRENTE.)
 
+## 🔴 ADESSO (7/9 sera) — Lista Target PRONTA, si passa all'outreach
+- [x] Lista Target costruita (6.659 aziende) + **tutte le 3.895 email verificate** (Apify verifier) + audit TUTTO OK.
+- [ ] **Valerio: repo → PRIVATO** (GitHub → Settings → General → Danger zone → Change visibility) → poi io committo
+      l'asset in `asset/` sul ramo. Fino ad allora: xlsx + zip backup inviati in chat (tienili!).
+- [ ] **Valerio: condividi lo script cold call** → lo salvo in `docs/05` e preparo il tracker Airtable.
+- [ ] Valerio: cold call sui tab `3_SOLO_MOBILE` / `2_EMAIL+MOBILE_*` (mar→ven 10-12, 14:30-19).
+- [ ] Io: appena ci sono i domini → DNS + warmup Instantly (14gg) → campagna 1 con le 1.452 email (Tier A+B, Lombardia→Veneto→Emilia).
+- [ ] Io: arricchimento Tier A/B senza email (sito → FB → Apify GMaps contact-details; NO openapi).
+- [ ] Io: collaudo Instantly con 20-30 email della fase1 → misurare bounce; se < 2% valutare fase2 (catch-all).
+
 ## 🚀 FASE ATTUALE (scelta CEO 6/9): INFRA COLD EMAIL — parte ora
 Piano completo in `docs/13-infra-cold-email.md`. **In attesa decisioni CEO (popup posto):**
 domini, Instantly Growth ora sì/no, geo di partenza, come costruire la lista.
