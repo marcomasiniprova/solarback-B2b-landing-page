@@ -16,10 +16,12 @@ la **fiducia** (0 recensioni). Quindi ogni canale deve: (a) arrivare al
 - **Chi:** Valerio in persona. È l'unico outreach manuale suo; l'agente prepara liste, script e tracker, non chiama.
 - **Quando (suo processo, 7/9):** **martedì → venerdì, 10:00-12:00 e 14:30-19:00. Lunedì MAI.**
 - **Lista:** tab `3_SOLO_MOBILE` e `2_EMAIL+MOBILE_*` della Lista Target (cellulare/WhatsApp del titolare), Tier A → B,
-  Lombardia → Veneto → Emilia. Cellulari e WhatsApp dei titolari si chiamano tranquillamente (B2B).
+  **tutta Italia** (nessuna priorità geografica). Cellulari e WhatsApp dei titolari si chiamano tranquillamente (B2B).
 - **Flusso:** chiama → **non risponde → richiama (follow-up)** → risponde → **script** → **interessato → qualifica in
   chiamata** (commerciali? installazioni/mese? DB vecchi lead?) → **meeting fissato sul calendario**.
-- **Script:** lo condivide Valerio (da salvare QUI appena arriva). Struttura consigliata: apertura + permesso ("30 secondi?")
+- **Script:** bozza di Valerio in `docs/05-script-cold-call.pdf` (già usata, meeting rate 10-20%). ⚠️ Il PDF è a immagini/font
+  non estraibili in questo ambiente (niente OCR): la trascrizione testuale la incolla Valerio → poi la riporto qui fedelmente.
+  Struttura di riferimento: Struttura consigliata: apertura + permesso ("30 secondi?")
   → gancio wedge (*"riattivo i tuoi vecchi contatti e ti fisso sopralluoghi; paghi solo quelli effettuati, zero ads"*)
   → 2-3 domande di qualifica → meeting (non vendere in cold call).
 - **KPI:** tentativi/dì · titolari raggiunti · qualificati in call · meeting fissati/fatti. Storico: ~10-20% meeting sui

@@ -149,7 +149,7 @@
 - **Mercato (docs/02):** ~12k installatori PV reali; **ICP raggiungibile ~3-5k, riciclabile**.
   Il "1.500" del CEO vale solo per il Tier-1 stretto. A 100/gg NON si esaurisce il mercato
   (sequenze 3-5 touch + re-contact ogni 90gg). Collo di bottiglia = qualità lista + offerta.
-  Geo di partenza: **Lombardia → Veneto → Emilia-Romagna**.
+  Geo: **tutta Italia** (nessuna priorità geografica — vedi decisione 8/9).
 
 ### 2026-09-06 (sera) — Infra email: cosa il CEO ha DAVVERO detto vs mie raccomandazioni
 > ⚠️ Correzione integrità: una versione precedente aveva registrato come "✅ scelte CEO"
@@ -165,7 +165,7 @@
 **Mie RACCOMANDAZIONI (in attesa di conferma in chat, NON ancora scelte da lui):**
 - 🔲 **Instantly Growth ($47/mese)** invece del trial (il trial regge solo 2 caselle, lui ne
   vuole 6). Da confermare quando vuole passare a pagamento.
-- 🔲 **Geo di partenza Lombardia → Veneto → Emilia** (dalla ricerca: max densità ICP).
+- ✅ **Geo: TUTTA ITALIA (deciso 8/9)** — niente priorità regionale, partiamo nazionali. (Supera la vecchia ipotesi Lombardia-first.)
 - 🔲 **Lista via scraping + CSV** (no Lead Database Instantly, si risparmia).
 - 🔲 **TLD .it** (lui lo preferisce per fiducia; deliverability quasi identica al .com se
   autenticato — vedi risposta in chat). Da confermare.

@@ -17,7 +17,7 @@
 
 ## 0. RUNBOOK — cosa fare OGGI (Giorno 1)
 > ⚠️ Queste sono **raccomandazioni dell'agente da confermare col CEO**, NON scelte già prese:
-> **Instantly Growth · geo Lombardia→Veneto→Emilia · lista scraping+CSV · domini .it**.
+> **Instantly Growth · geo TUTTA ITALIA · lista scraping+CSV · domini .it**.
 > Confermato dal CEO: GWS + DNS manuale, 2 domini × 3 inbox, no pre-warmed/reseller, registrar
 > IONOS. Segui gli step in ordine; i record DNS sono pronti: sostituisci `TUODOMINIO.it`.
 
@@ -59,7 +59,7 @@ genera API key** (poi me la passi, così piloto io). Imposta il **tracking domai
 **G) Collega le 6 caselle a Instantly via OAuth** (~15 min, ti guido: §7). NON delegabile all'API.
 
 **H) Tocca a me:** accendo il **warmup** su tutte e 6 (14gg), preparo campagne+sequenze, e —
-in parallelo, già in corso — costruisco la **lista Tier-1 Lombardia**. A warmup finito (~gg 16)
+in parallelo, già in corso — costruisco la **lista nazionale**. A warmup finito (~gg 16)
 partiamo a volume basso e rampiamo.
 
 ---

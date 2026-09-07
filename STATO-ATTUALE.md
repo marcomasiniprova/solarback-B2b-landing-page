@@ -107,7 +107,7 @@ cold email** (scelta CEO, parte ora).
    Workspace + Instantly Growth, fa DNS (SPF/DKIM/DMARC), collega le caselle via
    OAuth, genera API key → io piloto campagne/warmup/lead via Composio. In attesa
    delle sue decisioni (popup: domini, Instantly ora, geo, come fare la lista).
-2. **Lista installatori ICP** (~3-5k raggiungibili, `docs/02`) — Tier-1 Lombardia/
-   Veneto/Emilia, poi allargare. Scraping (Google Maps/LinkedIn/ENF) + enrichment → CSV.
+2. **Lista installatori ICP** (~3-5k raggiungibili, `docs/02`) — tutta Italia (nessuna priorità geografica);
+   scraping (Google Maps/LinkedIn/ENF) + enrichment → CSV. **Lista costruita, nazionale.**
 3. **Copy cold email** (personalizzato, umano) + sequenze 3-5 touch, durante i 14gg
    di warmup. In parallelo: attivare/collaudare n8n (`docs/09`) per reggere gli appuntamenti.

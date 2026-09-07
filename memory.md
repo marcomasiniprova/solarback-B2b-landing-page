@@ -38,6 +38,7 @@
     Vietato usare in chat: "prospect/suspect/lead", "lista ICP", "cliente".
 - **13. Cold call = SOLO Valerio.** È l'unico outreach che fa lui a mano; io non "faccio" chiamate, gli preparo liste e
   script. Mar→ven 10-12 e 14:30-19, lunedì mai (dettaglio `docs/05`).
+- **13-bis. NIENTE priorità geografica** (deciso 8/9): la lista è NAZIONALE, tutta Italia allo stesso peso. Rimosso ovunque il "prima Lombardia/Veneto/nord". Le colonne REGIONE/PROVINCIA restano solo come dato per filtrare a mano.
 - **14. MAI più citare vincoli tipo RPO/consenso WhatsApp** (mi ha detto "smettila"): i cellulari/WhatsApp dei titolari
   si chiamano tranquillamente; le email si mandano a qualsiasi azienda/titolare (B2B). L'unico limite vero: **mai B2C.**
 - **15. Verificatore email fisso = Apify `blessiticus/email-verifier-pro`** (via Composio). **NO openapi.com** (troppo caro).
@@ -100,7 +101,7 @@
 - **Numeri (7/9 sera):** 27.132 righe grezze → 8.498 aziende uniche → **6.659 Lista Target** + 1.839 SCARTI (con motivo).
   Tab: EMAIL_TITOLARE 631 · EMAIL_GENERICA 443 · EMAIL+MOBILE_TITOLARE 106 · EMAIL+MOBILE_GENERICA 272 · SOLO_MOBILE 2.754 ·
   SOLO_FISSO 1.817 · SOLO_SOCIAL 636. **Email pronte per Instantly 1.452** (737 al titolare, 715 generiche/freemail) ·
-  mobile 3.132 · FB_ADS attive 608 · Tier A 435 / B 1.632 / C 4.592 · Lombardia 837 · PERSONE 5.777 · 608 possibili
+  mobile 3.132 · FB_ADS attive 608 · Tier A 156 / B 1.061 / C 5.442 (senza bias geografico) · PERSONE 5.777 · 608 possibili
   doppioni (flag `POSSIBILE_DOPPIONE`, lasciati separati per scelta CEO).
 - **Verifica email (fatta 7/9):** tutte le 3.895 email → Apify `blessiticus/email-verifier-pro` via Composio (39 run × 100,
   ~$3,4). Esito: 1.841 valid · 1.742 risky (970 catch-all, 770 role-based) · 123 invalid · 189 unknown.
@@ -116,8 +117,14 @@
   fusione solo tra nomi compatibili + valvola max 3 nomi/cluster · Excel minimal (header bold, filtri, freeze).
 - **Limiti onesti:** ~30% senza provincia · 72 PEC (mai cold) · rumore residuo possibile (Valerio segnala, io rifinisco) ·
   l'audit prova la coerenza interna, NON che un'azienda sia davvero in target (lo dice solo la call).
-- **PROSSIMI PASSI:** (1) repo privato → commit `asset/` · (2) Instantly: warmup 14gg → campagna 1 con le 1.452 email
-  (Tier A+B, Lombardia→Veneto→Emilia) · (3) arricchimento SOLO Tier A/B senza email: sito "chi siamo" → FB about → Apify
+- **⚠️ PROMEMORIA REPO (deciso 8/9):** Valerio rende il repo **PRIVATO DOMANI** (Settings→General→Danger zone→Change
+  visibility). Su sua richiesta esplicita l'asset coi contatti è GIÀ committato sul ramo pubblico ORA (se ne assume il
+  rischio; io l'ho segnalato). Appena è privato: ok, resta com'è.
+- **ARRICCHIMENTO (deciso 8/9):** attore fisso **Apify `vdrmota/contact-info-scraper` / Contact Details Scraper**
+  (~$0,0045 per contatto TROVATO, si paga solo sui hit) sui siti delle aziende senza email; poi ri-verifica col verifier
+  fisso; **tutta Italia**, tutte le 2.738 con sito (prima A+B, poi C), **test 100 siti prima di scalare**. NO openapi.
+- **PROSSIMI PASSI:** (1) repo privato → resta com'è (già committato) · (2) Instantly: warmup 14gg → campagna 1 con le 1.452 email
+  (Tier A+B, **tutta Italia**) · (3) arricchimento di TUTTE le aziende senza email ma con sito (2.738, nazionale): Apify Contact Details Scraper (sito "chi siamo"/contatti) → ri-verifica → aggiorna DB
   GMaps contact-details (**NO openapi.com: troppo caro, scelta CEO**) · (4) Valerio parte con le cold call sui tab con
   cellulare (suo processo in `docs/05`) · (5) LinkedIn DM solo Tier A.
 
@@ -131,7 +138,7 @@
   su GitHub che è privato) · script cold call → me lo incolla al prossimo messaggio · compra ORA domini + Workspace
   (~€80-95/mese) · arricchimento Tier A/B: SÌ (sito → FB → Apify GMaps).
 - **Prossima mossa mia:** (1) verificare repo privato → commit `asset/`; (2) salvare lo script in docs/05; (3) appena ha i
-  domini → DNS/warmup Instantly → campagna 1; (4) arricchimento Tier A/B (prima Lombardia).
+  domini → DNS/warmup Instantly → campagna 1; (4) arricchimento nazionale (test 100 siti → poi scale).
 
 ## 8. PUNTATORI
 `CLAUDE.md` (costituzione) · `TODO.md` · `DECISIONI.md` · `STATO-ATTUALE.md` · `SPRINT-26-OTTOBRE.md` ·

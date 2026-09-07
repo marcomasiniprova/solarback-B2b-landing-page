@@ -129,7 +129,7 @@ def prov_from_landline(e164):
     return None
 CITY_JUNK = {"landline","mobile","toll_free","toll-free","voip","fisso","cellulare","italy","italia","nan","none"}
 CITY_BAD = re.compile(r"(specializzat|impiant|servizio|azienda|store|negozio|fornitore|installat|ditta|s\.?r\.?l|spa\b|consulen|ingegner|elettric|http|www\.)")
-GEO_PRIORITY = {"Lombardia":3, "Veneto":2, "Emilia-Romagna":2, "Piemonte":1, "Lazio":1, "Campania":1, "Puglia":1, "Toscana":1}
+# NIENTE priorità geografica: lista NAZIONALE, tutta Italia allo stesso peso (scelta CEO 8/9). Le colonne REGIONE/PROVINCIA restano solo come dato per filtrare a mano.
 
 def geo_from_text(*texts):
     """Ritorna (sigla_prov, provincia, regione) cercando sigle/nomi provincia/regione nel testo."""
@@ -909,7 +909,6 @@ def tier(g, c):
     if c["mobile"]: s += 1
     if c["nomin"]: s += 1
     if re.search(r"fotovoltaic|solar", _n((g["categoria"] or "") + " " + g["azienda"])): s += 1
-    s += min(GEO_PRIORITY.get(g["regione"] or "", 0), 2)
     return ("A" if s >= 7 else "B" if s >= 4 else "C"), s
 
 # email presenti in >=3 aziende diverse (non fuse perche' nomi incompatibili) = email di terzi (web agency, studio, consulente)
@@ -960,7 +959,7 @@ for g in sorted(golden, key=lambda g: (g["regione"] or "zz", g["provincia"] or "
         "CITTA": g["citta"], "PROVINCIA": g["provincia"], "SIGLA": g["prov"], "REGIONE": g["regione"], "CAP": g["cap"], "INDIRIZZO": g["indirizzo"], "PAESE": g["paese"],
         "SITO": g["sito"], "LINKEDIN_AZIENDA": g["li_azienda"], "FACEBOOK": g["fb"], "INSTAGRAM": g["ig"],
         "CATEGORIA": g["categoria"], "CATEGORIE_TUTTE": g["categorie"], "RATING_GOOGLE": g["rating"], "N_RECENSIONI": g["recensioni"],
-        "FB_ADS_ATTIVE": "SI" if g["fb_ads"] else "NO", "FB_ADS_PAGINA": g.get("fb_ads_pagina"), "GEO_PRIORITA": GEO_PRIORITY.get(g["regione"] or "", 0),
+        "FB_ADS_ATTIVE": "SI" if g["fb_ads"] else "NO", "FB_ADS_PAGINA": g.get("fb_ads_pagina"),
         "GEO_DA_PREFISSO": "SI" if g.get("geo_da_prefisso") else "NO",
         "N_PERSONE": len(g["persone"]), "FONTI": ", ".join(g["fonti"]), "N_RIGHE_FUSE": g["n_fonti_righe"], "SOURCE_IDS": " | ".join(g["source_ids"]),
         "NOTE": g["note"], "MOTIVO_SCARTO": motivo,
@@ -987,9 +986,9 @@ for k, ids in _owner.items():
 master["CONDIVIDE_CONTATTO_CON"] = master["ID_SB"].map(lambda i: ", ".join(sorted(share[i])) if i in share else None)
 master["POSSIBILE_DOPPIONE"] = master["CONDIVIDE_CONTATTO_CON"].map(lambda v: "SI" if (v is not None and not (isinstance(v, float) and pd.isna(v)) and str(v).strip()) else "NO")
 log["possibili_doppioni_segnalati"] = int((master["POSSIBILE_DOPPIONE"] == "SI").sum())
-# ordinamento: tier A prima, poi geo priorità, poi recensioni
+# ordinamento: tier A prima, poi recensioni (nessuna priorità geografica: lista nazionale)
 master["_t"] = master["ICP_TIER"].map({"A":0,"B":1,"C":2})
-master = master.sort_values(["BUCKET","_t","GEO_PRIORITA","N_RECENSIONI"], ascending=[True,True,False,False]).drop(columns="_t")
+master = master.sort_values(["BUCKET","_t","N_RECENSIONI"], ascending=[True,True,False]).drop(columns="_t")
 
 # ----------------------------------------------------------------------------
 # 9. Export

@@ -14,18 +14,19 @@ quanto generano run-rate RICORRENTE.)
 
 ## 🔴 ADESSO (7/9 sera) — Lista Target PRONTA, si passa all'outreach
 - [x] Lista Target costruita (6.659 aziende) + **tutte le 3.895 email verificate** (Apify verifier) + audit TUTTO OK.
-- [ ] **Valerio: repo → PRIVATO** (GitHub → Settings → General → Danger zone → Change visibility) → poi io committo
+- [ ] **Valerio: repo → PRIVATO DOMANI** (deciso 8/9; l'asset coi contatti è già sul ramo pubblico su sua richiesta)  ⟵ **PROMEMORIA**
+- [x] ~~repo → PRIVATO prima di committare~~ (GitHub → Settings → General → Danger zone → Change visibility) → poi io committo
       l'asset in `asset/` sul ramo. Fino ad allora: xlsx + zip backup inviati in chat (tienili!).
 - [ ] **Valerio: condividi lo script cold call** → lo salvo in `docs/05` e preparo il tracker Airtable.
 - [ ] Valerio: cold call sui tab `3_SOLO_MOBILE` / `2_EMAIL+MOBILE_*` (mar→ven 10-12, 14:30-19).
-- [ ] Io: appena ci sono i domini → DNS + warmup Instantly (14gg) → campagna 1 con le 1.452 email (Tier A+B, Lombardia→Veneto→Emilia).
-- [ ] Io: arricchimento Tier A/B senza email (sito → FB → Apify GMaps contact-details; NO openapi) — **approvato 7/9**, parto da Lombardia Tier A.
+- [ ] Io: appena ci sono i domini → DNS + warmup Instantly (14gg) → campagna 1 con le 1.452 email (Tier A+B, **tutta Italia**).
+- [ ] Io: arricchimento NAZIONALE di tutte le 2.738 aziende senza email ma con sito (Apify Contact Details Scraper ~$0,0045/hit → ri-verifica; NO openapi). **Test 100 siti prima di scalare** (deciso 8/9). Ordine: A+B poi C.
 - [ ] Valerio (deciso 7/9): compra ORA solarback.it + 2 domini secondari (IONOS) + Google Workspace 6 caselle.
 - [ ] Io: collaudo Instantly con 20-30 email della fase1 → misurare bounce; se < 2% valutare fase2 (catch-all).
 
 ## 🚀 FASE ATTUALE (scelta CEO 6/9): INFRA COLD EMAIL — parte ora
 Piano completo in `docs/13-infra-cold-email.md`. **In attesa decisioni CEO (popup posto):**
-domini, Instantly Growth ora sì/no, geo di partenza, come costruire la lista.
+domini, Instantly Growth ora sì/no. (Geo: TUTTA ITALIA, deciso 8/9 — niente priorità regionale.)
 Azioni CEO (una tantum) → poi io piloto via Composio:
 - [ ] Comprare **2 domini** (variazione brand, mai il primario) — registrar Cloudflare.
 - [ ] Creare **2 Google Workspace** (3 utenti/caselle l'uno) — ~€50/mese incl. IVA.

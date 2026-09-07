@@ -118,8 +118,8 @@ Tier-3 adiacenze (HVAC/PDC/efficienza che vendono anche PV). **Multicanale sulla
 volume.
 
 **Dove partire (geografia):** installatori concentrati al Nord. Ordine di attacco consigliato:
-**1) Lombardia · 2) Veneto · 3) Emilia-Romagna** (max densità di domanda E di aziende ICP —
-ENF Solar: Lombardia ~530, Veneto ~385, Emilia ~310 installatori listati), poi Piemonte, Lazio,
+**Tutta Italia, nessuna priorità geografica (deciso 8/9).** (Storico, non più in uso: si era ipotizzato Lombardia/Veneto/Emilia per densità —
+ENF Solar: Lombardia ~530, Veneto ~385, Emilia ~310 — dato solo informativo.)
 Campania, Puglia. Partire regionale = testare offerta/copy senza bruciare la lista nazionale.
 
 **Fonti scrapabili per la lista:** Google Maps (per provincia), Pagine Gialle, LinkedIn (titolari),
