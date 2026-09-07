@@ -31,8 +31,12 @@ Reparto acquisizione clienti esterno per **installatori fotovoltaici in Italia**
 ## Git
 Branch `Solarback-Growth-Agents` (solo qui). `main` = sito, NON toccare. `private/` = git-ignored.
 
+## Terminologia (usa SEMPRE — dettaglio `GLOSSARIO.md`)
+**ICP** = criteri (non una lista) · **Lista Target** = aziende che sembrano in target ·
+**Contatto → Interessato → Qualificato → Partner** · cliente = **Partner**. Mai "prospect/lead/suspect" in chat.
+
 ## Mappa file
-`memory.md` (persona+regole+stato) · `STATO-ATTUALE.md` · `TODO.md` · `DECISIONI.md` · `SPRINT-26-OTTOBRE.md` ·
+`memory.md` (persona+regole+stato) · `GLOSSARIO.md` (termini) · `STATO-ATTUALE.md` · `TODO.md` · `DECISIONI.md` · `SPRINT-26-OTTOBRE.md` ·
 `docs/00-13` (business, ICP, posizionamento, funnel, canali, domande, offerta, mercato, n8n, materiale CEO, valutazione, stagionalità, infra-email).
 
 ## Verità su di me (il modello)

@@ -32,6 +32,10 @@
 10. **REGOLA DISCOVERY:** a ogni suo prompt → **4 domande popup** per capirlo e allinearsi,
     e **appuntare tutto qui**. ⚠️ Tensione con #9③: farle **utili e pertinenti**, non di numero.
 11. **`copertura-prompt` obbligatoria** sui prompt multi-istruzione → blocco `COPERTURA: n/tot`.
+12. **TERMINOLOGIA FISSA (vedi `GLOSSARIO.md`) — usa SEMPRE questi, mai sinonimi:**
+    **ICP** = i criteri (non una lista) · **Lista Target** = le aziende che sembrano in target ·
+    funnel: **Contatto → Interessato → Qualificato → Partner** · cliente finale = **Partner**.
+    Vietato usare in chat: "prospect/suspect/lead", "lista ICP", "cliente".
 
 ## 3. COS'È SOLARBACK
 - Reparto acquisizione clienti esterno per **installatori fotovoltaici in Italia** (B2B PMI,
