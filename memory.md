@@ -171,8 +171,14 @@
 - **Risposte popup 8/9:** chiavi → pannello "Credenziali API" (mai .env) · DB vivo → **Supabase** (non Airtable, non
   Composio) · prima migrare TUTTO senza perdere un dato, poi cancellare i CSV/XLSX (FATTO) · poi verifica+merge
   arricchimento · Instantly DOPO · nuovo progetto Supabase $10/mese: OK.
-- **In attesa da Valerio:** (a) repo → PRIVATO (promesso per il 9/9); (b) cancellare la base Airtable vuota "SolarBack —
-  Lista Target"; (c) domini + Google Workspace; (d) Instantly (piano + key nel pannello, host `api.instantly.ai`).
+- **TO-DO VALERIO (salvati 8/9 sera, li fa lui a breve — RIPETERE a ogni recap finché aperti):**
+  1. **Repo → PRIVATO** (GitHub → Settings → Danger zone → Change visibility). Promesso 9/9.
+  2. **Instantly:** pannello "Credenziali API" → Nome `Instantly` · Sito `api.instantly.ai` · Header `Authorization: Bearer <key>`.
+  3. (più avanti) domini secondari + Google Workspace 6 caselle · numero WhatsApp dedicato M2 · credenziale Google Calendar in n8n.
+  - Base Airtable "SolarBack — Lista Target" `appLFL7SYWwYh1570`: NON l'ho eliminata, è vuota (0 record); resta lì morta, non serve toccarla.
+- **NOVITÀ 8/9 (VINCOLANTI):** (i) **Supabase progetto `solarback` = DB VIVO *e* backend della dashboard/cruscotto CEO**
+  che costruiremo (per questo è un progetto separato). (ii) **APIFY ora via CONNETTORE NATIVO Apify (tool `mcp__Apify__*`),
+  NON più via Composio** — su Composio non usare più Apify. Il verifier email resta lo stesso attore, richiamato dal nativo.
 - **Prossima mossa mia:** (1) guida Instantly (key nel pannello, host `api.instantly.ai`) + Composio Gmail/Sheets →
   (2) warmup + campagna 1 dalla vista `v_cold_email` → (3) dashboard KPI su Supabase.
 

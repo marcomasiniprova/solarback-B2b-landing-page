@@ -23,11 +23,11 @@
 
 | Tool | A cosa serve (SolarBack) | Come si collega | Stato |
 |---|---|---|---|
-| **Composio** (Apify, Sheets, Airtable, Gmail, WABA, Telegram) | hub che fa da ponte a molti tool; già usato per Apify e verifica email | **MCP Composio (OAuth per app)** — NON serve .env | ✅ già collegato in sessione |
-| **Apify** | scraping liste + verifica email + arricchimento | via **Composio** (o API credential `api.apify.com`) | ✅ già usato |
+| **Composio** (Sheets, Airtable, Gmail, WABA, Telegram) | hub che fa da ponte a molti tool | **MCP Composio (OAuth per app)** — NON serve .env | ✅ collegato · ⛔ NON più per Apify (vedi sotto) |
+| **Apify** | scraping liste + verifica email + arricchimento | **CONNETTORE NATIVO Apify** (tool `mcp__Apify__*`): search-actors, call-actor, get-dataset-items. **Da 8/9: NON più via Composio** (scelta CEO: il nativo è più potente) | ✅ nativo in uso |
 | **GitHub** | repo, branch, asset | **MCP GitHub** | ✅ già collegato |
 | **n8n** (self-hosted) | delivery: speed-to-lead, booking, WhatsApp | **MCP n8n** (+ eventuale API key n8n) | ✅ MCP presente |
-| **Supabase** | **DB VIVO** della Lista Target + pipeline (progetto `solarback`, $10/mese, SQL, righe illimitate) | **MCP Supabase** (schema/query) + REST PostgREST per i bulk (script) | ✅ in uso dall'8/9 |
+| **Supabase** | **DB VIVO** Lista Target/pipeline **+ backend della DASHBOARD CEO** (progetto `solarback`, $10/mese, SQL, righe illimitate). Progetto separato apposta per fare da backend del cruscotto | **MCP Supabase** (schema/query) + REST PostgREST per i bulk (script) | ✅ in uso dall'8/9 |
 | **Airtable** | SOLO base operativa n8n "SolarBack — Operativo" (delivery). NON il DB contatti (Free = 1.000 record/base) | **MCP Airtable** | ✅ MCP presente |
 | **Netlify** | sito (deploy) | **MCP Netlify** | ✅ MCP presente |
 | **Railway** | hosting servizi/n8n | **MCP Railway** | ✅ MCP presente |

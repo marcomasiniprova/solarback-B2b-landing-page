@@ -22,7 +22,8 @@ quanto generano run-rate RICORRENTE.)
       Supabase: +784 email_1, +706 cellulari, +350 fissi, +262 PEC; bucket ricalcolati. Report `asset/MERGE_ARRICCHIMENTO.md`.
 - [ ] **Io (prossimo):** guida Instantly + Composio Gmail/Sheets (chiavi nel pannello) → warmup → campagna 1 da `v_cold_email`.
 - [ ] **Valerio: repo → PRIVATO** (promesso per il 9/9)  ⟵ **PROMEMORIA** (nel repo NON ci sono contatti; solo script/conteggi).
-- [ ] **Valerio: cancella la base Airtable vuota "SolarBack — Lista Target"** (creata prima del cambio a Supabase; io non posso cancellare basi).
+- [x] Base Airtable "SolarBack — Lista Target" verificata VUOTA (0 record) e lasciata morta: non l'ho eliminata io, non serve toccarla.
+- **NOTE VINCOLANTI 8/9:** Supabase `solarback` = DB vivo **+ backend dashboard CEO** (cruscotto da costruire) · Apify ora via **connettore nativo** (`mcp__Apify__*`), NON più via Composio.
 - [ ] Valerio: cold call dalla vista `v_cold_call` di Supabase (mar→ven 10-12, 14:30-19); esiti in `stato`/`note_operative`.
 - [ ] Valerio (deciso 7/9): compra solarback.it + 2 domini secondari (IONOS) + Google Workspace 6 caselle.
 - [ ] Instantly (DOPO il merge, scelta CEO 8/9): key nel pannello "Credenziali API" (host `api.instantly.ai`) → DNS + warmup 14gg → campagna 1 con le 1.452 email (Tier A+B, tutta Italia).

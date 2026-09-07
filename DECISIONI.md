@@ -228,6 +228,13 @@ preso uno; il sito è su `artecai.it`). Serve per: (a) identità brand, (b) targ
   usate (→ `email_sospette`), fuori policy → `email_scartate_verifica`. Classificatore persona/generica con i nomi propri
   del DB. Tutto tracciato in `arricchimento_sito` (fonte, dataset, data). DB riblindato (RLS + revoke).
 
+### 2026-09-08 sera — Supabase = anche dashboard, Apify nativo
+- ✅ **Supabase progetto `solarback` NON è solo il database:** è il **backend della dashboard/cruscotto CEO** che
+  costruiremo. È il motivo per cui è un progetto Supabase separato. (Da tenere a mente in ogni scelta di schema.)
+- ✅ **Apify: da ora via CONNETTORE NATIVO** (`mcp__Apify__*`), NON più tramite Composio (CEO: il nativo è più potente).
+  Il verifier email e gli attori restano gli stessi, richiamati dal nativo.
+- ✅ **Base Airtable "SolarBack — Lista Target":** verificata vuota, lasciata morta (non eliminata da me). Il DB è Supabase.
+
 ## ⚠️ Decisioni ANCORA da prendere (vedi docs/06-domande-aperte.md)
 - Struttura finale dell'offerta + offerta pilota "founding partner" (in ricerca).
 - Numero-target reale: 30 entro il 26/10 vs. filosofia "pochi partner/anno" del
