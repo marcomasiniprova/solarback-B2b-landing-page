@@ -7,7 +7,8 @@ $10/mese, scelta CEO al posto di Airtable): tabelle `aziende` 8.498 (6.659 in li
 `verifica_email` 3.895; viste `v_cold_email` (1.452 email pronte) e `v_cold_call` (5.511 con telefono). Migrazione
 riconciliata cella per cella (588.634 celle, 0 differenze — `asset/AUDIT_SUPABASE.md`); vecchi CSV/XLSX eliminati su
 ordine CEO. Geo = tutta Italia. Script cold call salvato (`docs/05-script-cold-call.md`). Arricchimento nazionale
-fatto (dataset Apify, 2.228 email + 680 cellulari da verificare/mergiare). Stack tool + regola chiavi in `docs/14`.
+verificato e MERGIATO su Supabase (+784 email_1, +706 cellulari, +350 fissi, +262 PEC su 1.818 aziende; ora ~2.230
+email pronte in `v_cold_email`). Stack tool + regola chiavi in `docs/14`.
 **In attesa:** repo privato (9/9), domini + Workspace, Instantly (dopo il merge).
 
 **Aggiornamento precedente:** 2026-09-07 (sera) — Lista Target costruita, verificata e collaudata: 27.132 righe

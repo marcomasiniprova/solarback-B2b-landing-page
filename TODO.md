@@ -18,8 +18,9 @@ quanto generano run-rate RICORRENTE.)
       audit cella per cella 0 differenze (`asset/AUDIT_SUPABASE.md`), RLS blindato. Vecchi CSV/XLSX eliminati (ordine CEO).
 - [x] Script cold call salvato (`docs/05-script-cold-call.md`). Geo → tutta Italia ovunque. Stack tool → `docs/14`.
 - [x] Arricchimento nazionale 2.674 domini (home-only, $5): dataset Apify `N3kvzIbboJMnpGPJL` (2.228 email, 680 cellulari, 327 WhatsApp).
-- [ ] **Io (prossimo):** ri-verifica delle 2.228 email arricchite (verifier fisso, 23 run × 100) → merge su Supabase
-      (email_1 dove manca, tabella `arricchimento_sito`, ri-bucket) → audit. Regola: nominative > generiche; prendere anche cellulari/WhatsApp.
+- [x] **Verifica + merge arricchimento (8/9 sera):** 1.954 email verificate (960 in policy) → 1.818 aziende aggiornate su
+      Supabase: +784 email_1, +706 cellulari, +350 fissi, +262 PEC; bucket ricalcolati. Report `asset/MERGE_ARRICCHIMENTO.md`.
+- [ ] **Io (prossimo):** guida Instantly + Composio Gmail/Sheets (chiavi nel pannello) → warmup → campagna 1 da `v_cold_email`.
 - [ ] **Valerio: repo → PRIVATO** (promesso per il 9/9)  ⟵ **PROMEMORIA** (nel repo NON ci sono contatti; solo script/conteggi).
 - [ ] **Valerio: cancella la base Airtable vuota "SolarBack — Lista Target"** (creata prima del cambio a Supabase; io non posso cancellare basi).
 - [ ] Valerio: cold call dalla vista `v_cold_call` di Supabase (mar→ven 10-12, 14:30-19); esiti in `stato`/`note_operative`.

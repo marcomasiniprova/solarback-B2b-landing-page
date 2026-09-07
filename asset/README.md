@@ -15,6 +15,7 @@ File qui (SENZA dati personali):
 - `LOG.json` — numeri, fonti e regole di fusione della pipeline.
 - `AUDIT.md` — riconciliazione righe grezze → lista (solo conteggi/controlli).
 - `AUDIT_SUPABASE.md` — riconciliazione CSV → Supabase (solo conteggi).
+- `MERGE_ARRICCHIMENTO.md` — esito del merge dell'arricchimento dal sito (8/9): +784 email, +706 cellulari, bucket ricalcolati.
 - `enrich_urls.txt` — i 2.674 siti pubblici usati per l'arricchimento (input dell'attore Apify).
 
 Numeri (07-08/09/2026): 27.132 righe grezze → 8.498 aziende → 6.659 in lista (+1.839 scarti). 1.452 email pronte

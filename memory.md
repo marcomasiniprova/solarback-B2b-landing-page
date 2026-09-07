@@ -74,9 +74,13 @@
   Progetto **`solarback`** id **`dziylyrneqeamqzatdzo`** (eu-central-1, org "Valerio - Artec AI progetti").
   Tabelle: **`aziende`** 8.498 (6.659 Lista Target + 1.839 Scarti; colonne = CSV in minuscolo + campi vivi `stato`
   Contatto→Interessato→Qualificato→Partner/Perso/Escluso, `ultimo_contatto`, `canale_ultimo`, `note_operative`) ·
-  **`persone`** 5.777 (fk `id_sb`) · **`verifica_email`** 3.895 (`fase1_ok` calcolato = 2.584). Viste: `v_lista_target`,
-  `v_cold_email` (1.452 pronte), `v_cold_call` (5.511 con telefono). Schema `scripts/supabase_schema.sql`; bulk
-  `scripts/supabase_load.py` (PostgREST, upsert idempotente) + riconciliazione `scripts/supabase_audit.py`.
+  **`persone`** 5.777 (fk `id_sb`) · **`verifica_email`** 5.849 (3.895 iniziali + 1.954 dell'arricchimento; `fase1_ok`
+  calcolato) · **`arricchimento_sito`** 2.674 (contatti trovati sulle home, fonte/dataset/data, `mergiato_il`) ·
+  `enrich_dom2id`. Viste: `v_lista_target`, **`v_cold_email` 2.236 pronte**, **`v_cold_call` 5.788 con telefono**.
+  Bucket Lista Target (8/9 sera): EMAIL_TITOLARE 647 · EMAIL_GENERICA 806 · EMAIL+MOBILE_TITOLARE 134 ·
+  EMAIL+MOBILE_GENERICA 649 · SOLO_MOBILE 2.780 · SOLO_FISSO 1.335 · SOLO_SOCIAL 308. Schema `scripts/supabase_schema.sql`;
+  bulk `scripts/supabase_load.py` (PostgREST, upsert idempotente) + riconciliazione `scripts/supabase_audit.py` + merge
+  arricchimento `scripts/supabase_merge_enrich.py`.
   **Sicurezza:** RLS attivo senza policy + revoke ad anon/authenticated → la chiave publishable NON legge nulla; i dati
   si toccano da pannello Supabase o MCP `execute_sql`. Per un nuovo bulk: grant temporaneo → carica → revoke.
   Base Airtable "SolarBack — Lista Target" creata per sbaglio prima del cambio: VUOTA, Valerio la cancella.
@@ -150,23 +154,27 @@
 - **ARRICCHIMENTO — RUN NAZIONALE FATTO (8/9):** Apify `vdrmota/contact-info-scraper` home-only su 2.674 domini
   (2.500 ok, 174 siti morti), costo **$5,00**. Dataset Apify persistente: **`N3kvzIbboJMnpGPJL`** (run `Yc0sB8RKpVikGuKae`).
   Trovato: 1.831 domini con email (402 con NOMINATIVA titolare), 680 cellulari nuovi, 327 WhatsApp; 2.228 email uniche.
-  **DA FARE (DB dinamico!):** ri-verificare le 2.228 email col verifier fisso (batch 100, fase1) → merge SU SUPABASE
-  (`email_1` dove manca, nuova tabella `arricchimento_sito` con email/cellulari/WhatsApp/social trovati, poi ri-bucket)
-  → audit. Fonte dati: dataset Apify `N3kvzIbboJMnpGPJL` (copia `left.json` nel sandbox Composio `/mnt/files/mex/`).
-- **PROSSIMI PASSI (ordine CEO 8/9):** (1) verifica 2.228 email + merge su Supabase · (2) Instantly (dopo) · (3) Valerio
-  cold call dalla vista `v_cold_call` (suo processo in `docs/05`) · (4) LinkedIn DM solo Tier A.
+  **VERIFICA + MERGE FATTI (8/9 sera, su Supabase):** 2.482 email uniche trovate → 1.954 da verificare (270 già note,
+  258 PEC/junk escluse) → 20 run verifier (~$1,7): 305 valid · 1.154 risky · 58 invalid · 437 unknown → **960 in policy
+  fase1**. Merge (`scripts/supabase_merge_enrich.py`, tabella `arricchimento_sito` 2.674 righe): **1.818 aziende
+  aggiornate · 784 nuove `email_1`** (19 nominative, 640 generiche, 125 freemail) · **706 cellulari** · 350 fissi ·
+  262 PEC · 872 email fuori policy → `email_scartate_verifica` · 178 di terzi → `email_sospette` · 1.135 bucket cambiati.
+  Report numeri: `asset/MERGE_ARRICCHIMENTO.md`. Lezione: le home espongono quasi solo info@ (nominative rare):
+  per i titolari servono LinkedIn/persone, non il crawl del sito.
+- **PROSSIMI PASSI (ordine CEO 8/9):** (1) Instantly: key nel pannello → warmup → campagna 1 · (2) Valerio cold call
+  dalla vista `v_cold_call` (suo processo in `docs/05`) · (3) LinkedIn DM solo Tier A.
 
 ## 7. DOVE SIAMO (aggiornare!) — 2026-09-08 sera
-- 0 Partner. **Lista Target VIVA su Supabase** (§6): 6.659 aziende in lista, 1.452 email pronte (`v_cold_email`),
-  5.511 con telefono (`v_cold_call`). Arricchimento sito fatto (dataset Apify), **non ancora verificato/mergiato**.
+- 0 Partner. **Lista Target VIVA su Supabase** (§6): 6.659 aziende in lista; dopo il merge dell'arricchimento (8/9 sera)
+  **~2.230 email pronte** (`v_cold_email`, era 1.452) e più cellulari (+706). Numeri esatti: query su Supabase / §6-ter.
 - `main` = solo sito; lavoro sul ramo `Solarback-Growth-Agents`. Repo ancora PUBBLICO (nessun contatto dentro).
 - **Risposte popup 8/9:** chiavi → pannello "Credenziali API" (mai .env) · DB vivo → **Supabase** (non Airtable, non
   Composio) · prima migrare TUTTO senza perdere un dato, poi cancellare i CSV/XLSX (FATTO) · poi verifica+merge
   arricchimento · Instantly DOPO · nuovo progetto Supabase $10/mese: OK.
 - **In attesa da Valerio:** (a) repo → PRIVATO (promesso per il 9/9); (b) cancellare la base Airtable vuota "SolarBack —
   Lista Target"; (c) domini + Google Workspace; (d) Instantly (piano + key nel pannello, host `api.instantly.ai`).
-- **Prossima mossa mia:** (1) verifica delle 2.228 email arricchite (verifier fisso, 23 run × 100) → (2) merge su
-  Supabase + ri-bucket + audit → (3) guida Instantly/Composio Gmail-Sheets → (4) campagna 1.
+- **Prossima mossa mia:** (1) guida Instantly (key nel pannello, host `api.instantly.ai`) + Composio Gmail/Sheets →
+  (2) warmup + campagna 1 dalla vista `v_cold_email` → (3) dashboard KPI su Supabase.
 
 ## 7-bis. TOOL & SICUREZZA CHIAVI (deciso 8/9)
 - Stack completo e come collegarlo → **`docs/14-stack-tool.md`**. **Regola d'oro: MAI API key in `.env` nel repo

@@ -223,6 +223,10 @@ preso uno; il sito è su `artecai.it`). Serve per: (a) identità brand, (b) targ
 - ✅ **Arricchimento nazionale** (2.674 domini, home-only, $5): fatto; **regola merge**: email nominative del titolare >
   generiche; prendere ANCHE cellulari/WhatsApp/social; ogni email trovata si ri-verifica prima di entrare nel DB.
 - ✅ **Ordine dei lavori (CEO):** Supabase → cancella vecchi file → verifica+merge arricchimento → Instantly (dopo).
+- ✅ **Merge arricchimento FATTO (8/9 sera):** 1.954 email verificate (960 fase1) → +784 email_1 (19 nominative: le home
+  espongono quasi solo info@), +706 cellulari, +350 fissi, +262 PEC su 1.818 aziende; email di terzi/placeholder mai
+  usate (→ `email_sospette`), fuori policy → `email_scartate_verifica`. Classificatore persona/generica con i nomi propri
+  del DB. Tutto tracciato in `arricchimento_sito` (fonte, dataset, data). DB riblindato (RLS + revoke).
 
 ## ⚠️ Decisioni ANCORA da prendere (vedi docs/06-domande-aperte.md)
 - Struttura finale dell'offerta + offerta pilota "founding partner" (in ricerca).
