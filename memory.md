@@ -84,9 +84,14 @@
 - **Mio compito:** consolidare tutti i file → **deduplica** → **arricchimento** (email/titolare
   mancanti) → **UN CSV pulito e ordinato** = lista target ICP. Salvare in **`private/`** (git-ignored,
   contiene contatti reali). Filtrare sull'ICP (docs/02): via micro/artigiani, tieni strutturati.
-- **Tool:** **Apify via Composio** (connesso: `apify`, `apify_mcp`) — usare gli attori col credito
-  di Valerio per scrapare/arricchire il mancante. Non ri-scrapare ciò che lui ha già.
-- **Stato:** ⏸️ IN ATTESA che Valerio carichi i file in chat.
+- **Formato file:** MISTI (export Apify, screenshot, PDF, testo) → normalizzo io.
+- **Campi presenti:** nome azienda + sito · email aziendale (info@) · **email personale titolare**
+  (oro per il cold) · telefono + città/provincia.
+- **Qualità:** c'è rumore (elettricisti/generici) → **filtro io** per tenere solo installatori FV strutturati.
+- **Apify: NON ora** (scelta CEO) — prima consolidare e vedere cosa manca, poi eventuale arricchimento.
+- **Pipeline:** consolida tutti i file → dedup → filtro ICP (via non-FV) → tiering (Tier-1 strutturati
+  → Tier-2 micro-alte) → **1 CSV pulito in `private/`** + report di cosa c'è e cosa manca.
+- **Stato:** ⏸️ IN ATTESA che Valerio carichi i file in chat. Poi parto.
 
 ## 7. DOVE SIAMO (aggiornare!) — 2026-09-06
 - 0 clienti. Sto montando la **1ª infrastruttura cold email** (setup in `docs/13`).
