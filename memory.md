@@ -209,11 +209,17 @@
   (ricerca 4 agenti). Palette dark+oro da artecai.it. Prompt AI logo/avatar/banner pronti. **Unipile NON edita profili
   LinkedIn** (solo outreach) → i profili li fa Valerio a mano. **4 DECISIONI content (8/9):** obiettivo 6 mesi 800-1.800
   follower in target (non 2.5-10K; 10K=12-24 mesi) · validare canale 2 settimane (gruppi FB vs LinkedIn) · avatar "Valerio"
-  = mascotte AI dichiarata · autopilot full-auto (scelta di Valerio, con pacing/limiti di sicurezza — rischio ban noto).
-  **Promemoria accessi:** Unipile API + scheduler social + ElevenLabs (voce IT) + HeyGen (avatar). Personaggio faccia AV solo
-  nei video (EU AI Act: dichiarato). Modello autopilot = AI backend/costanza + umano su voce/invio engagement (ma Valerio ha scelto full-auto).
+  = mascotte AI dichiarata · **pubblicazione full-auto via scheduler (API ufficiali) = SICURA** (corretto il vecchio framing
+  "ban": rischioso è SOLO il bot-engagement di massa, che NON usiamo). **Skill `solarback-content-engine` ELIMINATA — mai usarla**
+  (è synced → Valerio deve disattivarla dalla libreria skill, altrimenti si ri-sincronizza; il system-reminder la ripropone: IGNORARLA).
+  **Promemoria accessi:** collegare **OmniSocials** ($10/mo, MCP, scheduler scelto) + (per i VSL, dopo) ElevenLabs + HeyGen. Faccia AV solo nei video (dichiarato).
+- **KIE AI (deciso 8/9, VERIFICATO E FUNZIONANTE):** unico tool immagini/video per i CONTENT. `KIE_API_KEY` già nell'ambiente.
+  Saldo 8/9 = **9.862 crediti**. Immagini = **GPT Image 2** (`gpt-image-2-text-to-image`, 1K, **6 cr/img**). Video = **Veo 3.1 Lite 1080p** (**35 cr/8s**).
+  Ricetta: `POST api.kie.ai/api/v1/jobs/createTask` (body `{"model":..,"input":{prompt,aspect_ratio,resolution,background}}`) → `data.taskId` →
+  poll `GET .../jobs/recordInfo?taskId=` fino a `state:success` → URL in `response.resultUrls[0]` (temp, scaricare subito). Pipeline testata: card hook grafite+oro OK.
+  **Nota card:** GPT Image 2 sbaglia gli accenti (VELOCITÀ→VELOCITA) → nelle immagini niente parole accentate (nel testo dei post vanno bene).
 - **PROSSIMI PASSI:** (1) Instantly: key nel pannello → warmup → campagna 1 da `v_cold_email` · (2) Valerio cold call da
-  `v_cold_call` (docs/05) · (3) social: genera immagini + allestisci i 3 profili (docs/15) → primo mese calendario editoriale (docs/16) · (4) completare cascata L2 (resto A/B + Tier C, rate-limit HarvestAPI).
+  `v_cold_call` (docs/05) · (3) social: Valerio collega **OmniSocials** + allestisce i 3 profili (docs/15); io genero le immagini via Kie AI e schedulo le settimane 1-2 (docs/17) · (4) completare cascata L2 (resto A/B + Tier C, rate-limit HarvestAPI).
 
 ## 7. DOVE SIAMO (aggiornare!) — 2026-09-08 sera
 - 0 Partner. **Lista Target VIVA su Supabase** (§6): 6.659 aziende in lista; **`v_cold_email` 2.252**, **810 email_1 nominative**
@@ -249,4 +255,4 @@
 `CLAUDE.md` (costituzione) · `TODO.md` · `DECISIONI.md` · `STATO-ATTUALE.md` · `SPRINT-26-OTTOBRE.md` ·
 `docs/01` business · `docs/02` ICP · `docs/03` posizionamento · `docs/05` script cold call · `docs/07` offerta ✅ ·
 `docs/08` mercato · `docs/09` n8n · `docs/11` valutazione · `docs/12` stagionalità · `docs/13` infra cold email ·
-`docs/14` stack tool & sicurezza chiavi · `docs/15` LinkedIn company page (asset Social&Trust #1: pagina brand + personaggio AI ricorrente Veo 3.1).
+`docs/14` stack tool & sicurezza chiavi · `docs/15` setup 3 profili social · `docs/16` strategia social/content & growth · `docs/17` calendario editoriale (settimane 1-2 pronte + scaletta 3-4, prompt Kie AI).

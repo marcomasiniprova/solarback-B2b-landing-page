@@ -303,6 +303,15 @@ preso uno; il sito è su `artecai.it`). Serve per: (a) identità brand, (b) targ
   coerente sulla voce) + HeyGen per lip-sync. Caroselli 7 slide, <60 parole/slide, dark+oro. GAP di mercato: nessun competitor
   FV IT fa contenuti organici col volto → spazio bianco.
 
+### 2026-09-08 (sera) — Calendario editoriale (docs/17) + Kie AI + correzione framing pubblicazione
+- ✅ **Scheduler = OmniSocials** ($10/mo, integrazione MCP → Claude scrive E schedula direttamente + social inbox). Da collegare (accesso Valerio). Zernio scartato per questa fase.
+- ✅ **Voce copy = brand "SolarBack" (noi)** su tutti i canali (il profilo LinkedIn resta "Abdellah Hmamsi", quindi niente "io/Valerio" sui post).
+- ✅ **Formato settimane 1-2 = testo + caroselli + immagini AI** (niente video-avatar in questa fase). Video Veo dalle settimane 3-4.
+- ✅ **Kie AI = unico tool immagini/video per i CONTENT** (API già nell'ambiente, 9.862 cr): GPT Image 2 (6 cr/img) + Veo 3.1 Lite 1080p (35 cr/8s). **HeyGen/ElevenLabs SOLO per i VSL lunghi (5-10 min)**, non per i content. Pipeline testata e funzionante (card hook grafite+oro).
+- ✅ **CORREZIONE framing "ban" (era errato):** pubblicazione full-auto via scheduler con **API ufficiali** = totalmente sicura ("tutto chill"). Rischioso è SOLO il **bot-engagement di massa** (commenti/DM automatici a freddo), che **NON usiamo**. Engagement a volume umano assistito dall'AI. (Aggiornato docs/16 §0.4.)
+- ✅ **Orizzonte prodotto ora:** settimane 1-2 pronte al post (10 pezzi LinkedIn + caroselli + adattamento IG + presidio FB) + scaletta 3-4. Fase = **validazione canale** (LinkedIn vs gruppi FB), decisione canale #1 a fine settimana 2 con i numeri.
+- ✅ **Skill `solarback-content-engine` ELIMINATA e vietata** (Valerio, 8/9). È synced → Valerio la disattiva dalla libreria; il system-reminder che la ripropone va ignorato.
+
 ## ⚠️ Decisioni ANCORA da prendere (vedi docs/06-domande-aperte.md)
 - Struttura finale dell'offerta + offerta pilota "founding partner" (in ricerca).
 - Numero-target reale: 30 entro il 26/10 vs. filosofia "pochi partner/anno" del
