@@ -13,14 +13,18 @@
 
 | Piattaforma | Cosa usiamo | Foto profilo | Chi la compila |
 |---|---|---|---|
-| **LinkedIn** | Profilo personale **aged** = "Valerio, volto/founder di SolarBack" | **Avatar AI "Valerio"** (faccia) | **TU, a mano** (copy pronto sotto) — vedi nota Unipile ⬇ |
+| **LinkedIn** | Profilo personale **aged** (nome resta **"Abdellah Hmamsi"**), impostato **brand-forward** su SolarBack | **Logo SolarBack** | **TU, a mano** (copy pronto sotto) |
 | **Instagram** | Account **brand** @solarback.italia (Business) | **Logo SolarBack** | **Tu** (l'API non lo fa) |
 | **Facebook** | **Pagina** SolarBack (ri-brand della Pagina Artec) | **Logo SolarBack** | **Tu** (l'API non lo fa) |
 
-> 🔴 **Unipile NON compila i profili (verificato sulla doc ufficiale 8/9).** L'unico "edit profile" di Unipile vale per
-> WhatsApp/Instagram (campi limitati); **LinkedIn NON è editabile via Unipile**. Su LinkedIn Unipile fa solo messaggi,
-> inviti, post, commenti, reaction, endorsement → cioè **OUTREACH**. Quindi: i 3 profili li allestisci **tu a mano** con
-> il copy pronto qui sotto; **Unipile lo useremo nella fase successiva** per invitare e scrivere ai titolari della Lista Target.
+> **Decisioni round 2 (8/9):** LinkedIn **brand-forward** (nome resta Abdellah Hmamsi, foto = LOGO, testo tutto SolarBack;
+> l'avatar "Valerio" appare **solo nei video**, non è la foto profilo). IG handle resta **@solarback.italia**. L'account IG
+> personale **@valerio_alieri** = profilo founder personale (rimanda a SolarBack). **Zero prova social oggi** → il copy
+> azzera il rischio (garanzia, pay-per-result) e costruisce autorità con la trasparenza, **mai numeri inventati**.
+> Contatti pubblici attivi: **WhatsApp +39 327 317 4931 · info@artecai.it · artecai.it**.
+>
+> 🟡 **API per dopo (deciso da Valerio):** in questa fase configuri i profili **tu a mano** col copy qui sotto. L'automazione
+> via API (Unipile) la vediamo **dopo**, per la fase outreach (inviti + DM + post ai titolari della Lista Target).
 
 **Coerenza (identico ovunque):** logo, palette, tagline, posizionamento, e **lo stesso volto "Valerio"** nei video.
 **Si adatta per piattaforma:** il tono (LinkedIn sobrio/autorevole · IG visivo · FB community-locale) e la quantità di emoji.
@@ -87,11 +91,11 @@ Regola: **fondo scuro + oro + bianco caldo**. Il verde/rosso solo come tocco ita
 
 ---
 
-## 3. LINKEDIN — profilo personale "aged" come volto/founder
+## 3. LINKEDIN — profilo aged (nome Abdellah), impostato brand-forward su SolarBack
 
 > Obiettivo: il profilo deve sembrare **una landing page di SolarBack**. Autorevole, professionale, converte.
-> Lo compilo **io via Unipile** (headline/about/esperienza/URL dove l'API lo consente); foto, banner e nome
-> potresti doverli mettere tu a mano (vedi nota esecuzione in fondo). Tono LinkedIn: sobrio, autorevole, numeri e metodo.
+> **Lo compili TU a mano** (copy pronto qui sotto, ~20 min): incolli headline/about/esperienza/Featured e carichi
+> foto+banner. (L'automazione via API la vediamo dopo, non ora.) Tono LinkedIn: sobrio, autorevole, numeri e metodo.
 > Emoji: **0-3, funzionali** (▪️ ✅ →), mai faccine né 🚀💰🔥.
 >
 > **Perché il profilo personale (non una Company Page):** la ricerca 2026 è netta: i profili personali battono le pagine
@@ -99,19 +103,20 @@ Regola: **fondo scuro + oro + bianco caldo**. Il verde/rosso solo come tocco ita
 > risposte** a parità di campagna. Quindi il profilo aged = volto/founder è la scelta giusta.
 > [growleads](https://growleads.io/blog/linkedin-profile-optimization-guide-2026/) · [virtuwise](https://virtuwise.io/insights/linkedin-profile-optimization-b2b-lead-generation)
 
-> ⚠️ **Nome dell'account aged:** oggi è "Abdellah Hmamsi". Cambiarlo in "Valerio ..." su un account aged è delicato
-> (LinkedIn può chiedere verifica). Da fare **con calma, dal dispositivo/IP abituale dell'account**, una volta sola.
-> Ne parliamo prima di toccarlo: è l'unica mossa a rischio ban del setup.
+> ✅ **Nome:** resta **"Abdellah Hmamsi"** (deciso: NON lo cambiamo, così zero rischio verifica/ban su un account aged).
+> Il profilo è **brand-forward**: il nome personale passa in secondo piano, perché foto = logo SolarBack e headline/about/
+> banner urlano SolarBack. Il personaggio "Valerio" non compare nel profilo: vive **solo nei video**.
 
 ### Parametri, uno per uno
-- **Nome + Cognome:** il nome del volto ("Valerio" + cognome coerente). → da decidere insieme prima di cambiarlo.
+- **Nome + Cognome:** **resta "Abdellah Hmamsi"** (non si tocca). Lo compensiamo rendendo tutto il resto pieno di SolarBack.
 - **Headline (max 220 char).** Regola d'oro: **i primi 40-60 caratteri fanno tutto** (su mobile e nei risultati di ricerca
   si vede solo quello) → il risultato va DAVANTI, il ruolo dopo. Formula: `[chi aiuto + risultato] | [come/differenza] | [ruolo]`.
   - **Opzione A (consigliata):** `Riempio l'agenda degli installatori fotovoltaici di sopralluoghi qualificati | Non liste da rincorrere: appuntamenti veri | Paghi a risultato | Founder SolarBack`
   - **Opzione B:** `Più sopralluoghi fotovoltaici in agenda, zero perditempo | Reparto acquisizione clienti esterno per installatori | Si paga solo a risultato | SolarBack`
   - **Opzione C:** `Porto clienti veri agli installatori fotovoltaici | Sopralluoghi qualificati in agenda | Paghi quando il sopralluogo è fatto | Founder @ SolarBack`
-- **Foto profilo:** avatar "Valerio" (vedi prompt sez. 6). Volto, luce morbida, sguardo in camera, leggero sorriso,
-  sfondo neutro. Quadrata ≥400×400 (meglio 800×800).
+- **Foto profilo:** **LOGO/monogramma SolarBack** (NON una faccia: il nome è Abdellah, mettere un volto creerebbe
+  incoerenza). Stesso file di IG/FB → coerenza totale. Quadrata ≥400×400 (meglio 800×800), marchio centrato, alto contrasto.
+  (L'avatar "Valerio" lo usiamo nei VIDEO, non come foto profilo.)
 - **Immagine di copertina / banner (1584×396):** landing page. Layout a 3 zone (dettaglio + prompt in sez. 6).
 - **Info / Riepilogo (About, max ~2.600 char).** Struttura che converte (ricerca 2026): **hook → credibilità → CTA**, deve
   leggersi come una landing, non come una biografia. Le prime **2 righe sono le uniche visibili prima del "…vedi altro"**:
@@ -132,7 +137,6 @@ Regola: **fondo scuro + oro + bianco caldo**. Il verde/rosso solo come tocco ita
   > Tu pensi agli impianti. All'agenda pensiamo noi.
   >
   > 📩 Vuoi la tua zona in esclusiva? Scrivimi qui o su WhatsApp +39 327 317 4931.
-  > (Valerio è il volto digitale di SolarBack.)
 - **Esperienza:** voce "Founder @ SolarBack" (data di inizio coerente con l'anzianità), descrizione breve col
   posizionamento (le prime righe della sezione About vanno bene anche qui, accorciate).
 - **In evidenza (Featured) — sezione critica per i lead:** è il "prossimo passo" per chi visita. Metti: (1) link a
@@ -155,7 +159,8 @@ Regola: **fondo scuro + oro + bianco caldo**. Il verde/rosso solo come tocco ita
 ## 4. INSTAGRAM — @solarback.italia (account BRAND)
 
 > Tono IG: visivo, umano, dietro le quinte. Emoji: **3-5** per caption, funzionali. Foto profilo = **logo**.
-> Lo compili **tu** (l'API non modifica il profilo IG).
+> Lo compili **tu** (l'API non modifica il profilo IG). Handle **@solarback.italia** confermato (si tiene).
+> Nota: l'account IG personale **@valerio_alieri** resta il tuo profilo founder personale (rimando a SolarBack), separato dal brand.
 
 ### Parametri, uno per uno
 - **Tipo account:** **Professionale → Business** (NON Creator). Business dà pulsanti azione, categoria, insight, più link.
@@ -247,19 +252,29 @@ Regola: **fondo scuro + oro + bianco caldo**. Il verde/rosso solo come tocco ita
 > Genera con ChatGPT Image / Midjourney / Veo (per l'avatar animato). Palette: grafite `#0B0B0B` + oro `#D9A441` +
 > bianco caldo `#F5F2EB`. Testo nelle immagini in **italiano**. Genera più varianti e scegli.
 
-### 6.1 — Logo / Marchio SolarBack (simbolo + wordmark)
+### 6.1 — Logo / Marchio SolarBack (serio, astratto, memorabile — NO clipart)
+> Direzione decisa con Valerio: un marchio **iconico e astratto** come Apple / Tesla / Nvidia. NON deve raffigurare
+> letteralmente sole/pannelli/frecce. Deve essere **serio, premium, memorabile**, e solo *sottilmente* evocare
+> "energia / risultati che tornano / slancio", senza cliché di settore.
 ```
-Minimalist premium B2B logo for a company named "SolarBack". Wordmark-led: the word "SolarBack" in a bold, clean
-geometric sans-serif (Manrope ExtraBold style), letter "S" and "B" capitalized. Beside or above the wordmark, a simple
-abstract mark that suggests a "return / boomerang arc" (a clean arc that departs and comes back) OR the letter "O"
-rendered as a minimal geometric sun (a single circle with a subtle gap, NO cartoon sun rays). Two colors only: warm
-gold #D9A441 mark on a deep charcoal #0B0B0B background, wordmark in warm off-white #F5F2EB. Flat vector, high contrast,
-lots of negative space, timeless, corporate, premium. NOT clipart, no gradients, no 3D, no solar panel illustration,
-no photo. Also output a square monogram version "SB" in a rounded square for profile pictures and favicon.
-Deliver on transparent background and on charcoal background. 4 variations.
+Design an iconic, premium, minimalist logo for a B2B company named "SolarBack". Quality bar: as timeless and abstract
+as Apple, Tesla, Nvidia — a mark people remember, NOT a literal illustration.
+STRICT NO-LIST: no sun, no sun rays, no solar panel, no house, no lightning bolt, no literal arrow, no clipart, no
+gradients, no 3D bevel, no photo, nothing cheesy or "marketing-agency" looking.
+Build it as an abstract geometric MONOGRAM based on the letters S and B, fused into a single distinctive symbol
+(a confident single-weight geometric form / ligature) that subtly suggests upward momentum and "return" (a shape that
+loops or comes back on itself) — but reads first as a strong abstract mark, not as an object.
+Palette: warm gold #D9A441 (or a subtle gold gradient #EFC97A→#A06C1C) on deep charcoal #0B0B0B; also provide a version
+in flat off-white #F5F2EB. Alongside the symbol, set the wordmark "SolarBack" in a bold, clean geometric sans-serif
+(Manrope / Neue Haas style), tight tracking, "Solar" and "Back" subtly distinguished (e.g. weight or the gold accent).
+Flat vector, high contrast, generous negative space, perfectly balanced, corporate and expensive-looking.
+Deliverables: (1) symbol alone, (2) symbol + wordmark horizontal lockup, (3) square "SB" monogram for profile pictures
+and favicon (must read at 32px). On transparent and on charcoal backgrounds. Produce 6 distinct abstract concepts.
 ```
 
-### 6.2 — Foto profilo avatar "Valerio" (LinkedIn + video)
+### 6.2 — Avatar "Valerio" per i VIDEO (NON è la foto profilo)
+> Le foto profilo dei 3 account sono il LOGO. Questo avatar serve per i **contenuti video** (Veo). Per l'EU AI Act
+> (art. 50) i video vanno presentati come contenuto con volto digitale (es. dicitura "volto digitale di SolarBack").
 ```
 Photorealistic professional headshot of a European/Italian man, around 38-45 years old, trustworthy and approachable,
 short neat hair, light stubble, wearing a dark quality sweater or a smart shirt (no tie, entrepreneur look). Soft key
@@ -289,7 +304,7 @@ Text in Italian exactly as written.
 Facebook page cover, 1640x624 px, premium B2B dark theme, warm gold accents (#D9A441) on charcoal (#0B0B0B), off-white
 text (#F5F2EB). Keep the BOTTOM-LEFT corner clear (profile picture and page name overlap there on mobile). Keep all
 critical content within the central ~640px-wide safe zone. Headline: "Sopralluoghi qualificati in agenda. Paghi a
-risultato." Subline: "Per installatori fotovoltaici in Italia — SolarBack". A small gold arrow/CTA pointing down toward
+risultato." Subline: "Per installatori fotovoltaici in Italia · SolarBack". A small gold arrow/CTA pointing down toward
 the page button: "Scrivici su WhatsApp". Clean, high contrast, legible on mobile, no clutter, Italian text.
 ```
 
@@ -313,7 +328,7 @@ Usa l'output monogramma "SB" del prompt 6.1 (grafite + oro), 1080×1080 PNG, mar
 
 ## 8. TODO collegati
 - [ ] Valerio: genera le immagini coi prompt §6 (logo/monogramma, avatar Valerio, banner LinkedIn, cover FB).
-- [ ] Valerio: **LinkedIn** → incolla headline + About + Featured (scheda §3) + carica foto/banner. (Nome aged: decidiamo insieme.)
+- [ ] Valerio: **LinkedIn** → incolla headline + About + Featured (scheda §3) + carica foto (logo) e banner. Nome resta "Abdellah Hmamsi".
 - [ ] Valerio: **IG** → Business + categoria + nome + bio + foto + link + highlights (scheda §4).
 - [ ] Valerio: **FB** → ri-brand Pagina + username + bio + foto/cover + CTA WhatsApp (scheda §5).
 - [ ] Valerio: compra solarback.it + email dedicata (toglie il mismatch artec).
