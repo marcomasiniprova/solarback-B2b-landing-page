@@ -290,12 +290,21 @@
   INSTAGRAM sess `session_01UjZbNFTLzLWUbgvQjjpP8t` · trig `trig_016nLAtfDupdMfbPRmxuwBnq` (30 6-18, OFF). BLOG: nessuna sessione (pausa).
   Collaudo: fire NUDO (`fire_trigger` senza text) = gira nella sessione operativa coi connettori; con text = sessione orfana. Ordine: Scout → Strategist → Analyst → Caroselli → Video → LinkedIn → Instagram. Modalità sicura per i 4 rischiosi.
   **Scrittura dashboard = funzione DB `mc.ingest(key,op,payload)` (security definer, chiave in `mc.config`)**: nessuna dipendenza dalla service key (che ora c'è: storage ok). E2E live OK 8/9 19:50 UTC.
-  Dashboard rifatta come Rivolio (sidebar solo aree, card-agente link, Space Grotesk+Inter, anello oro rotante = working). kv config: `scout:config` (cap 0,50 collaudo → 2 regime), `linkedin:stato`/`instagram:stato` (volumi 20/20 · 20, template_ok false), `strategist:config`.
+  Dashboard rifatta come Rivolio (sidebar solo aree, card-agente link, Space Grotesk+Inter, anello oro rotante = working).
+  **COLLAUDO TEAM 8/9 notte (fire nudo, sequenziale): 7/7 giri PULITI** (run_start→lavoro→run_finish, zero errori, zero run appesi):
+  SCOUT 19:56→20:10 (121 domini Tier A, 104 lead, 7 email verificate, 3 titolari promossi, 0,32 $; Comoli Ferrari SB-03973 → Scarti) ·
+  STRATEGIST 20:13→20:15 (piano:oggi contrarian da docs/17 W1 G1) · ANALYST 20:17→20:20 (analyst:ultimo, Kie 9.559 cr) ·
+  CAROSELLI 20:22→20:25 (8 slide+2 caption, solo testo) · VIDEO 20:28→20:29 (script 24s, 3 clip Veo, 0 crediti) ·
+  LINKEDIN 20:35→20:38 (pool 1.370 titolari con LinkedIn A51/B180/C1139; Template DM v1 + lista 20 Tier A; Unipile assente → inbox saltata) ·
+  INSTAGRAM 20:41→20:43 (pool 282 titolari IG A52/B173/C57; Template DM v1 + lista 20 Tier A; ⚠️ il suo primo DM vende subito, contro la sua regola → da correggere).
+  **7 bozze pending in Approvazioni** (piano, carosello, video, 2 template DM, 2 liste contatti) → decide Valerio col PIN dalla dashboard.
+  **Routine ON:** Scout 05:00 UTC (cap 0,50 $ finché non lo alza), Strategist 05:30, Analyst 18:00. **OFF:** Caroselli, Video, LinkedIn, Instagram (si accendono dopo il suo OK). kv config: `scout:config` (cap 0,50 collaudo → 2 regime), `linkedin:stato`/`instagram:stato` (volumi 20/20 · 20, template_ok false), `strategist:config`.
 - **NOVITÀ 8/9 (VINCOLANTI):** (i) **Supabase progetto `solarback` = DB VIVO *e* backend della dashboard/cruscotto CEO**
   che costruiremo (per questo è un progetto separato). (ii) **APIFY ora via CONNETTORE NATIVO Apify (tool `mcp__Apify__*`),
   NON più via Composio** — su Composio non usare più Apify. Il verifier email resta lo stesso attore, richiamato dal nativo.
-- **Prossima mossa mia:** (1) guida Instantly (key nel pannello, host `api.instantly.ai`) + Composio Gmail/Sheets →
-  (2) warmup + campagna 1 dalla vista `v_cold_email` → (3) dashboard KPI su Supabase.
+- **Prossima mossa mia:** aspettare le decisioni di Valerio sul collaudo (approvare bozze, cap Scout, accendere routine, Unipile) →
+  poi: correggere primo DM Instagram, riportare `scout:config.cap_usd` a 2, abilitare le routine approvate, fase reale (Kie, DM con template).
+  In coda: Instantly (key nel pannello, host `api.instantly.ai`) → warmup + campagna 1 da `v_cold_email`.
 
 ## 7-bis. TOOL & SICUREZZA CHIAVI (deciso 8/9)
 - Stack completo e come collegarlo → **`docs/14-stack-tool.md`**. **Regola d'oro: MAI API key in `.env` nel repo

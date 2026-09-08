@@ -330,6 +330,14 @@ preso uno; il sito è su `artecai.it`). Serve per: (a) identità brand, (b) targ
 - ✅ **Avatar:** NON generati con Kie: presi online (Fluent UI Emoji 3D, MIT). Kie resta per i content, con prudenza.
 - ✅ **Riverifica unknown:** STOP ora, resta in TODO come promemoria (lo farà lo Scout in M3 quando avanza budget).
 
+### 2026-09-08 (notte, tardi) — Team AI cablato e collaudato: 7/7
+- ✅ **Cablaggio:** Valerio ha creato 7 sessioni operative (coi connettori); io 7 routine cron agganciate (`persistent_session_id`). Fire "nudo" = gira nella sessione operativa. Ogni agente è stato informato che fa parte del TEAM AI SOLARBACK (nel prompt della routine).
+- ✅ **Collaudo sequenziale (Scout → Strategist → Analyst → Caroselli → Video → LinkedIn → Instagram): 7/7 giri puliti**, tutti visibili in dashboard (anello oro mentre lavorano, run/feed/bozze). Modalità sicura per i 4 rischiosi: 0 crediti Kie, 0 DM inviati.
+- ✅ **Scout in collaudo con cap 0,50 $** (speso 0,32 $): 3 titolari Tier A promossi. Regime 2 $/giro solo dopo OK.
+- ✅ **Routine accese:** Scout, Strategist, Analyst (i tre senza rischi esterni). **Spente:** Caroselli, Video, LinkedIn, Instagram finché Valerio non approva qualità/template.
+- ⚠️ **Onesto:** il Template DM Instagram v1 vende al primo messaggio (contro la sua stessa regola) → da correggere prima dell'approvazione. Il LinkedIn è pulito.
+- ✅ **Dashboard allineata a Rivolio** (sidebar solo aree, card intere cliccabili per reparto, Space Grotesk + Inter self-hosted, ordine home, avatar 3D Fluent Emoji, anello oro rotante quando lavora). Deploy `mission-control` ok.
+
 ## ⚠️ Decisioni ANCORA da prendere (vedi docs/06-domande-aperte.md)
 - Struttura finale dell'offerta + offerta pilota "founding partner" (in ricerca).
 - Numero-target reale: 30 entro il 26/10 vs. filosofia "pochi partner/anno" del

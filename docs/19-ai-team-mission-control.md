@@ -1,4 +1,4 @@
-# docs/19 — AI Team & Mission Control · AS-BUILT (8/9/2026)
+# docs/19 — AI Team & Mission Control · AS-BUILT (8/9/2026, aggiornato a notte tarda)
 
 > **Cos'è:** il team di agenti AI di SolarBack e la dashboard **Mission Control** che li mostra. Costruito seguendo
 > alla lettera la guida Rivolio (`docs/21`), vestito dark + oro. Qui c'è com'è fatto DAVVERO, non un piano.
@@ -20,14 +20,14 @@ Endpoint: `/api/ingest` (GET digest, POST ops) · `/api/snapshot` (stato pubblic
 ## 2. La squadra (8 ruoli, decisi da Valerio, nome `SOLAR - RUOLO`, ognuno riporta a lui)
 | Ruolo | Reparto | Tipo | Cadenza (IT) | Stato |
 |---|---|---|---|---|
-| SOLAR - CONTENT STRATEGIST | Contenuti | daily | 07:30 | da collaudare |
-| SOLAR - CAROSELLI | Contenuti | daily | 08:00 | da collaudare |
-| SOLAR - VIDEO | Contenuti | daily | 08:30 | in collaudo (0 crediti Kie finché non validato) |
-| SOLAR - BLOG | Contenuti | daily | lun 09:00 | in pausa (non prioritario) |
-| SOLAR - LINKEDIN DM OUTREACH | Outreach | **live** | ogni ora 08-20 (+ webhook inbox) | da definire (volumi, template) |
-| SOLAR - INSTAGRAM DM OUTREACH | Outreach | **live** | ogni ora 08-20 (+ webhook inbox) | da definire (volumi, template) |
-| SOLAR - SCOUT | Dati | daily | 07:00 | **definito 8/9 + skill pronta** (`.claude/skills/solar-scout/`): 4 missioni, cap 2 $/giro, promozione autonoma, Tier A/B→C. In attesa: sessione operativa (Valerio) → routine → collaudo |
-| SOLAR - DATA ANALYST | Dati | daily | 20:00 | da collaudare |
+| SOLAR - CONTENT STRATEGIST | Contenuti | daily | 07:30 | ✅ collaudato 8/9 · routine ON |
+| SOLAR - CAROSELLI | Contenuti | daily | 08:00 | ✅ collaudato 8/9 (solo testo, 0 Kie) · routine OFF fino a OK |
+| SOLAR - VIDEO | Contenuti | daily | 08:30 | ✅ collaudato 8/9 (script + shot list, 0 Kie) · routine OFF fino a OK |
+| SOLAR - BLOG | Contenuti | daily | lun 09:00 | in pausa (nessuna sessione) |
+| SOLAR - LINKEDIN DM OUTREACH | Outreach | **live** | ogni ora 08-20 (+ webhook inbox) | ✅ collaudato 8/9 in modalità sicura (template + lista proposti) · routine OFF · Unipile da collegare |
+| SOLAR - INSTAGRAM DM OUTREACH | Outreach | **live** | ogni ora 08-20 (+ webhook inbox) | ✅ collaudato 8/9 in modalità sicura · primo DM da correggere · routine OFF · Unipile da collegare |
+| SOLAR - SCOUT | Dati | daily | 07:00 | ✅ collaudato 8/9 (cap 0,50 $, 3 titolari promossi) · routine ON |
+| SOLAR - DATA ANALYST | Dati | daily | 20:00 | ✅ collaudato 8/9 · routine ON |
 
 Due classi: **"una task al giorno"** (Video, Caroselli, Strategist, Scout, Blog, Analyst) e **"sempre live"** (gli squali: LinkedIn + Instagram, mandano messaggi, presidiano inbox, rispondono subito, fissano meeting qualificati).
 
@@ -42,14 +42,15 @@ Due classi: **"una task al giorno"** (Video, Caroselli, Strategist, Scout, Blog,
 8. Onestà: se hai sbagliato, dillo e scrivilo.
 9. **Kie AI = prudenza**: crediti solo dopo collaudo del ruolo.
 
-## 4. Stato del collaudo (8/9 sera, onesto)
-- ✅ Build `next build` a zero errori TypeScript, lint pulito.
-- ✅ Deploy Railway riuscito (dominio generato), `/api/health` ok, home 200, dati reali (Lista Target 6.659).
-- ✅ Screenshot Playwright di tutte le pagine: estetica dark+oro come richiesto, nessun errore di pagina (solo il websocket realtime bloccato dal proxy del sandbox, non presente in produzione).
-- ✅ Contratto `/api/ingest`: 401 senza auth, digest ok, 503 onesto senza service key.
-- ⏳ **Scrittura via `/api/ingest` e `/api/decide`: attiva solo quando Valerio inserisce `SUPABASE_SERVICE_ROLE_KEY` su Railway** (segreto che non passa per la chat). Poi giro `scripts/e2e.mjs` end-to-end.
-- ⏳ Prova "live in due tab" (realtime): da fare dal browser di Valerio (qui il websocket è bloccato dal proxy).
-- ✅ Avatar 3D presi online (Fluent UI Emoji, MIT): cervello, cornice, ciak, memo, squalo, camera, detective, grafico. Fallback SVG.
+## 4. Stato del collaudo (8/9 notte, onesto)
+- ✅ Build `next build` a zero errori TypeScript, lint pulito. Deploy Railway ok, `/api/health` ok (`storage_write: true`).
+- ✅ Scrittura agenti: funzione DB `mc.ingest(key, op, payload)` (security definer, chiave in `mc.config`) chiamata da `/api/ingest`. E2E live ok.
+- ✅ **7 sessioni operative (Valerio) + 7 routine (io) cablate. Collaudo con fire nudo, un ruolo alla volta: 7/7 giri puliti**, ognuno con run_start → feed → bozze/kv → run_finish, visibile in dashboard (anello oro mentre lavora).
+- ✅ Modalità sicura rispettata: 0 crediti Kie, 0 inviti/DM inviati. Unipile non collegato → gli squali saltano la inbox e lo scrivono nel feed.
+- ✅ Dashboard allineata alla guida Rivolio (sidebar, card, font, ordine, avatar 3D Fluent Emoji, anello oro). Screenshot Playwright ok su server locale.
+- ⏳ In attesa di Valerio: 7 bozze da decidere in Approvazioni (PIN), cap Scout a regime, accensione routine spente, Unipile.
+- ⚠️ Da correggere: primo DM del Template Instagram v1 (vende subito).
+- ⏳ Prova "live in due tab" (realtime) dal browser di Valerio (qui il websocket è bloccato dal proxy).
 
 ## 5. Come si attiva un ruolo (runbook)
 1. Valerio crea la **sessione operativa** dalla UI (una per ruolo) e ci collega i connettori.
@@ -58,7 +59,7 @@ Due classi: **"una task al giorno"** (Video, Caroselli, Strategist, Scout, Blog,
 4. **Collaudo**: fire nudo → 2-3 giri puliti → Valerio approva la qualità → routine attiva. Un ruolo alla volta.
 
 ## 6. Env su Railway (mai nel repo)
-`NEXT_PUBLIC_SUPABASE_URL` ✅ · `NEXT_PUBLIC_SUPABASE_ANON_KEY` ✅ · `INGEST_KEY` ✅ · `DECIDE_PIN` ✅ · **`SUPABASE_SERVICE_ROLE_KEY` ⏳ (la mette Valerio: Supabase → Project Settings → API keys → service_role → Railway → Variables)**.
+`NEXT_PUBLIC_SUPABASE_URL` ✅ · `NEXT_PUBLIC_SUPABASE_ANON_KEY` ✅ · `INGEST_KEY` ✅ · `DECIDE_PIN` ✅ · `SUPABASE_SERVICE_ROLE_KEY` ✅ (inserita da Valerio l'8/9; serve solo per lo Storage, la scrittura passa dalla funzione DB).
 
 ## 7. Costi (dichiarati da Valerio, mostrati in dashboard)
 Unipile €49 fisso · OmniSocials ~$10 · Railway ~$5 · Supabase $10 · Kie ~$50 crediti/mese · Claude abbonamento (da verificare). ~€100-120/mese. Solo Kie è a consumo.
