@@ -30,7 +30,10 @@ quanto generano run-rate RICORRENTE.)
 - [ ] **Io (prossimo):** guida Instantly + Composio Gmail/Sheets (chiavi nel pannello) → warmup → campagna 1 da `v_cold_email`.
 - [ ] Prossimi asset Social&Trust: casi studio (al primo risultato reale) · coerenza sito solarback.it.
 - [x] **Setup profili social (docs/15)** + **Strategia contenuti/organic (docs/16)** + **Calendario editoriale (docs/17)**: ricerca 4 agenti + piano completo + 2 settimane pronte al post (copy + prompt immagini Kie AI) + scaletta 3-4. **4 decisioni prese (8/9):** target 800-1.800 a 6 mesi · valida canale 2 settimane · avatar mascotte dichiarata · pubblicazione full-auto via scheduler = sicura (no bot-engagement di massa).
-- [x] **Kie AI verificato** (API nell'ambiente, 9.862 crediti, pipeline immagine testata): GPT Image 2 (6 cr) + Veo 3.1 Lite (35 cr/8s).
+- [x] **Kie AI verificato** (API nell'ambiente, 9.862 crediti, pipeline immagine testata): GPT Image 2 (6 cr) + Veo 3.1 Lite (35 cr/8s). **⛔ STOP generazione finché non ho fondamenta di design (regola 10).**
+- [ ] **⚠️ FONDAMENTA CONTENT prima di produrre (regola 10):** ricerca online (copywriting, design caroselli on-brand, algoritmi per-piattaforma, video) + skill/ruoli + brand/design-system doc → POI strategia/produzione. In attesa di 4 risposte popup per lo scope.
+- [x] **`docs/18` registro attori Apify** creato (leads-finder ⭐, harvestapi, snipercoder, verifier + cimitero). Consultare SEMPRE prima di scraping.
+- [ ] **Riverificare i 630 "unknown"** (server non rispose; 20 sono titolari) con Apify verifier — 2° giro, costo minimo. Poi promuovere i valid a email_1.
 - [ ] **PROMEMORIA accessi da Valerio (per partire coi social):** collegare **OmniSocials** ($10/mo, MCP — poi schedulo io) + confermare i 3 profili pronti/collegabili · (dopo, per i VSL) ElevenLabs + HeyGen.
 - [ ] **Valerio: disattivare la skill `solarback-content-engine` dalla libreria** (è synced, si ri-ripropone anche se la elimino in locale — non va MAI usata).
 - [ ] **Valerio: repo → PRIVATO** (promesso per il 9/9)  ⟵ **PROMEMORIA** (nel repo NON ci sono contatti; solo script/conteggi).

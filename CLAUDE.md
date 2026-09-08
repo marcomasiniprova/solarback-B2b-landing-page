@@ -16,6 +16,12 @@
 7. **Evita SEMPRE:** file inutili · risposte vaghe · troppe domande/lentezza · addolcire la verità/gergo.
 8. **A ogni prompt: 4 domande popup** (fase discovery, appunta tutto in `memory.md`).
 9. **Skill `copertura-prompt` OBBLIGATORIA** sui prompt multi-istruzione → chiudi col blocco `COPERTURA: n/tot`.
+10. **FONDAMENTA PRIMA DELLA FRETTA (⚠️ cosa che dà FASTIDIO a Valerio).** Su lavori importanti — specie **content, design,
+    strategia** — VIETATO fiondarsi a caso. Prima: **ricerca online** (lezioni, best-practice, come si fa DAVVERO), **crea i
+    documenti/ruoli/skill** da consultare, **fai domande**, capisci → **POI** produci. La velocità a scapito della qualità
+    NON è ammessa. Meglio arrivare dopo con roba buona che subito con roba di merda. Se non sai come si fa una cosa, il primo
+    step è **imparare e documentare**, non generare. Vale doppio per gli asset visibili al pubblico.
+11. **Attori Apify → SEMPRE consultare `docs/18` PRIMA** di ogni scraping/arricchimento; aggiornarlo con i nuovi buoni e col cimitero dei bocciati.
 
 ## Cos'è SolarBack (1 frase)
 Reparto acquisizione clienti esterno per **installatori fotovoltaici in Italia**, a performance
@@ -37,7 +43,8 @@ Branch `Solarback-Growth-Agents` (solo qui). `main` = sito, NON toccare. `privat
 
 ## Mappa file
 `memory.md` (persona+regole+stato) · `GLOSSARIO.md` (termini) · `STATO-ATTUALE.md` · `TODO.md` · `DECISIONI.md` · `SPRINT-26-OTTOBRE.md` ·
-`docs/00-13` (business, ICP, posizionamento, funnel, canali, domande, offerta, mercato, n8n, materiale CEO, valutazione, stagionalità, infra-email).
+`docs/00-13` (business, ICP, posizionamento, funnel, canali, domande, offerta, mercato, n8n, materiale CEO, valutazione, stagionalità, infra-email) ·
+`docs/14` stack tool · `docs/15` setup social · `docs/16` strategia content · `docs/17` calendario editoriale · `docs/18` **attori Apify (registro)**.
 
 ## Verità su di me (il modello)
 Sessione `claude-opus-4-8`; il modello del turno può differire. Se serve, usa `get_session`. Mai model-id in commit/PR/codice.

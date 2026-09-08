@@ -234,7 +234,15 @@
      dell'azienda (casella vera SolarBack). È il dominio da PROTEGGERE (sito+email vere), diverso dai 2 domini secondari cold-email.
   3. **Instantly:** pannello "Credenziali API" → Nome `Instantly` · Sito `api.instantly.ai` · Header `Authorization: Bearer <key>`.
   4. (più avanti) 2 domini secondari cold-email + Google Workspace caselle · numero WhatsApp dedicato M2 · credenziale Google Calendar in n8n.
+  5. **Collegare OmniSocials** ($10/mo, MCP) per pubblicare i social. **Disattivare skill `solarback-content-engine` dalla libreria** (synced).
   - Base Airtable "SolarBack — Lista Target" `appLFL7SYWwYh1570`: NON l'ho eliminata, è vuota (0 record); resta lì morta, non serve toccarla.
+- **NOVITÀ 8/9 sera — REGOLA 10 (fondamenta prima della fretta):** Valerio incazzato perché mi sono fiondato sul content/immagini
+  senza costruire fondamenta. Su content/design/strategia: PRIMA ricerca online + documenti/ruoli/skill + domande, POI produco.
+  **STOP Kie/immagini finché non ho fondamenta di design/caroselli.** (Regola in CLAUDE.md §10, gli dà fastidio.)
+- **630 "unknown" (verificato nel DB 8/9):** email che il verifier SMTP non ha potuto giudicare (server destinatario non
+  risponde/greylisting/timeout) → NON invalide, NON colpa nostra né del contatto. **Tutte 630 su dominio proprio** (0 freemail),
+  **20 sono email di titolari**. **Da RIVERIFICARE** in un secondo giro (Apify verifier, costo minimo): una parte diventerà valid. Non ancora fatto.
+- **`docs/18` = registro attori Apify** (leads-finder ⭐, harvestapi, snipercoder, verifier). Consultarlo SEMPRE prima di scraping.
 - **NOVITÀ 8/9 (VINCOLANTI):** (i) **Supabase progetto `solarback` = DB VIVO *e* backend della dashboard/cruscotto CEO**
   che costruiremo (per questo è un progetto separato). (ii) **APIFY ora via CONNETTORE NATIVO Apify (tool `mcp__Apify__*`),
   NON più via Composio** — su Composio non usare più Apify. Il verifier email resta lo stesso attore, richiamato dal nativo.
