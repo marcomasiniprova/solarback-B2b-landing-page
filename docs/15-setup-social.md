@@ -13,9 +13,14 @@
 
 | Piattaforma | Cosa usiamo | Foto profilo | Chi la compila |
 |---|---|---|---|
-| **LinkedIn** | Profilo personale **aged** = "Valerio, volto/founder di SolarBack" | **Avatar AI "Valerio"** (faccia) | **Io via Unipile API** (quando colleghi l'account LinkedIn) |
+| **LinkedIn** | Profilo personale **aged** = "Valerio, volto/founder di SolarBack" | **Avatar AI "Valerio"** (faccia) | **TU, a mano** (copy pronto sotto) — vedi nota Unipile ⬇ |
 | **Instagram** | Account **brand** @solarback.italia (Business) | **Logo SolarBack** | **Tu** (l'API non lo fa) |
 | **Facebook** | **Pagina** SolarBack (ri-brand della Pagina Artec) | **Logo SolarBack** | **Tu** (l'API non lo fa) |
+
+> 🔴 **Unipile NON compila i profili (verificato sulla doc ufficiale 8/9).** L'unico "edit profile" di Unipile vale per
+> WhatsApp/Instagram (campi limitati); **LinkedIn NON è editabile via Unipile**. Su LinkedIn Unipile fa solo messaggi,
+> inviti, post, commenti, reaction, endorsement → cioè **OUTREACH**. Quindi: i 3 profili li allestisci **tu a mano** con
+> il copy pronto qui sotto; **Unipile lo useremo nella fase successiva** per invitare e scrivere ai titolari della Lista Target.
 
 **Coerenza (identico ovunque):** logo, palette, tagline, posizionamento, e **lo stesso volto "Valerio"** nei video.
 **Si adatta per piattaforma:** il tono (LinkedIn sobrio/autorevole · IG visivo · FB community-locale) e la quantità di emoji.
@@ -88,21 +93,29 @@ Regola: **fondo scuro + oro + bianco caldo**. Il verde/rosso solo come tocco ita
 > Lo compilo **io via Unipile** (headline/about/esperienza/URL dove l'API lo consente); foto, banner e nome
 > potresti doverli mettere tu a mano (vedi nota esecuzione in fondo). Tono LinkedIn: sobrio, autorevole, numeri e metodo.
 > Emoji: **0-3, funzionali** (▪️ ✅ →), mai faccine né 🚀💰🔥.
+>
+> **Perché il profilo personale (non una Company Page):** la ricerca 2026 è netta: i profili personali battono le pagine
+> aziendali **5-10x in reach ed engagement**, il "founder-led" è la leva #1, e un profilo curato porta **+20-25% di
+> risposte** a parità di campagna. Quindi il profilo aged = volto/founder è la scelta giusta.
+> [growleads](https://growleads.io/blog/linkedin-profile-optimization-guide-2026/) · [virtuwise](https://virtuwise.io/insights/linkedin-profile-optimization-b2b-lead-generation)
 
 > ⚠️ **Nome dell'account aged:** oggi è "Abdellah Hmamsi". Cambiarlo in "Valerio ..." su un account aged è delicato
 > (LinkedIn può chiedere verifica). Da fare **con calma, dal dispositivo/IP abituale dell'account**, una volta sola.
-> Valuta se tenere un nome credibile e coerente. (Ne parliamo prima di toccarlo.)
+> Ne parliamo prima di toccarlo: è l'unica mossa a rischio ban del setup.
 
 ### Parametri, uno per uno
 - **Nome + Cognome:** il nome del volto ("Valerio" + cognome coerente). → da decidere insieme prima di cambiarlo.
-- **Headline (max ~220 char):** è la riga che si legge ovunque. Vende il risultato, non il ruolo.
-  - Opzione A: `Aiuto gli installatori fotovoltaici a riempire l'agenda di sopralluoghi qualificati. Si paga a risultato. | Founder SolarBack`
-  - Opzione B: `Founder @ SolarBack ▪️ Portiamo sopralluoghi fotovoltaici già qualificati in agenda ai tuoi commerciali ▪️ Paghi solo a risultato`
-  - Opzione C: `Riempio l'agenda degli installatori fotovoltaici di appuntamenti veri. Niente liste da rincorrere: paghi a risultato. | SolarBack`
+- **Headline (max 220 char).** Regola d'oro: **i primi 40-60 caratteri fanno tutto** (su mobile e nei risultati di ricerca
+  si vede solo quello) → il risultato va DAVANTI, il ruolo dopo. Formula: `[chi aiuto + risultato] | [come/differenza] | [ruolo]`.
+  - **Opzione A (consigliata):** `Riempio l'agenda degli installatori fotovoltaici di sopralluoghi qualificati | Non liste da rincorrere: appuntamenti veri | Paghi a risultato | Founder SolarBack`
+  - **Opzione B:** `Più sopralluoghi fotovoltaici in agenda, zero perditempo | Reparto acquisizione clienti esterno per installatori | Si paga solo a risultato | SolarBack`
+  - **Opzione C:** `Porto clienti veri agli installatori fotovoltaici | Sopralluoghi qualificati in agenda | Paghi quando il sopralluogo è fatto | Founder @ SolarBack`
 - **Foto profilo:** avatar "Valerio" (vedi prompt sez. 6). Volto, luce morbida, sguardo in camera, leggero sorriso,
   sfondo neutro. Quadrata ≥400×400 (meglio 800×800).
 - **Immagine di copertina / banner (1584×396):** landing page. Layout a 3 zone (dettaglio + prompt in sez. 6).
-- **Info / Riepilogo (About, max ~2.600 char):** prima riga = gancio (si vede prima del "vedi altro"). Bozza:
+- **Info / Riepilogo (About, max ~2.600 char).** Struttura che converte (ricerca 2026): **hook → credibilità → CTA**, deve
+  leggersi come una landing, non come una biografia. Le prime **2 righe sono le uniche visibili prima del "…vedi altro"**:
+  devono colpire da sole. Bozza pronta:
   > Gli installatori fotovoltaici bravi hanno tutti lo stesso problema: sanno montare impianti, non riempire l'agenda.
   >
   > Io mi occupo di una cosa sola, e la faccio bene: porto **sopralluoghi qualificati in agenda** ai commerciali degli
@@ -118,15 +131,24 @@ Regola: **fondo scuro + oro + bianco caldo**. Il verde/rosso solo come tocco ita
   >
   > Tu pensi agli impianti. All'agenda pensiamo noi.
   >
-  > 📩 Scrivimi qui o su WhatsApp +39 327 317 4931.
+  > 📩 Vuoi la tua zona in esclusiva? Scrivimi qui o su WhatsApp +39 327 317 4931.
   > (Valerio è il volto digitale di SolarBack.)
-- **Esperienza:** "Founder" @ SolarBack (crea la pagina/azienda o voce testuale), descrizione breve col posizionamento.
-- **In evidenza (Featured):** link a artecai.it (titolo neutro "Scopri SolarBack") + eventuale lead magnet / calendly.
-- **URL personalizzato:** linkedin.com/in/valerio-solarback (o simile coerente).
-- **Sezione Servizi / "Disponibile per":** consulenza acquisizione clienti FV.
-- **Competenze:** Lead generation, Advertising, Sales, Fotovoltaico, Cold email.
+- **Esperienza:** voce "Founder @ SolarBack" (data di inizio coerente con l'anzianità), descrizione breve col
+  posizionamento (le prime righe della sezione About vanno bene anche qui, accorciate).
+- **In evidenza (Featured) — sezione critica per i lead:** è il "prossimo passo" per chi visita. Metti: (1) link a
+  artecai.it con titolo "Scopri SolarBack"; (2) un post/immagine "Come funziona in 3 passi"; (3) quando li avrai, un
+  caso studio. Serve dare SEMPRE un'azione da fare dopo aver letto.
+- **URL personalizzato:** `linkedin.com/in/valerio-solarback` (o coerente col nome scelto).
+- **Sezione Servizi / "Disponibile per":** consulenza acquisizione clienti fotovoltaico.
+- **Competenze:** Lead generation · Advertising (Meta) · Sales · Fotovoltaico · Cold email · Marketing a performance.
 - **Lingua profilo:** Italiano.
-- (Dettagli fini + tricks: rifiniti con la ricerca LinkedIn dedicata, vedi §7.)
+- **Ordine di priorità dei campi (impatto):** foto → banner → headline → About → Esperienza → In evidenza → Competenze → attività.
+- **Tricks 2026 ad alto impatto:**
+  1. Numeri nella headline/About appena li hai (es. "X sopralluoghi generati"): la prova batte l'aggettivo.
+  2. Il **Featured** trasforma il profilo in landing: senza, il visitatore legge e se ne va.
+  3. Rivedi il profilo **prima di ogni campagna** (cold email/ads): è la pagina dove atterrano quelli che ti cercano.
+  4. Attività recente: pochi post di valore rendono il profilo "vivo" e affidabile prima dell'outreach.
+  5. Coerenza totale con IG/FB (stesso volto nei video, stessa tagline, stesso logo): "stessa stanza" su ogni canale.
 
 ---
 
@@ -278,21 +300,22 @@ Usa l'output monogramma "SB" del prompt 6.1 (grafite + oro), 1080×1080 PNG, mar
 
 ## 7. Esecuzione + cosa manca
 
-- **LinkedIn via Unipile:** il canale API **funziona** (host su 443 con `?port=`). Ma su Unipile ora c'è solo un account
-  Instagram di test. **Per farti il profilo LinkedIn devi collegare a Unipile l'account LinkedIn aged.** Poi compilo io
-  i campi che l'API espone (headline, about, esperienza, URL). Foto/banner/nome potresti doverli caricare tu a mano se
-  l'API non li espone: lo verifico appena l'account è collegato.
-- **Instagram + Facebook:** li configuri **tu** seguendo le schede sopra (l'API non modifica questi profili). Ti guido
-  passo-passo quando vuoi.
-- **Immagini:** genera con i prompt §6, poi mandami i file/URL: per LinkedIn provo a caricarli via Unipile; per IG/FB li
-  carichi tu.
+- **LinkedIn — lo compili TU a mano.** Verificato sulla doc Unipile (8/9): **Unipile non modifica il profilo LinkedIn**
+  (l'endpoint "edit profile" copre solo WhatsApp/Instagram). Quindi headline, About, foto, banner, nome, esperienza,
+  Featured li incolli tu dalla scheda §3 (ti guido passo-passo, ~20 min). Il canale Unipile tecnicamente funziona
+  (host 443 + `?port=`), ma serve per l'outreach, non per il setup profilo.
+- **Unipile = fase OUTREACH (dopo il setup):** collega l'account LinkedIn aged a Unipile → poi automatizziamo inviti +
+  messaggi + post ai titolari della Lista Target (`v_cold_*` su Supabase). È lì che vale oro.
+- **Instagram + Facebook:** li configuri **tu** con le schede §4 e §5. Ti guido passo-passo quando vuoi.
+- **Immagini:** genera con i prompt §6, poi le carichi tu su ogni profilo (per tutti e 3, LinkedIn incluso).
 - **Da chiudere per il 100% di trust:** comprare **solarback.it** + email **info@solarback.it** → così spariscono i
   riferimenti "artec" e il brand è coerente al 100% (unico vero punto debole attuale).
 
 ## 8. TODO collegati
-- [ ] Valerio: collega l'account LinkedIn aged a Unipile → poi compilo io il profilo.
-- [ ] Valerio: genera le immagini coi prompt §6 (logo, avatar, banner, cover) e me le manda.
-- [ ] Valerio: IG → Business + categoria + nome + bio + foto + link + highlights (scheda §4).
-- [ ] Valerio: FB → ri-brand Pagina + username + bio + foto/cover + CTA WhatsApp (scheda §5).
+- [ ] Valerio: genera le immagini coi prompt §6 (logo/monogramma, avatar Valerio, banner LinkedIn, cover FB).
+- [ ] Valerio: **LinkedIn** → incolla headline + About + Featured (scheda §3) + carica foto/banner. (Nome aged: decidiamo insieme.)
+- [ ] Valerio: **IG** → Business + categoria + nome + bio + foto + link + highlights (scheda §4).
+- [ ] Valerio: **FB** → ri-brand Pagina + username + bio + foto/cover + CTA WhatsApp (scheda §5).
 - [ ] Valerio: compra solarback.it + email dedicata (toglie il mismatch artec).
+- [ ] Fase OUTREACH (dopo setup): collega LinkedIn aged a Unipile → inviti + DM + post ai titolari della Lista Target.
 - [ ] Prossima fase (separata): strategia contenuti/organic + calendario video con l'avatar.
