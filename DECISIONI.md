@@ -258,6 +258,22 @@ preso uno; il sito è su `artecai.it`). Serve per: (a) identità brand, (b) targ
   331 persone. Regola promozione: miglior decisore fase1 (valid) per azienda; un decisore batte anche un'email nominativa
   esistente. Cellulari da leads-finder ≈ 0 (confermato su 3 run) → per i cellulari titolare serve altra fonte (o restano i GMaps).
 
+### 2026-09-08 sera — round 2 titolari: leads-finder resto Tier C + cascata L2 (lezioni operative)
+- ✅ **leads-finder resto Tier C (1.600 domini/score, cap $4):** ha reso solo **42 lead puliti** su 1.100 grezzi. Causa: ~14
+  grandi aziende off-target nella lista C (bricocenter, unoenergy, cbre, carpoint… 100+ dipendenti) hanno mangiato il budget +
+  metà lead senza email. **LEZIONE VINCOLANTE:** prima di leads-finder, **escludere i domini di grandi brand/reseller** (non
+  solo il filtro >15 a valle). Il cap `maxTotalChargeUsd` va sempre messo (l'abort a cap funziona).
+- ✅ **Cascata L2 `harvestapi/linkedin-company-employees` — REGOLE (validate sul campo):** (1) input = URL LinkedIn azienda,
+  seniority `["320","310","300","220"]` (Owner/CXO/VP/Director), mode **"Full + email search"** ($12/1k) → dà nome+ruolo+email
+  verificata del decisore. Resa email ~60%, qualità altissima (owner/CEO/founder italiani). (2) **MAX ~20 aziende per run**
+  (oltre → "up to 20 companies", 0 output). (3) **LinkedIn/HarvestAPI throttla i run concorrenti**: lanciarne 5 in parallelo →
+  solo i primi 1-2 (che girano 100-120s) rendono, gli altri tornano **0 item in pochi secondi**. → **lanciare i batch UNO ALLA
+  VOLTA**, con pausa. Mapping profilo→azienda via dominio email (il campo sito-azienda spesso non si popola).
+- ✅ **Anti-rumore classificazione ruolo:** usare confini di parola (regex) — "coordinator" NON è "coo", "amministrativo" NON è
+  "amministratore". Tenere solo IT + ruolo target (scartare Supply Chain/Procurement/HR/IT anche se senior).
+- ✅ **Scritture Supabase solo via MCP execute_sql/apply_migration (service-role, bypassa RLS)** → RLS resta SEMPRE attivo,
+  niente temp-grant da richiudere. Preferibile ai POST PostgREST quando il volume è basso (decine/centinaia di righe).
+
 ## ⚠️ Decisioni ANCORA da prendere (vedi docs/06-domande-aperte.md)
 - Struttura finale dell'offerta + offerta pilota "founding partner" (in ricerca).
 - Numero-target reale: 30 entro il 26/10 vs. filosofia "pochi partner/anno" del

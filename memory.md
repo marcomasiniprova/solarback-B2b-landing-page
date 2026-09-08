@@ -174,12 +174,24 @@
   8 invalid, 4 unknown); **102 aziende** con titolare nominativo promosso a `email_1` (info@→email_2); 331 caricati come
   `persone` (tot 6.108). Bucket: 1_EMAIL_TITOLARE 646 · 2_EMAIL+MOBILE_TITOLARE 103 (749 nominative) · v_cold_email 2.246.
   **Cellulari da leads-finder ≈ 0** (Apollo non li ha per PMI IT). DB riblindato (401 con chiave publishable).
+- **SCRAPING TITOLARI ROUND 2 — 8/9 (resto Tier C + cascata L2):** (a) resto Tier C su leads-finder (1.600 domini/score,
+  cap $4 → 1.100 lead) MA il budget è stato mangiato da ~14 grandi aziende off-target (bricocenter, unoenergy, cbre… 100+ dip.
+  ciascuna) + metà senza email → solo **42 lead puliti**. LEZIONE: pre-escludere i domini di grandi brand prima di leads-finder.
+  (b) **Cascata L2** `harvestapi/linkedin-company-employees` (Full+email $12/1k, seniority Owner/CXO/VP/Director) sui **143 A/B**
+  con `linkedin_azienda`: l'attore accetta **max ~20 aziende/run**; LinkedIn **throttla i run concorrenti** (i run >20 o lanciati
+  in parallelo tornano 0 in pochi sec) → vanno lanciati UNO ALLA VOLTA. Completati ~52 aziende (test+b0+b3) → **11 lead L2**
+  owner/CEO/founder (email valida al 60%). Round tot: 53 staging → 49 verificate (37 valid, 10 risky-catchall, 2 invalid) →
+  **26 aziende** con decisore nominativo promosso a `email_1`, +48 persone. **DB sempre bloccato** (scritture solo via MCP
+  service-role, RLS mai disattivato). Speso ~$4,7 (leads-finder $4 + L2 ~$0,7 + verifier $0,04).
+- **RESTO DA RIPRENDERE (dopo cooldown LinkedIn):** batch L2 A/B rimasti (~90 aziende: b1,b2,b4,b5,b6) uno alla volta + L2 sui
+  483 Tier C con `linkedin_azienda`. Metodo validato, batch pronti in scratchpad `l2_batches.json`.
+- **NUMERI POST-ROUND-2:** email_1 nominativa **810** · persone **6.156** · `leads_titolari` 384 · `v_cold_email` 2.252.
 - **PROSSIMI PASSI:** (1) Instantly: key nel pannello → warmup → campagna 1 da `v_cold_email` · (2) Valerio cold call da
-  `v_cold_call` (docs/05) · (3) LinkedIn brand+personaggio AI (docs/15) · (opz.) più titolari: Tier C oltre 1.500 + cascata L2/L3.
+  `v_cold_call` (docs/05) · (3) LinkedIn brand+personaggio AI (docs/15) · (4) completare cascata L2 (resto A/B + Tier C).
 
 ## 7. DOVE SIAMO (aggiornare!) — 2026-09-08 sera
-- 0 Partner. **Lista Target VIVA su Supabase** (§6): 6.659 aziende in lista; dopo il merge dell'arricchimento (8/9 sera)
-  **~2.230 email pronte** (`v_cold_email`, era 1.452) e più cellulari (+706). Numeri esatti: query su Supabase / §6-ter.
+- 0 Partner. **Lista Target VIVA su Supabase** (§6): 6.659 aziende in lista; **`v_cold_email` 2.252**, **810 email_1 nominative**
+  (titolare/decisore), **6.156 persone**, più cellulari (+706 dall'arricchimento). Numeri esatti: query su Supabase / §6-ter.
 - `main` = solo sito; lavoro sul ramo `Solarback-Growth-Agents`. Repo ancora PUBBLICO (nessun contatto dentro).
 - **Risposte popup 8/9:** chiavi → pannello "Credenziali API" (mai .env) · DB vivo → **Supabase** (non Airtable, non
   Composio) · prima migrare TUTTO senza perdere un dato, poi cancellare i CSV/XLSX (FATTO) · poi verifica+merge
