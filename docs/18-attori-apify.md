@@ -29,6 +29,9 @@
 - **A cosa serve:** dato un dominio aziendale, trova i contatti dei decisori (email **e cellulare**). È il nostro cavallo per l'arricchimento a partire dai siti aziendali del DB.
 - **Input chiave:** `company_domains` (lista di domini) + filtro ruolo (Owner/Titolare/CEO/Founder).
 - **Costo:** pay-per-event, **$0,003 per lead** restituito.
+- **⚠️ TRAPPOLA (imparata sul campo):** su grandi aziende off-target (es. bricocenter, unoenergy, CBRE, Comoli Ferrari) **mangia budget** restituendo tanti lead inutili. → **Filtrare i domini a monte** (solo installatori veri) e mettere sempre un **cap di spesa per run**. Nel round L2 un cap senza filtro ha reso solo ~42 lead puliti su budget bruciato da ~14 aziende grosse.
+- **⚠️ TRAPPOLA 2 (collaudo Scout 8/9):** `maxTotalChargeUsd` **non tronca un batch già avviato** (fattura per lead a fine run): un batch da 121 domini ha superato il cap. → **batch da ≤20 domini**, cap per batch, ripetere finché c'è budget.
+- **Nota utile:** restituisce anche **decisori con URL LinkedIn ma senza email** (~70 su 121 domini Tier A): passarli a `snipercoder` (L3) per l'email.
 - **⚠️ TRAPPOLA (imparata sul campo):** su grandi aziende off-target (es. bricocenter, unoenergy, CBRE) **mangia budget** restituendo tanti lead inutili. → **Filtrare i domini a monte** (solo installatori veri) e mettere sempre un **cap di spesa per run** (es. $4). Nel round L2 un cap senza filtro ha reso solo ~42 lead puliti su budget bruciato da ~14 aziende grosse.
 - **⚠️ Riconferma 8/9 (giro SOLAR-SCOUT):** `comoliferrari.it` (SB-03973, Comoli Ferrari — distributore elettrico all'ingrosso) è taggata Tier A ma è off-target: ha reso **~68 lead di staff** (Point-of-Sale/HR/Product Manager…), ~$0,20 del giro, zero titolari utili. Regola pratica: **un'azienda che rende >10 contatti è quasi sempre un grande off-target** → escluderla dallo staging e segnalarla per re-tier/Scarti (non è compito dello Scout muovere `stato`/`tier`).
 - **⚠️ `maxTotalChargeUsd` NON è un hard-cap istantaneo:** con cap `0,20 $` il run ha comunque restituito **90 lead (~0,27 $)** prima di fermarsi. → bloccare la produzione **anche** col campo nativo `max_result`, non solo col cap di spesa; e scremare i domini a monte.
@@ -49,6 +52,7 @@
 - **Input chiave:** `linkedin_url_or_ids` (un URL o ID per riga) **oppure** `csv_file` (header `linkedin_url_or_id`).
 - **Costo:** **$0,001/email** (FREE tier; scende a $0,0006 sui tier alti).
 - **⚠️ TRAPPOLA (dichiarata dall'autore):** **input sopra 100 falliscono** → spezzare in batch da ≤100.
+- **Uso nel team:** step L3 dello Scout, sui decisori trovati da leads-finder senza email (kv `scout:l3_candidati`).
 - **Quando usarlo:** hai già le **URL dei profili persona** (es. dai dipendenti trovati) e vuoi solo l'email, spendendo pochissimo. Terzo step / alternativa economica.
 - **Stato:** rating alto (4,86) ma **non ancora provato da noi** → primo giro su un batch piccolo per validarne la resa reale prima di fidarsi.
 

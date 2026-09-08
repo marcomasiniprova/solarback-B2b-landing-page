@@ -61,6 +61,7 @@ with cand as (
   join public.verifica_email v on v.email = l.email
   join public.aziende a on a.id_sb = l.id_sb
   where l.promossa = false and v.fase1_ok and a.lista = 'Lista Target' and a.titolare_email is null
+    and l.created_at >= :run_started_at   -- solo i lead di QUESTO giro (evita conflazioni con giri precedenti)
 ), upd as (
   update public.aziende a set
     titolare_nome = c.first_name, titolare_cognome = c.last_name, titolare_ruolo = coalesce(c.title, c.role),
@@ -72,7 +73,7 @@ with cand as (
   returning a.id_sb, a.titolare_email
 )
 update public.leads_titolari l set promossa = true from upd u where u.id_sb = l.id_sb and l.email = u.titolare_email;
--- conteggio: select count(*) from public.leads_titolari where promossa and run_date = current_date;
+-- conteggio del giro: select count(*) from public.leads_titolari where promossa and created_at >= :run_started_at;
 ```
 ### Q5 · Persone (tutte le verificate del giro, non solo le promosse)
 ```sql
@@ -83,7 +84,7 @@ select 'SC-' || substr(md5(l.email), 1, 12), l.id_sb, a.azienda, l.first_name, l
 from public.leads_titolari l
 join public.aziende a on a.id_sb = l.id_sb
 join public.verifica_email v on v.email = l.email
-where v.fase1_ok and l.run_date = current_date
+where v.fase1_ok and l.created_at >= :run_started_at
   and not exists (select 1 from public.persone p where p.email = l.email);
 ```
 ### Q6 · Ricalcolo bucket (solo aziende toccate oggi)
@@ -109,7 +110,7 @@ limit 1;
 ### Report finale (numeri veri per kv/feed)
 ```sql
 select
-  (select count(*) from public.leads_titolari where promossa and run_date = current_date) as nuovi_titolari,
+  (select count(*) from public.leads_titolari where promossa and created_at >= :run_started_at) as nuovi_titolari,
   (select count(*) from public.verifica_email where fonte = 'scout-' || to_char(current_date,'YYYY-MM-DD')) as nuove_email_verificate,
   (select count(*) from public.aziende where 'SCOUT_GMAPS' = any(fonti) and created_at::date = current_date) as nuove_aziende,
   (select count(*) from public.aziende where lista='Lista Target' and titolare_email is null) as bacino_residuo;
@@ -118,9 +119,9 @@ select
 ## Attori (dal registro docs/18, con opzioni collaudate)
 | Step | Attore | Opzioni | Costo |
 |---|---|---|---|
-| L1 | `microworlds/leads-finder` | `company_domains`, filtro ruolo Owner/Titolare/CEO/Founder/Amministratore; `maxTotalChargeUsd` ≤ 1.2 | $0,003/lead |
+| L1 | `microworlds/leads-finder` | **batch da 20 domini**, `company_domains`, filtro ruolo decisori; `maxTotalChargeUsd` per batch = min(0,20, residuo). Il cap non tronca un batch avviato: batch piccoli | $0,003/lead |
 | L2 | `harvestapi/linkedin-company-employees` | max 20 aziende/run, `seniorityLevelIds ["320","310","300","220"]`, Full+email, `all_at_once`, `maxItems 60`; se 0 item in <10 s = rate-limit → salta | ~$0,012/profilo |
-| L3 (opz.) | `snipercoder/bulk-linkedin-email-finder` | ≤100 URL profilo per run | $0,001/email |
+| L3 | `snipercoder/bulk-linkedin-email-finder` | ≤100 URL profilo per run, da kv `scout:l3_candidati` (decisori L1 senza email); `fonte='L3-snipercoder'` | $0,001/email |
 | Verifica | `blessiticus/email-verifier-pro` | `emails[]` ≤100, `concurrency 20, maxRetries 1, timeout 12`; abort se appeso >150 s | $0,00085/email |
 | M2 | Google Maps scraper | **da validare** (micro-test ≤0,50 $) e registrare in docs/18 | — |
 
