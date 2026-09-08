@@ -43,7 +43,7 @@ la **fiducia** (0 recensioni). Quindi ogni canale deve: (a) arrivare al
 - **Due binari:**
   - **Outbound DM** ai titolari target (connection + messaggio con wedge).
   - **Contenuti** (founder story, dietro le quinte, risultati appena arrivano) →
-    esiste anche una skill dedicata: `solarback-content-engine`.
+    strategia + calendario editoriale in `docs/16-strategia-social-content.md`.
 - **KPI:** connessioni · risposte · meeting · (engagement/follower per il brand).
 
 ## ❌ Ads a pagamento (RIMANDATE)

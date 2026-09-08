@@ -5,7 +5,7 @@
 > LinkedIn-first (IG/FB in riuso)**. Gestione in **autopilot AI 24/7** (costanza perfetta = vantaggio sul competitor).
 > Dati da **ricerca online 2025-2026** (fonti: van der Blom/Algorithm Insights, AuthoredUp 372K-3M post, Buffer/Sprout,
 > We Are Social/NapoleonCat, Mosseri/algoritmi Meta). Copy con skill `copywriting-italiano-umano-2026`; produzione pezzi
-> con `solarback-content-engine`. Ricerca 4 agenti COMPLETA (LinkedIn organic, IG/FB organic, video-avatar+competitor, growth-playbook).
+> (i contenuti li produciamo direttamente col copy, senza la skill solarback-content-engine, eliminata). Ricerca 4 agenti COMPLETA (LinkedIn organic, IG/FB organic, video-avatar+competitor, growth-playbook).
 
 ---
 
@@ -26,17 +26,20 @@ La ricerca (fonti 2026) ha alzato 4 bandiere rosse su scelte già fatte. Te le m
    produzione", e dal 2/8/2026 la disclosure AI è obbligatoria. Opzioni: **A)** volto reale del founder primario + avatar
    per scala/ripubblicazione (max fiducia); **B)** avatar come **mascotte di marca dichiarata** (scala, ma autorità più
    lenta); **C)** ibrido caroselli+faceless+volto occasionale. → La ricerca raccomanda A o B-dichiarato. **Da decidere.**
-4. **"Autopilot 24/7 matematicamente garantito" va corretto in HUMAN-IN-THE-LOOP.** L'engagement automatizzato (bot
-   commenti/DM) nel 2026 è la via più rapida al **ban** (HeyReach bannata mar-2026; ~40% degli utenti Expandi/Dripify
-   ristretti). → **L'AI garantisce la COSTANZA** (idee, bozze, produzione, scheduling, analytics 24/7); **l'umano mette
-   voce + invio di commenti/DM** (con limiti di sicurezza). Così sei più costante E veloce dei competitor, senza bruciare
-   l'account. Il "garantito matematico" viene dalla costanza della macchina sul backend, non dall'automazione dell'engagement.
+4. **"Autopilot 24/7" = SÌ, ed è sicuro — perché PUBBLICARE ≠ BOTTARE.** Distinzione netta, era confusa e la correggo:
+   - **PUBBLICAZIONE automatica** (schedulare e postare contenuti nostri via **OmniSocials/Zernio**, che usano le **API
+     ufficiali** delle piattaforme): **totalmente sicura e legittima**. È esattamente ciò che fa qualsiasi agenzia/brand.
+     Nessun rischio ban. Questo lo automatizziamo al 100%, 24/7. → **è tutto chill.**
+   - **BOT-ENGAGEMENT di massa** (software che sparano commenti/DM/inviti automatici a freddo simulando un umano — HeyReach
+     bannata mar-2026, ~40% utenti Expandi/Dripify ristretti): **questo** è la via rapida al ban. **Noi NON lo usiamo.**
+   → L'engagement (commenti, risposte ai DM) lo facciamo a **volume umano**, anche dalla **social inbox** di OmniSocials
+   (API ufficiali), con l'AI che scrive le bozze. Quindi: **backend full-auto sulla pubblicazione, engagement umano-assistito.**
+   Sei più costante E veloce dei competitor, senza mai rischiare l'account.
 
 **DECISO da Valerio (8/9):** (1) obiettivo 6 mesi = **800-1.800 follower in target + inbound** (10K = 12-24 mesi);
 (2) **validazione canale 2 settimane** (gruppi FB installatori vs LinkedIn) prima di fissare il #1; (3) **avatar "Valerio"
-come mascotte AI dichiarata** (opzione B); (4) **full-auto** sull'engagement — scelta consapevole del rischio: si implementa
-comunque con **pacing umano + limiti di sicurezza + personalizzazione** per minimizzare il rischio di restrizione/ban (causa
-nota, accettata da Valerio).
+come mascotte AI dichiarata** (opzione B); (4) **pubblicazione full-auto 24/7 via scheduler (OmniSocials/Zernio, API
+ufficiali) = sicura**; engagement a volume umano assistito dall'AI (nessun bot di massa) → nessun rischio ban.
 
 ---
 
@@ -299,6 +302,7 @@ sostanza, audio scadente, niente sottotitoli, orizzontali riciclati.
 ## 15. TODO
 - [ ] Valerio: decidere sulle 4 verità di §0 (target, canale da validare, avatar-volto, autopilot human-in-loop).
 - [ ] Valerio: accesso a **Unipile API** + **tool scheduling social** (+ ElevenLabs/HeyGen per i video) → attivo il backend.
-- [ ] Costruire il **primo mese di calendario editoriale** (4 settimane pronte) con `solarback-content-engine`.
+- [ ] Costruire il **primo mese di calendario editoriale** (4 settimane pronte) — scrittura diretta con la skill di copy.
+- [ ] Scegliere/collegare lo scheduler: **OmniSocials** (10$/mese, ha MCP → pubblico io) o **Zernio** (tier gratis, API). Entrambi = pubblicazione via API ufficiali, sicura.
 - [ ] Generare la **face+voice reference** dell'avatar "Valerio" (coerenza) prima di produrre i video.
-- [ ] Allineare la skill `solarback-content-engine` (cita "Marco 16enne") alla realtà: Valerio founder + avatar Valerio.
+- [x] Skill `solarback-content-engine` **eliminata** (citava "Marco 16enne", non allineata): non si usa più.

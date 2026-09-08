@@ -27,9 +27,9 @@
    (15–30 partner/anno, max 50) vs. voce ("100+, 50M"). Qual è il numero reale su
    cui ottimizzare *adesso*?
 
-6. **Co-founder / team.** Round-1: "solo io". Ma esiste una skill
-   `solarback-content-engine` che cita "Marco, co-founder 16enne" per i contenuti,
-   e il repo è di `marcomasiniprova`. C'è Marco? Chi gestisce i contenuti/LinkedIn?
+6. **Co-founder / team.** Round-1: "solo io". Il repo è di `marcomasiniprova` e
+   girava il nome "Marco, co-founder" nel materiale vecchio. C'è Marco? Chi
+   gestisce i contenuti/LinkedIn (oggi: AI + Valerio)?
 
 7. **Focus primo segmento:** residenziale vs. commerciale per i primi partner?
    (Il pricing è chiaro sul residenziale; il commerciale è a %.)
@@ -58,8 +58,8 @@
   competitor: Edilhub, MF Digital, "sopralluoghi in agenda"). ✅→ ricerca avviata.
 - **Q_extra tempo del CEO →** full, **7+ ore/giorno** fino al 26/10. ✅
 - **Q4 stato n8n →** ancora da verificare direttamente (prossima mossa).
-- **Q6 co-founder/Marco →** non ancora chiarito (skill `solarback-content-engine`
-  cita "Marco co-founder"); Valerio nel round-1 ha detto "solo io". Da chiarire.
+- **Q6 co-founder/Marco →** non ancora chiarito (materiale vecchio citava "Marco
+  co-founder"); Valerio nel round-1 ha detto "solo io". Da chiarire.
 
 **Round-4 — 2026-09-06 (obiettivo valutazione):**
 - **€200k →** cassa incassata nei ~50 giorni. ✅
