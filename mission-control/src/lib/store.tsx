@@ -1,7 +1,8 @@
 "use client";
 import React, { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { hasSupabase, supabaseBrowser } from "./supabase";
-import type { Agent, AgentRun, Approval, Asset, FeedItem, KpiFunnelRow, KpiListe, Meeting, Mode, OutreachMsg, Snapshot } from "./types";
+import type { Mode, Snapshot } from "./types";
+import { fetchSnapshot } from "./snapshot";
 import { demoSnapshot } from "./demo";
 
 type Ctx = {
@@ -27,38 +28,20 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
   const realtimeOk = useRef(false);
 
   const refetch = useCallback(async () => {
-    const sb = supabaseBrowser();
-    if (!sb) return;
+    if (!hasSupabase) return;
     try {
-      const [agents, runs, feed, kv, approvals, assets, outreach, meetings, kpiFunnel, kpiListe] = await Promise.all([
-        sb.from("agents").select("*").order("sort", { ascending: true }),
-        sb.from("agent_runs").select("*").order("started_at", { ascending: false }).limit(300),
-        sb.from("activity_feed").select("*").order("ts", { ascending: false }).limit(150),
-        sb.from("kv").select("*"),
-        sb.from("approvals").select("*").order("created_at", { ascending: false }).limit(200),
-        sb.from("assets").select("*").order("created_at", { ascending: false }).limit(100),
-        sb.from("outreach_msgs").select("*").order("ts", { ascending: false }).limit(200),
-        sb.from("meetings").select("*").order("created_at", { ascending: false }).limit(100),
-        sb.from("kpi_funnel").select("*"),
-        sb.from("kpi_liste").select("*").maybeSingle(),
-      ]);
-      const core = [agents, runs, feed, kv, approvals, assets, outreach, meetings];
-      const firstErr = core.find((r) => r.error)?.error;
-      if (firstErr) throw new Error(firstErr.message);
-      const kvMap: Record<string, unknown> = {};
-      for (const row of (kv.data ?? []) as { key: string; value: unknown }[]) kvMap[row.key] = row.value;
-      setData({
-        agents: (agents.data ?? []) as Agent[],
-        runs: (runs.data ?? []) as AgentRun[],
-        feed: (feed.data ?? []) as FeedItem[],
-        kv: kvMap,
-        approvals: (approvals.data ?? []) as Approval[],
-        assets: (assets.data ?? []) as Asset[],
-        outreach: (outreach.data ?? []) as OutreachMsg[],
-        meetings: (meetings.data ?? []) as Meeting[],
-        kpiFunnel: (kpiFunnel.error ? [] : (kpiFunnel.data ?? [])) as KpiFunnelRow[],
-        kpiListe: (kpiListe.error ? null : (kpiListe.data ?? null)) as KpiListe | null,
-      });
+      let snap: Snapshot | null = null;
+      try {
+        const r = await fetch("/api/snapshot", { cache: "no-store" });
+        const j = (await r.json()) as { ok: boolean; snapshot?: Snapshot; error?: string };
+        if (r.ok && j.ok && j.snapshot) snap = j.snapshot;
+        else throw new Error(j.error || `HTTP ${r.status}`);
+      } catch {
+        const sb = supabaseBrowser();
+        if (!sb) throw new Error("Supabase non configurato");
+        snap = await fetchSnapshot(sb);
+      }
+      setData(snap);
       setLastSync(new Date());
       setError(null);
       setMode(realtimeOk.current ? "live" : "sync");

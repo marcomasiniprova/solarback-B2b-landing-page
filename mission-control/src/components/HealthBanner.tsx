@@ -1,4 +1,5 @@
 "use client";
+import { useEffect, useState } from "react";
 import { ShieldAlert, ShieldCheck } from "lucide-react";
 import { useData } from "@/lib/store";
 import { isTodayRome, relTime } from "@/lib/utils";
@@ -6,9 +7,15 @@ import { Dot } from "./ui";
 
 export default function HealthBanner() {
   const { data, error, mode } = useData();
-  const dayAgo = Date.now() - 86_400_000;
-  const errors = data.runs.filter((r) => r.status === "error" && new Date(r.started_at).getTime() > dayAgo);
-  const stale = data.agents.filter((a) => a.status === "working" && a.updated_at && Date.now() - new Date(a.updated_at).getTime() > 2 * 3_600_000);
+  const [nowMs, setNowMs] = useState(0);
+  useEffect(() => {
+    const t0 = setTimeout(() => setNowMs(Date.now()), 0);
+    const t = setInterval(() => setNowMs(Date.now()), 30_000);
+    return () => { clearTimeout(t0); clearInterval(t); };
+  }, []);
+  const dayAgo = nowMs - 86_400_000;
+  const errors = nowMs ? data.runs.filter((r) => r.status === "error" && Date.parse(r.started_at) > dayAgo) : [];
+  const stale = nowMs ? data.agents.filter((a) => a.status === "working" && a.updated_at && nowMs - Date.parse(a.updated_at) > 2 * 3_600_000) : [];
   const today = data.runs.filter((r) => isTodayRome(r.started_at)).length;
   const last = data.runs[0];
   const lastAgent = last ? data.agents.find((a) => a.slug === last.agent_slug)?.name.replace("SOLAR - ", "") : null;
