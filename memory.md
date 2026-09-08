@@ -251,6 +251,15 @@
   Sopra: **dashboard mission-control su Railway** che legge Supabase (gli agenti la aggiornano ogni giorno); Valerio guarda solo quella.
   Architettura: cervello=repo (skill+docs ruolo), memoria/output=Supabase, vista=Railway. **Scelto FULL/fondamenta:** prima ricerca(4 aree)+skill+design-system, POI build.
   **Stato: 4 ricercatori 2026 lanciati (design caroselli, copywriting, algoritmi, video/avatar). Blueprint docs/19 da validare. NIENTE build finché non approva.**
+- **VIA LIBERA MISSION CONTROL (8/9 sera, Valerio):** costruire dashboard + team seguendo ALLA LETTERA la guida Rivolio
+  (`/root/.claude/uploads/.../GUIDAMISSIONCONTROLAGENTI.md`, copiata in `docs/21-guida-mission-control.md`). Stack: Next.js App Router
+  + TS + Tailwind v4 (@theme) + framer-motion + lucide + Supabase; Railway; Playwright. 3 pezzi: Supabase (verità) · dashboard (legge
+  realtime + poll 45s) · agenti = routine cron su sessioni operative, scrivono SOLO via /api/ingest (Bearer INGEST_KEY).
+  **Divisione compiti: VALERIO crea le sessioni operative (UI, coi connettori) · IO creo routine + skill (SKILL.md + reference.md) + dashboard.**
+  **BUDGET = NON è un problema** (~€100/mese: Unipile €49 fisso, Railway $5, OmniSocials $10, Kie ~$50 crediti/mese). Deploy ok.
+  **⚠️ KIE = PRUDENZA (regola):** mai sprecare crediti; un ruolo usa Kie SOLO dopo studio+test+collaudo del ruolo. Non è via libera.
+  Goal: non finire finché TUTTO è live, deployato, end-to-end, 0 errori build, estetica dark+oro come vuole, tutto comunicante col team.
+  Riverifica 549 unknown: nessuna risposta → STOP (mia raccomandazione) salvo contrordine.
 - **NOVITÀ 8/9 (VINCOLANTI):** (i) **Supabase progetto `solarback` = DB VIVO *e* backend della dashboard/cruscotto CEO**
   che costruiremo (per questo è un progetto separato). (ii) **APIFY ora via CONNETTORE NATIVO Apify (tool `mcp__Apify__*`),
   NON più via Composio** — su Composio non usare più Apify. Il verifier email resta lo stesso attore, richiamato dal nativo.
