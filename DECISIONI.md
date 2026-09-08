@@ -273,6 +273,12 @@ preso uno; il sito è su `artecai.it`). Serve per: (a) identità brand, (b) targ
   "amministratore". Tenere solo IT + ruolo target (scartare Supply Chain/Procurement/HR/IT anche se senior).
 - ✅ **Scritture Supabase solo via MCP execute_sql/apply_migration (service-role, bypassa RLS)** → RLS resta SEMPRE attivo,
   niente temp-grant da richiudere. Preferibile ai POST PostgREST quando il volume è basso (decine/centinaia di righe).
+- ⚠️ **CORREZIONE causa dei run L2 a 0 + stato crediti (verificato 8/9):** i run a 0 in pochi secondi erano il **limite del
+  piano FREE di Apify** su harvestapi (status **"free user run limit exceeded"**), non (solo) il throttle LinkedIn. Un account
+  Apify FREE fa solo ~3-4 run buone di questo attore poi si ferma. **Stato crediti reale:** connettore **Composio-Apify = VUOTO**
+  ($0.002, era un'illusione i "$4-5"); **nativo FREE = run-limit esaurito** per harvestapi. → **La L2 su larga scala richiede un
+  account Apify con piano/credito pagato.** Regola routing crediti resta valida ma **verificare sempre il saldo prima** (il saldo
+  atteso e quello reale possono divergere di molto).
 
 ## ⚠️ Decisioni ANCORA da prendere (vedi docs/06-domande-aperte.md)
 - Struttura finale dell'offerta + offerta pilota "founding partner" (in ricerca).

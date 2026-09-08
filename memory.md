@@ -183,8 +183,24 @@
   owner/CEO/founder (email valida al 60%). Round tot: 53 staging → 49 verificate (37 valid, 10 risky-catchall, 2 invalid) →
   **26 aziende** con decisore nominativo promosso a `email_1`, +48 persone. **DB sempre bloccato** (scritture solo via MCP
   service-role, RLS mai disattivato). Speso ~$4,7 (leads-finder $4 + L2 ~$0,7 + verifier $0,04).
-- **RESTO DA RIPRENDERE (dopo cooldown LinkedIn):** batch L2 A/B rimasti (~90 aziende: b1,b2,b4,b5,b6) uno alla volta + L2 sui
-  483 Tier C con `linkedin_azienda`. Metodo validato, batch pronti in scratchpad `l2_batches.json`.
+- **RESTO L2 — BLOCCATO SU CREDITO (8/9):** batch A/B rimasti (~90 az.: b1,b2,b4,b5,b6) + 483 Tier C. **Non eseguibili ora:**
+  nativo Apify FREE = "free user run limit exceeded" su harvestapi; Composio-Apify = $0.002 (vuoto). **Serve che Valerio ricarichi
+  un account Apify** (nativo o Composio) → poi finisco in ~$3-4 (A/B ~$0,6 + Tier C ~$2,8). Batch pronti in `l2_batches.json`.
+- 🏆 **LEZIONI D'ORO SCRAPING (memorizzate — NON ripetere gli errori):**
+  1. **L2 `harvestapi/linkedin-company-employees` = ORO** (owner/CEO/fondatori IT con email verificata, resa email ~60%).
+     Config: seniority `["320","310","300","220"]` (Owner/CXO/VP/Director), mode **"Full + email search"** ($12/1k).
+  2. **MAX ~20 aziende per run** (oltre → "up to 20 companies", 0 output). Batcha a 18-20.
+  3. **CAUSA VERA dei run a 0 (CORREZIONE 8/9):** NON era (solo) throttle LinkedIn ma il **limite del piano FREE di Apify**
+     sull'attore harvestapi → status **"free user run limit exceeded"**. Un account Apify FREE fa solo **poche run** di questo
+     attore, poi torna 0 item in pochi secondi. Lanciarli comunque **uno alla volta** (l'attore prende max ~20 aziende/run),
+     ma **per scalare la L2 serve un account Apify con credito/piano pagato** — col FREE ci si ferma dopo ~3-4 run buone.
+  4. **leads-finder:** SEMPRE `maxTotalChargeUsd`; **pre-escludere i grandi brand/reseller** (bricocenter, unoenergy, cbre…)
+     PRIMA del lancio, non solo col filtro >15 a valle (mangiano il budget: 440/1100 lead erano loro).
+  5. **Routing crediti Apify (regola CEO 8/9):** stima costo → se **>€1,50 usa Composio**, se **≤€1,50 usa il nativo**. MA
+     **VERIFICA IL SALDO PRIMA:** l'8/9 il connettore **Composio-Apify era VUOTO** ($0.002, non $4-5) e il **nativo FREE ha
+     esaurito il run-limit** per harvestapi. Entrambi a secco per la L2 → serve ricarica/piano pagato su un account Apify.
+  6. Mapping profilo L2→azienda via **dominio email** (il campo sito-azienda spesso non si popola). Scritture via MCP
+     service-role (RLS resta attivo). Classificazione ruolo con confini di parola (no "coo" in "coordinator").
 - **NUMERI POST-ROUND-2:** email_1 nominativa **810** · persone **6.156** · `leads_titolari` 384 · `v_cold_email` 2.252.
 - **PROSSIMI PASSI:** (1) Instantly: key nel pannello → warmup → campagna 1 da `v_cold_email` · (2) Valerio cold call da
   `v_cold_call` (docs/05) · (3) LinkedIn brand+personaggio AI (docs/15) · (4) completare cascata L2 (resto A/B + Tier C).
