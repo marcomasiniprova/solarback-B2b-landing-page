@@ -183,9 +183,11 @@
   owner/CEO/founder (email valida al 60%). Round tot: 53 staging → 49 verificate (37 valid, 10 risky-catchall, 2 invalid) →
   **26 aziende** con decisore nominativo promosso a `email_1`, +48 persone. **DB sempre bloccato** (scritture solo via MCP
   service-role, RLS mai disattivato). Speso ~$4,7 (leads-finder $4 + L2 ~$0,7 + verifier $0,04).
-- **RESTO L2 — BLOCCATO SU CREDITO (8/9):** batch A/B rimasti (~90 az.: b1,b2,b4,b5,b6) + 483 Tier C. **Non eseguibili ora:**
-  nativo Apify FREE = "free user run limit exceeded" su harvestapi; Composio-Apify = $0.002 (vuoto). **Serve che Valerio ricarichi
-  un account Apify** (nativo o Composio) → poi finisco in ~$3-4 (A/B ~$0,6 + Tier C ~$2,8). Batch pronti in `l2_batches.json`.
+- **RESTO L2 — credito OK, in COOLDOWN HarvestAPI (8/9):** Valerio ha **ricaricato il NATIVO** → gate FREE tolto (run status
+  "success"). MA HarvestAPI ora rate-limita l'account dopo le tante run di oggi: run "success" ma **0 profili in <25s** (stamattina
+  gli stessi batch rendevano) → cooldown temporale, non martellare. **Ripresa automatica programmata** (send_later trig
+  `trig_01J1g8PRH6kQfGvavdUbd1tb`, ~13:34 UTC). Composio-Apify resta VUOTO ($0.002). Da fare: A/B b1,b2,b4,b5,b6 + 483 Tier C.
+  Batch A/B pronti in `l2_batches.json`.
 - 🏆 **LEZIONI D'ORO SCRAPING (memorizzate — NON ripetere gli errori):**
   1. **L2 `harvestapi/linkedin-company-employees` = ORO** (owner/CEO/fondatori IT con email verificata, resa email ~60%).
      Config: seniority `["320","310","300","220"]` (Owner/CXO/VP/Director), mode **"Full + email search"** ($12/1k).
