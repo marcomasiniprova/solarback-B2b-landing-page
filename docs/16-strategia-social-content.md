@@ -32,7 +32,11 @@ La ricerca (fonti 2026) ha alzato 4 bandiere rosse su scelte già fatte. Te le m
    voce + invio di commenti/DM** (con limiti di sicurezza). Così sei più costante E veloce dei competitor, senza bruciare
    l'account. Il "garantito matematico" viene dalla costanza della macchina sul backend, non dall'automazione dell'engagement.
 
-> Queste 4 non bloccano la partenza: il resto del documento è pronto. Ma su queste 4 decidi tu (te le ripropongo in popup).
+**DECISO da Valerio (8/9):** (1) obiettivo 6 mesi = **800-1.800 follower in target + inbound** (10K = 12-24 mesi);
+(2) **validazione canale 2 settimane** (gruppi FB installatori vs LinkedIn) prima di fissare il #1; (3) **avatar "Valerio"
+come mascotte AI dichiarata** (opzione B); (4) **full-auto** sull'engagement — scelta consapevole del rischio: si implementa
+comunque con **pacing umano + limiti di sicurezza + personalizzazione** per minimizzare il rischio di restrizione/ban (causa
+nota, accettata da Valerio).
 
 ---
 

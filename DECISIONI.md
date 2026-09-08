@@ -280,6 +280,29 @@ preso uno; il sito è su `artecai.it`). Serve per: (a) identità brand, (b) targ
   account Apify con piano/credito pagato.** Regola routing crediti resta valida ma **verificare sempre il saldo prima** (il saldo
   atteso e quello reale possono divergere di molto).
 
+### 2026-09-08 — Social: setup profili (docs/15) + strategia contenuti/organic (docs/16)
+- ✅ **Profili:** LinkedIn = profilo personale **aged** brand-forward, **nome resta "Abdellah Hmamsi"** (non si cambia, zero
+  rischio ban), foto=LOGO · Instagram **@solarback.italia** (Business, brand) · Facebook = **ri-brand della Pagina "Artec
+  Soluzioni Italia" → SolarBack**. Profilo personale FB "Valerio Alieri" = admin + "Founder di SolarBack". IG personale
+  @valerio_alieri = profilo founder. Palette **dark grafite + oro #D9A441** (da artecai.it). Logo = marchio astratto/premium
+  (no sole/pannello/freccia). Contatti pubblici: WhatsApp +39 327 317 4931 · info@artecai.it · artecai.it (finché non c'è solarback.it).
+- ✅ **Unipile:** raggiungibile via host 443 + `?port=` (non con la porta TCP). MA **non edita i profili LinkedIn** (edit-profile
+  solo WhatsApp/IG). Su LinkedIn serve per l'**outreach** (inviti/DM/post), non per il setup. Profili LinkedIn compilati a mano.
+- ✅ **Strategia contenuti (4 decisioni, dopo ricerca 4 agenti):**
+  1. **Obiettivo 6 mesi = 800-1.800 follower IN TARGET + inbound** (NON 2.5-10K: il mercato è ~5.000 aziende; 10K = 12-24 mesi).
+     Onestà obbligata: mai promettere numeri impossibili.
+  2. **Validare il canale 2 settimane** (gruppi FB installatori vs LinkedIn) prima di fissare il #1: l'ICP blue-collar-adjacent
+     potrebbe stare più su Facebook/WhatsApp.
+  3. **Avatar "Valerio" = mascotte AI DICHIARATA** (opzione B), non spacciato per umano (EU AI Act art. 50). Usato per format
+     educativi, mai finte testimonianze.
+  4. **Autopilot = full-auto** (scelta di Valerio, informato del rischio ban dell'engagement automatizzato 2026): si implementa
+     comunque con **pacing umano + limiti di sicurezza + personalizzazione**. Rischio noto e accettato.
+- ✅ **Impostazioni strategia:** aggressivo mirato · mix video-avatar + caroselli (pesato: LinkedIn caroselli/testo davanti,
+  video a supporto; IG/FB Reels davanti) · angolo contrarian+educativo · LinkedIn-first ma da validare · engagement (commenti/
+  gruppi FB) = motore #1 della crescita targeted. Workflow avatar: reference-set faccia + voce clonata ElevenLabs (Veo non è
+  coerente sulla voce) + HeyGen per lip-sync. Caroselli 7 slide, <60 parole/slide, dark+oro. GAP di mercato: nessun competitor
+  FV IT fa contenuti organici col volto → spazio bianco.
+
 ## ⚠️ Decisioni ANCORA da prendere (vedi docs/06-domande-aperte.md)
 - Struttura finale dell'offerta + offerta pilota "founding partner" (in ricerca).
 - Numero-target reale: 30 entro il 26/10 vs. filosofia "pochi partner/anno" del

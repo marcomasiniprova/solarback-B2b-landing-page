@@ -204,8 +204,16 @@
   6. Mapping profilo L2→azienda via **dominio email** (il campo sito-azienda spesso non si popola). Scritture via MCP
      service-role (RLS resta attivo). Classificazione ruolo con confini di parola (no "coo" in "coordinator").
 - **NUMERI POST-ROUND-2:** email_1 nominativa **810** · persone **6.156** · `leads_titolari` 384 · `v_cold_email` 2.252.
+- **SOCIAL — SETUP (docs/15) + STRATEGIA CONTENUTI (docs/16), 8/9:** 3 profili (LinkedIn profilo aged brand-forward nome
+  resta "Abdellah Hmamsi" foto=logo · IG @solarback.italia brand · FB ri-brand Pagina Artec) + strategia organica completa
+  (ricerca 4 agenti). Palette dark+oro da artecai.it. Prompt AI logo/avatar/banner pronti. **Unipile NON edita profili
+  LinkedIn** (solo outreach) → i profili li fa Valerio a mano. **4 DECISIONI content (8/9):** obiettivo 6 mesi 800-1.800
+  follower in target (non 2.5-10K; 10K=12-24 mesi) · validare canale 2 settimane (gruppi FB vs LinkedIn) · avatar "Valerio"
+  = mascotte AI dichiarata · autopilot full-auto (scelta di Valerio, con pacing/limiti di sicurezza — rischio ban noto).
+  **Promemoria accessi:** Unipile API + scheduler social + ElevenLabs (voce IT) + HeyGen (avatar). Personaggio faccia AV solo
+  nei video (EU AI Act: dichiarato). Modello autopilot = AI backend/costanza + umano su voce/invio engagement (ma Valerio ha scelto full-auto).
 - **PROSSIMI PASSI:** (1) Instantly: key nel pannello → warmup → campagna 1 da `v_cold_email` · (2) Valerio cold call da
-  `v_cold_call` (docs/05) · (3) LinkedIn brand+personaggio AI (docs/15) · (4) completare cascata L2 (resto A/B + Tier C).
+  `v_cold_call` (docs/05) · (3) social: genera immagini + allestisci i 3 profili (docs/15) → primo mese calendario editoriale (docs/16) · (4) completare cascata L2 (resto A/B + Tier C, rate-limit HarvestAPI).
 
 ## 7. DOVE SIAMO (aggiornare!) — 2026-09-08 sera
 - 0 Partner. **Lista Target VIVA su Supabase** (§6): 6.659 aziende in lista; **`v_cold_email` 2.252**, **810 email_1 nominative**
