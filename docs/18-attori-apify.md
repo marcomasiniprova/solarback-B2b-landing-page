@@ -30,6 +30,9 @@
 - **Input chiave:** `company_domains` (lista di domini) + filtro ruolo (Owner/Titolare/CEO/Founder).
 - **Costo:** pay-per-event, **$0,003 per lead** restituito.
 - **⚠️ TRAPPOLA (imparata sul campo):** su grandi aziende off-target (es. bricocenter, unoenergy, CBRE) **mangia budget** restituendo tanti lead inutili. → **Filtrare i domini a monte** (solo installatori veri) e mettere sempre un **cap di spesa per run** (es. $4). Nel round L2 un cap senza filtro ha reso solo ~42 lead puliti su budget bruciato da ~14 aziende grosse.
+- **⚠️ Riconferma 8/9 (giro SOLAR-SCOUT):** `comoliferrari.it` (SB-03973, Comoli Ferrari — distributore elettrico all'ingrosso) è taggata Tier A ma è off-target: ha reso **~68 lead di staff** (Point-of-Sale/HR/Product Manager…), ~$0,20 del giro, zero titolari utili. Regola pratica: **un'azienda che rende >10 contatti è quasi sempre un grande off-target** → escluderla dallo staging e segnalarla per re-tier/Scarti (non è compito dello Scout muovere `stato`/`tier`).
+- **⚠️ `maxTotalChargeUsd` NON è un hard-cap istantaneo:** con cap `0,20 $` il run ha comunque restituito **90 lead (~0,27 $)** prima di fermarsi. → bloccare la produzione **anche** col campo nativo `max_result`, non solo col cap di spesa; e scremare i domini a monte.
+- **Nota resa (8/9):** su installatori piccoli la copertura Apollo è **bassa e molto variabile** (batch1: 14 lead/40 domini; batch2: 90 lead/81 domini ma per l'80% dal solo off-target Comoli Ferrari). I decisori veri spesso tornano **con LinkedIn ma senza email** → passarli a L3.
 - **Quando usarlo:** hai i **domini** delle aziende e vuoi il contatto del titolare. Primo step della catena.
 
 ### harvestapi/linkedin-company-employees
