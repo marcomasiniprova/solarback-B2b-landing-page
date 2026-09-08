@@ -324,6 +324,12 @@ preso uno; il sito è su `artecai.it`). Serve per: (a) identità brand, (b) targ
 - ✅ **Metodo:** ORA architettura + dashboard; i ruoli si definiscono e collaudano **uno alla volta**, non tutti in una seduta. Valerio crea le sessioni operative, io routine + skill.
 - ✅ **Scelte tecniche:** letture same-origin via `/api/snapshot` (più robuste) + realtime diretto; avatar SVG v1 (3D via Kie solo dopo test approvato); `SUPABASE_SERVICE_ROLE_KEY` la inserisce Valerio su Railway (mai in chat).
 
+### 2026-09-08 (notte) — Primo ruolo: SOLAR - SCOUT definito · avatar online · unknown in pausa
+- ✅ **Primo ruolo da collaudare = SOLAR - SCOUT** (il più pronto e senza rischi esterni). **4 missioni** in priorità: (1) titolare delle aziende in Lista Target senza email titolare (Tier A/B, poi C), (2) scoprire nuove aziende installatrici (attore Google Maps da validare), (3) riverifica email unknown, (4) aggiornare dati. **Cap duro 2 $/giro.** **Promozione autonoma** dei decisori verificati (azione interna al DB). Skill scritta con SQL sullo schema reale.
+- ✅ **Metodo:** definire il ruolo in chat → Valerio crea la sessione operativa → io routine → 2-3 giri puliti.
+- ✅ **Avatar:** NON generati con Kie: presi online (Fluent UI Emoji 3D, MIT). Kie resta per i content, con prudenza.
+- ✅ **Riverifica unknown:** STOP ora, resta in TODO come promemoria (lo farà lo Scout in M3 quando avanza budget).
+
 ## ⚠️ Decisioni ANCORA da prendere (vedi docs/06-domande-aperte.md)
 - Struttura finale dell'offerta + offerta pilota "founding partner" (in ricerca).
 - Numero-target reale: 30 entro il 26/10 vs. filosofia "pochi partner/anno" del

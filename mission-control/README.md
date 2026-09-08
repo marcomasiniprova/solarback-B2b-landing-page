@@ -13,6 +13,9 @@ Dashboard live del team di agenti AI di SolarBack. Replica il framework verifica
 - Regola: ogni giro **inizia con `run_start` e finisce SEMPRE con `run_finish`**.
 - `POST /api/decide {id, decision, pin}` = approvazione umana (protetta da `DECIDE_PIN`). `POST /api/publish` = 501 finché il Publisher non è collegato.
 
+## Avatar
+Render 3D presi online: **Fluent UI Emoji** (Microsoft, licenza MIT) in `public/avatars/*.png`; fallback SVG on-brand.
+
 ## Env (mai nel repo)
 `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`, `INGEST_KEY`, `DECIDE_PIN`.
 

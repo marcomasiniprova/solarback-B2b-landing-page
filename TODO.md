@@ -33,13 +33,15 @@ quanto generano run-rate RICORRENTE.)
 - [x] **Kie AI verificato** (API nell'ambiente, 9.862 crediti, pipeline immagine testata): GPT Image 2 (6 cr) + Veo 3.1 Lite (35 cr/8s). **⛔ STOP generazione finché non ho fondamenta di design (regola 10).**
 - [ ] **⚠️ FONDAMENTA CONTENT prima di produrre (regola 10):** ricerca online (copywriting, design caroselli on-brand, algoritmi per-piattaforma, video) + skill/ruoli + brand/design-system doc → POI strategia/produzione. In attesa di 4 risposte popup per lo scope.
 - [x] **`docs/18` registro attori Apify** creato (leads-finder ⭐, harvestapi, snipercoder, verifier + cimitero). Consultare SEMPRE prima di scraping.
-- [ ] **Riverificare i 630 "unknown"** (server non rispose; 20 sono titolari) con Apify verifier — 2° giro, costo minimo. Poi promuovere i valid a email_1.
+- [ ] **PROMEMORIA (STOP deciso 8/9, da fare più avanti insieme agli altri): riverificare i 549 email "unknown" rimasti** (2 batch fatti: 58 recuperate, 4 titolari). Lo può fare lo Scout in M3 quando avanza budget.
 - [x] **MISSION CONTROL COSTRUITA E LIVE (8/9 sera)** → `https://mission-control-production-d22b.up.railway.app` (docs/19 as-built). Schema `mc` su Supabase, dashboard Next.js dark+oro su Railway, 8 ruoli mappati, `/api/ingest` + `/api/decide` (PIN), collaudo build/lint/screenshot ok.
   - [ ] **Valerio: inserire `SUPABASE_SERVICE_ROLE_KEY` su Railway** (Supabase → Project Settings → API keys → service_role → Railway → servizio mission-control → Variables). Senza, la dashboard legge ma gli agenti non possono scrivere. Poi io lancio `scripts/e2e.mjs`.
   - [ ] **Valerio: prova live in 2 tab** dal suo browser (realtime): qui il websocket è bloccato dal proxy.
   - [ ] **Definire e collaudare i ruoli UNO ALLA VOLTA** (ordine da decidere con Valerio): lui crea la sessione operativa coi connettori → io skill (`.claude/skills/solar-ruolo-template/`) → routine → 2-3 giri puliti → approvazione qualità.
   - [ ] Volumi + template DM per LinkedIn/Instagram (li decide Valerio). Webhook inbox Unipile per i ruoli live.
-  - [ ] Avatar 3D on-brand: 1 test Kie (6 crediti) → se Valerio approva lo stile, gli altri 7. Fino ad allora SVG v1.
+  - [x] Avatar 3D presi online (Fluent UI Emoji, MIT) per gli 8 ruoli + fallback SVG.
+  - [x] **SOLAR - SCOUT definito** (4 missioni, cap 2 $/giro, promozione autonoma, Tier A/B→C) + skill scritta `.claude/skills/solar-scout/`.
+  - [ ] **Valerio: crea la sessione operativa "SOLAR SCOUT operative"** (connettori: Apify nativo + Supabase + repo) e mi dice il nome/ID → io creo la routine `0 5 * * *` e facciamo il primo fire di collaudo (2-3 giri puliti).
   - [ ] Publisher (OmniSocials) e Blog: dopo, non prioritari.
 - [ ] **PROMEMORIA accessi da Valerio (per partire coi social):** collegare **OmniSocials** ($10/mo, MCP — poi schedulo io) + confermare i 3 profili pronti/collegabili · (dopo, per i VSL) ElevenLabs + HeyGen.
 - [ ] **Valerio: disattivare la skill `solarback-content-engine` dalla libreria** (è synced, si ri-ripropone anche se la elimino in locale — non va MAI usata).

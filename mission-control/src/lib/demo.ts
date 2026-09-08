@@ -2,7 +2,7 @@ import type { Snapshot } from "./types";
 
 const now = new Date().toISOString();
 const a = (slug: string, name: string, role: string, department: string, kind: "daily" | "live", tagline: string, description: string, schedule_label: string, cron: string, sort: number, status: "idle" | "paused" = "idle") => ({
-  slug, name, role, department, kind, tagline, description, avatar: `/avatars/${slug}.svg`, status, current_task: null, last_run_at: null,
+  slug, name, role, department, kind, tagline, description, avatar: `/avatars/${slug}.png`, status, current_task: null, last_run_at: null,
   schedule_label, cron, today_count: 0, color: "#d9a441", sort, updated_at: now,
 });
 

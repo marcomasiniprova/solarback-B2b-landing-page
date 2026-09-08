@@ -1,6 +1,6 @@
 "use client";
+import { useState, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
-import type { ReactNode } from "react";
 
 export function Card({ className, children }: { className?: string; children: ReactNode }) {
   return <div className={cn("rounded-card border border-line bg-card shadow-card", className)}>{children}</div>;
@@ -65,8 +65,10 @@ export function EmptyState({ title, hint }: { title: string; hint?: string }) {
   );
 }
 export function Avatar({ src, alt, size = 56, className }: { src?: string | null; alt: string; size?: number; className?: string }) {
+  const [failed, setFailed] = useState(false);
+  const url = !src || failed ? "/avatars/default.png" : src;
   // eslint-disable-next-line @next/next/no-img-element
-  return <img src={src || "/avatars/default.svg"} alt={alt} width={size} height={size} className={cn("shrink-0 rounded-2xl border border-line-strong bg-card-2 object-cover", className)} />;
+  return <img src={url} alt={alt} width={size} height={size} onError={() => setFailed(true)} className={cn("shrink-0 rounded-2xl border border-line-strong bg-card-2 object-contain p-1", className)} />;
 }
 export function Table({ head, children }: { head: string[]; children: ReactNode }) {
   return (

@@ -26,7 +26,7 @@ Endpoint: `/api/ingest` (GET digest, POST ops) · `/api/snapshot` (stato pubblic
 | SOLAR - BLOG | Contenuti | daily | lun 09:00 | in pausa (non prioritario) |
 | SOLAR - LINKEDIN DM OUTREACH | Outreach | **live** | ogni ora 08-20 (+ webhook inbox) | da definire (volumi, template) |
 | SOLAR - INSTAGRAM DM OUTREACH | Outreach | **live** | ogni ora 08-20 (+ webhook inbox) | da definire (volumi, template) |
-| SOLAR - SCOUT | Dati | daily | 07:00 | da collaudare (pipeline L2 esiste) |
+| SOLAR - SCOUT | Dati | daily | 07:00 | **definito 8/9 + skill pronta** (`.claude/skills/solar-scout/`): 4 missioni, cap 2 $/giro, promozione autonoma, Tier A/B→C. In attesa: sessione operativa (Valerio) → routine → collaudo |
 | SOLAR - DATA ANALYST | Dati | daily | 20:00 | da collaudare |
 
 Due classi: **"una task al giorno"** (Video, Caroselli, Strategist, Scout, Blog, Analyst) e **"sempre live"** (gli squali: LinkedIn + Instagram, mandano messaggi, presidiano inbox, rispondono subito, fissano meeting qualificati).
@@ -49,7 +49,7 @@ Due classi: **"una task al giorno"** (Video, Caroselli, Strategist, Scout, Blog,
 - ✅ Contratto `/api/ingest`: 401 senza auth, digest ok, 503 onesto senza service key.
 - ⏳ **Scrittura via `/api/ingest` e `/api/decide`: attiva solo quando Valerio inserisce `SUPABASE_SERVICE_ROLE_KEY` su Railway** (segreto che non passa per la chat). Poi giro `scripts/e2e.mjs` end-to-end.
 - ⏳ Prova "live in due tab" (realtime): da fare dal browser di Valerio (qui il websocket è bloccato dal proxy).
-- ⏳ Avatar: v1 SVG on-brand (deterministici). Versione 3D via Kie solo dopo un test approvato da Valerio (regola prudenza).
+- ✅ Avatar 3D presi online (Fluent UI Emoji, MIT): cervello, cornice, ciak, memo, squalo, camera, detective, grafico. Fallback SVG.
 
 ## 5. Come si attiva un ruolo (runbook)
 1. Valerio crea la **sessione operativa** dalla UI (una per ruolo) e ci collega i connettori.

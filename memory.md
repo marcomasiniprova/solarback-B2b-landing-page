@@ -276,6 +276,10 @@
   browser Playwright del sandbox NON raggiunge Supabase via proxy (WS e fetch) → letture same-origin via `/api/snapshot` (anche più robusto);
   (3) React Compiler lint: niente setState sincrono negli effect, niente `Date.now()`/`new Date()` in render; (4) viste su viste `security_invoker`
   → usare funzione `security definer` per le aggregazioni lette da anon.
+- **SOLAR - SCOUT = primo ruolo (definito 8/9 notte):** 4 missioni (titolari A/B→C · nuove aziende · riverifica · aggiorna), cap 2 $/giro,
+  promozione autonoma, skill in `.claude/skills/solar-scout/` (SKILL.md + reference.md con Q1-Q7 SQL). Bacino: senza titolare_email A 121 · B 945 · C 4.745.
+  **In attesa: Valerio crea la sessione "SOLAR SCOUT operative" (Apify nativo + Supabase + repo) → io routine `0 5 * * *` → collaudo.**
+  Avatar: Fluent UI Emoji 3D (MIT) da GitHub, in `public/avatars/*.png` (DB aggiornato a .png). Unknown 549: STOP, promemoria in TODO.
 - **NOVITÀ 8/9 (VINCOLANTI):** (i) **Supabase progetto `solarback` = DB VIVO *e* backend della dashboard/cruscotto CEO**
   che costruiremo (per questo è un progetto separato). (ii) **APIFY ora via CONNETTORE NATIVO Apify (tool `mcp__Apify__*`),
   NON più via Composio** — su Composio non usare più Apify. Il verifier email resta lo stesso attore, richiamato dal nativo.
