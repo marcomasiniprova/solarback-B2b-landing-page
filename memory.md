@@ -280,6 +280,17 @@
   promozione autonoma, skill in `.claude/skills/solar-scout/` (SKILL.md + reference.md con Q1-Q7 SQL). Bacino: senza titolare_email A 121 · B 945 · C 4.745.
   **In attesa: Valerio crea la sessione "SOLAR SCOUT operative" (Apify nativo + Supabase + repo) → io routine `0 5 * * *` → collaudo.**
   Avatar: Fluent UI Emoji 3D (MIT) da GitHub, in `public/avatars/*.png` (DB aggiornato a .png). Unknown 549: STOP, promemoria in TODO.
+- **TEAM CABLATO (8/9 notte) — sessioni operative (create da Valerio) + routine (create da me, persistent_session_id):**
+  SCOUT sess `session_01EkasqpHXpkHmPvJc8c7QV2` · trig `trig_01EBvwP8e7QmEyB5TmzmBpuq` (0 5 * * *, ON) ·
+  CONTENT STRATEGIST sess `session_017gBAndV56esEaDDzr3WTb1` · trig `trig_01D36xYT7gjMx4yDr8D8cTQi` (30 5, ON) ·
+  DATA ANALYST sess `session_01Ea1Fx4pNXLawqhjUVADR5J` · trig `trig_01CrRNRg6BttTa8YoZXuXdfm` (0 18, ON) ·
+  CAROSELLI sess `session_01AMmScpUcmogiMgzYb8yDy4` · trig `trig_0185kvodcRDGiiq2aNb9dbBx` (0 6, OFF) ·
+  VIDEO sess `session_01FBZdxdA9dca9tnGoNry6B6` · trig `trig_01BQ5QtDcr237WzbMXZp93SW` (30 6, OFF) ·
+  LINKEDIN sess `session_016u5ncnTfowFmB6jHfAU4HP` · trig `trig_011hoptCvu7Vm1xH9PwGNroo` (0 6-18, OFF) ·
+  INSTAGRAM sess `session_01UjZbNFTLzLWUbgvQjjpP8t` · trig `trig_016nLAtfDupdMfbPRmxuwBnq` (30 6-18, OFF). BLOG: nessuna sessione (pausa).
+  Collaudo: fire NUDO (`fire_trigger` senza text) = gira nella sessione operativa coi connettori; con text = sessione orfana. Ordine: Scout → Strategist → Analyst → Caroselli → Video → LinkedIn → Instagram. Modalità sicura per i 4 rischiosi.
+  **Scrittura dashboard = funzione DB `mc.ingest(key,op,payload)` (security definer, chiave in `mc.config`)**: nessuna dipendenza dalla service key (che ora c'è: storage ok). E2E live OK 8/9 19:50 UTC.
+  Dashboard rifatta come Rivolio (sidebar solo aree, card-agente link, Space Grotesk+Inter, anello oro rotante = working). kv config: `scout:config` (cap 0,50 collaudo → 2 regime), `linkedin:stato`/`instagram:stato` (volumi 20/20 · 20, template_ok false), `strategist:config`.
 - **NOVITÀ 8/9 (VINCOLANTI):** (i) **Supabase progetto `solarback` = DB VIVO *e* backend della dashboard/cruscotto CEO**
   che costruiremo (per questo è un progetto separato). (ii) **APIFY ora via CONNETTORE NATIVO Apify (tool `mcp__Apify__*`),
   NON più via Composio** — su Composio non usare più Apify. Il verifier email resta lo stesso attore, richiamato dal nativo.
