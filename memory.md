@@ -260,6 +260,22 @@
   **⚠️ KIE = PRUDENZA (regola):** mai sprecare crediti; un ruolo usa Kie SOLO dopo studio+test+collaudo del ruolo. Non è via libera.
   Goal: non finire finché TUTTO è live, deployato, end-to-end, 0 errori build, estetica dark+oro come vuole, tutto comunicante col team.
   Riverifica 549 unknown: nessuna risposta → STOP (mia raccomandazione) salvo contrordine.
+- **MISSION CONTROL — COSTRUITA E LIVE (8/9 sera).** URL: `https://mission-control-production-d22b.up.railway.app`.
+  Railway progetto `solarback-mission-control` (id `98600e12-51f6-42a6-ba6d-5bec360d5467`, servizio `mission-control` id
+  `841faff5-cc94-43bc-839f-e8845c437068`, env production `8db3b06a-...`), deploya dal branch **`mission-control`** (mirror di
+  Solarback-Growth-Agents: `git push origin Solarback-Growth-Agents:mission-control`), root dir `mission-control/`, watch solo quella cartella.
+  Supabase: **schema `mc`** (8 tabelle + viste kpi_funnel/kpi_liste via funzione security definer) esposto in PostgREST, realtime, bucket `mc-assets`.
+  Env su Railway: URL/anon/INGEST_KEY/DECIDE_PIN ✅ · **SUPABASE_SERVICE_ROLE_KEY ⏳ la mette Valerio** (senza, la dashboard legge ma non scrive).
+  Segreti generati (INGEST_KEY, DECIDE_PIN) nello scratchpad `mc.env` di questa sessione + su Railway; il PIN l'ho detto a Valerio in chat.
+  **Roster deciso da Valerio (8 ruoli `SOLAR - ...`):** CONTENT STRATEGIST, CAROSELLI, VIDEO, BLOG (pausa), LINKEDIN DM OUTREACH (live),
+  INSTAGRAM DM OUTREACH (live), SCOUT, DATA ANALYST. Il MIO roster precedente (11 ruoli) è stato BOCCIATO: non riproporlo.
+  Regole: approvazione di tutto finché la qualità non è provata (poi autopilot), DM outreach con template+volumi approvati a monte,
+  volumi outreach li decide Valerio (non ancora), blog non prioritario. **Prossimo: definire e collaudare i ruoli UNO ALLA VOLTA**
+  (Valerio crea la sessione operativa coi connettori → io skill da `.claude/skills/solar-ruolo-template/` → routine → 2-3 giri puliti).
+  Lezioni tecniche: (1) `pkill -f "next start"` uccide anche lo script che lo lancia → kill per PID/nome processo `next-server`; (2) il
+  browser Playwright del sandbox NON raggiunge Supabase via proxy (WS e fetch) → letture same-origin via `/api/snapshot` (anche più robusto);
+  (3) React Compiler lint: niente setState sincrono negli effect, niente `Date.now()`/`new Date()` in render; (4) viste su viste `security_invoker`
+  → usare funzione `security definer` per le aggregazioni lette da anon.
 - **NOVITÀ 8/9 (VINCOLANTI):** (i) **Supabase progetto `solarback` = DB VIVO *e* backend della dashboard/cruscotto CEO**
   che costruiremo (per questo è un progetto separato). (ii) **APIFY ora via CONNETTORE NATIVO Apify (tool `mcp__Apify__*`),
   NON più via Composio** — su Composio non usare più Apify. Il verifier email resta lo stesso attore, richiamato dal nativo.
@@ -280,4 +296,4 @@
 `CLAUDE.md` (costituzione) · `TODO.md` · `DECISIONI.md` · `STATO-ATTUALE.md` · `SPRINT-26-OTTOBRE.md` ·
 `docs/01` business · `docs/02` ICP · `docs/03` posizionamento · `docs/05` script cold call · `docs/07` offerta ✅ ·
 `docs/08` mercato · `docs/09` n8n · `docs/11` valutazione · `docs/12` stagionalità · `docs/13` infra cold email ·
-`docs/14` stack tool & sicurezza chiavi · `docs/15` setup 3 profili social · `docs/16` strategia social/content & growth · `docs/17` calendario editoriale (settimane 1-2 pronte + scaletta 3-4, prompt Kie AI).
+`docs/14` stack tool & sicurezza chiavi · `docs/15` setup 3 profili social · `docs/16` strategia social/content & growth · `docs/17` calendario editoriale · `docs/18` registro attori Apify · `docs/19` **AI Team & Mission Control AS-BUILT** · `docs/20` design-system · `docs/21` guida Rivolio · `docs/ricerca/` 4 ricerche 2026 · `.claude/skills/solar-ruolo-template/` (contratto ruoli) · `mission-control/` (app Next.js).

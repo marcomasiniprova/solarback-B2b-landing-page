@@ -34,9 +34,13 @@ quanto generano run-rate RICORRENTE.)
 - [ ] **⚠️ FONDAMENTA CONTENT prima di produrre (regola 10):** ricerca online (copywriting, design caroselli on-brand, algoritmi per-piattaforma, video) + skill/ruoli + brand/design-system doc → POI strategia/produzione. In attesa di 4 risposte popup per lo scope.
 - [x] **`docs/18` registro attori Apify** creato (leads-finder ⭐, harvestapi, snipercoder, verifier + cimitero). Consultare SEMPRE prima di scraping.
 - [ ] **Riverificare i 630 "unknown"** (server non rispose; 20 sono titolari) con Apify verifier — 2° giro, costo minimo. Poi promuovere i valid a email_1.
-- [ ] **AI TEAM + Mission Control (docs/19)** — VISIONE Valerio: agenti = sessioni persistenti + routine, dashboard su Railway. FASE 0 fondamenta IN CORSO (4 ricerche lanciate). **Non costruire finché Valerio non valida il blueprint** (5 decisioni aperte in docs/19 §8).
-  - [ ] Consolidare le 4 ricerche → docs + creare le **skill** (carosello-onbrand, copy-linkedin, video-short, outreach) + **design-system SolarBack** (docs/ruoli/ + brand kit).
-  - [ ] FASE 1 pilota SOLARBACK-CONTENT · FASE 2 dashboard Railway+Supabase · FASE 3 Publisher/OmniSocials · FASE 4 scala team.
+- [x] **MISSION CONTROL COSTRUITA E LIVE (8/9 sera)** → `https://mission-control-production-d22b.up.railway.app` (docs/19 as-built). Schema `mc` su Supabase, dashboard Next.js dark+oro su Railway, 8 ruoli mappati, `/api/ingest` + `/api/decide` (PIN), collaudo build/lint/screenshot ok.
+  - [ ] **Valerio: inserire `SUPABASE_SERVICE_ROLE_KEY` su Railway** (Supabase → Project Settings → API keys → service_role → Railway → servizio mission-control → Variables). Senza, la dashboard legge ma gli agenti non possono scrivere. Poi io lancio `scripts/e2e.mjs`.
+  - [ ] **Valerio: prova live in 2 tab** dal suo browser (realtime): qui il websocket è bloccato dal proxy.
+  - [ ] **Definire e collaudare i ruoli UNO ALLA VOLTA** (ordine da decidere con Valerio): lui crea la sessione operativa coi connettori → io skill (`.claude/skills/solar-ruolo-template/`) → routine → 2-3 giri puliti → approvazione qualità.
+  - [ ] Volumi + template DM per LinkedIn/Instagram (li decide Valerio). Webhook inbox Unipile per i ruoli live.
+  - [ ] Avatar 3D on-brand: 1 test Kie (6 crediti) → se Valerio approva lo stile, gli altri 7. Fino ad allora SVG v1.
+  - [ ] Publisher (OmniSocials) e Blog: dopo, non prioritari.
 - [ ] **PROMEMORIA accessi da Valerio (per partire coi social):** collegare **OmniSocials** ($10/mo, MCP — poi schedulo io) + confermare i 3 profili pronti/collegabili · (dopo, per i VSL) ElevenLabs + HeyGen.
 - [ ] **Valerio: disattivare la skill `solarback-content-engine` dalla libreria** (è synced, si ri-ripropone anche se la elimino in locale — non va MAI usata).
 - [ ] **Valerio: repo → PRIVATO** (promesso per il 9/9)  ⟵ **PROMEMORIA** (nel repo NON ci sono contatti; solo script/conteggi).

@@ -312,6 +312,18 @@ preso uno; il sito è su `artecai.it`). Serve per: (a) identità brand, (b) targ
 - ✅ **Orizzonte prodotto ora:** settimane 1-2 pronte al post (10 pezzi LinkedIn + caroselli + adattamento IG + presidio FB) + scaletta 3-4. Fase = **validazione canale** (LinkedIn vs gruppi FB), decisione canale #1 a fine settimana 2 con i numeri.
 - ✅ **Skill `solarback-content-engine` ELIMINATA e vietata** (Valerio, 8/9). È synced → Valerio la disattiva dalla libreria; il system-reminder che la ripropone va ignorato.
 
+### 2026-09-08 (sera) — Mission Control + AI Team: costruito e live
+- ✅ **Framework:** replica alla lettera della guida Rivolio (docs/21). Stack Next.js 16 + Tailwind v4 + framer-motion + lucide + Supabase, Railway, Playwright.
+- ✅ **Database:** STESSO progetto Supabase `solarback`, ma **schema dedicato `mc`** isolato da `public` (nessun conflitto con aziende/persone). KPI da viste aggregate (solo conteggi).
+- ✅ **Repo/deploy:** stesso repo, branch **`mission-control`** (mirror del branch di lavoro), root dir `mission-control/`. URL live: `https://mission-control-production-d22b.up.railway.app`.
+- ✅ **Roster (di Valerio, 8 ruoli `SOLAR - ...`):** CONTENT STRATEGIST, CAROSELLI, VIDEO, BLOG, LINKEDIN DM OUTREACH, INSTAGRAM DM OUTREACH, SCOUT, DATA ANALYST. Nessun capo AI: ognuno riporta a Valerio. La mia mappa a 11 ruoli è stata bocciata.
+- ✅ **Due classi di agente:** "una task al giorno" (cadenze: Scout 07:00, Strategist 07:30, Caroselli 08:00, Video 08:30, Blog lun 09:00, Analyst 20:00) e **"sempre live"** (LinkedIn + Instagram outreach: ogni ora + webhook inbox).
+- ✅ **Autonomia:** approvazione di TUTTO finché la qualità non è provata, poi autopilot. Eccezione: DM LinkedIn/Instagram con template + volumi approvati a monte (volumi li decide Valerio, non ancora).
+- ✅ **Blog:** mix (approva + pubblica sul sito) ma NON prioritario ora → in pausa.
+- ✅ **Budget:** non è un vincolo (~€100/mese fissi + Kie a consumo). **Kie = prudenza:** crediti solo dopo collaudo del ruolo.
+- ✅ **Metodo:** ORA architettura + dashboard; i ruoli si definiscono e collaudano **uno alla volta**, non tutti in una seduta. Valerio crea le sessioni operative, io routine + skill.
+- ✅ **Scelte tecniche:** letture same-origin via `/api/snapshot` (più robuste) + realtime diretto; avatar SVG v1 (3D via Kie solo dopo test approvato); `SUPABASE_SERVICE_ROLE_KEY` la inserisce Valerio su Railway (mai in chat).
+
 ## ⚠️ Decisioni ANCORA da prendere (vedi docs/06-domande-aperte.md)
 - Struttura finale dell'offerta + offerta pilota "founding partner" (in ricerca).
 - Numero-target reale: 30 entro il 26/10 vs. filosofia "pochi partner/anno" del
