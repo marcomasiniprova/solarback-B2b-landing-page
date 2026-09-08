@@ -34,6 +34,9 @@ quanto generano run-rate RICORRENTE.)
 - [ ] **⚠️ FONDAMENTA CONTENT prima di produrre (regola 10):** ricerca online (copywriting, design caroselli on-brand, algoritmi per-piattaforma, video) + skill/ruoli + brand/design-system doc → POI strategia/produzione. In attesa di 4 risposte popup per lo scope.
 - [x] **`docs/18` registro attori Apify** creato (leads-finder ⭐, harvestapi, snipercoder, verifier + cimitero). Consultare SEMPRE prima di scraping.
 - [ ] **Riverificare i 630 "unknown"** (server non rispose; 20 sono titolari) con Apify verifier — 2° giro, costo minimo. Poi promuovere i valid a email_1.
+- [ ] **AI TEAM + Mission Control (docs/19)** — VISIONE Valerio: agenti = sessioni persistenti + routine, dashboard su Railway. FASE 0 fondamenta IN CORSO (4 ricerche lanciate). **Non costruire finché Valerio non valida il blueprint** (5 decisioni aperte in docs/19 §8).
+  - [ ] Consolidare le 4 ricerche → docs + creare le **skill** (carosello-onbrand, copy-linkedin, video-short, outreach) + **design-system SolarBack** (docs/ruoli/ + brand kit).
+  - [ ] FASE 1 pilota SOLARBACK-CONTENT · FASE 2 dashboard Railway+Supabase · FASE 3 Publisher/OmniSocials · FASE 4 scala team.
 - [ ] **PROMEMORIA accessi da Valerio (per partire coi social):** collegare **OmniSocials** ($10/mo, MCP — poi schedulo io) + confermare i 3 profili pronti/collegabili · (dopo, per i VSL) ElevenLabs + HeyGen.
 - [ ] **Valerio: disattivare la skill `solarback-content-engine` dalla libreria** (è synced, si ri-ripropone anche se la elimino in locale — non va MAI usata).
 - [ ] **Valerio: repo → PRIVATO** (promesso per il 9/9)  ⟵ **PROMEMORIA** (nel repo NON ci sono contatti; solo script/conteggi).

@@ -243,6 +243,11 @@
   risponde/greylisting/timeout) → NON invalide, NON colpa nostra né del contatto. **Tutte 630 su dominio proprio** (0 freemail),
   **20 sono email di titolari**. **Da RIVERIFICARE** in un secondo giro (Apify verifier, costo minimo): una parte diventerà valid. Non ancora fatto.
 - **`docs/18` = registro attori Apify** (leads-finder ⭐, harvestapi, snipercoder, verifier). Consultarlo SEMPRE prima di scraping.
+- **VISIONE AI TEAM (8/9 sera, Valerio) → `docs/19`:** team di agenti AI = **sessioni persistenti + routine** (non subagenti),
+  ognuno un RUOLO marketing con skill+docs+tool propri (es. SOLARBACK-VIDEO ore 8 con Kie AI; SOLARBACK-LINKEDIN-OUTREACHER con Unipile).
+  Sopra: **dashboard mission-control su Railway** che legge Supabase (gli agenti la aggiornano ogni giorno); Valerio guarda solo quella.
+  Architettura: cervello=repo (skill+docs ruolo), memoria/output=Supabase, vista=Railway. **Scelto FULL/fondamenta:** prima ricerca(4 aree)+skill+design-system, POI build.
+  **Stato: 4 ricercatori 2026 lanciati (design caroselli, copywriting, algoritmi, video/avatar). Blueprint docs/19 da validare. NIENTE build finché non approva.**
 - **NOVITÀ 8/9 (VINCOLANTI):** (i) **Supabase progetto `solarback` = DB VIVO *e* backend della dashboard/cruscotto CEO**
   che costruiremo (per questo è un progetto separato). (ii) **APIFY ora via CONNETTORE NATIVO Apify (tool `mcp__Apify__*`),
   NON più via Composio** — su Composio non usare più Apify. Il verifier email resta lo stesso attore, richiamato dal nativo.

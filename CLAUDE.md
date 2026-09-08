@@ -44,7 +44,7 @@ Branch `Solarback-Growth-Agents` (solo qui). `main` = sito, NON toccare. `privat
 ## Mappa file
 `memory.md` (persona+regole+stato) · `GLOSSARIO.md` (termini) · `STATO-ATTUALE.md` · `TODO.md` · `DECISIONI.md` · `SPRINT-26-OTTOBRE.md` ·
 `docs/00-13` (business, ICP, posizionamento, funnel, canali, domande, offerta, mercato, n8n, materiale CEO, valutazione, stagionalità, infra-email) ·
-`docs/14` stack tool · `docs/15` setup social · `docs/16` strategia content · `docs/17` calendario editoriale · `docs/18` **attori Apify (registro)**.
+`docs/14` stack tool · `docs/15` setup social · `docs/16` strategia content · `docs/17` calendario editoriale · `docs/18` **attori Apify (registro)** · `docs/19` **AI Team & Mission Control (architettura)**.
 
 ## Verità su di me (il modello)
 Sessione `claude-opus-4-8`; il modello del turno può differire. Se serve, usa `get_session`. Mai model-id in commit/PR/codice.
