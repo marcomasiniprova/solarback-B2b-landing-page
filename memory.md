@@ -239,9 +239,11 @@
 - **NOVITÀ 8/9 sera — REGOLA 10 (fondamenta prima della fretta):** Valerio incazzato perché mi sono fiondato sul content/immagini
   senza costruire fondamenta. Su content/design/strategia: PRIMA ricerca online + documenti/ruoli/skill + domande, POI produco.
   **STOP Kie/immagini finché non ho fondamenta di design/caroselli.** (Regola in CLAUDE.md §10, gli dà fastidio.)
-- **630 "unknown" (verificato nel DB 8/9):** email che il verifier SMTP non ha potuto giudicare (server destinatario non
-  risponde/greylisting/timeout) → NON invalide, NON colpa nostra né del contatto. **Tutte 630 su dominio proprio** (0 freemail),
-  **20 sono email di titolari**. **Da RIVERIFICARE** in un secondo giro (Apify verifier, costo minimo): una parte diventerà valid. Non ancora fatto.
+- **Riverifica "unknown" (8/9, FATTA 2 batch su ~200 email, spesa ~$0,15):** recuperate **58 email in lista** (`fase1_ok`), di cui
+  **11 valid** (4 titolari: emanuele.chiozzi/filippo.angeli/giorgio.nicolini @ircispa + altri). Aggiornate con `fonte='reverify-2026-09'`.
+  **549 unknown restano** MA il verifier (blessiticus) ha **cap 100/run sul piano free** e **si impunta sui server morti** (~60% non
+  risponde neanche al retry = mailbox host down, non recuperabili). Yield ~40% per batch. Grindare i 549 = 5-6 batch capped/appesi per
+  return calante (per lo più info@ generiche che già abbiamo). **PAUSA reverify** in attesa scelta Valerio (finire in background vs stop).
 - **`docs/18` = registro attori Apify** (leads-finder ⭐, harvestapi, snipercoder, verifier). Consultarlo SEMPRE prima di scraping.
 - **VISIONE AI TEAM (8/9 sera, Valerio) → `docs/19`:** team di agenti AI = **sessioni persistenti + routine** (non subagenti),
   ognuno un RUOLO marketing con skill+docs+tool propri (es. SOLARBACK-VIDEO ore 8 con Kie AI; SOLARBACK-LINKEDIN-OUTREACHER con Unipile).
