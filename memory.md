@@ -185,9 +185,10 @@
   service-role, RLS mai disattivato). Speso ~$4,7 (leads-finder $4 + L2 ~$0,7 + verifier $0,04).
 - **RESTO L2 — credito OK, in COOLDOWN HarvestAPI (8/9):** Valerio ha **ricaricato il NATIVO** → gate FREE tolto (run status
   "success"). MA HarvestAPI ora rate-limita l'account dopo le tante run di oggi: run "success" ma **0 profili in <25s** (stamattina
-  gli stessi batch rendevano) → cooldown temporale, non martellare. **Ripresa automatica programmata** (send_later trig
-  `trig_01J1g8PRH6kQfGvavdUbd1tb`, ~13:34 UTC). Composio-Apify resta VUOTO ($0.002). Da fare: A/B b1,b2,b4,b5,b6 + 483 Tier C.
-  Batch A/B pronti in `l2_batches.json`.
+  gli stessi batch rendevano) → cooldown temporale, non martellare. **3 tentativi 8/9 (12:00, 14:39, 17:41 UTC) = tutti 0 profili**
+  → è un **cap GIORNALIERO** del piano FREE (~20 run/giorno). **Ripresa automatica programmata DOMANI 9/9 06:00 UTC (08:00 IT)**
+  (send_later `trig_01ViQNFjmmxNAtbNS3B7wrgK`). Composio-Apify resta VUOTO ($0.002). Da fare: A/B indici 1,2,4,5,6 + 483 Tier C.
+  Batch A/B pronti in `l2_batches.json` (lista di 7 liste). Se anche domani 0 → proporre piano a pagamento HarvestAPI o snipercoder (docs/18).
 - 🏆 **LEZIONI D'ORO SCRAPING (memorizzate — NON ripetere gli errori):**
   1. **L2 `harvestapi/linkedin-company-employees` = ORO** (owner/CEO/fondatori IT con email verificata, resa email ~60%).
      Config: seniority `["320","310","300","220"]` (Owner/CXO/VP/Director), mode **"Full + email search"** ($12/1k).
