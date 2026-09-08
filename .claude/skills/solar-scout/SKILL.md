@@ -43,13 +43,13 @@ Bacino al 8/9/2026 (aziende in Lista Target **senza** `titolare_email`): **Tier 
 3. **Staging:** ogni lead → `leads_titolari` (`Q2`), con `id_sb` via dominio (`enrich_dom2id` o host di `aziende.sito`), `fonte='L1-leads-finder'`, `run_date=oggi`.
 4. **L2 (solo se resta ≥ 0,5 $)** · per le aziende del bacino rimaste senza lead ma con `linkedin_azienda`: `harvestapi/linkedin-company-employees` (max 20 aziende/run, `seniorityLevelIds ["320","310","300","220"]`, `profileScraperMode "Full + email search ($12 per 1k)"`, `companyBatchMode "all_at_once"`, `maxItems 60`, cap residuo). Se 0 item in pochi secondi → rate-limit: salta, feed.
 5. **Verifica** · `blessiticus/email-verifier-pro` sulle email di staging non ancora in `verifica_email` (batch ≤ 100, `concurrency 20, maxRetries 1, timeout 12`; se il run resta appeso > 150 s → abort e prendi i risultati pronti). Upsert in `verifica_email` (`Q3`), poi `leads_titolari.verificata=true`.
-6. **Promozione (autonoma, decisa da Valerio):** `Q4` promuove a `titolare_*` + `email_1` la migliore email `fase1_ok` per azienda (priorità **decisore** per ruolo), `Q5` carica le persone verificate, `Q6` ricalcola il `bucket` delle aziende toccate. Conta i promossi: sono gli `items` del giro.
+6. **Promozione (autonoma, decisa da Valerio):** `Q4` promuove a `titolare_*` + `email_1` la migliore email `fase1_ok` per azienda (priorità **`role='DECISORE'`**, poi titolo grezzo), `Q5` carica le persone verificate, `Q6` ricalcola il `bucket` delle aziende toccate. Conta i promossi: sono gli `items` del giro.
 
 ### M2 · Scoprire NUOVE aziende installatrici (se resta ≥ 0,5 $)
 - Attore per Google Maps: **da validare al primo giro** (candidato: il Google Maps scraper più usato dello Store; cercare con `search-actors`, leggere input schema, micro-test ≤ 0,50 $ su 1 città), poi registrarlo in `docs/18`.
 - Query tipo: "installatore fotovoltaico", "impianti fotovoltaici" per **una provincia al giorno** (ruota per copertura nazionale: nessuna priorità geografica).
 - **Dedup obbligatoria** prima di inserire (`Q7`): stesso host del sito, o stesso telefono, o stesso nome+città → scarta.
-- Inserisci in `aziende` con `lista='Lista Target'`, `stato='Contatto'`, `icp_tier='C'`, `icp_score=0`, `fonti='scout-gmaps'`, `bucket` calcolato (`Q6`). Il tier lo alza Valerio/lo Strategist, non tu.
+- Inserisci in `aziende` con `lista='Lista Target'`, `stato='Contatto'`, `icp_tier='C'`, `icp_score=0`, `fonti=array['SCOUT_GMAPS']` (è un array), `categoria` da Maps (es. "Installatore Fotovoltaico"), `bucket` calcolato (`Q6`). Il tier lo alza Valerio/lo Strategist, non tu.
 
 ### M3 · Riverificare email vecchie/unknown (se resta budget, max 100 email/giro)
 - `verifica_email` con `status='unknown'` e `verificata_il` più vecchia di 7 giorni, prima le `titolare_email`. Stesso verifier, stesse opzioni anti-impuntamento. Aggiorna con `fonte='reverify-<data>'`. Poi `Q4` promuove ciò che è diventato `fase1_ok`.

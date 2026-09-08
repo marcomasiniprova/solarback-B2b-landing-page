@@ -10,10 +10,10 @@ Tutto il contratto generale (op, chiavi kv, prompt della routine) è in `.claude
 
 ## Supabase (scrittura su `public`, via MCP `execute_sql`, project `dziylyrneqeamqzatdzo`)
 Tabelle e colonne reali (8/9/2026):
-- `aziende`: `id_sb, lista, stato, bucket, icp_tier, icp_score, azienda, titolare_nome, titolare_cognome, titolare_ruolo, titolare_email, titolare_linkedin, email_1, email_1_tipo (NOMINATIVA_AZIENDALE|GENERICA|FREEMAIL), email_1_verifica, email_1_confidenza, email_1_catchall, mobile_1, mobile_2, fisso_1, fisso_2, citta, provincia, regione, sito, linkedin_azienda, categoria, fonti, updated_at, ...`
-- `leads_titolari` (staging): `email, first_name, last_name, title, role, mobile, linkedin, dominio, id_sb, catchall, fonte, run_date, verificata, promossa, created_at`
+- `aziende`: `id_sb, lista, stato, bucket, icp_tier, icp_score, azienda, titolare_nome, titolare_cognome, titolare_ruolo, titolare_email, titolare_linkedin, email_1, email_1_tipo (NOMINATIVA_AZIENDALE|GENERICA|FREEMAIL), email_1_verifica, email_1_confidenza, email_1_catchall, mobile_1, mobile_2, fisso_1, fisso_2, citta, provincia, regione, sito, linkedin_azienda, categoria, fonti (**text[]**, es. APIFY_GMAPS, APIFY_LEADS_FINDER), updated_at, ...`
+- `leads_titolari` (staging, **pk = email**): `email, first_name, last_name, title (titolo grezzo), role (**classificato: DECISORE | COMMERCIALE | MARKETING**), mobile, linkedin, dominio, id_sb (fk aziende), catchall, fonte, run_date, verificata, promossa, created_at`
 - `verifica_email`: `email (pk), status, confidence, is_catch_all, is_role_based, is_free_provider, verificata_il, fonte, fase1_ok (calcolata: valid, oppure risky+role_based+non catch-all+confidenza medium/high)`
-- `persone`: `id_p, id_sb, azienda, nome, cognome, ruolo, email, email_tipo, email_verifica, linkedin, e_titolare_principale ('SI'|'NO'), azienda_in, provincia, regione`
+- `persone` (**pk = id_p**; convenzioni esistenti `P-0…`, `AP-…`; lo Scout usa `SC-<md5(email)[:12]>`): `id_p, id_sb, azienda, nome, cognome, ruolo, email, email_tipo, email_verifica, linkedin, e_titolare_principale ('SI'|'NO'), azienda_in, provincia, regione`
 - `enrich_dom2id`: `dominio, id_sb`
 
 ### Q1 · Bacino M1 (Tier A → B → C, con sito)
@@ -29,13 +29,15 @@ limit 150;
 ### Q2 · Staging dei lead (uno per riga; `id_sb` dal dominio)
 ```sql
 insert into public.leads_titolari (email, first_name, last_name, title, role, mobile, linkedin, dominio, id_sb, catchall, fonte, run_date, verificata, promossa)
-values (lower(:email), :first_name, :last_name, :title, :role, :mobile, :linkedin, :dominio,
+values (lower(:email), :first_name, :last_name, :title,
+        case when coalesce(:title,'') ~* '(owner|titolar|ceo|founder|fondat|amministrat|socio|direttor|presidente|managing|general manager|proprietar|legale rappresentante)' then 'DECISORE'
+             when coalesce(:title,'') ~* '(marketing|comunicaz|social)' then 'MARKETING' else 'COMMERCIALE' end,
+        :mobile, :linkedin, :dominio,
         coalesce((select id_sb from public.enrich_dom2id where dominio = :dominio limit 1),
                  (select id_sb from public.aziende where regexp_replace(lower(sito), '^https?://(www\.)?([^/]+).*$', '\2') = :dominio limit 1)),
         false, 'L1-leads-finder', current_date, false, false)
-on conflict do nothing;
+on conflict (email) do nothing;
 ```
-(Se `leads_titolari` non ha vincolo univoco su email, controlla prima `select 1 from leads_titolari where email = :email`.)
 
 ### Q3 · Upsert verifica
 ```sql
@@ -48,10 +50,12 @@ update public.leads_titolari set verificata = true where email = lower(:email);
 ### Q4 · Promozione autonoma (migliore email fase1_ok per azienda, priorità decisore)
 ```sql
 with cand as (
-  select l.id_sb, l.email, l.first_name, l.last_name, l.role, l.linkedin, l.mobile,
+  select l.id_sb, l.email, l.first_name, l.last_name, l.role, l.title, l.linkedin, l.mobile,
          v.status, v.confidence, v.is_catch_all, v.is_free_provider,
          row_number() over (partition by l.id_sb order by
-           case when coalesce(l.role,'') ~* '(owner|titolar|ceo|founder|fondat|amministrat|socio|direttor|presidente|managing|general manager|proprietar|legale rappresentante)' then 1 else 2 end,
+           case when upper(coalesce(l.role,'')) = 'DECISORE' then 1
+                when coalesce(l.title,'') ~* '(owner|titolar|ceo|founder|fondat|amministrat|socio|direttor|presidente|managing|general manager|proprietar|legale rappresentante)' then 1
+                else 2 end,
            case v.status when 'valid' then 1 else 2 end, l.created_at) as rn
   from public.leads_titolari l
   join public.verifica_email v on v.email = l.email
@@ -59,7 +63,7 @@ with cand as (
   where l.promossa = false and v.fase1_ok and a.lista = 'Lista Target' and a.titolare_email is null
 ), upd as (
   update public.aziende a set
-    titolare_nome = c.first_name, titolare_cognome = c.last_name, titolare_ruolo = c.role,
+    titolare_nome = c.first_name, titolare_cognome = c.last_name, titolare_ruolo = coalesce(c.title, c.role),
     titolare_email = c.email, titolare_linkedin = coalesce(c.linkedin, a.titolare_linkedin),
     email_1 = c.email, email_1_tipo = case when c.is_free_provider then 'FREEMAIL' else 'NOMINATIVA_AZIENDALE' end,
     email_1_verifica = c.status, email_1_confidenza = c.confidence, email_1_catchall = c.is_catch_all,
@@ -73,7 +77,7 @@ update public.leads_titolari l set promossa = true from upd u where u.id_sb = l.
 ### Q5 · Persone (tutte le verificate del giro, non solo le promosse)
 ```sql
 insert into public.persone (id_p, id_sb, azienda, nome, cognome, ruolo, email, email_tipo, email_verifica, linkedin, e_titolare_principale, azienda_in, provincia, regione)
-select 'SC-' || substr(md5(l.email), 1, 12), l.id_sb, a.azienda, l.first_name, l.last_name, l.role, l.email,
+select 'SC-' || substr(md5(l.email), 1, 12), l.id_sb, a.azienda, l.first_name, l.last_name, coalesce(l.title, l.role), l.email,
        case when v.is_free_provider then 'FREEMAIL' else 'NOMINATIVA_AZIENDALE' end, v.status, l.linkedin,
        case when a.titolare_email = l.email then 'SI' else 'NO' end, a.lista, a.provincia, a.regione
 from public.leads_titolari l
@@ -107,7 +111,7 @@ limit 1;
 select
   (select count(*) from public.leads_titolari where promossa and run_date = current_date) as nuovi_titolari,
   (select count(*) from public.verifica_email where fonte = 'scout-' || to_char(current_date,'YYYY-MM-DD')) as nuove_email_verificate,
-  (select count(*) from public.aziende where fonti = 'scout-gmaps' and created_at::date = current_date) as nuove_aziende,
+  (select count(*) from public.aziende where 'SCOUT_GMAPS' = any(fonti) and created_at::date = current_date) as nuove_aziende,
   (select count(*) from public.aziende where lista='Lista Target' and titolare_email is null) as bacino_residuo;
 ```
 
