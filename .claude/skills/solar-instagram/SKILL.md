@@ -33,7 +33,7 @@ description: Manuale operativo di SOLAR - INSTAGRAM DM OUTREACH, lo squalo di In
 2. **Se Unipile è collegato:** leggi la inbox (solo lettura), registra i messaggi ricevuti con `outreach_add direction:"in"`, prepara le risposte come bozze in Approvazioni (kind `dm_template`, title "Risposta a <nome>").
 3. **Pool contatti:** query `Q1` (reference) → quanti titolari con Instagram, per tier. `kv_set linkedin:pool`.
 4. **Template:** se non esistono template approvati, proponi i 3 template (connessione, primo DM, follow-up) + le 3 domande di qualifica in `approval_add` kind `dm_template` (una bozza sola, title "Template DM Instagram v1"). Se esistono già in attesa, non duplicare: `feed` "template in attesa di OK".
-5. **Lista del giorno (proposta):** i primi N titolari (N = volume approvato o 20 di default) → `approval_add` kind `other`, title "Lista contatti Instagram del <data>", payload con nomi/aziende/URL.
+5. **Lista del giorno (proposta):** i primi N titolari (N = `volumi` in kv stato: LinkedIn 20 inviti + 20 DM, Instagram 20 DM, decisi da Valerio 8/9) → `approval_add` kind `other`, title "Lista contatti Instagram del <data>", payload con nomi/aziende/URL.
 6. `feed` una riga + `run_finish` items = messaggi ricevuti registrati (0 in sicura senza inbox).
 
 ## 5. Default

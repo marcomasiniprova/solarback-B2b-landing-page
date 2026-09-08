@@ -26,7 +26,7 @@ Il DB vivo è **Supabase** progetto `solarback` (id `dziylyrneqeamqzatdzo`), sch
 Bacino al 8/9/2026 (aziende in Lista Target **senza** `titolare_email`): **Tier A 121 · B 945 · C 4.745** (con sito: A 121, B 856, C 2.339; con LinkedIn azienda: A 34, B 124, C 477).
 
 ## 3. Le leggi non negoziabili
-1. **Cap duro: 2 $ per giro, sommando tutti gli attori.** Ogni run Apify parte con `maxTotalChargeUsd` ≤ budget residuo. Finito il budget, si chiude il giro.
+1. **Cap duro per giro = `cap_usd` in kv `scout:config`** (leggilo dal digest a inizio giro; se manca, 2 $). Somma tutti gli attori. Ogni run Apify parte con `maxTotalChargeUsd` ≤ budget residuo. Finito il budget, si chiude il giro. (Collaudo 8/9: 0,50 $; a regime 2 $.)
 2. **Solo attori del registro `docs/18`.** Un attore nuovo si prova su un micro-batch (≤ 0,50 $), poi si aggiunge al registro (o al cimitero) con 1 riga.
 3. **Mai martellare un attore rate-limitato** (es. HarvestAPI: run "success" in 5-8 s con 0 item = cap giornaliero): 1 tentativo, poi salta e scrivi nel feed.
 4. **Verifica SEMPRE le email** col verifier prima di promuoverle (regola `fase1_ok`). Mai promuovere email non verificate.
@@ -39,7 +39,7 @@ Bacino al 8/9/2026 (aziende in Lista Target **senza** `titolare_email`): **Tier 
 
 ### M1 · Trovare il TITOLARE delle aziende in Lista Target (priorità Tier A e B, poi C)
 1. **Bacino:** query `Q1` (reference.md): aziende in Lista Target con `titolare_email is null` e `sito` valorizzato, ordinate per tier (A, B, C) e `icp_score`. Prendi i primi **150 domini** (host del sito, senza `www.`).
-2. **L1 · `microworlds/leads-finder`** (`company_domains` = i domini; ruoli Owner/Titolare/CEO/Founder/Amministratore/Socio/Direttore; `maxTotalChargeUsd` = min(1.2, residuo)). ⚠️ Trappola nota: grandi aziende off-target mangiano budget → i domini vengono solo dal bacino ICP, mai liberi.
+2. **L1 · `microworlds/leads-finder`** (`company_domains` = i domini; ruoli Owner/Titolare/CEO/Founder/Amministratore/Socio/Direttore; `maxTotalChargeUsd` = min(60% del cap, residuo)). Con cap 0,50 $ prendi **40 domini**, non 150. ⚠️ Trappola nota: grandi aziende off-target mangiano budget → i domini vengono solo dal bacino ICP, mai liberi.
 3. **Staging:** ogni lead → `leads_titolari` (`Q2`), con `id_sb` via dominio (`enrich_dom2id` o host di `aziende.sito`), `fonte='L1-leads-finder'`, `run_date=oggi`.
 4. **L2 (solo se resta ≥ 0,5 $)** · per le aziende del bacino rimaste senza lead ma con `linkedin_azienda`: `harvestapi/linkedin-company-employees` (max 20 aziende/run, `seniorityLevelIds ["320","310","300","220"]`, `profileScraperMode "Full + email search ($12 per 1k)"`, `companyBatchMode "all_at_once"`, `maxItems 60`, cap residuo). Se 0 item in pochi secondi → rate-limit: salta, feed.
 5. **Verifica** · `blessiticus/email-verifier-pro` sulle email di staging non ancora in `verifica_email` (batch ≤ 100, `concurrency 20, maxRetries 1, timeout 12`; se il run resta appeso > 150 s → abort e prendi i risultati pronti). Upsert in `verifica_email` (`Q3`), poi `leads_titolari.verificata=true`.
