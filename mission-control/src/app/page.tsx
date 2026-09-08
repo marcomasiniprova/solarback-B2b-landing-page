@@ -13,7 +13,7 @@ export default function Home() {
       <HealthBanner />
       <KpiGrid />
       <CostPanel />
-      <div className="grid grid-cols-1 gap-8 2xl:grid-cols-[1fr_380px]">
+      <div className="grid grid-cols-1 gap-8 xl:grid-cols-[minmax(0,1fr)_360px]">
         <TeamGrid />
         <FeedRail />
       </div>

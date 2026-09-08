@@ -44,7 +44,7 @@ export default function TeamGrid() {
               </div>
               <div className="text-xs text-ink-3">{members.length} membri</div>
             </div>
-            <div className="grid grid-cols-1 gap-4 xl:grid-cols-2">
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
               {members.map((a, i) => <AgentCard key={a.slug} agent={a} index={i} />)}
             </div>
           </section>

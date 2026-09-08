@@ -4,12 +4,8 @@ import "./globals.css";
 import { DataProvider } from "@/lib/store";
 import Sidebar from "@/components/Sidebar";
 
-const manrope = localFont({
-  src: "./fonts/Manrope.woff2",
-  variable: "--font-manrope",
-  weight: "200 800",
-  display: "swap",
-});
+const grotesk = localFont({ src: "./fonts/SpaceGrotesk.woff2", variable: "--font-grotesk", weight: "500 700", display: "swap" });
+const inter = localFont({ src: "./fonts/Inter.woff2", variable: "--font-inter", weight: "400 700", display: "swap" });
 
 export const metadata: Metadata = {
   title: "SolarBack · Mission Control",
@@ -19,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="it" className={manrope.variable}>
+    <html lang="it" className={`${grotesk.variable} ${inter.variable}`}>
       <body className="font-sans">
         <DataProvider>
           <div className="flex min-h-dvh">

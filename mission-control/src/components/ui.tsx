@@ -64,11 +64,15 @@ export function EmptyState({ title, hint }: { title: string; hint?: string }) {
     </div>
   );
 }
-export function Avatar({ src, alt, size = 56, className }: { src?: string | null; alt: string; size?: number; className?: string }) {
-  const [failed, setFailed] = useState(false);
-  const url = !src || failed ? "/avatars/default.png" : src;
-  // eslint-disable-next-line @next/next/no-img-element
-  return <img src={url} alt={alt} width={size} height={size} onError={() => setFailed(true)} className={cn("shrink-0 rounded-2xl border border-line-strong bg-card-2 object-contain p-1", className)} />;
+export function Avatar({ src, alt, size = 44, live = false, className }: { src?: string | null; alt: string; size?: number; live?: boolean; className?: string }) {
+  const [broken, setBroken] = useState(false);
+  const shown = broken ? "/avatars/default.svg" : src || "/avatars/default.png";
+  return (
+    <span className={cn("avatar-tile inline-flex shrink-0 items-center justify-center rounded-xl border border-line-strong bg-card-2", live && "avatar-live", className)} style={{ width: size, height: size }}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={shown} alt={alt} width={Math.round(size * 0.8)} height={Math.round(size * 0.8)} onError={() => setBroken(true)} draggable={false} className="object-contain" style={{ width: Math.round(size * 0.8), height: Math.round(size * 0.8) }} />
+    </span>
+  );
 }
 export function Table({ head, children }: { head: string[]; children: ReactNode }) {
   return (

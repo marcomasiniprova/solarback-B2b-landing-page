@@ -4,7 +4,8 @@ import { useParams } from "next/navigation";
 import { ArrowLeft, CalendarClock, Clock, Hash, ListChecks, ShieldCheck, Sparkles, Wrench } from "lucide-react";
 import { useData } from "@/lib/store";
 import { agentSpecs } from "@/lib/agentSpecs";
-import { fmtDateTime, fmtNext, kindLabel, nextCron, relTime, statusLabel } from "@/lib/utils";
+import { fmtDateTime, fmtNext, kindLabel, nextCron, relTime } from "@/lib/utils";
+import { statusOf } from "@/components/AgentCard";
 import LiveBadge from "@/components/LiveBadge";
 import FeedRail from "@/components/FeedRail";
 import { Avatar, Badge, Card, Dot, EmptyState, Kicker, SectionTitle, Table } from "@/components/ui";
@@ -25,18 +26,18 @@ export default function AgentPage() {
   }
   const runs = data.runs.filter((r) => r.agent_slug === agent.slug).slice(0, 30);
   const next = agent.status === "paused" ? null : nextCron(agent.cron);
-  const tone = agent.status === "working" ? "gold" : agent.status === "error" ? "err" : agent.status === "paused" ? "warn" : "muted";
+  const st = statusOf(agent);
   return (
     <div className="mx-auto max-w-[1100px]">
       <Link href="/" className="inline-flex items-center gap-1 text-sm text-ink-3 hover:text-ink"><ArrowLeft size={14} /> Mission Control</Link>
       <Card className="mt-4 p-6">
         <div className="flex flex-wrap items-start justify-between gap-6">
           <div className="flex items-start gap-5">
-            <Avatar src={agent.avatar} alt={agent.name} size={84} />
+            <Avatar src={agent.avatar} alt={agent.name} size={84} live={agent.status === "working"} />
             <div>
               <div className="flex flex-wrap items-center gap-3">
                 <h1 className="font-display text-2xl font-extrabold tracking-tight text-ink">{agent.name}</h1>
-                <Badge tone={tone}><Dot tone={agent.status === "working" ? "gold" : agent.status === "error" ? "err" : agent.status === "paused" ? "warn" : "muted"} pulse={agent.status === "working"} />{statusLabel[agent.status]}</Badge>
+                <Badge tone={st.tone}><Dot tone={st.dot} pulse={st.pulse} />{st.label}</Badge>
                 <Badge tone={agent.kind === "live" ? "gold" : "muted"}>{kindLabel[agent.kind]}</Badge>
               </div>
               <div className="mt-1 text-sm font-semibold text-brand-400">{agent.role}</div>
