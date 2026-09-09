@@ -5,7 +5,7 @@
 > Gli attori inutili/difettosi/fasulli/non-allineati vanno nel **Cimitero** (§4) così non li riusiamo per sbaglio.
 > Aggiornare **man mano** che se ne provano di nuovi. Costi = pay-per-event (paghi il risultato, non il tempo).
 
-**Ultimo aggiornamento:** 8/9/2026 · dati costo/rating verificati dallo Store Apify in questa data.
+**Ultimo aggiornamento:** 9/9/2026 (snipercoder validato) · costi/rating verificati dallo Store Apify l'8/9/2026.
 
 ---
 
@@ -55,6 +55,7 @@
 - **Uso nel team:** step L3 dello Scout, sui decisori trovati da leads-finder senza email (kv `scout:l3_candidati`).
 - **Quando usarlo:** hai già le **URL dei profili persona** (es. dai dipendenti trovati) e vuoi solo l'email, spendendo pochissimo. Terzo step / alternativa economica.
 - **Stato:** ✅ **validato sul campo 9/9** (giro Scout collaudo #2): 28 URL LinkedIn (decisori Tier A/B trovati da leads-finder senza email) → **9 email** (~32% hit), tra cui CEO/proprietari veri (Pesce "Proprietario", Priolo "CEO", Grossetti "Amm. delegato"). Restituisce anche **telefono** (spesso FISSO, non mobile: non spacciarlo per `mobile_1`). Chi non ha email torna riga `"email not found."` (0 costo). Costo reale giro: ~$0,009 per 9 email. **Il miglior rapporto valore/costo per i titolari.**
+- **⚠️ Muro catch-all:** parte delle email trovate è su domini catch-all (il server accetta qualsiasi indirizzo): il verifier le marca `risky`, non `valid` → non promuovibili per regola. Restano in `leads_titolari` come `risky` per un eventuale test a campione via cold email.
 
 ### ➕ blessiticus/email-verifier-pro — il nostro verifier
 - **ID:** `rzWN5rWOZelwVxehV` (`blessiticus/email-verifier-pro`)
