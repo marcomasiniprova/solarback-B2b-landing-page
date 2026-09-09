@@ -39,7 +39,8 @@ quanto generano run-rate RICORRENTE.)
   - [ ] **Valerio: prova live in 2 tab** dal suo browser (realtime): qui il websocket è bloccato dal proxy.
   - [x] **7 ruoli cablati (sessione operativa + routine) e COLLAUDATI 8/9 notte: 7/7 giri puliti** (Scout, Strategist, Analyst, Caroselli, Video, LinkedIn, Instagram; Blog in pausa). Dettaglio in memory.md §7 e docs/19 §4.
   - [ ] **Valerio: decidere 7 bozze in Approvazioni** (dashboard → Approvazioni → PIN): piano contenuti, carosello, video, Template DM LinkedIn v1, Template DM Instagram v1, 2 liste contatti Tier A.
-  - [ ] **Io: correggere il primo DM Instagram** (vende al primo messaggio, contro la regola "nessuna vendita nel primo DM"): aggiornare skill `solar-instagram` + far rigenerare la bozza.
+  - [x] Primo DM Instagram corretto (9/9): v1 rifiutata, "legge del primo DM" in skill, v2 conforme in Approvazioni.
+  - [ ] **Valerio: decidere pulizia DB segnalata dallo Scout** → 95 domini duplicati in `aziende` (263 righe in eccesso), 12 siti spazzatura, ingeteam.it off-target. Proposta: dedup tenendo la riga più completa + Scarti per spazzatura/off-target (lo faccio io dopo OK, è irreversibile).
   - [ ] **Dopo OK di Valerio:** `scout:config.cap_usd` 0,50 → 2 · accendere routine Caroselli/Video (Kie con prudenza: prima 1 test approvato) · accendere LinkedIn/Instagram SOLO con template approvati + Unipile collegato.
   - [ ] **Valerio: collegare Unipile** (account LinkedIn + Instagram) nelle 2 sessioni outreach; finché manca, gli squali saltano la inbox (avviso nel feed). Poi webhook inbox.
   - [x] Avatar 3D presi online (Fluent UI Emoji, MIT) per gli 8 ruoli + fallback SVG.

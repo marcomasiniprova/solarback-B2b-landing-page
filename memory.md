@@ -298,7 +298,10 @@
   LINKEDIN 20:35→20:38 (pool 1.370 titolari con LinkedIn A51/B180/C1139; Template DM v1 + lista 20 Tier A; Unipile assente → inbox saltata) ·
   INSTAGRAM 20:41→20:43 (pool 282 titolari IG A52/B173/C57; Template DM v1 + lista 20 Tier A; ⚠️ il suo primo DM vende subito, contro la sua regola → da correggere).
   **7 bozze pending in Approvazioni** (piano, carosello, video, 2 template DM, 2 liste contatti) → decide Valerio col PIN dalla dashboard.
-  **Routine ON:** Scout 05:00 UTC (cap 0,50 $ finché non lo alza), Strategist 05:30, Analyst 18:00. **OFF:** Caroselli, Video, LinkedIn, Instagram (si accendono dopo il suo OK). kv config: `scout:config` (cap 0,50 collaudo → 2 regime), `linkedin:stato`/`instagram:stato` (volumi 20/20 · 20, template_ok false), `strategist:config`.
+  **Routine ON:** Scout 05:00 UTC (cap 0,50 $ finché non lo alza), Strategist 05:30, Analyst 18:00. **OFF:** Caroselli, Video, LinkedIn, Instagram (si accendono dopo il suo OK).
+  **9/9 mattina — PRIMI GIRI AUTONOMI (da cron, senza di me): Scout 05:17→05:28 ok** (4 titolari, tutti decisori, via L3 snipercoder: 9 email/28 URL, ~0,05 $ → snipercoder ✅ in docs/18; 5 decisori su domini catch-all = risky, non promossi) · **Strategist 05:35→05:37 ok** (piano 09/09 educativo, docs/17 W1 G2).
+  Instagram: Template v1 RIFIUTATO da me (vendeva al primo DM) → regola "legge del primo DM" scritta in skill → nuovo giro → **Template v2 conforme** (id 10) in Approvazioni.
+  **Segnalazione Scout da decidere con Valerio:** in `aziende` **95 domini duplicati (358 righe, 263 in eccesso)** + 12 `sito` spazzatura (tally.so, trustpilot, social) + ingeteam.it (multinazionale inverter) Tier B off-target. kv config: `scout:config` (cap 0,50 collaudo → 2 regime), `linkedin:stato`/`instagram:stato` (volumi 20/20 · 20, template_ok false), `strategist:config`.
 - **NOVITÀ 8/9 (VINCOLANTI):** (i) **Supabase progetto `solarback` = DB VIVO *e* backend della dashboard/cruscotto CEO**
   che costruiremo (per questo è un progetto separato). (ii) **APIFY ora via CONNETTORE NATIVO Apify (tool `mcp__Apify__*`),
   NON più via Composio** — su Composio non usare più Apify. Il verifier email resta lo stesso attore, richiamato dal nativo.
