@@ -15,7 +15,7 @@
 |---|---|---|---|---|---|---|
 | ⭐1 | **microworlds/leads-finder** | email **+ cellulare** del titolare | per **dominio** filtrando ruolo Owner/Titolare/CEO | **$0,003/lead** | — | ✅ usato, ottimo |
 | 2 | **harvestapi/linkedin-company-employees** | titolare **+ email** | via **URL LinkedIn azienda** (filtro seniority) | **~$0,012** /profilo+email | — | ✅ usato |
-| 3 | **snipercoder/bulk-linkedin-email-finder** | **solo email** (+ nome/titolo/azienda) | da **URL/ID LinkedIn persona** | **$0,001/email** (fino a $0,0006 tier alti) | 4,86 (11) | 🟡 da provare noi |
+| 3 | **snipercoder/bulk-linkedin-email-finder** | **solo email** (+ nome/titolo/azienda/telefono) | da **URL/ID LinkedIn persona** | **$0,001/email** (fino a $0,0006 tier alti) | 4,86 (11) | ✅ validato 9/9 (step L3) |
 | ➕ | **blessiticus/email-verifier-pro** | **verifica SMTP** delle email | CSV/lista email | **$0,00085/email** ($0,85/1k) | 5,0 (7) | ✅ nostro verifier standard |
 
 > ➕ = non era nei 3 che mi hai dato, ma lo usiamo davvero e funziona (è il verifier con cui abbiamo prodotto valid/risky/unknown). Lo tengo qui perché è il migliore per quel compito. Se non lo vuoi, lo sposto.
@@ -46,7 +46,7 @@
 - **⚠️ TRAPPOLE:** (a) in modalità `all_at_once` **max ~20 aziende per run**; (b) il **FREE tier ha run-limit + rate-limit giornaliero** → se lanci troppo, i run tornano 0 in pochi secondi: serve **cooldown** (riprendere dopo/il giorno dopo).
 - **Quando usarlo:** cascata L2 — hai l'URL LinkedIn dell'azienda ma non il titolare. Secondo step quando leads-finder non ha reso il decisore.
 
-### snipercoder/bulk-linkedin-email-finder — 🟡 da testare
+### snipercoder/bulk-linkedin-email-finder — ✅ validato (step L3 Scout)
 - **ID:** `ddgw2oGFaH645BFAq` (`snipercoder/bulk-linkedin-email-finder`)
 - **A cosa serve:** date le **URL/ID LinkedIn di persone**, restituisce l'email (+ nome, titolo, azienda). Il più economico dei tre.
 - **Input chiave:** `linkedin_url_or_ids` (un URL o ID per riga) **oppure** `csv_file` (header `linkedin_url_or_id`).
@@ -54,7 +54,7 @@
 - **⚠️ TRAPPOLA (dichiarata dall'autore):** **input sopra 100 falliscono** → spezzare in batch da ≤100.
 - **Uso nel team:** step L3 dello Scout, sui decisori trovati da leads-finder senza email (kv `scout:l3_candidati`).
 - **Quando usarlo:** hai già le **URL dei profili persona** (es. dai dipendenti trovati) e vuoi solo l'email, spendendo pochissimo. Terzo step / alternativa economica.
-- **Stato:** rating alto (4,86) ma **non ancora provato da noi** → primo giro su un batch piccolo per validarne la resa reale prima di fidarsi.
+- **Stato:** ✅ **validato sul campo 9/9** (giro Scout collaudo #2): 28 URL LinkedIn (decisori Tier A/B trovati da leads-finder senza email) → **9 email** (~32% hit), tra cui CEO/proprietari veri (Pesce "Proprietario", Priolo "CEO", Grossetti "Amm. delegato"). Restituisce anche **telefono** (spesso FISSO, non mobile: non spacciarlo per `mobile_1`). Chi non ha email torna riga `"email not found."` (0 costo). Costo reale giro: ~$0,009 per 9 email. **Il miglior rapporto valore/costo per i titolari.**
 
 ### ➕ blessiticus/email-verifier-pro — il nostro verifier
 - **ID:** `rzWN5rWOZelwVxehV` (`blessiticus/email-verifier-pro`)
